@@ -1,1 +1,1 @@
-{"/blog/":{"data":{"":"something"},"title":"Blog"},"/post/blog/":{"data":{"":"something"},"title":"Blog"}}
+{"/blog/":{"data":{"":"something else"},"title":"Blog"},"/blog/blog/":{"data":{"":"something"},"title":"Blog"},"/posts/someblog/":{"data":{"":"something in posts"},"title":"Blog"},"/user-manuals/":{"data":{"user-manuals#User Manuals":"User Manuals{{ range .Pages }}\n[{{ .Title }}]({{ .Permalink }}) {{ .Summary }} {{ end }} "},"title":"User Manuals"}}
