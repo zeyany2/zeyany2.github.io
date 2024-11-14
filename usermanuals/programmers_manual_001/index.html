@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+<link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
+<title>Programmer&#39;s Manual P1 – Nastran RAG</title>
+  <meta name="description" content="NASA SP-223 (01) THENASTRAN PROGRAMMER’S MANUAL SEPTEMBER 1972 Scientific andTechnical Information Office 1972 NATIONAL AERONAUTICS AND SPACE ADMINISTRATION Washington, D.C. II]]1] i,
+ForsalefromComputer Software Management andInformation Center (COSMIC) Barrows Hall,University ofGeorgia, Athens, Georgia 30601 -Price $27.50
+PREFACE TOTHENASTRAN PROGRAMMER’S MANIIAL TheProgrammer’s Manual isoneoffourmanuals thatconstitute thedocumentation forNASTRAN, theother three being theTheoretical Manual, theUser’s Manual andtheDemonstration Problem Manual. TheProgrammer’s Manual isdivided intoseven major sections: Section l,NASTRAN Program- ming Fundamentals; Section 2,DataBlock andTable Descriptions; Section 3,Subroutine Descriptions; Section 4,Module Functional Descriptions; Section 5,NASTRAN -Operating System Interfaces; Section 6,Modifications andAdditions toNASTRAN; andSection 7,NASTRAN Support Programs. Section lisageneral overview oftheprogram, andassuchitshould bereadasbackground material forallsections which follow. Section 2contains descriptions ofthedatablocks, which aretheprincipal means ofdata communication between theprogram’s functional modules (amodule isdefined tobeagroup ofsub- routines which perform aspecific function) andtheNASTRAN Executive System. Twoindexes forthe datablock descriptions, onesorted alphabetically ondatablock names andtheother sorted alpha- betically onthenames ofthemodules fromwhich thedatablocks areoutput, aregiven inSections 2.2.1 and2.2.2 respectively. Section 2alsocontains a)descriptions oftables, both coreand noncore resident, maintained bytheNASTRAN Executive System andb)descriptions ofmiscellaneous tables which areaccessed byaclass ofmodules. Alphabetical indexes forthese tables aregiven atthebeginning ofSections 2.4and2.5respectively. Sections 3and4contain descriptions ofthe(utility orgeneral purpose) subroutines and modules ofNASTRAN respectively. Thereader isdirected tothealphabetical indexes, sorted on entry point names, inSections 3.2and4.1.3 respectively forthese sections. Anindex tothe Module Functional Descriptions, sorted alphabetically onmodule names, isgiven inSection 4.1.2. Thereader isurged toreadtheintroductory material toSections 3and4before using these sections. Section 5treats computer andoperating system dependent matters suchasoperating system control cards andgeneration oftheabsolute (executable) NASTRAN system. Section 6describes themeans bywhich modifications andadditions toNASTRAN areimplemented. Section 7describes several auxiliary programs usedtomaintain orinterface withNASTRAN. Thelearning ofanynewsystem, whether itbeanoperating system oralarge applications system likeNASTRA_I, ismademoredifficult thanitought tobebecause oftheusebythedesigners ofthesystem ofnewmnemonics, acronyms, phrases and&#34;buzz&#34; words. Inorder toaidthereader in i(811172)" /><link rel="canonical" href="http://localhost:1313/usermanuals/programmers_manual_001/" itemprop="url" />
+
+<meta property="og:title" content="Programmer&#39;s Manual P1" />
+<meta property="og:description" content="NASA SP-223 (01)
+THENASTRAN PROGRAMMER&rsquo;S MANUAL
+SEPTEMBER 1972
+Scientific andTechnical Information Office 1972
+NATIONAL AERONAUTICS AND SPACE ADMINISTRATION
+Washington, D.C.
+II]]1] i,
+ForsalefromComputer Software Management andInformation Center (COSMIC)
+Barrows Hall,University ofGeorgia, Athens, Georgia 30601 -Price $27.50
+PREFACE TOTHENASTRAN PROGRAMMER&rsquo;S MANIIAL
+TheProgrammer&rsquo;s Manual isoneoffourmanuals thatconstitute thedocumentation forNASTRAN,
+theother three being theTheoretical Manual, theUser&rsquo;s Manual andtheDemonstration Problem
+Manual. TheProgrammer&rsquo;s Manual isdivided intoseven major sections: Section l,NASTRAN Program-
+ming Fundamentals; Section 2,DataBlock andTable Descriptions; Section 3,Subroutine Descriptions;
+Section 4,Module Functional Descriptions; Section 5,NASTRAN -Operating System Interfaces; Section
+6,Modifications andAdditions toNASTRAN; andSection 7,NASTRAN Support Programs.
+Section lisageneral overview oftheprogram, andassuchitshould bereadasbackground
+material forallsections which follow.
+Section 2contains descriptions ofthedatablocks, which aretheprincipal means ofdata
+communication between theprogram&rsquo;s functional modules (amodule isdefined tobeagroup ofsub-
+routines which perform aspecific function) andtheNASTRAN Executive System. Twoindexes forthe
+datablock descriptions, onesorted alphabetically ondatablock names andtheother sorted alpha-
+betically onthenames ofthemodules fromwhich thedatablocks areoutput, aregiven inSections
+2.2.1 and2.2.2 respectively. Section 2alsocontains a)descriptions oftables, both coreand
+noncore resident, maintained bytheNASTRAN Executive System andb)descriptions ofmiscellaneous
+tables which areaccessed byaclass ofmodules. Alphabetical indexes forthese tables aregiven
+atthebeginning ofSections 2.4and2.5respectively.
+Sections 3and4contain descriptions ofthe(utility orgeneral purpose) subroutines and
+modules ofNASTRAN respectively. Thereader isdirected tothealphabetical indexes, sorted on
+entry point names, inSections 3.2and4.1.3 respectively forthese sections. Anindex tothe
+Module Functional Descriptions, sorted alphabetically onmodule names, isgiven inSection 4.1.2.
+Thereader isurged toreadtheintroductory material toSections 3and4before using these
+sections.
+Section 5treats computer andoperating system dependent matters suchasoperating system
+control cards andgeneration oftheabsolute (executable) NASTRAN system.
+Section 6describes themeans bywhich modifications andadditions toNASTRAN areimplemented.
+Section 7describes several auxiliary programs usedtomaintain orinterface withNASTRAN.
+Thelearning ofanynewsystem, whether itbeanoperating system oralarge applications
+system likeNASTRA_I, ismademoredifficult thanitought tobebecause oftheusebythedesigners
+ofthesystem ofnewmnemonics, acronyms, phrases and&quot;buzz&quot; words. Inorder toaidthereader in
+i(811172)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/usermanuals/programmers_manual_001/" /><meta property="article:section" content="usermanuals" />
+
+
+
+  <meta itemprop="name" content="Programmer&#39;s Manual P1">
+  <meta itemprop="description" content="NASA SP-223 (01) THENASTRAN PROGRAMMER’S MANUAL SEPTEMBER 1972 Scientific andTechnical Information Office 1972 NATIONAL AERONAUTICS AND SPACE ADMINISTRATION Washington, D.C. II]]1] i,
+ForsalefromComputer Software Management andInformation Center (COSMIC) Barrows Hall,University ofGeorgia, Athens, Georgia 30601 -Price $27.50
+PREFACE TOTHENASTRAN PROGRAMMER’S MANIIAL TheProgrammer’s Manual isoneoffourmanuals thatconstitute thedocumentation forNASTRAN, theother three being theTheoretical Manual, theUser’s Manual andtheDemonstration Problem Manual. TheProgrammer’s Manual isdivided intoseven major sections: Section l,NASTRAN Program- ming Fundamentals; Section 2,DataBlock andTable Descriptions; Section 3,Subroutine Descriptions; Section 4,Module Functional Descriptions; Section 5,NASTRAN -Operating System Interfaces; Section 6,Modifications andAdditions toNASTRAN; andSection 7,NASTRAN Support Programs. Section lisageneral overview oftheprogram, andassuchitshould bereadasbackground material forallsections which follow. Section 2contains descriptions ofthedatablocks, which aretheprincipal means ofdata communication between theprogram’s functional modules (amodule isdefined tobeagroup ofsub- routines which perform aspecific function) andtheNASTRAN Executive System. Twoindexes forthe datablock descriptions, onesorted alphabetically ondatablock names andtheother sorted alpha- betically onthenames ofthemodules fromwhich thedatablocks areoutput, aregiven inSections 2.2.1 and2.2.2 respectively. Section 2alsocontains a)descriptions oftables, both coreand noncore resident, maintained bytheNASTRAN Executive System andb)descriptions ofmiscellaneous tables which areaccessed byaclass ofmodules. Alphabetical indexes forthese tables aregiven atthebeginning ofSections 2.4and2.5respectively. Sections 3and4contain descriptions ofthe(utility orgeneral purpose) subroutines and modules ofNASTRAN respectively. Thereader isdirected tothealphabetical indexes, sorted on entry point names, inSections 3.2and4.1.3 respectively forthese sections. Anindex tothe Module Functional Descriptions, sorted alphabetically onmodule names, isgiven inSection 4.1.2. Thereader isurged toreadtheintroductory material toSections 3and4before using these sections. Section 5treats computer andoperating system dependent matters suchasoperating system control cards andgeneration oftheabsolute (executable) NASTRAN system. Section 6describes themeans bywhich modifications andadditions toNASTRAN areimplemented. Section 7describes several auxiliary programs usedtomaintain orinterface withNASTRAN. Thelearning ofanynewsystem, whether itbeanoperating system oralarge applications system likeNASTRA_I, ismademoredifficult thanitought tobebecause oftheusebythedesigners ofthesystem ofnewmnemonics, acronyms, phrases and&#34;buzz&#34; words. Inorder toaidthereader in i(811172)">
+  <meta itemprop="wordCount" content="3623">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Programmer&#39;s Manual P1">
+  <meta name="twitter:description" content="NASA SP-223 (01) THENASTRAN PROGRAMMER’S MANUAL SEPTEMBER 1972 Scientific andTechnical Information Office 1972 NATIONAL AERONAUTICS AND SPACE ADMINISTRATION Washington, D.C. II]]1] i,
+ForsalefromComputer Software Management andInformation Center (COSMIC) Barrows Hall,University ofGeorgia, Athens, Georgia 30601 -Price $27.50
+PREFACE TOTHENASTRAN PROGRAMMER’S MANIIAL TheProgrammer’s Manual isoneoffourmanuals thatconstitute thedocumentation forNASTRAN, theother three being theTheoretical Manual, theUser’s Manual andtheDemonstration Problem Manual. TheProgrammer’s Manual isdivided intoseven major sections: Section l,NASTRAN Program- ming Fundamentals; Section 2,DataBlock andTable Descriptions; Section 3,Subroutine Descriptions; Section 4,Module Functional Descriptions; Section 5,NASTRAN -Operating System Interfaces; Section 6,Modifications andAdditions toNASTRAN; andSection 7,NASTRAN Support Programs. Section lisageneral overview oftheprogram, andassuchitshould bereadasbackground material forallsections which follow. Section 2contains descriptions ofthedatablocks, which aretheprincipal means ofdata communication between theprogram’s functional modules (amodule isdefined tobeagroup ofsub- routines which perform aspecific function) andtheNASTRAN Executive System. Twoindexes forthe datablock descriptions, onesorted alphabetically ondatablock names andtheother sorted alpha- betically onthenames ofthemodules fromwhich thedatablocks areoutput, aregiven inSections 2.2.1 and2.2.2 respectively. Section 2alsocontains a)descriptions oftables, both coreand noncore resident, maintained bytheNASTRAN Executive System andb)descriptions ofmiscellaneous tables which areaccessed byaclass ofmodules. Alphabetical indexes forthese tables aregiven atthebeginning ofSections 2.4and2.5respectively. Sections 3and4contain descriptions ofthe(utility orgeneral purpose) subroutines and modules ofNASTRAN respectively. Thereader isdirected tothealphabetical indexes, sorted on entry point names, inSections 3.2and4.1.3 respectively forthese sections. Anindex tothe Module Functional Descriptions, sorted alphabetically onmodule names, isgiven inSection 4.1.2. Thereader isurged toreadtheintroductory material toSections 3and4before using these sections. Section 5treats computer andoperating system dependent matters suchasoperating system control cards andgeneration oftheabsolute (executable) NASTRAN system. Section 6describes themeans bywhich modifications andadditions toNASTRAN areimplemented. Section 7describes several auxiliary programs usedtomaintain orinterface withNASTRAN. Thelearning ofanynewsystem, whether itbeanoperating system oralarge applications system likeNASTRA_I, ismademoredifficult thanitought tobebecause oftheusebythedesigners ofthesystem ofnewmnemonics, acronyms, phrases and&#34;buzz&#34; words. Inorder toaidthereader in i(811172)">
+
+    <link href="/css/compiled/main.css" rel="stylesheet" />
+
+
+
+  <link href="/css/custom.css" rel="stylesheet" />
+
+
+  <script>
+     
+    const defaultTheme = 'system';
+
+    const setDarkTheme = () => {
+      document.documentElement.classList.add("dark");
+      document.documentElement.style.colorScheme = "dark";
+    }
+    const setLightTheme = () => {
+      document.documentElement.classList.remove("dark");
+      document.documentElement.style.colorScheme = "light";
+    }
+
+    if ("color-theme" in localStorage) {
+      localStorage.getItem("color-theme") === "dark" ? setDarkTheme() : setLightTheme();
+    } else {
+      defaultTheme === "dark" ? setDarkTheme() : setLightTheme();
+      if (defaultTheme === "system") {
+        window.matchMedia("(prefers-color-scheme: dark)").matches ? setDarkTheme() : setLightTheme();
+      }
+    }
+  </script>
+
+  
+</head>
+<body dir="ltr"><div class="nav-container hx-sticky hx-top-0 hx-z-20 hx-w-full hx-bg-transparent print:hx-hidden">
+  <div class="nav-container-blur hx-pointer-events-none hx-absolute hx-z-[-1] hx-h-full hx-w-full hx-bg-white dark:hx-bg-dark hx-shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] contrast-more:hx-shadow-[0_0_0_1px_#000] dark:hx-shadow-[0_-1px_0_rgba(255,255,255,.1)_inset] contrast-more:dark:hx-shadow-[0_0_0_1px_#fff]"></div>
+
+  <nav class="hx-mx-auto hx-flex hx-items-center hx-justify-end hx-gap-2 hx-h-16 hx-px-6 hx-max-w-[90rem]">
+    <a class="hx-flex hx-items-center hover:hx-opacity-75 ltr:hx-mr-auto rtl:hx-ml-auto" href="/">
+        <img class="hx-block dark:hx-hidden" src="/images/logo.svg" alt="Nastran RAG" height="20" width="20" />
+        <img class="hx-hidden dark:hx-block" src="/images/logo.svg" alt="Nastran RAG" height="20" width="20" />
+        <span class="hx-mx-2 hx-font-extrabold hx-inline hx-select-none" title="Nastran RAG">Nastran RAG</span>
+    </a><a
+            title="Home"
+            href="/"
+            
+            class="hx-text-sm contrast-more:hx-text-gray-700 contrast-more:dark:hx-text-gray-100 hx-relative -hx-ml-2 hx-hidden hx-whitespace-nowrap hx-p-2 md:hx-inline-block hx-text-gray-600 hover:hx-text-gray-800 dark:hx-text-gray-400 dark:hover:hx-text-gray-200"
+          >
+            <span class="hx-text-center">Home</span>
+          </a><a
+            title="User Manuals"
+            href="/usermanuals/"
+            
+            class="hx-text-sm contrast-more:hx-text-gray-700 contrast-more:dark:hx-text-gray-100 hx-relative -hx-ml-2 hx-hidden hx-whitespace-nowrap hx-p-2 md:hx-inline-block hx-text-gray-600 hover:hx-text-gray-800 dark:hx-text-gray-400 dark:hover:hx-text-gray-200"
+          >
+            <span class="hx-text-center">User Manuals</span>
+          </a><a
+            title="About"
+            href="/about/"
+            
+            class="hx-text-sm contrast-more:hx-text-gray-700 contrast-more:dark:hx-text-gray-100 hx-relative -hx-ml-2 hx-hidden hx-whitespace-nowrap hx-p-2 md:hx-inline-block hx-text-gray-600 hover:hx-text-gray-800 dark:hx-text-gray-400 dark:hover:hx-text-gray-200"
+          >
+            <span class="hx-text-center">About</span>
+          </a><button type="button" aria-label="Menu" class="hamburger-menu -hx-mr-2 hx-rounded hx-p-2 active:hx-bg-gray-400/20 md:hx-hidden"><svg height=24 fill="none" viewBox="0 0 24 24" stroke="currentColor"><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8H20"></path></g><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16H20"></path></g></svg></button>
+  </nav>
+</div>
+
+  <div class='hx-mx-auto hx-flex hx-max-w-screen-xl'>
+    <div class="mobile-menu-overlay [transition:background-color_1.5s_ease] hx-fixed hx-inset-0 hx-z-10 hx-bg-black/80 dark:hx-bg-black/60 hx-hidden"></div>
+<aside class="sidebar-container hx-flex hx-flex-col print:hx-hidden md:hx-top-16 md:hx-shrink-0 md:hx-w-64 md:hx-self-start max-md:[transform:translate3d(0,-100%,0)] md:hx-sticky">
+  
+  <div class="hx-px-4 hx-pt-4 md:hx-hidden">
+    <div class="search-wrapper hx-relative md:hx-w-64">
+  <div class="hx-relative hx-flex hx-items-center hx-text-gray-900 contrast-more:hx-text-gray-800 dark:hx-text-gray-300 contrast-more:dark:hx-text-gray-300">
+    <input
+      placeholder="Search..."
+      class="search-input hx-block hx-w-full hx-appearance-none hx-rounded-lg hx-px-3 hx-py-2 hx-transition-colors hx-text-base hx-leading-tight md:hx-text-sm hx-bg-black/[.05] dark:hx-bg-gray-50/10 focus:hx-bg-white dark:focus:hx-bg-dark placeholder:hx-text-gray-500 dark:placeholder:hx-text-gray-400 contrast-more:hx-border contrast-more:hx-border-current"
+      type="search"
+      value=""
+      spellcheck="false"
+    />
+    <kbd
+      class="hx-absolute hx-my-1.5 hx-select-none ltr:hx-right-1.5 rtl:hx-left-1.5 hx-h-5 hx-rounded hx-bg-white hx-px-1.5 hx-font-mono hx-text-[10px] hx-font-medium hx-text-gray-500 hx-border dark:hx-border-gray-100/20 dark:hx-bg-dark/50 contrast-more:hx-border-current contrast-more:hx-text-current contrast-more:dark:hx-border-current hx-items-center hx-gap-1 hx-transition-opacity hx-pointer-events-none hx-hidden sm:hx-flex"
+    >
+      CTRL K
+    </kbd>
+  </div>
+
+  <div>
+    <ul
+      class="search-results hextra-scrollbar hx-hidden hx-border hx-border-gray-200 hx-bg-white hx-text-gray-100 dark:hx-border-neutral-800 dark:hx-bg-neutral-900 hx-absolute hx-top-full hx-z-20 hx-mt-2 hx-overflow-auto hx-overscroll-contain hx-rounded-xl hx-py-2.5 hx-shadow-xl hx-max-h-[min(calc(50vh-11rem-env(safe-area-inset-bottom)),400px)] md:hx-max-h-[min(calc(100vh-5rem-env(safe-area-inset-bottom)),400px)] hx-inset-x-0 ltr:md:hx-left-auto rtl:md:hx-right-auto contrast-more:hx-border contrast-more:hx-border-gray-900 contrast-more:dark:hx-border-gray-50 hx-w-screen hx-min-h-[100px] hx-max-w-[min(calc(100vw-2rem),calc(100%+20rem))]"
+      style="transition: max-height 0.2s ease 0s;"
+    ></ul>
+  </div>
+</div>
+
+  </div>
+  <div class="hextra-scrollbar hx-overflow-y-auto hx-overflow-x-hidden hx-p-4 hx-grow md:hx-h-[calc(100vh-var(--navbar-height)-var(--menu-height))]">
+    <ul class="hx-flex hx-flex-col hx-gap-1 md:hx-hidden">
+      
+      
+          <li class=""><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/about/"
+    
+  >About
+    </a></li>
+          <li class="open"><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/usermanuals/"
+    
+  >Usermanuals
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
+    </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+    href="/usermanuals/programmers_manual_001/"
+    
+  >Programmer&#39;s Manual P1
+    </a>
+  
+              
+            </li></ul>
+      </div></li>
+    </ul>
+
+    <ul class="hx-flex hx-flex-col hx-gap-1 max-md:hx-hidden">
+        
+          <li class="open"><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+    href="/usermanuals/programmers_manual_001/"
+    
+  >Programmer&#39;s Manual P1
+    </a></li>
+        
+      </ul>
+    </div>
+  
+  
+    <div class="  hx-sticky hx-bottom-0 hx-bg-white dark:hx-bg-dark hx-mx-4 hx-py-4 hx-shadow-[0_-12px_16px_#fff] hx-flex hx-items-center hx-gap-2 dark:hx-border-neutral-800 dark:hx-shadow-[0_-12px_16px_#111] contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-shadow-none hx-border-t" data-toggle-animation="show"><div class="hx-flex hx-grow hx-flex-col"><button
+  title="Change theme"
+  data-theme="light"
+  class="theme-toggle hx-group hx-h-7 hx-rounded-md hx-px-2 hx-text-left hx-text-xs hx-font-medium hx-text-gray-600 hx-transition-colors dark:hx-text-gray-400 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50"
+  type="button"
+  aria-label="Change theme"
+>
+  <div class="hx-flex hx-items-center hx-gap-2 hx-capitalize"><svg height=12 class="group-data-[theme=light]:hx-hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><span class="group-data-[theme=light]:hx-hidden">Light</span><svg height=12 class="group-data-[theme=dark]:hx-hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg><span class="group-data-[theme=dark]:hx-hidden">Dark</span></div>
+</button>
+</div></div></aside>
+    
+<nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
+    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4">
+      <div class=" hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
+        <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
+          <span>Scroll to top</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx-inline ltr:hx-ml-1 rtl:hx-mr-1 hx-h-3.5 hx-w-3.5 hx-border hx-rounded-full hx-border-gray-500 hover:hx-border-gray-900 dark:hx-border-gray-400 dark:hover:hx-border-gray-100 contrast-more:hx-border-gray-800 contrast-more:dark:hx-border-gray-50">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+    <article class="hx-w-full hx-break-words hx-flex hx-min-h-[calc(100vh-var(--navbar-height))] hx-min-w-0 hx-justify-center hx-pb-8 hx-pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+      <main class="hx-w-full hx-min-w-0 hx-max-w-6xl hx-px-6 hx-pt-4 md:hx-px-12">
+        
+  <div class="hx-mt-1.5 hx-flex hx-items-center hx-gap-1 hx-overflow-hidden hx-text-sm hx-text-gray-500 dark:hx-text-gray-400 contrast-more:hx-text-current">
+        <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
+          <a href="/usermanuals/">Usermanuals</a>
+        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">Programmer&#39;s Manual P1</div>
+  </div>
+
+        <div class="content">
+          <h1>Programmer&#39;s Manual P1</h1>
+          <p>NASA SP-223 (01)
+THENASTRAN PROGRAMMER&rsquo;S MANUAL
+SEPTEMBER 1972
+Scientific andTechnical Information Office 1972
+NATIONAL AERONAUTICS AND SPACE ADMINISTRATION
+Washington, D.C.
+II]]1] i,</p>
+<p>ForsalefromComputer Software Management andInformation Center (COSMIC)
+Barrows Hall,University ofGeorgia, Athens, Georgia 30601 -Price $27.50</p>
+<p>PREFACE TOTHENASTRAN PROGRAMMER&rsquo;S MANIIAL
+TheProgrammer&rsquo;s Manual isoneoffourmanuals thatconstitute thedocumentation forNASTRAN,
+theother three being theTheoretical Manual, theUser&rsquo;s Manual andtheDemonstration Problem
+Manual. TheProgrammer&rsquo;s Manual isdivided intoseven major sections: Section l,NASTRAN Program-
+ming Fundamentals; Section 2,DataBlock andTable Descriptions; Section 3,Subroutine Descriptions;
+Section 4,Module Functional Descriptions; Section 5,NASTRAN -Operating System Interfaces; Section
+6,Modifications andAdditions toNASTRAN; andSection 7,NASTRAN Support Programs.
+Section lisageneral overview oftheprogram, andassuchitshould bereadasbackground
+material forallsections which follow.
+Section 2contains descriptions ofthedatablocks, which aretheprincipal means ofdata
+communication between theprogram&rsquo;s functional modules (amodule isdefined tobeagroup ofsub-
+routines which perform aspecific function) andtheNASTRAN Executive System. Twoindexes forthe
+datablock descriptions, onesorted alphabetically ondatablock names andtheother sorted alpha-
+betically onthenames ofthemodules fromwhich thedatablocks areoutput, aregiven inSections
+2.2.1 and2.2.2 respectively. Section 2alsocontains a)descriptions oftables, both coreand
+noncore resident, maintained bytheNASTRAN Executive System andb)descriptions ofmiscellaneous
+tables which areaccessed byaclass ofmodules. Alphabetical indexes forthese tables aregiven
+atthebeginning ofSections 2.4and2.5respectively.
+Sections 3and4contain descriptions ofthe(utility orgeneral purpose) subroutines and
+modules ofNASTRAN respectively. Thereader isdirected tothealphabetical indexes, sorted on
+entry point names, inSections 3.2and4.1.3 respectively forthese sections. Anindex tothe
+Module Functional Descriptions, sorted alphabetically onmodule names, isgiven inSection 4.1.2.
+Thereader isurged toreadtheintroductory material toSections 3and4before using these
+sections.
+Section 5treats computer andoperating system dependent matters suchasoperating system
+control cards andgeneration oftheabsolute (executable) NASTRAN system.
+Section 6describes themeans bywhich modifications andadditions toNASTRAN areimplemented.
+Section 7describes several auxiliary programs usedtomaintain orinterface withNASTRAN.
+Thelearning ofanynewsystem, whether itbeanoperating system oralarge applications
+system likeNASTRA_I, ismademoredifficult thanitought tobebecause oftheusebythedesigners
+ofthesystem ofnewmnemonics, acronyms, phrases and&quot;buzz&quot; words. Inorder toaidthereader in
+i(811172)</p>
+<p>learning suchcommonly usedNASTRAN terms, asingle source reference, Section 7,theNASTRAN
+Dictionary, oftheUser&rsquo;s Manual isprovided. Theprogrammer isadivsed tosecure acopyofat
+leastthissection oftheUser&rsquo;s Manual forhisday-to-day reference.
+ii(8/I/72)</p>
+<p>TABLE OFCONTENTS
+Section
+I.NASTRAN PROGRAMMING FUNDAMENTALSPageNo.
+l.l
+1.2PROGRAM
+1.I.I
+l.l.2
+NASTRAN
+l.2.1
+l.2.2
+l.2.3OVERVIEW &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. l.l-I
+Objectives &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; l.l-I
+Program Organization &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. l.l-3
+EXECUTIVE SYSTEM &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 1.2-1
+Introduction &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 1.2-1
+Executive Operations During thePreface &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 1.2-4
+Executive Operations During Problem Solution &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 1.2-9a
+1.3 WORDSIZEANDCOMPUTER HARDWARE CONSIDERATIONS &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 1.3-1
+1.3.1 Introduction &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 1.3-1
+1.3.2 Alphanumeric Data &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 1.3-2
+1.3.3 Word Packing &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 1.3-2
+1.4 SYSTEM BLOCK DATASUBPROGRAM (SEMDBD) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 1.4-1
+1.5 THEOPENCORECONCEPT &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 1.5-1
+1.5.1 Introduction &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 1.5-1
+1.5.2 Definition ofOpenCore &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 1.5-1
+1.5.3 Example ofanApplication ofOpenCore &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 1.5-1
+1.6 NASTRAN INPUT/OUTPUT &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 1.6-1
+1.6.1 Introduction &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 1.6-1
+1.6.2 UseoftheOperating System Input File &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 1.6-1
+1.6.3 UseoftheOperating System Output File &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 1.6-2
+1.6.4 GIN_ &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 1.6-3
+1.7 NASTRAN MATRIX ROUTINES &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 1.7-I
+1.7.1 Introduction &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 1.7°l
+1.7.2 Matrix Packing andUnpacking &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 1.7-1
+1.7.3 TheNested Vector SetConcept UsedtoRepresent Components
+ofDisplacement &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 1.7-2
+1.7.4 Processing ofMatrices &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 1.7-4
+1.8 GENERATION OFMATRICES &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 1.8-1
+1.8.1 TheECPTDataBlock &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 1.8-1
+1.8.2 Structural Elements &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 1.8-2
+iii(8/I/72)</p>
+<p>,Section
+1.9
+1.I0TABLEOFCONTENTS (Continued)
+2.PageNo.
+TERMINATION PHILOSOPHY ANDDIAGNOSTIC MESSAGES &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 1.9-I
+RESTARTS INNASTRAN &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. I.I0-I
+DATABLOCKANDTABLEDESCRIPTIONS
+2.1INTRODUCTION &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.1-I
+2.2DATABLOCKDESCRIPTIONS -GENERAL COMMENTS ANDINDEXES &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 2.2-I
+2.2.1 IndexforDataBlockDescriptions Sorted onDataBlockNames &hellip;&hellip;. 2.2-3
+2.2.2 IndexforDataBlockDescriptions Sorted Alphabetically byModule ..2.2-11
+2.3DATABLOCKDESCRIPTIONS &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 2.3-I
+2.3.1 DataBlocks Output FromModule IFPI&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-I
+2.3.2 DataBlocks
+2.3.3 DataBlocks
+2.3.4 DataBlocks
+2.3.5 DataBlocks
+2.3.6 DataBlocks
+2.3.7 DataBlocks
+2.3.8 DataBlocks
+2.3.9 DataBlocks
+2.3.10 DataBlocks
+2.3.11 DataBlocks
+2.3.12 DataBlocks
+2.3.13 DataBlocks
+2.3.14 DataBlocks
+2.3.15 DataBlocks
+2.3.16 DataBlocks
+2.3.17 DataBlocks
+2.3.18 DataBlocks
+2.3.19 DataBlocks
+2.3.20 DataBlocks
+2.3.21 DataBlocks
+2.3.22 DataBlocksOutput FromModule IFP&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 2.3-5
+Output FromModule GPI&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 2.3-31
+Output FromModule GP2&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 2.3-36
+Output FromModule PLTSET &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 2.3-37
+Output FromModule PL_T&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-40
+Output FromModule GP3&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 2.3-41
+Out)ut FromModule TAI&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 2.3-45
+Out)ut FromModule SMAI&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-56
+Out)ut FromModule SMA2&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-58
+Out)ut FromModule GPWG&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-59
+Out)ut FromModule SMA3&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-60
+Out)ut FromModule GP4&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 2.3-61
+Out)ut FromModule GPSP&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-63
+Out)ut FromModule MCEI&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-64
+Out)ut FromModule MCE2&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-65
+Out)ut FromModule SCEI&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-67
+Out)ut FromModule SMPI&hellip;&hellip;&hellip;&hellip;. &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 2.3-70
+OutDut FromModule RBMGI &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 2.3-73
+Output FromModule RBMG2 &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 2.3-75
+Output FromModule RBMG3 &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 2.3-77
+Output FromModule RBMG4 &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 2.3-78
+iv(8/I172)</p>
+<p>Section
+2.3.23
+2.3.24
+2.3.25
+2.3.26
+2.3.27
+2.3.28
+2.3.29
+2.3.30
+2.3.31
+2.3.32
+2.3.33
+2.3.34
+2.3.35
+2.3.36
+2.3.37
+2.3.38
+2.3.39
+2.3.40
+2.3.41
+2.3.42
+2.3.43
+2.3.44
+2.3.45
+2.3.46
+2.3.47
+2.3.48
+2.3.49
+2.3.50
+2.3.51
+2.3.52TABLEOFCONTENTS (Continued)
+PageNo.
+DataBlocks Output FromModule SSGI&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-79
+DataBlocks Output FromModule SSG2&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-80
+DataBlocks Output FromModule SSG3&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-81
+DataBlocks Output FromModule SSG4&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-83
+DataBlocks Output FromModule SDRI&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-84
+DataBlocks Output FromModule SDR2&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-88
+DataBlocks Output FromModule DPD&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 2.3-114
+DataBlocks Output FromModule READ&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-125
+DataBlocks Output FromModule DSMGI &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 2.3-128
+DataBlocks Output FromModule SMP2&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-129
+DataBlocks Output FromModule DSMG2 &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 2.3-130
+DataBlocks Output FromModule PLAI&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-132
+DataBlocks Output FromModule ADD&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 2.3-137
+DataBlocks Output FromModule PLA2&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-138
+DataBlocks Output FromModule PLA3&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-139
+DataBlocks Output FromModule PLA4&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-140
+DataBlocks Output FromModule CASE&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-141
+DataBlocks Output FromModule MTRXIN &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 2.3-142
+DataBlocks Output FromModule GKAD&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-143
+DataBlocks Output FromModule CEAD&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-146
+DataBlocks Output FromModule VDR&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 2.3-149
+DataBlocks Output FromModule FRRD&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-158
+DataBlocks Output FromModule SDR3&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-160
+DataBlocks Output FromModule XYTRAN &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 2.3-175
+DataBlocks Output FromModule RANDOM &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 2.3-179
+DataBlocks Output FromModule TRD&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 2.3-181
+DataBlocks Output FromModule GKAM&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-183
+DataBlocks Output FromModule DDRI&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-184
+Element Stress Output DataDescription &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 2.3-185
+Element ForceOutput DataDescription &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 2.3-189
+v(811172)</p>
+<p>Section
+2.4TABLEOFCONTENTS (Continued)
+3.2.3.53 DataBlocks Output FromModule DDR2&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..
+2.3.54 DataBlocks Output FromModule BMG&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;
+2.3.55 DataBlocks Output FromModule PLTTRAN &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..
+EXECUTIVE TABLEDESCRIPTIONS &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..PageNo.
+2.3-192
+2.3-194
+2.3-194
+2.4-I
+2.4.1 Executive Tables WhicharePermanently CoreResident &hellip;&hellip;&hellip;&hellip;&hellip; 2.4-2
+2.4.2 Executive Tables NotPermanently CoreResident &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 2.4-15
+2.5MISCELLANEOUS TABLEDESCRIPTIONS &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 2.5-I
+2.5.1 Miscellaneous Tables WhicharePermanently CoreResident &hellip;&hellip;&hellip;.. 2.5-2
+2.5,2 Miscellaneous Tables NotPermanently CoreResident &hellip;&hellip;&hellip;&hellip;&hellip;.. 2,5-6
+SUBROUTINE DESCRIPTIONS
+3.1INTRODUCTION &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.1-I
+3.2ALPHABETICAL INDEXOFENTRYPOINTS FORSUBROUTINE DESCRIPTIONS &hellip;&hellip;&hellip;&hellip;. 3.2-I
+3.3EXECUTIVE SUBROUTINE DESCRIPTIONS &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.3-I
+3.3.1 XSEMI (Executive Sequence Monitor, Preface) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.3-I
+3.43.3.2
+3.3.3
+3.3.4
+3.3.5
+3.3.6
+3.3.7
+3.3.8
+3.3.9
+3.3.10
+3.3.11
+3.3.12
+3.3.13
+3.3.14
+3.3.15BTSTRP
+SEMINT
+GNFIAT
+ENDSYS(Bootstrap Generator) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.3-2
+(Sequence Monitor Initialization) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.3-3
+(Generate FIAT)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.3-5
+(End-of-Link) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.3-6
+SEARCH (Search, Load,andExecute Link) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.3-8
+XSEMi(LinkiMainProgram, i=2,3&hellip;.)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.3-9
+XSEMXX (Sequence Monitor -DeckGenerator) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.3-11
+GNFIST (Generate FIST) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.3-12
+XEOT(End-of-Tape) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.3-14
+SSWTCH (Sense Switches) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.3-15
+C_NMSG (Console Message Writer) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.3-16
+TTLPGE (Title PageWriter) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.3-17
+SEMTRN (Transliteration) (IBH360-370 only) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.3-19
+RETURN (Return) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.3-20
+3.4-I
+3.4-IUTILITY SUBROUTINE DESCRIPTIONS &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..
+3.4.1 MAPFNS (Machine WordFunctions) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;
+vi(8/I/72)</p>
+<p>Secti on
+3.4.2
+3.4.3
+3.4.4
+3.4.5
+3.4.6
+3.4.7
+3,4.8
+3.4.9
+3.4.10
+3.4.11
+3.4.12
+3.4.13
+3.4.14
+3.4.15
+3.4.16
+3.4.17
+3.4.18
+3.4.19
+3.4.20
+3.4.21
+3.4.22
+3.4.23
+3.4.24
+3.4.25
+3.4.26
+3.4.27
+3.4.28
+3.4.29
+3.4.30
+3.4.31TABLE OFCONTENTS (Continued)
+PageNo.
+_PEN (Initiate Activity onaFile) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-3
+WRITE (Write DatainaLogical Record) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.4-4
+CLOSE (Terminate Activity onaFile) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.4-5
+READ (Read DataFromaLogical Record) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.4-6
+FWDREC (Forward Space OneLogical Record) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.4-8
+BCKREC (Backspace OneLogical Record) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-9
+REWIND (Position FiletotheLoadPoint) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-I0
+EOF(Write anEnd-of-File) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.4-II
+SKPFIL (Skip Files Forward orBackward) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.4-12
+XGINO (GINO Utility Routine) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-13
+GINO (General Input/Output Routine) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.4-15
+OPNCOR (Transmit Logical Records To/From CoreStorage) &hellip;&hellip;&hellip;&hellip;. 3.4-20
+GOPEN (Short FormforSubroutine _PENWithHeader Record
+Processing) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.4-22
+FREAD (Short FormforSubroutine READ) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.4-23
+WRTTRL (Write Trailer) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-24
+FNAME (File Name) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.4-25
+CLSTAB (Close aGINOFileandWrite aNonzero Trailer) &hellip;&hellip;&hellip;&hellip;.. 3.4-26
+XRCARD (Executive Free-Field CardDataConversion Routine) &hellip;&hellip;&hellip;. 3.4-27
+RCARD (Fixed Field CardDataConversion Routine) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.4-32
+TAPBIT (Tape BitTest) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-35
+PEXIT (Problem Exit)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-36
+TMTOGO (Time-To-Go) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-37
+PAGE (Page Heading) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. _&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.4-38
+MESAGE (Message) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-39
+MSGWRT (Message Writer) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.4-40
+USRMSG (User Message Writer) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-41
+MATDUM (Matrix Dump(Print) Routine) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.4-42
+TABPRT (Table Printer) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-43
+PRELOC (Position DataBlock toRequested Record) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.4-44
+SORT (Sort aTable) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-46
+vii(811172)</p>
+<p>Section
+3.4.32
+3.4.33
+3.4.34
+3.4.35
+3.4.36
+3.4.37
+3.4.38
+3.4.39
+3.4.40
+3.4.41
+3.4.42
+3.4.43
+3.4,44
+3.4.45
+3.4.46
+3.4.47
+3.4.48
+3.4.49
+3.4.50
+3.4.51
+3.4.52
+3.4.53
+3.4.54
+3.4.55
+3.4,56
+3.4.57
+3.4.58
+3.4.59
+3.4.60GMMATD
+Precisi
+GMMATS
+Precisi
+INVERD
+INVERS
+PREMAT
+PRETRD
+Double
+PRETRS
+Single
+PRETABTABLEOFCONTENTS (Continued)
+PageNo.
+(General Matrix Multiply andTranspose -Double
+on)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-49
+(General Matrix Multiply andTranspose -Single
+on)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-52
+(Double Precision InCoreInverse Routine) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.4-53
+(Single Precision InCoreInverse Routine) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-54
+(Material Property Utility) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-55
+(Utility forModules WhichUsetheCSTMDataBlock-
+Precision Version) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-64
+(Utility forModules WhichUsetheCSTMDataBlock -
+Precision Version) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-66
+(Table Look-Up) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-67
+AXIS(DrawanAxisonaPlot) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.4-70
+AXISi(AxisRoutine forPlotter i)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-72
+SKPFRM (SkipaVariable Number ofFrames) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.4-73
+SELCAM (ToInitiate aNewPlot) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.4-74
+IDPL_T (Generate an&quot;ID&quot;Plot) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.4-75
+INTGPX (Search aListofIntegers) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-76
+INTLST (Interpret aListofIntegers) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-77
+LINE(DrawaLineonaPlotter) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-78
+LINEi(DrawaLineonPlotter i)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.4-79
+PRINT(Print aTitleonaPlotter) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-81
+RDM_DX (ReadaFileContaining XRCARD Translations) &hellip;&hellip;&hellip;&hellip;&hellip;. 3.4-83
+SGINO (GI_!OforUnformatted Tapes) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-85
+STPL_T (ToInitiate aNewPlotorTerminate theCurrent Plot)&hellip;&hellip;. 3.4-87
+SYMBOL (TypeaSymbol onaPlotter) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.4-88
+TIPE(TypeaLineofCharacters onaPlotter) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.4-90
+TYPEi (TypeaLineofCharacters onPlotter i)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-92
+TYPFLT (TypeaFloating PointNumber onaPlotter) &hellip;&hellip;&hellip;&hellip;&hellip;.. 3.4-94
+TYPINT (TypeanInteger Number onaPlotter) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.4-96
+WPLTI (Write aPlotter Command forPlotter I)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.4-98
+WPLT2 (Write aPlotter Command forPlotters 2and8)&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-100
+WPLT3 (Write aPlotter Command forPlotter 3)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.4-102
+viii(8/I/72)</p>
+<p>SectionTABLE OFCONTENTS (Continued)
+3.4.61
+3.4.62
+3.4.63
+3.4.64
+3.4.65
+3.4.66
+3.4.67
+3.4.68
+3.4.69
+3.4.70
+3.4.71
+3.4.72
+3.4.73
+3.4.74
+3.4.75
+3.4.76
+3.4.77
+3.4.78
+3.4.79PageNo.
+GINOIO (GINO Input/Output Routine) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-I03
+EJECT (Automatic PageEject) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-105
+PLAMAT (Material Property Utility forTwo-Dimensional Elements
+inPiecewise Linear Analysis) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-I06
+WPLT4 (Write aPlotter Command forPlotters 4through 7)&hellip;&hellip;&hellip;.. 3.4-I08
+WPLT9 (Write aPlotter Command forPlotter 9)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.4-II0
+WPLTIO (Write aPlotter Command fortheNASTRAN General Purpose
+Plotter) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.4-III
+PLTSET (Plotting Parameter Initialization) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-I13
+DRWCHR (ToDrawaLineofCharacters) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-I15
+FNDPLT (Determine theInternal Plotter andModel Indices) &hellip;&hellip;&hellip;. 3.4-I17
+PHDMIA (DMIPunch Routine) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.4-I18
+HEAD (Plot Heading) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-120
+DELSET (Dummy Element Setup). &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.4-121
+HMAT (Heat Transfer Material Property Utility) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-122
+(Binary Search) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.4-123 BISRCH
+FORFIL (File Unit) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.4-126
+DADOTB (Double Precision Vector DotProduct) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.4-127
+DAXB(Double Precision Vector Cross Product) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.4-128
+SADOTB (Single Precision Vector DotProduct) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.4-129
+SAXB(Single Precision Vector Cross Product) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.4-130
+3.5 MATRIX SUBROUTINE DESCRIPTIONS &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.5-I
+BLDPK (Build aPacked Column ofaMatrix) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.5-I
+PACK (Pack aColumn ofaMatrix) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.5-5
+INTPK (Interpret aPacked Column ofaMatrix) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.5-7
+UNPACK (Unpack aPacked Column ofaMatrix) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.5-I0
+CALCV
+PARTN
+SSG2A
+SDRIB
+UPART3.5.l
+3.5.2
+3.5.3
+3.5.4
+3.5.5
+3.5.6
+3.5.7
+3.5.8
+3.5.9(Compute aPartitioning Vector) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.5-12
+-MERGE (Partition aMatrix -Merge Matrices Together) &hellip;&hellip;.. 3.5-13
+(Driver forPARTN) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.5-16
+(Driver forMERGE) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.5-17
+(Symmetric Partition Driver) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.5-18
+ix(811172)
+L</p>
+<p>TABLEOFCONTENTS (Continued)
+Section
+4.PageNo.
+3.5.10 ADD(Driver forSADD) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.5-19
+3.5.11 SSG2C(Driver forADD)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.5-20
+3.5.12 MPYAD(Matrix Multiplication Routine) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.5-22
+3.5.13 SSG2B(Driver forMPYAD) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.5-29
+3.5.14 SDCOMP (Symmetric Decomposition) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.5-30
+3.5.15 DECOMP (Unsymmetric Matrix Decomposition) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.5-44
+3.5.16 CDCBMP (Complex Matrix Decomposition) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.5-62
+3.5.17 FBS(Forward -Backward Substitution) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.5-64
+3.5.18 SSG3A (Driver forFBS)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.5-66
+3.5.19 GFBS(General Forward -Backward Substitution) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.5-67
+3.5.20 SOLVER (Simultaneous Equation Solution Routine) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 3.5-69
+3.5.21 DMPY(Multiply aDiagonal Matrix byanArbitrary Matrix) &hellip;&hellip;&hellip;.. 3.5-71
+3.5.22 ELIM(Perform aMatrix Reduction) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.5-73
+3.5.23 FACTOR (Decompose aMatrix IntoTriangular Factors) &hellip;&hellip;&hellip;&hellip;&hellip;. 3.5-74
+3.5.24 TRANPI (Driver forTRNSP) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 3.5-75
+3.5.25 TRNSP (Matrix Transpose) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.5-76
+3.5.26 SADD(Matrix Addition Routine) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.5-78
+3.5.27 RSPSDC (RealSingle Precision Symmetric Decomposition) &hellip;&hellip;&hellip;&hellip;. 3.5-80
+3.5.28 CSPSDC (Complex Single Precision Symmetric Decomposition) &hellip;&hellip;&hellip;. 3.5-82
+3.5.29 CXFBS (Forward -Backward Substitution) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 3.5-84
+MODULE FUNCTIONAL DESCRIPTIONS
+4.1GENERAL COMMENTS ANDINDEXES &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.1-I
+4.1.1 UseofModule Functional Descriptions &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.1-2
+4.1.2 Alphabetical IndexofModule Functional Descriptions &hellip;&hellip;&hellip;&hellip;.. 4.1-7
+4.1.3 Alphabetical IndexofEntryPoints inModule Functional
+Descriptions &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.1-8
+4.2EXECUTIVE PREFACE MODULE XCSA(EXECUTIVE CONTROL SECTION ANALYSIS) &hellip;&hellip;&hellip; 4.2-I
+4.3 EXECUTIVE PREFACE MODULE IFPI(INPUT FILEPROCESSOR, PARTI)&hellip;&hellip;&hellip;&hellip;&hellip; 4.3-I
+4.4EXECUTIVE PREFACE MODULE XSORT(EXECUTIVE BULKDATACARDSORT) &hellip;&hellip;&hellip;&hellip;. 4.4-I
+4.5EXECUTIVE PREFACE MODULE IFP(INPUT FILEPROCESSOR) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.5-I
+x(811172)</p>
+<p>Section
+4.6
+4.7
+4.8
+4.9
+4.10
+4.11
+4.12
+4.13
+4.14
+4.15
+4.16
+4.17
+4.18
+4.19
+4.20
+4.21
+4.22
+4.23
+4.24
+4.25
+4.26
+4.27
+4.28
+4.29
+4.30
+4.31
+4.32
+4.33
+4.34
+4.35TABLE OFCONTENTS (Continued)
+PageNo.
+EXECUTIVE PREFACE MODULE IFP3(II4PUT FILEPROCESSOR 3)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.6-I
+EXECUTIVE PREFACE MODULE XGPI(EXECUTIVE GENERAL PROBLEM INITIALIZATION &hellip;.. 4.7-I
+EXECUTIVE PREFACE MODULE UMFEDIT (USER MASTER FILEEDITOR) &hellip;&hellip;&hellip;&hellip;&hellip;.. 4.8-I
+EXECUTIVE MODULE XSFA (EXECUTIVE SEGMENT FILEALLOCATOR) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.9-I
+EXECUTIVE DMAPMODULE CHKPNT (CHECKPOINT) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.10-1
+EXECUTIVE DMAPINSTRUCTION REPT (REPEAT AGROUP OFDMAP INSTRUCTIONS) &hellip;&hellip;. 4.11-1
+EXECUTIVE DMAPINSTRUCTION JUMP (UNCONDITIONAL DMAPTRANSFER) &hellip;&hellip;&hellip;&hellip;.. 4.12-I
+EXECUTIVE DMAPINSTRUCTION C_ND (CONDITIONAL TRANSFER) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.13-I
+EXECUTIVE DMAPINSTRUCTION EXIT (TERMINATE DMAPPROGRAM) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.14-I
+EXECUTIVE DMAPMODULE SAVE (SAVE VARIABLE PARAMETER VALUES) &hellip;&hellip;&hellip;&hellip;&hellip;. 4.15-I
+EXECUTIVE DMAPMODULE PURGE (EXPLICIT DATABLOCK PURGE) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.16-I
+EXECUTIVE DMAPMODULE EQUIV (DATA BLOCK NAMEEQUIVALENCE) &hellip;&hellip;&hellip;&hellip;&hellip;.. 4.17-I
+EXECUTIVE DMAPINSTRUCTION END(ENDOFDMAPPROGRAM) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.18-I
+EXECUTIVE DMAPMODULE PARAM (PARAMETER PROCESSOR) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.19-I
+EXECUTIVE DMAPMODULE-SETVAL (SETVALUES) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.20-I
+FUNCTIONAL MODULE GPI(GEOMETRY PROCESSOR -PHASE l)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.21-I
+FUNCTIONAL MODULE GP2(GEOMETRY PROCESSOR -PHASE 2)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.22-I
+FUNCTIONAL MODULE PLTSET (PLOT SETDEFINITION PROCESSOR) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.23-I
+FUNCTIONAL MODULE PLBT (STRUCTURAL PLOTTER) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.24-I
+FUNCTIONAL MODULE GP3(GEOMETRY PROCESSOR -PHASE 3)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.25-I
+FUNCTIONAL MODULE TAI(TABLE ASSEMBLER) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.26-I
+FUNCTIONAL MODULE SMAI (STRUCTURAL MATRIX ASSEMBLER -PHASE l)&hellip;&hellip;&hellip;&hellip;. 4.27-I
+FUNCTIONAL MODULE SMA2 (STRUCTURAL MATRIX ASSEMBLER -PHASE 2)&hellip;&hellip;&hellip;&hellip;. 4.28-I
+FUNCTIONAL MODULE GPWG (GRID POINT WEIGHT GENERATOR) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.29-I
+FUNCTIONAL MODULE SMA3 (STRUCTURAL MATRIX ASSEMBLER -PHASE 3)&hellip;&hellip;&hellip;&hellip;.. 4.30-I
+FUNCTIONAL MODULE GP4(GEOMETRY PROCESSOR -PHASE 4)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.31-I
+FUNCTIONAL MODULE GPSP (GRID POINT SINGULARITY PROCESSOR) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.32-I
+FUNCTIONAL MODULE MCEI (MULTIPOINT CONSTRAINT ELIMINATOR -PHASE l)&hellip;&hellip;.. 4.33-I
+FUNCTIONAL MODULE MCE2 (MULTIPOINT CONSTRAINT ELIMINATOR -PHASE 2)&hellip;&hellip;.. 4.34-I
+FUNCTIONAL MODULE SCEI (SINGLE-POINT CONSTRAINT ELIMINATOR) &hellip;&hellip;&hellip;&hellip;&hellip;. 4.35-I
+xi(811172)</p>
+<p>Section
+4.36
+4.37
+4.38
+4.39
+4.40
+4.41
+4.42
+4.43
+4.44
+4.45
+4.46
+4.47
+4.48
+4.49
+4.50
+4.51
+4.52
+4.53
+4.54
+4.55
+4.56
+4.57
+4.58
+4.59
+4.60
+4,61
+4.62
+4.63
+4.64TABLEOFCONTENTS (Continued)
+P_Pa_geNo.
+FUNCTIONAL MODULE SMPI(STRUCTURAL MATRIX PARTITIONER -PHASEI)&hellip;&hellip;&hellip;. 4.36-I
+FUNCTIONAL MODULE RBMGI (RIGID BODYMATRIX GENERATOR -PHASEI)&hellip;&hellip;&hellip;.. 4.37-I
+FUNCTIONAL MODULE RBMG2(RIGID BODYMATRIX GENERATOR -PHASE2)&hellip;&hellip;&hellip;.. 4.38-I
+FUNCTIONAL MODULE RBMG3(RIGID BODYMATRIX GENERATOR -PHASE3)&hellip;&hellip;&hellip;.. 4.39-I
+FUNCTIONAL MODULE RBMG4(RIGID BODYMATRIX GENERATOR -PHASE4)&hellip;&hellip;&hellip;.. 4.40-I
+FUNCTIONAL MODULE SSGI(STATIC SOLUTION GENERATOR -PHASEI)&hellip;&hellip;&hellip;&hellip;.. 4.41-I
+FUNCTIONAL MODULE SSG2(STATIC SOLUTION GENERATOR -PHASE2)&hellip;&hellip;&hellip;&hellip;.. 4.42-I
+FUNCTIONAL MODULE SSG3(STATIC SOLUTION GENERATOR -PHASE3)&hellip;&hellip;&hellip;&hellip;.. 4.43-I
+FUNCTIONAL MODULE SSG4(STATIC SOLUTION GENERATOR -PHASE4)&hellip;&hellip;&hellip;&hellip;.. 4.44-I
+FUNCTIONAL MODULE SDRI(STRESS DATARECOVERY -PHASEI)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.45-I
+FUNCTIONAL MODULE SDR2(STRESS DATARECOVERY -PHASE2)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.46-I
+FUNCTIONAL MODULE DPD(DYNAMICS POOLDISTRIBUTOR) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.47-I
+FUNCTIONAL MO[ULE READ(REALEIGENVALUE ANALYSIS -DISPLACEMENT) &hellip;&hellip;&hellip;. 4.48-I
+FUNCTIONAL MODULE DSMGI(DIFFERENTIAL STIFFNESS MATRIX GENERATOR -
+PHASEI)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.49-I
+FUNCTIONAL MODULE SMP2(STRUCTURAL MATRIX PARTITIONER -PHASE2)&hellip;&hellip;&hellip;. 4.50-I
+FUNCTIONAL MODULE DSMG2(DIFFERENTIAL STIFFNESS MATRIX GENERATOR -
+PHASE2)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.51-I
+FUNCTIONAL MODULE PLAI(PIECEWISE LINEAR ANALYSIS -PHASEI)&hellip;&hellip;&hellip;&hellip;.. 4.52-I
+FUNCTIONAL MODULE PLA2(PIECEWISE LINEAR ANALYSIS -PHASE2)&hellip;&hellip;&hellip;&hellip;.. 4.53-I
+FUNCTIONAL MODULE PLA3(PIECEWISE LINEAR ANALYSIS -PHASE3)&hellip;&hellip;&hellip;&hellip;.. 4.54-I
+FUNCTIONAL MODULE PLA4(PIECEW!SE LINEAR ANALYSIS -PHASE4)&hellip;&hellip;&hellip;&hellip;.. 4.55-I
+FUNCTIONAL MODULE CASE(SIMPLIFY CASECONTROL) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.56-I
+FUNCTIONAL MODULE MTRXIN (MATRIX INPUT) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.57-I
+FUNCTIONAL MODULE GKAD(GENERAL KASSEMBLER DIRECT) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.58-I
+FUNCTIONAL MODULE CEAD(COMPLEX EIGENVALUE ANALYSIS -DISPLACEMENT) &hellip;&hellip;.. 4.59-I
+FUNCTIONAL MODULE VDR(VECTOR DATARECOVERY) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.60-I
+FUNCTIONAL MODULE FRRD(FREQUENCY RESPONSE -DISPLACEMENT APPROACH) &hellip;&hellip;.. 4.61-I
+FUNCTIONAL MODULE SDR3(STRESS DATARECOVERY -PHASE3-S@RTIto
+S_RT2PROCESSOR) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.62-I
+FUNCTIONAL MODULE XYTRAN (XY-OUTPUT DATATRANSLATOR) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.63-I
+FUNCTIONAL MODULE RANDOM (RANDOM ANALYSIS MODULE) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.64-I
+xii(8/I/72)</p>
+<p>TABLEOFCONTENTS(Continued)
+Section
+4.65
+4.66
+4.67
+4.68
+4.69
+4.70
+4.71
+4.72
+4.73
+4.74
+4.75
+4.76
+4.77
+4.78
+4.79
+4.80
+4.81
+4.82
+4.83
+4.84
+4.85
+4.86
+4.87Page No.
+FUNCTIONAL MODULE TRD(TRANSIENT ANALYSIS -DISPLACEMENT) &hellip;&hellip;&hellip;&hellip;&hellip;.. 4.65-I
+FUNCTIONAL MODULE GKAM (GENERAL KASSEMBLER ,MODAL) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.66-I
+FUNCTIONAL MODULE DDRI (DYNAMIC DATA RECOVERY -PART l)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.67-I
+FUNCTIONAL MODULE DDR2 (DYNAMIC DATA RECOVERY -PART 2)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.68-I
+OUTPUT MODULE XYPLOT (X-Y DATA PLOTTER) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.69-I
+OUTPUT MODULE BFP(OUTPUT FILE PROCESSOR) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.70-I
+OUTPUT MODULE MATPRN (GENERAL MATRIX PRINTER) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.71-I
+OUTPUT MODULE MATGPR (DISPLACEMENT METHOD MATRIX PRI_ITER) &hellip;&hellip;&hellip;&hellip;&hellip;.. 4.72-I
+OUTPUT MODULE MATPRT (MATRIX PRINTER) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.73-I
+OUTPUT MODULE SEEMAT (PICTORIAL MATRIX PRINTER) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.74-I
+OUTPUT MODULE TABPT (TABLE PRINTER) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.75-I
+OUTPUT MODULE PRTMSG (MESSAGE WRITER) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.76-I
+OUTPUT MODULE PRTPARM (PARAMETER ANDDMAPMESSAGE PRINTER) &hellip;&hellip;&hellip;&hellip;&hellip;. 4.77-I
+MATRIX MODULE ADD(ADDTWOMATRICES) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.78-I
+.MATRIX MODULE MPYAD(MULTIPLY ADD)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.79-I
+MATRIX MODULE S_LVE (SOLVES THEMATRIX EQUATION [A][X] =[B])&hellip;&hellip;&hellip;&hellip;.. 4.80-I
+MATRIX MODULE DECAMP (MATRIX DECOMPOSITION) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.81-I
+MATRIX MODULE FBS(FORWARD -BACKWARD SUBSTITUTION) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.82-I
+MATRIX MODULE PARTN(PARTITION AMATRIX) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.83-I
+MATRIX MODULE MERGE(MERGE MATRICES TOGETHER) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.84-I
+MATRIX MODULE TRNSP (TRANSPOSE AMATRIX) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.85-I
+MATRIX MODULE SMPYAD (STRI?IG MULTIPLY ADD)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.86-I
+STRUCTURAL ELEMENT DESCRIPTIONS &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.87-I
+4.87.1 TheR_D,C_IRBD, andTUBEElements &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-7
+4.87.1.1 InputDatafortheR_D,TUBE,CBNR_D Elements &hellip;&hellip;&hellip; 4.87-7
+4.87.1.2 Stiffness Matrix Calculation (Subroutine KR_D
+andKTUBEofModule SMAI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-8
+4.87.1.3 Lumped MassMatrix Calculation (Subroutine MR_D
+andMTUBEofModule SMA2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-9
+4.87.1.4 Element LoadCalculations (Subroutine EDTLof
+Module SSGI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.87-10
+4.87.1.5 Element Stress Calculations (Subroutines SR_DI
+andSR_D2ofModule SDR2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-10
+xiii (8/I/72)</p>
+<p>Section
+4.87.2
+4.87.3TABLEOFCONTENTS (Continued)
+PageNo.
+4.87.1.6 Differential Stiffness Matrix Calculation (Subroutine
+DRODofModule DSMGI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-12
+4.87.1.7 Piecewise Linear Analysis Calculations (Subroutine
+PSRODofModule PLA3andSubroutine PKRODofModule
+PLA4) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-14
+4.87.1.8 Coupled MassMatrix Calculation (Subroutine MCRODof
+Module SMA2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.87-16a
+4.87.1.9 Thermal Analysis Calculations fortheRODElements
+(Subroutine KRODofModule SMAI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-16b
+TheBARElement &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-17
+4.87.2.1 InputDatafortheBARElement &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-17
+4.87.2.2 Stiffness Matrix Calculation (Subroutine KBARof
+Module SMAI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.87-18
+4.87.2.3 Lumped MassMatrix Calculation (Subroutine MBARof
+Module SMA2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.87-25
+4.87.2.4 Element LoadCalculation (Subroutine BARofModule
+SSGI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-26
+4.87.2.5 Element Stress Calculations (Subroutines SBARIand
+SBAR2ofModule SDR2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.87-27
+4.87.2.6 Differential Stiffness Matrix Calculation (Subroutine
+DBEAMofModule DSMGI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-29
+4.87.2.7 Piecewise Linear Analysis Calculations (Subroutine
+PSBARofModule PLA3andSubroutine PKBARofModule
+PLA4&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-32
+4.87.2.8 &ldquo;Consistent&rdquo; MassMatrix Calculation (Subroutine
+MCBARofModule SMA2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.87-36
+4.87.2.9 Thermal Analysis Calculations fortheBARElement
+(Subroutine KBARofModule SMAI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-37
+TheSHEAR PanelandTWIST PanelElements &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-38
+InputDataforSHEARandTWISTPanels &hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-38
+Definition ofElement Geometry &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.87-39
+Coefficient Generation &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-41
+Stiffness Matrix Formulation foraSHEARPanel
+(Subroutine KPANEL ofModule SMAI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-46
+TWIST Element Stiffness Matrix Generation (Subroutine
+KPANEL ofModule SMAI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-47
+MassMatrix Generation (Subroutine MASSTQ ofModule
+SMA2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-484.87.3.1
+4.87.3.2
+4.87.3.3
+4.87.3.4
+4.87.3.5
+4.87.3.6
+xiv(8/I/72)</p>
+<p>Section
+4.87.4
+4.87.5TABLE OFCONTENTS (Continued)
+PageNo.
+4.87.3.7 SHEAR Element Stress andForce Calculations
+(Subroutine SPANLI andSPANL2 ofModule SDR2) &hellip;&hellip;&hellip;. 4.87-50
+4.87.3.8 TWIST Element Stress andForce Calculations
+(Subroutines SPANLI andSPANL2 ofModule SDR2) &hellip;&hellip;&hellip; 4.87-52&rsquo;
+4.87.3.9 SHEAR Panel Differential Stiffness Calculations
+(Subroutine DSHEAR ofModule DSMGI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-54
+TRMEM andQDMEM Elements &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-58
+4.87.4.1 Input DatafortheTRMEM andQDMEM Elements &hellip;&hellip;&hellip;.. 4.87-58
+4.87.4.2 Basic Equations forTRMEM &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-59
+4.87.4.3 Stiffness Matrix Calculation forTRMEM (Subroutine
+KTRMEM ofModule SMAI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-61
+4.87.4.4 Mass Matrix Calculation fortheTRMEM Element
+(Subroutine MASSTQ ofModule SMA2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-62
+4.87.4.5 Element LoadCalculations fortheTRMEM Element
+(Subroutine TRIMEM ofModule SSGI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-63
+4.87.4.6 Element Stress Calculations fortheTRMEM Element
+(Subroutines STRMEI andSTQME2 ofModule SDR2) &hellip;&hellip;.. 4.87-63
+4.87.4.7 Differential Stiffness Matrix Calculations forthe
+TRMEM Element (Subroutine DTRMEM ofModule DSMGI) &hellip;&hellip; 4.87-67
+4.87.4.8 General Calculations fortheQDMEM bytheQDMEM
+Driver Routines (Subroutines KQDMEM ofModule SMAI,
+SQDMEI ofModule SDR2, DQDMEM ofModule DSMGI) &hellip;&hellip;&hellip; 4.87-67
+4.87.4.9 Stiffness Matrix Calculations fortheQDMEM &hellip;&hellip;&hellip;. 4.87-70
+4.87.4.10 Element Stress Calculations fortheQDMEM (Subroutine
+SQDMEI andSTQME2 ofModule SDR2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.87-70
+4.87.4.11 MassMatrix Generation fortheQDMEM Element
+(Subroutine MASSTQ ofModule SMA2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-74
+4.87.4.12 Thermal LoadComputation fortheQDMEM &hellip;&hellip;&hellip;&hellip;&hellip; 4.87-76
+4.87.4.13 Differential Stiffness Computations fortheQDMEM
+(Subroutines DQDMEM andDTRMEM ofModule DSMGI) &hellip;&hellip;. 4.87-76
+4.87.4.14 Piece_ise Linear Analysis Calculations (Subroutines
+PSTRM andPSQDM ofModule PLA3andSubroutines
+PKTRM andPKQDM ofModule PLA4) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.87-76a
+4.87.4.15 Thermal Analysis Calculations fortheMembrane
+Elements (Subroutine KTRMEM andKQDMEM ofModule
+SMAI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-76d
+TheTRBSC, TRPLT andQDPLT Elements &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.87-78
+4.87.5.1 Input DatafortheTRBSC andTRPLT Elements &hellip;&hellip;&hellip;.. 4.87-78
+4.87.5.2 General Calculation fortheTRBSC Element &hellip;&hellip;&hellip;&hellip; 4.87-79
+xv(811172)</p>
+<p>TABLEOFCONTENTS (Continued)
+Section
+4.87.64.87.5.3
+4.87.5.8
+4.87.5.9
+4.87.5.10
+4.87.5.11
+4.87.5.12
+4.87.5.13
+4.87.5.14
+TheTRIAl,
+4.87.6.1
+4.87.6.2
+4.87.6.3
+4.87.6.4
+4.87.6.5
+4.87.6.6
+4.87.6.7Pa_a_eNo.
+Stiffness Matrix Calculations fortheTRBSCElement
+(Subroutine KTRBSC ofModule SMAI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-84
+Stress Calculations fortheTRBSCElement &hellip;&hellip;&hellip;&hellip;. 4.87-85
+Stiffness Matrix Calculations fortheTRPLTElement
+(Subroutine KTRPLT ofModule SMAI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-87
+Structural Damping Matrices fortheTRPLTElement &hellip;.. 4.87-95
+Stress andElement ForceCalculations fortheTRPLT
+Element (Subroutines STRPLI andSBSPL2 ofModule
+SDR2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-95
+Stiffness Matrix Calculations fortheQDPLTElement
+(Subroutine KQDPLT ofModule SMAI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-97
+Stress andElement ForceCalculations fortheQDPLT
+Element (Subroutines SQDPLI andSBSPL2 ofModule
+SDR2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-102
+Lumped MassMatrix Generation fortheTRBSC, TRPLT,
+andQDPLTElements (Subroutine MASSTQ ofModule SMA2).. 4.87-104
+Coupled MassMatrix Calculations fortheTRBSCElement
+(Subroutine MTRBSC ofModule SMA2)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.87-I04a
+MassMatrix Calculations fortheTRPLT Element
+(Subroutine MTRPLT ofModule SMA2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-I04g
+MassMatrix Calculations fortheQDPLTElement
+(Subroutine MQDPLT ofModule SMA2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-I04j
+Thermal LoadEquations fortheBending Element
+(Subroutine TRBSC, TRPLT andQDPLTofModule SSGI) &hellip;.4.87-I04n
+TRIA2, QUADIandQUAD2Elements &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-106
+InputDatafortheTRIAl, TRIA2, QUADIandQUAD2
+Elements &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-106
+Stiffness Matrix Calculations (Subroutine KTRIQD
+ofModule SMAI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.87-107
+Lumped MassMatrix Generation (Subroutine MASSTQ
+ofModule SMA2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.87-108
+Thermal LoadCalculations (Subroutine EDTLofModule
+SSGI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-108
+Element Stress andForceCalculations (Subroutines
+STRQDI andSTRQD2 ofModule SDR2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.87-108
+Differential Stiffness Matrix Calculations
+(Subroutine MTRIQD ofModule SMA2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-I09
+Piecewise Linear Analysis Calculations (Subroutines
+PSTRII, PSTRI2, PSQADI, andPSQAD2 ofModule PLA3,
+andPKTRII, PKTRI2, PKQADI andPKQAD2 ofModule
+PLA4) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-I09a
+xvi(811/72)</p>
+<p>Secti on
+4.87.7
+4.87.8
+4.87.94.87.6.8
+4.87.6.9TABLE OFCONTENTS (Continued)
+PageNo.
+Differential Stiffness Matrix Calculations forthe
+TRIAl andTRIA2 Elements (Subroutine DTRIA of
+Module DSMGI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-I09d
+Differential Stiffness Matrix Calculations forthe
+QUADI andQUAD2 Elements (Subroutine DQUAD of
+Module DSMGI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-I09g
+4.87.6.10 Differential Stiffness Matrix Calculations forthe
+Basic Bending Triangle (Subroutine DTRBSC of
+Module DSMGI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-I09j
+4.87.6.11 Thermal Calculations fortheCombination Elements
+(Subroutine KTRIQD ofModule SMAI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-I09p
+TheELASi, MASSi andDAMPi Elements &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-II0
+4.87.7.1 Input Data fortheELASi, MASSi andDAMPi Elements &hellip;. 4.87-II0
+4.87.7.2 ELASi Stiffness Matrix Generation (Subroutine KELAS
+ofModule SMAI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-II0
+4.87.7.3 MASSi Mass Matrix Generation (Subroutine MASSD of
+Module SMA2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-III
+4.87.7.4 DAMPi Damping Matrix Generation (Subroutine MASSD
+ofModule SMA2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-III
+4.87.7.5 ELASi Stress andForce Recovery (Subroutines SELASI
+andSELAS2 ofModule SDR2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.87-III
+Concentrated MassElements C_NMI, C_NM2 &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-113
+4.87.8.1 ECPTEntries fortheC_NMIMassElement &hellip;&hellip;&hellip;&hellip;.. 4.87-113
+4.87.8.2 MassMatrix Calculations fortheCONMIElement
+(Subroutine MC_NMX ofModule SMA2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-113
+4.87.8.3 ECPTEntries fortheCOHM2MassElement &hellip;&hellip;&hellip;&hellip;.. 4.87-114
+4.87.8.4 MassMatrix Calculations fortheCONM2Element
+(Subroutine MCBNMX ofModule STY2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.87-114
+TheCONEAX Element &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-117
+4.87.9.1 InputDatafortheCONEAX Element &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-117
+4.87.9.2 Stiffness Matrix Calculations (Subroutine KCONEof
+Module SMAI)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-117
+4.87.9.3 MassMatrix Computation (Subroutine MCONEofModule
+SMA2)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.87-118
+4.87.9.4 Element LoadCalculations (Subroutine CONEofModule
+SSGI)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-118
+4.87.9.5 Element Stress Calculations (Subroutines SCONE1,
+SCONE2, SC@NE3 ofModule SDR2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-123
+4.87.9.6 Differential Stiffness Matrix Calculations (Subroutine
+DCONEofModule DSMGI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-127a
+xvii (8/I/72)</p>
+<p>Section
+4.87.10
+4.87.11
+4.87.12TABLEOFCONTENTS (Continued)
+No.
+TheTRIARG Element &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-128
+4.87.10.1 InputDatafortheTRIARG Element &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-128
+4.87.10.2 General Geometric Calculations &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4,87-129
+4.87.10.3 Integral Calculations &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-130
+4.87.10.4 Elastic Constants Matrix Calculations &hellip;&hellip;&hellip;&hellip;&hellip; 4.87-132
+4.87.10.5 Stiffness Matrix Generation (Subroutine KTRIRG of
+Module SMAI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-133
+4.87.10.6 MassMatrix Calculations (Subroutine MTRIRG of
+Module SMA2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4,87-135
+4.87.10.7 Thermal LoadCalculations (Subroutine TTRIRG of
+Module SSGI)&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.87-136
+4.87.10.8 Element ForceandStress Calculations (Subroutines
+STRIRI andSTRIR2 ofModule SDR2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-136
+4.87.10.9 Thermal Analysis Calculations fortheTRIARG and
+TRAPRG Elements (Subroutine HRINGofModule SMAI)&hellip;.. 4.87-138a
+TheTRAPRG Element &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-139
+4.87.11.1 InputDatafortheTRAPRG Element &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-139
+4.87.11.2 General Calculations &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.87-140
+4,87.11.3 Integral Calculations &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-142
+4.87.11.4 Elastic Constants Matrix Calculation &hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-144
+4.87.11.5 Stiffness Matrix Generation (Subroutine KTRAPR of
+Module SMAI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-144
+4.87.11.6 MassMatrix Calculation (Subroutine MTRAPR of
+Module SMA2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-146
+4.87.11.7 Thermal LoadCalculations (Subroutine TTRAPR of
+Module SSGI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-147
+4.87.11,8 Element ForceandStress Calculations (Subroutines
+STRAP1 andSTRAP2 ofModule SDR2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-148
+4.87.11.9 Thermal Analysis Calculations fortheTRAPRG Element
+(Subroutine HRINGofModule SMAI) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-151
+TheT_RDRG Element &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-152
+4.87.12.1
+4,87.12,2
+4.87.12.3
+4.87.12.4InputDatafortheT@RDRG Element &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-152
+General Calculations &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip; 4.87-153
+Integral Calculations &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4,87-156
+Elastic Constants Matrix Calculations &hellip;&hellip;&hellip;&hellip;&hellip;. 4.87-160
+xviii (8/I/72)</p>
+
+        </div>
+        <div class="hx-mt-16"></div>
+        
+        
+      </main>
+    </article>
+  </div>
+
+      <footer class="hextra-footer hx-bg-gray-100 hx-pb-[env(safe-area-inset-bottom)] dark:hx-bg-neutral-900 print:hx-bg-transparent"><div
+    class="hx-max-w-screen-xl hx-mx-auto hx-flex hx-justify-center hx-py-12 hx-pl-[max(env(safe-area-inset-left),1.5rem)] hx-pr-[max(env(safe-area-inset-right),1.5rem)] hx-text-gray-600 dark:hx-text-gray-400 md:hx-justify-start"
+  >
+    <div class="hx-flex hx-w-full hx-flex-col hx-items-center sm:hx-items-start"><div class="hx-font-semibold"><a class="hx-flex hx-text-sm hx-items-center hx-gap-1 hx-text-current" target="_blank" rel="noopener noreferrer" title="Hextra GitHub Homepage" href="https://github.com/imfing/hextra">
+    <span>Powered by Hextra<svg height=1em class="hx-inline-block ltr:hx-ml-1 rtl:hx-mr-1 hx-align-[-2.5px]" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="m 105.50024,22.224647 c -9.59169,-5.537563 -21.40871,-5.537563 -31.000093,0 L 39.054693,42.689119 C 29.463353,48.226675 23.55484,58.460531 23.55484,69.535642 v 40.928918 c 0,11.07542 5.908513,21.3092 15.499853,26.84652 l 35.445453,20.46446 c 9.591313,5.53732 21.408404,5.53732 31.000094,0 l 35.44507,-20.46446 c 9.59131,-5.53732 15.49985,-15.7711 15.49985,-26.84652 V 69.535642 c 0,-11.075111 -5.90854,-21.308967 -15.49985,-26.846523 z M 34.112797,85.737639 c -1.384445,2.397827 -1.384445,5.352099 0,7.749927 l 24.781554,42.922974 c 1.38437,2.39783 3.942853,3.87496 6.711592,3.87496 h 49.563107 c 2.76905,0 5.3273,-1.47713 6.71144,-3.87496 l 24.78194,-42.922974 c 1.38414,-2.397828 1.38414,-5.3521 0,-7.749927 L 121.88049,42.814746 c -1.38414,-2.397828 -3.94239,-3.874964 -6.71144,-3.874964 H 65.605944 c -2.768739,0 -5.327223,1.477059 -6.711592,3.874964 z" style="stroke-width:0.774993" /></svg></span>
+  </a></div>
+    </div>
+  </div>
+</footer>
+    
+    <script defer src="/js/main.js" integrity=""></script>
+
+
+<script defer src="/lib/flexsearch/flexsearch.bundle.min.0425860527cc9968f9f049421c7a56b39327d475e2e3a8f550416be3a9134327.js" integrity="sha256-BCWGBSfMmWj58ElCHHpWs5Mn1HXi46j1UEFr46kTQyc="></script>
+    <script defer src="/en.search.js" integrity=""></script>
+
+
+  </body>
+</html>
