@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DOC REPO – Documentation</title>
-    <link>https://zeyany2.github.io.github.io/docs/</link>
+    <link>http://localhost:1313/docs/</link>
     <description>Recent content in Documentation on DOC REPO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="https://zeyany2.github.io.github.io/docs/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:1313/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,21 +16,21 @@
     
     <item>
       <title>A Summary</title>
-      <link>https://zeyany2.github.io.github.io/docs/summary/</link>
+      <link>http://localhost:1313/docs/summary/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/summary/</guid>
+      <guid>http://localhost:1313/docs/summary/</guid>
       <description>
         
         
         &lt;p&gt;This documents of Nastran 95 include:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://zeyany2.github.io.github.io/pdfs/NASTRAN_Programmers_Manual.pdf&#34; &gt;NASTRAN Programmers Manual&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://zeyany2.github.io.github.io/pdfs/NASTRAN_Users_Manual_2.pdf&#34; &gt;NASTRAN Users Manual 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/pdfs/NASTRAN_Programmers_Manual.pdf&#34; &gt;NASTRAN Programmers Manual&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/pdfs/NASTRAN_Users_Manual_2.pdf&#34; &gt;NASTRAN Users Manual 2&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The Python scripts to convert the manuals into markdown files can be found in the following zip file:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://zeyany2.github.io.github.io/zips/pdfs_processing_scripts.zip&#34; &gt;pdfs_processing_scripts.zip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/zips/pdfs_processing_scripts.zip&#34; &gt;pdfs_processing_scripts.zip&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -38,10 +38,10 @@
     
     <item>
       <title>Programmer&#39;s Manual P1</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_001/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_001/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_001/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_001/</guid>
       <description>
         
         
@@ -977,10 +977,10 @@ xviii (8/I/72)&lt;/p&gt;
     
     <item>
       <title>Programmer&#39;s Manual P10</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_010/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_010/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_010/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_010/</guid>
       <description>
         
         
@@ -1730,10 +1730,10 @@ Words I-6contain nosignificant values.
     
     <item>
       <title>Programmer&#39;s Manual P100</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_100/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_100/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_100/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_100/</guid>
       <description>
         
         
@@ -2208,10 +2208,10 @@ Figure 34(g). Flowchart forcontrol statement processing.
     
     <item>
       <title>Programmer&#39;s Manual P101</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_101/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_101/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_101/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_101/</guid>
       <description>
         
         
@@ -2643,10 +2643,10 @@ Figure 36(d). Flowchart forLKED050.
     
     <item>
       <title>Programmer&#39;s Manual P102</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_102/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_102/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_102/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_102/</guid>
       <description>
         
         
@@ -3225,10 +3225,10 @@ Figure 41(a). Flowchart forsubroutine L_ADER. ofthesegment loader.
     
     <item>
       <title>Programmer&#39;s Manual P103</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_103/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_103/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_103/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_103/</guid>
       <description>
         
         
@@ -3891,10 +3891,10 @@ Lanquaqe: C_MPASS
     
     <item>
       <title>Programmer&#39;s Manual P104</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_104/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_104/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_104/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_104/</guid>
       <description>
         
         
@@ -4681,10 +4681,10 @@ CALLZAP
     
     <item>
       <title>Programmer&#39;s Manual P105</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_105/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_105/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_105/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_105/</guid>
       <description>
         
         
@@ -5640,10 +5640,10 @@ _J
     
     <item>
       <title>Programmer&#39;s Manual P106</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_106/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_106/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_106/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_106/</guid>
       <description>
         
         
@@ -6498,10 +6498,10 @@ doesnothing morethanremove theargument listsfromtheENTRYstatements.
     
     <item>
       <title>Programmer&#39;s Manual P107</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_107/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_107/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_107/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_107/</guid>
       <description>
         
         
@@ -7059,10 +7059,10 @@ Figure lO(a). Flowchart forDRIVES.
     
     <item>
       <title>Programmer&#39;s Manual P108</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_108/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_108/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_108/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_108/</guid>
       <description>
         
         
@@ -7199,10 +7199,10 @@ Figure 12(d). Flowchart for NSRETN.&lt;/p&gt;
     
     <item>
       <title>Programmer&#39;s Manual P11</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_011/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_011/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_011/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_011/</guid>
       <description>
         
         
@@ -8142,10 +8142,10 @@ Trailer issameasthatforUGVwithword1=O,andword6=O,(seesection 2.3.27.1).
     
     <item>
       <title>Programmer&#39;s Manual P12</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_012/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_012/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_012/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_012/</guid>
       <description>
         
         
@@ -8937,10 +8937,10 @@ Words 2-6=zero.Anelement&amp;rsquo;s ESTdataresides in
     
     <item>
       <title>Programmer&#39;s Manual P13</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_013/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_013/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_013/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_013/</guid>
       <description>
         
         
@@ -9689,10 +9689,10 @@ printandpunch
     
     <item>
       <title>Programmer&#39;s Manual P14</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_014/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_014/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_014/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_014/</guid>
       <description>
         
         
@@ -10708,10 +10708,10 @@ TableTrailer
     
     <item>
       <title>Programmer&#39;s Manual P15</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_015/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_015/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_015/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_015/</guid>
       <description>
         
         
@@ -11922,10 +11922,10 @@ Imag.
     
     <item>
       <title>Programmer&#39;s Manual P16</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_016/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_016/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_016/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_016/</guid>
       <description>
         
         
@@ -12827,10 +12827,10 @@ intheMPL(2.4.2.2) table.
     
     <item>
       <title>Programmer&#39;s Manual P17</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_017/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_017/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_017/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_017/</guid>
       <description>
         
         
@@ -13783,10 +13783,10 @@ No
     
     <item>
       <title>Programmer&#39;s Manual P18</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_018/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_018/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_018/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_018/</guid>
       <description>
         
         
@@ -14817,10 +14817,10 @@ This table isusedbytheDRWCHR subroutine.
     
     <item>
       <title>Programmer&#39;s Manual P19</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_019/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_019/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_019/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_019/</guid>
       <description>
         
         
@@ -15733,10 +15733,10 @@ Thejobisthenterminated.
     
     <item>
       <title>Programmer&#39;s Manual P2</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_002/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_002/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_002/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_002/</guid>
       <description>
         
         
@@ -19300,10 +19300,10 @@ l.l-I&lt;/p&gt;
     
     <item>
       <title>Programmer&#39;s Manual P20</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_020/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_020/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_020/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_020/</guid>
       <description>
         
         
@@ -19818,10 +19818,10 @@ process thecall.
     
     <item>
       <title>Programmer&#39;s Manual P21</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_021/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_021/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_021/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_021/</guid>
       <description>
         
         
@@ -20370,10 +20370,10 @@ BBBB889888B88888
     
     <item>
       <title>Programmer&#39;s Manual P22</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_022/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_022/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_022/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_022/</guid>
       <description>
         
         
@@ -20881,10 +20881,10 @@ A(5) =3.0
     
     <item>
       <title>Programmer&#39;s Manual P23</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_023/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_023/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_023/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_023/</guid>
       <description>
         
         
@@ -21488,10 +21488,10 @@ polynomial evaluation&amp;ndash;if thetabletypeis4.
     
     <item>
       <title>Programmer&#39;s Manual P24</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_024/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_024/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_024/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_024/</guid>
       <description>
         
         
@@ -21874,10 +21874,10 @@ intoM_DE.
     
     <item>
       <title>Programmer&#39;s Manual P25</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_025/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_025/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_025/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_025/</guid>
       <description>
         
         
@@ -22358,10 +22358,10 @@ Subroutine used: SWRITE.
     
     <item>
       <title>Programmer&#39;s Manual P26</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_026/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_026/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_026/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_026/</guid>
       <description>
         
         
@@ -22842,10 +22842,10 @@ Messages 3002,3008, 2157,3062and2156maybeissued.
     
     <item>
       <title>Programmer&#39;s Manual P27</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_027/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_027/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_027/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_027/</guid>
       <description>
         
         
@@ -23272,10 +23272,10 @@ System messages ifUSETorFILEParenotcorrect GIN_files.
     
     <item>
       <title>Programmer&#39;s Manual P28</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_028/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_028/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_028/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_028/</guid>
       <description>
         
         
@@ -23785,10 +23785,10 @@ Figures 6,7,and8show howstorage isallocated tovarious operations.
     
     <item>
       <title>Programmer&#39;s Manual P29</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_029/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_029/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_029/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_029/</guid>
       <description>
         
         
@@ -24337,10 +24337,10 @@ Figure 4.(c) DECAMP program flow
     
     <item>
       <title>Programmer&#39;s Manual P3</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_003/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_003/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_003/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_003/</guid>
       <description>
         
         
@@ -24876,10 +24876,10 @@ c)Logically add(_RF)words AandB;store intoX
     
     <item>
       <title>Programmer&#39;s Manual P30</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_030/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_030/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_030/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_030/</guid>
       <description>
         
         
@@ -25452,10 +25452,10 @@ Thefollowing system fatalmessage maybeissued byS_LVER:
     
     <item>
       <title>Programmer&#39;s Manual P31</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_031/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_031/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_031/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_031/</guid>
       <description>
         
         
@@ -25980,10 +25980,10 @@ INTPK, UNPACK). Descriptions forthese routines arefound insection 3.
     
     <item>
       <title>Programmer&#39;s Manual P32</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_032/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_032/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_032/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_032/</guid>
       <description>
         
         
@@ -27284,10 +27284,10 @@ named comon block /XMDMSK/.
     
     <item>
       <title>Programmer&#39;s Manual P33</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_033/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_033/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_033/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_033/</guid>
       <description>
         
         
@@ -28116,10 +28116,10 @@ IfNLINE _lO0apageeject is
     
     <item>
       <title>Programmer&#39;s Manual P34</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_034/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_034/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_034/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_034/</guid>
       <description>
         
         
@@ -29246,10 +29246,10 @@ U8SET I0GEBM4 088370810 8$53500 0IJHK
     
     <item>
       <title>Programmer&#39;s Manual P35</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_035/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_035/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_035/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_035/</guid>
       <description>
         
         
@@ -30462,10 +30462,10 @@ i=lto3
     
     <item>
       <title>Programmer&#39;s Manual P36</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_036/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_036/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_036/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_036/</guid>
       <description>
         
         
@@ -31001,10 +31001,10 @@ values foritemsEntry
     
     <item>
       <title>Programmer&#39;s Manual P37</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_037/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_037/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_037/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_037/</guid>
       <description>
         
         
@@ -31504,10 +31504,10 @@ SAVE mustaccess blank common andnamed common blocks /XVPS/and/_SCENT/.
     
     <item>
       <title>Programmer&#39;s Manual P38</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_038/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_038/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_038/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_038/</guid>
       <description>
         
         
@@ -32037,10 +32037,10 @@ Insystem Mthevectors defining theaxesofsystem Nare
     
     <item>
       <title>Programmer&#39;s Manual P39</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_039/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_039/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_039/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_039/</guid>
       <description>
         
         
@@ -32597,10 +32597,10 @@ CgMM_N/PLTDAT/ -SeethePLTDAT miscellaneous table description(section 2.5).
     
     <item>
       <title>Programmer&#39;s Manual P4</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_004/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_004/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_004/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_004/</guid>
       <description>
         
         
@@ -33128,10 +33128,10 @@ simply requires there-execution ofanoutput module suchastheStructure Plotter, th
     
     <item>
       <title>Programmer&#39;s Manual P40</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_040/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_040/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_040/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_040/</guid>
       <description>
         
         
@@ -33782,10 +33782,10 @@ I&lt;/p&gt;
     
     <item>
       <title>Programmer&#39;s Manual P41</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_041/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_041/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_041/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_041/</guid>
       <description>
         
         
@@ -34387,10 +34387,10 @@ NOGENL Input-integer-no default value, i_OGENL isthenumber ofgeneral
     
     <item>
       <title>Programmer&#39;s Manual P42</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_042/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_042/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_042/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_042/</guid>
       <description>
         
         
@@ -35048,10 +35048,10 @@ I.Entry Point: KFLUD4
     
     <item>
       <title>Programmer&#39;s Manual P43</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_043/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_043/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_043/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_043/</guid>
       <description>
         
         
@@ -35720,10 +35720,10 @@ Seethediagnostic message section intheMFDforSMAI (section 4.27.10).
     
     <item>
       <title>Programmer&#39;s Manual P44</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_044/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_044/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_044/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_044/</guid>
       <description>
         
         
@@ -36346,10 +36346,10 @@ Foreachset,alistofalldegrees offreedom belonging tothesetisgiven.
     
     <item>
       <title>Programmer&#39;s Manual P45</title>
-      <link>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_045/</link>
+      <link>http://localhost:1313/docs/programmers/programmers_manual_045/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_045/</guid>
+      <guid>http://localhost:1313/docs/programmers/programmers_manual_045/</guid>
       <description>
         
         

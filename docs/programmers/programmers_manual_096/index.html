@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="noindex, nofollow" />
   <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
@@ -15,7 +15,7 @@
   <meta name="description" content="INTRODUCTION 7.1INTRODUCTION Insection 3ofthismanual, wedescribed NASTRAN subroutines notanintegral partofa module. These subroutines werepartitioned intothree classes: Executive, matrix, andutility. AnExecutive subroutine isonewhich isclearly partoftheNASTRAN Executive System, i.e., no functional module usesit;amatrix subroutine isonewhich isclearly dedicated toNASTRAN matrix (data block) operations; allother subroutines aretermed utility subroutines. There exists another class ofsubroutines, better still, programs thatwhile notactually partofNASTRAN perse,areallimportant forthesmooth functioning ofNASTRAN. Theprograms inthis class arecalled support programs. NASTRAN together with itsassociated support programs comprise theNASTRAN System ofComputer Programs. Clearly themost important ofthesupport programs istheCDC6400/6600 Linkage Editor. development ofthisLinkage Editor wasnecessary toinsure thatthere bejustoneversion of NASTRAN. Thepolicy decision thatthere bejustoneversion ofNASTRAN wasderived fromthe criterion thatNASTRAN beaday-to-day production tool. This criterion imediately implies a oneversion, maintainable program. Section 5.6ofthismanual describes theusage ofthe Linkage Editor; section 7.2describes theprogramming details oftheLinkage Editor.The During theearly stages ofNASTRAN development, thedesign teamchose asubset ofFORTRAN IV tobethe&#34;language&#34; oftheoverwhelming majority ofNASTRAN code(less thanI%oftheNASTRAN System isinassembly language). Section 6.2describes thissubset. However, theFORTRAN RUN compiler atLangley Research Center andother CDC6600 series compilers havetwomajor differences inFORTRAN language specifications fromthe&#34;NASTRAN FORTRAN language.&#34; First, NASTRAN FORTRAN allows arguments ontheENTRY statement; CDCFORTRAN doesnot. Additionally, nonstandard returns inNASTRAN FORTRAN havedifferent formats fromthat inCDCFORTRAN. Table lillustrates this major difference. Toovercome these language differences, theSource Conversion Program (SCP) wasdeveloped. TheSCPaccepts aUNIVAC ll08NASTRAN source tapeandgenerates aCDC6600 NASTRAN source tape which, after compilation andlinkediting, produces anexecutable NASTRAN system tapethat is equivalent toitsUNIVAC ll08(andIBMS/360) counterpart(s). Section 7.3describes theSCP. 7.1-I (3/I/71)" />
 
   
-    <link rel="canonical" href="https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_096/" itemprop="url" />
+    <link rel="canonical" href="http://localhost:1313/docs/programmers/programmers_manual_096/" itemprop="url" />
   
 
   
@@ -52,7 +52,7 @@ which, after compilation andlinkediting, produces anexecutable NASTRAN system ta
 equivalent toitsUNIVAC ll08(andIBMS/360) counterpart(s). Section 7.3describes theSCP.
 7.1-I (3/I/71)" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_096/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="http://localhost:1313/docs/programmers/programmers_manual_096/" /><meta property="article:section" content="docs" />
 
 
 
@@ -64,12 +64,11 @@ equivalent toitsUNIVAC ll08(andIBMS/360) counterpart(s). Section 7.3describes th
   <meta name="twitter:title" content="Programmer&#39;s Manual P96">
   <meta name="twitter:description" content="INTRODUCTION 7.1INTRODUCTION Insection 3ofthismanual, wedescribed NASTRAN subroutines notanintegral partofa module. These subroutines werepartitioned intothree classes: Executive, matrix, andutility. AnExecutive subroutine isonewhich isclearly partoftheNASTRAN Executive System, i.e., no functional module usesit;amatrix subroutine isonewhich isclearly dedicated toNASTRAN matrix (data block) operations; allother subroutines aretermed utility subroutines. There exists another class ofsubroutines, better still, programs thatwhile notactually partofNASTRAN perse,areallimportant forthesmooth functioning ofNASTRAN. Theprograms inthis class arecalled support programs. NASTRAN together with itsassociated support programs comprise theNASTRAN System ofComputer Programs. Clearly themost important ofthesupport programs istheCDC6400/6600 Linkage Editor. development ofthisLinkage Editor wasnecessary toinsure thatthere bejustoneversion of NASTRAN. Thepolicy decision thatthere bejustoneversion ofNASTRAN wasderived fromthe criterion thatNASTRAN beaday-to-day production tool. This criterion imediately implies a oneversion, maintainable program. Section 5.6ofthismanual describes theusage ofthe Linkage Editor; section 7.2describes theprogramming details oftheLinkage Editor.The During theearly stages ofNASTRAN development, thedesign teamchose asubset ofFORTRAN IV tobethe&#34;language&#34; oftheoverwhelming majority ofNASTRAN code(less thanI%oftheNASTRAN System isinassembly language). Section 6.2describes thissubset. However, theFORTRAN RUN compiler atLangley Research Center andother CDC6600 series compilers havetwomajor differences inFORTRAN language specifications fromthe&#34;NASTRAN FORTRAN language.&#34; First, NASTRAN FORTRAN allows arguments ontheENTRY statement; CDCFORTRAN doesnot. Additionally, nonstandard returns inNASTRAN FORTRAN havedifferent formats fromthat inCDCFORTRAN. Table lillustrates this major difference. Toovercome these language differences, theSource Conversion Program (SCP) wasdeveloped. TheSCPaccepts aUNIVAC ll08NASTRAN source tapeandgenerates aCDC6600 NASTRAN source tape which, after compilation andlinkediting, produces anexecutable NASTRAN system tapethat is equivalent toitsUNIVAC ll08(andIBMS/360) counterpart(s). Section 7.3describes theSCP. 7.1-I (3/I/71)">
 
-    <link rel="preload" href="/css/compiled/main.min.23a12191daf50c320fcb5ce50e8c895a47f37ce361f66be7c771e19f254b32b2.css" as="style" integrity="sha256-I6Ehkdr1DDIPy1zlDoyJWkfzfONh9mvnx3HhnyVLMrI=" />
-    <link href="/css/compiled/main.min.23a12191daf50c320fcb5ce50e8c895a47f37ce361f66be7c771e19f254b32b2.css" rel="stylesheet" integrity="sha256-I6Ehkdr1DDIPy1zlDoyJWkfzfONh9mvnx3HhnyVLMrI=" />
+    <link href="/css/compiled/main.css" rel="stylesheet" />
 
 
 
-  <link href="/css/custom.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" rel="stylesheet" integrity="sha256-47DEQpj8HBSa&#43;/TImW&#43;5JCeuQeRkm5NMpJWZG3hSuFU=" />
+  <link href="/css/custom.css" rel="stylesheet" />
 
 
 
@@ -2985,11 +2984,11 @@ always havetherange l&lt;P&lt;LASTENT, where LASTENT, apointer, points tothelast
   </div>
 </footer>
     
-    <script defer src="/js/main.min.50a0d894de45456461df15a40fda1d0185bbc2595f2abd5b149a74387527f0d9.js" integrity="sha256-UKDYlN5FRWRh3xWkD9odAYW7wllfKr1bFJp0OHUn8Nk="></script>
+    <script defer src="/js/main.js" integrity=""></script>
 
 
 <script defer src="/lib/flexsearch/flexsearch.bundle.min.0425860527cc9968f9f049421c7a56b39327d475e2e3a8f550416be3a9134327.js" integrity="sha256-BCWGBSfMmWj58ElCHHpWs5Mn1HXi46j1UEFr46kTQyc="></script>
-    <script defer src="/en.search.min.af48afc03adde8983ff621cfde8f8d4deff4f8d2ee47b3d5b2442835a8d92cf2.js" integrity="sha256-r0ivwDrd6Jg/9iHP3o&#43;NTe/0&#43;NLuR7PVskQoNajZLPI="></script>
+    <script defer src="/en.search.js" integrity=""></script>
 
 
   </body>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="noindex, nofollow" />
   <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
@@ -15,7 +15,7 @@
   <meta name="description" content="NASTRANONTHEIBMSYSTEM360-370OPERATINGSYSTEM(S) 5.3.6.2 Installation ofNASTRANPhysicalItems Partitioned datasetstoberestoredbyIEHM_VEshouldbepre-allocated onthepack.Todo this,usethefollowingJCL(NSTNLM_Disusedhereasanexample): //ALBCAT EXEC //XXX DD // /*PGM=IEFBRI4 UNIT=2314,VBL=SER=xxxxxx,DISP=(NEW,KEEP),DSN=NSTMLMBD, SPACE=(TRK,(IO28,,3)),DCB=(DS_RG=P,RECFN=U,BLKSIZE=7294) Thefollowing JCLmaybeusedtorecreate thepartitioned datasetsunloaded byIEHMBVE. ThisJCLcanbeusedfordatasetsDEM_DATA, NSTNLM_D, BBJ,S_UI,S_U2,S_U3,SUBSYS, andUTILMBDS. WhenusingthisJCLforSBUIand_BJitwillbenecessary toincrease theinitial spaceallocation to80tracks ontheUNIDDcardandaddaPARM=‘POWER=2’ option totheIEHMBVE EXECcard. //ALL EXEC //UNI DD //MBV EXEC //SYSPRINT DD //SYSUTI DD //DDI DD //TAPE1 DD // // //SYSIN DD C_PY /JCI_FORIFIIMI_VE PGM=IEFBRI4 UNIT=2314,DISP=(NEW,DELETE),SPACE=(TRK,(40)),,CBNTIG) PGM=IEHMBVE SYS_UT=A UNIT-2314,V_L=REF=.ALL.UNI,DISP=_LD UNIT=2314,VBL=SER=xxxxxx,DSN=NSTNLM_D,DISP=(_LD,PASS) UNIT=2400,V_L=SER=zzzzzz,DISP=LD,LABEL=(,BLP), DCB:(RECFM=FB,LRECL=80,BLKSIZE=8OO,DEN=2), DSN:NSTNLM_D PDS=NSTNLM_D,FR_M=2400=zzzzzz,T=2314=xxxxxx,FRBMDD=TAPEI Thefollowing JCLmaybeusedtorestore theLevel 15archive packwhichincludes allofthe ninedatasetspreviously described fromtheIEHDASDR packdumptapes. JCLFORIEHDASDR //RE313 EXEC PGM=IEHDASDR //SYSPRINT DD SYS_UT=A //TAPE DD UNIT=2400,V_L:SER=(bbbbbb,cccccc),DISP=_LD, // DSN=DO0313,LABEL=(,BLP),DCB=DEN=2 //DISK DD UNIT-2314,VBL:SER=aaaaaa,DISP=LD //SYSIN DD * RESTBRE FR_MDD=TAPE,T_DD=DISK,CPYV_LID=N /* After preparation ofthearchive pack,either byprocessing theninedatasetsindividually orbyprocessing themthrough IEHDASDR asapackdump,theNASTRAN program maybeexecuted by theinstream procedure provided. Careshould betakentoinsure thattheinstream procedure provided doesnotconflict withanyrequirements placed ontheuserbyhisparticular installation. 5.3-15 (811172)" />
 
   
-    <link rel="canonical" href="https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_079/" itemprop="url" />
+    <link rel="canonical" href="http://localhost:1313/docs/programmers/programmers_manual_079/" itemprop="url" />
   
 
   
@@ -74,7 +74,7 @@ theinstream procedure provided. Careshould betakentoinsure thattheinstream proce
 provided doesnotconflict withanyrequirements placed ontheuserbyhisparticular installation.
 5.3-15 (811172)" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_079/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="http://localhost:1313/docs/programmers/programmers_manual_079/" /><meta property="article:section" content="docs" />
 
 
 
@@ -86,12 +86,11 @@ provided doesnotconflict withanyrequirements placed ontheuserbyhisparticular ins
   <meta name="twitter:title" content="Programmer&#39;s Manual P79">
   <meta name="twitter:description" content="NASTRANONTHEIBMSYSTEM360-370OPERATINGSYSTEM(S) 5.3.6.2 Installation ofNASTRANPhysicalItems Partitioned datasetstoberestoredbyIEHM_VEshouldbepre-allocated onthepack.Todo this,usethefollowingJCL(NSTNLM_Disusedhereasanexample): //ALBCAT EXEC //XXX DD // /*PGM=IEFBRI4 UNIT=2314,VBL=SER=xxxxxx,DISP=(NEW,KEEP),DSN=NSTMLMBD, SPACE=(TRK,(IO28,,3)),DCB=(DS_RG=P,RECFN=U,BLKSIZE=7294) Thefollowing JCLmaybeusedtorecreate thepartitioned datasetsunloaded byIEHMBVE. ThisJCLcanbeusedfordatasetsDEM_DATA, NSTNLM_D, BBJ,S_UI,S_U2,S_U3,SUBSYS, andUTILMBDS. WhenusingthisJCLforSBUIand_BJitwillbenecessary toincrease theinitial spaceallocation to80tracks ontheUNIDDcardandaddaPARM=‘POWER=2’ option totheIEHMBVE EXECcard. //ALL EXEC //UNI DD //MBV EXEC //SYSPRINT DD //SYSUTI DD //DDI DD //TAPE1 DD // // //SYSIN DD C_PY /JCI_FORIFIIMI_VE PGM=IEFBRI4 UNIT=2314,DISP=(NEW,DELETE),SPACE=(TRK,(40)),,CBNTIG) PGM=IEHMBVE SYS_UT=A UNIT-2314,V_L=REF=.ALL.UNI,DISP=_LD UNIT=2314,VBL=SER=xxxxxx,DSN=NSTNLM_D,DISP=(_LD,PASS) UNIT=2400,V_L=SER=zzzzzz,DISP=LD,LABEL=(,BLP), DCB:(RECFM=FB,LRECL=80,BLKSIZE=8OO,DEN=2), DSN:NSTNLM_D PDS=NSTNLM_D,FR_M=2400=zzzzzz,T=2314=xxxxxx,FRBMDD=TAPEI Thefollowing JCLmaybeusedtorestore theLevel 15archive packwhichincludes allofthe ninedatasetspreviously described fromtheIEHDASDR packdumptapes. JCLFORIEHDASDR //RE313 EXEC PGM=IEHDASDR //SYSPRINT DD SYS_UT=A //TAPE DD UNIT=2400,V_L:SER=(bbbbbb,cccccc),DISP=_LD, // DSN=DO0313,LABEL=(,BLP),DCB=DEN=2 //DISK DD UNIT-2314,VBL:SER=aaaaaa,DISP=LD //SYSIN DD * RESTBRE FR_MDD=TAPE,T_DD=DISK,CPYV_LID=N /* After preparation ofthearchive pack,either byprocessing theninedatasetsindividually orbyprocessing themthrough IEHDASDR asapackdump,theNASTRAN program maybeexecuted by theinstream procedure provided. Careshould betakentoinsure thattheinstream procedure provided doesnotconflict withanyrequirements placed ontheuserbyhisparticular installation. 5.3-15 (811172)">
 
-    <link rel="preload" href="/css/compiled/main.min.23a12191daf50c320fcb5ce50e8c895a47f37ce361f66be7c771e19f254b32b2.css" as="style" integrity="sha256-I6Ehkdr1DDIPy1zlDoyJWkfzfONh9mvnx3HhnyVLMrI=" />
-    <link href="/css/compiled/main.min.23a12191daf50c320fcb5ce50e8c895a47f37ce361f66be7c771e19f254b32b2.css" rel="stylesheet" integrity="sha256-I6Ehkdr1DDIPy1zlDoyJWkfzfONh9mvnx3HhnyVLMrI=" />
+    <link href="/css/compiled/main.css" rel="stylesheet" />
 
 
 
-  <link href="/css/custom.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" rel="stylesheet" integrity="sha256-47DEQpj8HBSa&#43;/TImW&#43;5JCeuQeRkm5NMpJWZG3hSuFU=" />
+  <link href="/css/custom.css" rel="stylesheet" />
 
 
 
@@ -2912,11 +2911,11 @@ Figure 4.Overlay Structure forLinkOlontheIBM360-370.
   </div>
 </footer>
     
-    <script defer src="/js/main.min.50a0d894de45456461df15a40fda1d0185bbc2595f2abd5b149a74387527f0d9.js" integrity="sha256-UKDYlN5FRWRh3xWkD9odAYW7wllfKr1bFJp0OHUn8Nk="></script>
+    <script defer src="/js/main.js" integrity=""></script>
 
 
 <script defer src="/lib/flexsearch/flexsearch.bundle.min.0425860527cc9968f9f049421c7a56b39327d475e2e3a8f550416be3a9134327.js" integrity="sha256-BCWGBSfMmWj58ElCHHpWs5Mn1HXi46j1UEFr46kTQyc="></script>
-    <script defer src="/en.search.min.af48afc03adde8983ff621cfde8f8d4deff4f8d2ee47b3d5b2442835a8d92cf2.js" integrity="sha256-r0ivwDrd6Jg/9iHP3o&#43;NTe/0&#43;NLuR7PVskQoNajZLPI="></script>
+    <script defer src="/en.search.js" integrity=""></script>
 
 
   </body>

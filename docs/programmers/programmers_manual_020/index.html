@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="noindex, nofollow" />
   <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
@@ -16,7 +16,7 @@
 SUBROUTINE DESCRIPTIONS 3.3.9 GNFIST (Generate FIST) 3.3.9.1 EntryPoint: GNFIST. 3.3.9.2 Purpose Tosetuptheproper linkage between datablocks andthefilestheyreside oninpreparation forexecuting thefunctional module requiring thedatablocks. 3.3.9.3 Calling Sequence CALLGNFIST(DDN,FISTNM,M_DN_) DBN -Datablock name(TwowordBCDarray-8characters total) FISTNM -Datablock identification (GIN_filenumber) usedbyfunctional module (integer). M_DN_ SCARrecord number offunctional module tobeexecuted (integer). M_DN indicates tothecalling routine whataction wastakenbyGNFIST. M_DNO&gt;O,datablockassigned afileoritwaspurged. M_DN_=O,fatalerrordetected. M_DN_-O,datablocknotassigned afile,GNFIST called Executive Segment FileAllocator (XSFA) 3.3.9.4 Method Ifthedatablockispurged, GNFIST returns tothecalling routine withMODNO&gt;O.A datablockispurged ifitisaninputwhich hasnotbeengenerated oritsstatus ispurged or DBN=O. Ifaninputdatablockresides ontheDataPoolFileandneedstobeunpooled, GNFIST calls thefileallocator (XSFA) tounpoGl allinputs tothemodule which reside ontheDataPoolFile thatneedtobeunpooled. GI_FIST thenreturns tothecalling routine withM_DN_&lt;O.Theother condition underwhichXSFAiscalled isifafilehasnotbeenallocated toanon-purged output datablockorscratch datablockneeded bythemodule. Afileisallocated toadatablockwhenthedatablock nameappears intheFIATtable, located innamedcommon block/XFIAT/, asunpurged. Input, output andscratch datablocks which havebeenassigned toafileandarerequired bythefunctional module, havetheirFISTNM’s entered 3.3-12" />
 
   
-    <link rel="canonical" href="https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_020/" itemprop="url" />
+    <link rel="canonical" href="http://localhost:1313/docs/programmers/programmers_manual_020/" itemprop="url" />
   
 
   
@@ -61,7 +61,7 @@ located innamedcommon block/XFIAT/, asunpurged. Input, output andscratch datablo
 havebeenassigned toafileandarerequired bythefunctional module, havetheirFISTNM&rsquo;s entered
 3.3-12" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_020/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="http://localhost:1313/docs/programmers/programmers_manual_020/" /><meta property="article:section" content="docs" />
 
 
 
@@ -75,12 +75,11 @@ SUBROUTINE DESCRIPTIONS 3.3.9 GNFIST (Generate FIST) 3.3.9.1 EntryPoint: GNFIST.
   <meta name="twitter:description" content="EXECUTIVESUBROUTINE DESCRIPTIONS 3.3.8 XSEIIXX (Sequence Monitor -Deck Generator). 3.3.8.1 Entry Point: XSEMXX. 3.3.8.2 Purpose Toprovide amodel from which allother XSEMi (i=link number) subroutines except XSEMI canbemade. Seesection 6.11, which discusses howtogenerate alink driver subroutine. 3.3-II
 SUBROUTINE DESCRIPTIONS 3.3.9 GNFIST (Generate FIST) 3.3.9.1 EntryPoint: GNFIST. 3.3.9.2 Purpose Tosetuptheproper linkage between datablocks andthefilestheyreside oninpreparation forexecuting thefunctional module requiring thedatablocks. 3.3.9.3 Calling Sequence CALLGNFIST(DDN,FISTNM,M_DN_) DBN -Datablock name(TwowordBCDarray-8characters total) FISTNM -Datablock identification (GIN_filenumber) usedbyfunctional module (integer). M_DN_ SCARrecord number offunctional module tobeexecuted (integer). M_DN indicates tothecalling routine whataction wastakenbyGNFIST. M_DNO&gt;O,datablockassigned afileoritwaspurged. M_DN_=O,fatalerrordetected. M_DN_-O,datablocknotassigned afile,GNFIST called Executive Segment FileAllocator (XSFA) 3.3.9.4 Method Ifthedatablockispurged, GNFIST returns tothecalling routine withMODNO&gt;O.A datablockispurged ifitisaninputwhich hasnotbeengenerated oritsstatus ispurged or DBN=O. Ifaninputdatablockresides ontheDataPoolFileandneedstobeunpooled, GNFIST calls thefileallocator (XSFA) tounpoGl allinputs tothemodule which reside ontheDataPoolFile thatneedtobeunpooled. GI_FIST thenreturns tothecalling routine withM_DN_&lt;O.Theother condition underwhichXSFAiscalled isifafilehasnotbeenallocated toanon-purged output datablockorscratch datablockneeded bythemodule. Afileisallocated toadatablockwhenthedatablock nameappears intheFIATtable, located innamedcommon block/XFIAT/, asunpurged. Input, output andscratch datablocks which havebeenassigned toafileandarerequired bythefunctional module, havetheirFISTNM’s entered 3.3-12">
 
-    <link rel="preload" href="/css/compiled/main.min.23a12191daf50c320fcb5ce50e8c895a47f37ce361f66be7c771e19f254b32b2.css" as="style" integrity="sha256-I6Ehkdr1DDIPy1zlDoyJWkfzfONh9mvnx3HhnyVLMrI=" />
-    <link href="/css/compiled/main.min.23a12191daf50c320fcb5ce50e8c895a47f37ce361f66be7c771e19f254b32b2.css" rel="stylesheet" integrity="sha256-I6Ehkdr1DDIPy1zlDoyJWkfzfONh9mvnx3HhnyVLMrI=" />
+    <link href="/css/compiled/main.css" rel="stylesheet" />
 
 
 
-  <link href="/css/custom.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" rel="stylesheet" integrity="sha256-47DEQpj8HBSa&#43;/TImW&#43;5JCeuQeRkm5NMpJWZG3hSuFU=" />
+  <link href="/css/custom.css" rel="stylesheet" />
 
 
 
@@ -2898,11 +2897,11 @@ process thecall.
   </div>
 </footer>
     
-    <script defer src="/js/main.min.50a0d894de45456461df15a40fda1d0185bbc2595f2abd5b149a74387527f0d9.js" integrity="sha256-UKDYlN5FRWRh3xWkD9odAYW7wllfKr1bFJp0OHUn8Nk="></script>
+    <script defer src="/js/main.js" integrity=""></script>
 
 
 <script defer src="/lib/flexsearch/flexsearch.bundle.min.0425860527cc9968f9f049421c7a56b39327d475e2e3a8f550416be3a9134327.js" integrity="sha256-BCWGBSfMmWj58ElCHHpWs5Mn1HXi46j1UEFr46kTQyc="></script>
-    <script defer src="/en.search.min.af48afc03adde8983ff621cfde8f8d4deff4f8d2ee47b3d5b2442835a8d92cf2.js" integrity="sha256-r0ivwDrd6Jg/9iHP3o&#43;NTe/0&#43;NLuR7PVskQoNajZLPI="></script>
+    <script defer src="/en.search.js" integrity=""></script>
 
 
   </body>

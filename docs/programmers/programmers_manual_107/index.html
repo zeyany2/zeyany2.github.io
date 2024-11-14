@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="noindex, nofollow" />
   <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
@@ -16,7 +16,7 @@
 NASTRAN SUPPORT PROGRAMS 7.3.3 Major Divisions intheProgram Thefollowing discussion isintended fortheusebytheprogramming analyst responsible for theuseandmaintenance oftheSCP. Refer tothesymbolic FORTRAN code, which isheavily com- mented, inaddition tothis discussion andtheflowcharts given insection 7.3.5. 7.3.3.1 TheMain Driving Routine CONVSOU Themain driving routine CONVSOU isasingle subprogram that controls theconversion of FORTRAN subprograms itfinds ontheinput file. Itdoes thefollowing: I.Reads afull subprogram into core. 2.Calls MULTEN, themultiple-entry processor, which will convert thedeck formultiple entries. 3.Calls REORDR, thedelcarative statement reordering processor, which will rearrange into correct order anydeclaratives within thesubprogram. REORDR iscalled only if thesubprogram hasmultiple entries. 4.Calls NSRETN, thenonstandard return processor, which will complete theconversion bytranslating allnonstandard return statements within thesubprogram. 5.Outputs theconverted deck viaroutine DKOUT. 6.Repeats steps lthrough 5until nomore subprograms remain ontheinput file. Themain driving routine contains blank COMMON which isloaded below (i.e., atahigher core location than) allobject code oftheSCP. Itisthus used asopen core. Within themain driving routine andthethree processors, asubprogram being converted always lies inthis open core from Z(IDK) toZ(NDK), where Z=Open core array IDK=Relative location inZwhere thesubprogram begins. NDK=Relative location where thesubprogram ends. 7.3-8 (311171)" />
 
   
-    <link rel="canonical" href="https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_107/" itemprop="url" />
+    <link rel="canonical" href="http://localhost:1313/docs/programmers/programmers_manual_107/" itemprop="url" />
   
 
   
@@ -79,7 +79,7 @@ IDK=Relative location inZwhere thesubprogram begins.
 NDK=Relative location where thesubprogram ends.
 7.3-8 (311171)" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_107/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="http://localhost:1313/docs/programmers/programmers_manual_107/" /><meta property="article:section" content="docs" />
 
 
 
@@ -93,12 +93,11 @@ NASTRAN SUPPORT PROGRAMS 7.3.3 Major Divisions intheProgram Thefollowing discuss
   <meta name="twitter:description" content="THESOURCECONVERSION PROGRAM(SCP) 2.Iftheaboveconditionisnotmet,thentheSCPgenerates&#34;drivers&#34;asshownin Figures2,3,and4. 3.Toinsurethatacoreassignment foranargumentismaintained forfuturecallstoa subroutine withmultipleentries,allcallstothatsubroutine aretrappedthroughsmall subroutines called&#34;drivers.&#34; TheSCPgeneratesadriverforeachentrypointina multiple-entry subroutine. Thedriversubroutine nameisthesameastheentryit represents. Itsargumentlististhesameastheoriginal,e.g.,seetheentries inFiguresl,2,3,and4. 4.Thedriver’sfunctionistopreservethecoreassignments ofitsargumentsandto thencalltheentryoriginally intendedwithalistofallpossibleargumentcore assignments. 5.Theargumentlistoftheconverteddeckiscomprisedoftheset-theoretic union ofallargumentnamesforallentries(seeFigurel,linesO001and0028,andFigure5, lineSUBIl). 6.Thedriversdonotpreservetheactualcorelocations, butinsteadpreserve,in labeledCOMMON,indexesrelativetoafixedlocationincore(/SYSTEM/–see section 2.4.I.8). SeeforexamplelinesSUB35,SUB36,andSUB37inFigure4. 7.Theentrypointnamesoftheoriginalsubroutine arefilledtosevencharacters each,using&#34;Z’s.“Seven-character namesareingeneraluniquesincesixisthe maximumnumberofcharacters permittedfornamesinNASTRANFORTRAN.TheSCPdoes notconsiderthepossibility ofamultiple-entry subroutine havingtwoentrynames (suchasSUBZandSUBZZ)which,whenfilledwithZstosevencharacters, wouldproduce identicalentrynames.Inthiscase,thecodeproducedbytheSCPwillnotcompile, anditisuptotheprogrammer usingtheSCPtosolvetheproblem. 8.AtexecutiontimethedriverswillproducecorrectresultsonlywhenCALLsaremade inasequencethatwouldbevalidusingtheoriginalsubroutine ontheUNIVACll08 andtheIBMS/360. 7.3-7(311171)
 NASTRAN SUPPORT PROGRAMS 7.3.3 Major Divisions intheProgram Thefollowing discussion isintended fortheusebytheprogramming analyst responsible for theuseandmaintenance oftheSCP. Refer tothesymbolic FORTRAN code, which isheavily com- mented, inaddition tothis discussion andtheflowcharts given insection 7.3.5. 7.3.3.1 TheMain Driving Routine CONVSOU Themain driving routine CONVSOU isasingle subprogram that controls theconversion of FORTRAN subprograms itfinds ontheinput file. Itdoes thefollowing: I.Reads afull subprogram into core. 2.Calls MULTEN, themultiple-entry processor, which will convert thedeck formultiple entries. 3.Calls REORDR, thedelcarative statement reordering processor, which will rearrange into correct order anydeclaratives within thesubprogram. REORDR iscalled only if thesubprogram hasmultiple entries. 4.Calls NSRETN, thenonstandard return processor, which will complete theconversion bytranslating allnonstandard return statements within thesubprogram. 5.Outputs theconverted deck viaroutine DKOUT. 6.Repeats steps lthrough 5until nomore subprograms remain ontheinput file. Themain driving routine contains blank COMMON which isloaded below (i.e., atahigher core location than) allobject code oftheSCP. Itisthus used asopen core. Within themain driving routine andthethree processors, asubprogram being converted always lies inthis open core from Z(IDK) toZ(NDK), where Z=Open core array IDK=Relative location inZwhere thesubprogram begins. NDK=Relative location where thesubprogram ends. 7.3-8 (311171)">
 
-    <link rel="preload" href="/css/compiled/main.min.23a12191daf50c320fcb5ce50e8c895a47f37ce361f66be7c771e19f254b32b2.css" as="style" integrity="sha256-I6Ehkdr1DDIPy1zlDoyJWkfzfONh9mvnx3HhnyVLMrI=" />
-    <link href="/css/compiled/main.min.23a12191daf50c320fcb5ce50e8c895a47f37ce361f66be7c771e19f254b32b2.css" rel="stylesheet" integrity="sha256-I6Ehkdr1DDIPy1zlDoyJWkfzfONh9mvnx3HhnyVLMrI=" />
+    <link href="/css/compiled/main.css" rel="stylesheet" />
 
 
 
-  <link href="/css/custom.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" rel="stylesheet" integrity="sha256-47DEQpj8HBSa&#43;/TImW&#43;5JCeuQeRkm5NMpJWZG3hSuFU=" />
+  <link href="/css/custom.css" rel="stylesheet" />
 
 
 
@@ -2959,11 +2958,11 @@ Figure lO(a). Flowchart forDRIVES.
   </div>
 </footer>
     
-    <script defer src="/js/main.min.50a0d894de45456461df15a40fda1d0185bbc2595f2abd5b149a74387527f0d9.js" integrity="sha256-UKDYlN5FRWRh3xWkD9odAYW7wllfKr1bFJp0OHUn8Nk="></script>
+    <script defer src="/js/main.js" integrity=""></script>
 
 
 <script defer src="/lib/flexsearch/flexsearch.bundle.min.0425860527cc9968f9f049421c7a56b39327d475e2e3a8f550416be3a9134327.js" integrity="sha256-BCWGBSfMmWj58ElCHHpWs5Mn1HXi46j1UEFr46kTQyc="></script>
-    <script defer src="/en.search.min.af48afc03adde8983ff621cfde8f8d4deff4f8d2ee47b3d5b2442835a8d92cf2.js" integrity="sha256-r0ivwDrd6Jg/9iHP3o&#43;NTe/0&#43;NLuR7PVskQoNajZLPI="></script>
+    <script defer src="/en.search.js" integrity=""></script>
 
 
   </body>

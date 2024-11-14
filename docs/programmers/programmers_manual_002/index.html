@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="noindex, nofollow" />
   <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
@@ -15,7 +15,7 @@
   <meta name="description" content="TABLE OFCONTENTS (Continued) Section 4.87.13 4.87.14 4.87.15Page No. 4.87.12.5 Stiffness Matrix Calculations (Subroutine KT_RDR ofModule SMAI) ……………………………….. 4.87-160 4.87.12.6 Mass Matrix Calculations (Subroutine MT_RDR of Module SMA2) ………………………………….. 4.87-165 4.87.12.7 Thermal Load Calculations (Subroutine TT_RDR of Module SSGI) …………………………………. 4.87-166 4.87.12.8 Element Force andStress Calculations (Subroutines STORDI andSTORD2 ofModule SDR2) ……………….. 4.87-168 TheVISC Element …………………………………………. 4.87-175 4.87.13.1 4.87.13.2Input Data fortheVISC Element …………………. 4.87-175 Damping Matrix Calculations (Subroutine BVISC of Module SMA2) ………………………………….. 4.87-175 4.87.14.1 4.87.14.2 4.87.14.3 4.87.14.4 4.87.14.5 4.87.14.6Integral Calculations fortheTRIARG, TRAPRG Elements ………… 4.87-177 Integral Calculation forq&gt;0andanyp.(Function DKINT) ……………….. ?…………………….. 4.87-179 Integral Calculation forp&gt;0andq&lt;-l(Function DK8g) ………………… _…………………….. 4.87-179 Integral Calculation forp&lt;0andq&lt;-l(Function DKIO0) ………………………………………… 4.87-180 Integral Calculations forp&gt;-landq=-l(Function DKJAB) ……………………………………….. 4.87-181 Integral Calculations forp&lt;-landq=-l(Function DK219) ……………………………………….. 4.87-182 Integral Calculations forp=-landq=-l(Function DK211) ……………………………………….. 4.87-182 TheFLUID2, FLUID3, FLUID4, AXIF2, AXIF3, AXlF4, andMFREE Elements ……………………………………………….. 4.87-183 4.87.15.1 4.87.15.2 4.87.15.3 4.87.15.4 4.87.15.5Input Data fortheFluid Elements ……………….. 4.87-183 Matrix Calculations fortheFLUID2 Element (Subroutine KFLUD2 ofModule SMAIandSubroutine MFLUD2 ofModule SMA2) …………………………. 4.87-183 Matrix Calculations fortheFLUID3 Element (Subroutine KFLUD3 ofModule SMAIandSubroutine MFLUD3 ofModule SMA2) …………………………. 4.87-186 Matrix Generation fortheFLUID4 Element (Subroutine KFLUD4 inModule SMAIandSubroutine MFLUD4 inModule SF_2) …………………………. 4.87-188 Matrix Calculations fortheMFREEElement (Subroutine MFREEinModule SMA2) ………………………….. 4.87-189 xix(8/I/72)" />
 
   
-    <link rel="canonical" href="https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_002/" itemprop="url" />
+    <link rel="canonical" href="http://localhost:1313/docs/programmers/programmers_manual_002/" itemprop="url" />
   
 
   
@@ -77,7 +77,7 @@ Matrix Calculations fortheMFREEElement (Subroutine
 MFREEinModule SMA2) &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.. 4.87-189
 xix(8/I/72)" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_002/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="http://localhost:1313/docs/programmers/programmers_manual_002/" /><meta property="article:section" content="docs" />
 
 
 
@@ -89,12 +89,11 @@ xix(8/I/72)" />
   <meta name="twitter:title" content="Programmer&#39;s Manual P2">
   <meta name="twitter:description" content="TABLE OFCONTENTS (Continued) Section 4.87.13 4.87.14 4.87.15Page No. 4.87.12.5 Stiffness Matrix Calculations (Subroutine KT_RDR ofModule SMAI) ……………………………….. 4.87-160 4.87.12.6 Mass Matrix Calculations (Subroutine MT_RDR of Module SMA2) ………………………………….. 4.87-165 4.87.12.7 Thermal Load Calculations (Subroutine TT_RDR of Module SSGI) …………………………………. 4.87-166 4.87.12.8 Element Force andStress Calculations (Subroutines STORDI andSTORD2 ofModule SDR2) ……………….. 4.87-168 TheVISC Element …………………………………………. 4.87-175 4.87.13.1 4.87.13.2Input Data fortheVISC Element …………………. 4.87-175 Damping Matrix Calculations (Subroutine BVISC of Module SMA2) ………………………………….. 4.87-175 4.87.14.1 4.87.14.2 4.87.14.3 4.87.14.4 4.87.14.5 4.87.14.6Integral Calculations fortheTRIARG, TRAPRG Elements ………… 4.87-177 Integral Calculation forq&gt;0andanyp.(Function DKINT) ……………….. ?…………………….. 4.87-179 Integral Calculation forp&gt;0andq&lt;-l(Function DK8g) ………………… _…………………….. 4.87-179 Integral Calculation forp&lt;0andq&lt;-l(Function DKIO0) ………………………………………… 4.87-180 Integral Calculations forp&gt;-landq=-l(Function DKJAB) ……………………………………….. 4.87-181 Integral Calculations forp&lt;-landq=-l(Function DK219) ……………………………………….. 4.87-182 Integral Calculations forp=-landq=-l(Function DK211) ……………………………………….. 4.87-182 TheFLUID2, FLUID3, FLUID4, AXIF2, AXIF3, AXlF4, andMFREE Elements ……………………………………………….. 4.87-183 4.87.15.1 4.87.15.2 4.87.15.3 4.87.15.4 4.87.15.5Input Data fortheFluid Elements ……………….. 4.87-183 Matrix Calculations fortheFLUID2 Element (Subroutine KFLUD2 ofModule SMAIandSubroutine MFLUD2 ofModule SMA2) …………………………. 4.87-183 Matrix Calculations fortheFLUID3 Element (Subroutine KFLUD3 ofModule SMAIandSubroutine MFLUD3 ofModule SMA2) …………………………. 4.87-186 Matrix Generation fortheFLUID4 Element (Subroutine KFLUD4 inModule SMAIandSubroutine MFLUD4 inModule SF_2) …………………………. 4.87-188 Matrix Calculations fortheMFREEElement (Subroutine MFREEinModule SMA2) ………………………….. 4.87-189 xix(8/I/72)">
 
-    <link rel="preload" href="/css/compiled/main.min.23a12191daf50c320fcb5ce50e8c895a47f37ce361f66be7c771e19f254b32b2.css" as="style" integrity="sha256-I6Ehkdr1DDIPy1zlDoyJWkfzfONh9mvnx3HhnyVLMrI=" />
-    <link href="/css/compiled/main.min.23a12191daf50c320fcb5ce50e8c895a47f37ce361f66be7c771e19f254b32b2.css" rel="stylesheet" integrity="sha256-I6Ehkdr1DDIPy1zlDoyJWkfzfONh9mvnx3HhnyVLMrI=" />
+    <link href="/css/compiled/main.css" rel="stylesheet" />
 
 
 
-  <link href="/css/custom.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" rel="stylesheet" integrity="sha256-47DEQpj8HBSa&#43;/TImW&#43;5JCeuQeRkm5NMpJWZG3hSuFU=" />
+  <link href="/css/custom.css" rel="stylesheet" />
 
 
 
@@ -5961,11 +5960,11 @@ l.l-I</p>
   </div>
 </footer>
     
-    <script defer src="/js/main.min.50a0d894de45456461df15a40fda1d0185bbc2595f2abd5b149a74387527f0d9.js" integrity="sha256-UKDYlN5FRWRh3xWkD9odAYW7wllfKr1bFJp0OHUn8Nk="></script>
+    <script defer src="/js/main.js" integrity=""></script>
 
 
 <script defer src="/lib/flexsearch/flexsearch.bundle.min.0425860527cc9968f9f049421c7a56b39327d475e2e3a8f550416be3a9134327.js" integrity="sha256-BCWGBSfMmWj58ElCHHpWs5Mn1HXi46j1UEFr46kTQyc="></script>
-    <script defer src="/en.search.min.af48afc03adde8983ff621cfde8f8d4deff4f8d2ee47b3d5b2442835a8d92cf2.js" integrity="sha256-r0ivwDrd6Jg/9iHP3o&#43;NTe/0&#43;NLuR7PVskQoNajZLPI="></script>
+    <script defer src="/en.search.js" integrity=""></script>
 
 
   </body>

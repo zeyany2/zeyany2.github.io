@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="noindex, nofollow" />
   <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
@@ -16,7 +16,7 @@
 FUNCTIONAL MODULES 6.7 FUNCTIONAL MODULES Afunctional module communicates with theNASTRAN Executive System, andhence indirectly with other functional modules, onlythrough itsinput datablocks, itsoutput datablocks andits DMAPparameters. Hence amodification toafunctional module which disturbs neither itsoutput datablocks noritsDMAPparameters canbemadewithout changing anyother functional modules. Ifamodification toafunctional module affects itsoutput datablocks oritsDMAPparameters, itmustbedetermined (byreferring tosection 4,Module Functional Descriptions, ofthePro- grammer’s Manual and/or section 3,Rigid Formats, oftheUser’s Manual) whatmodules usethese output datablocks andDMAPparameters asinput. Ifthese modules arenumercus, orifthe changes tothemareveryextensive, itmaybemoreprofitable towrite anewmodule(s) to accomplish thetaskathand. Toaddafunctional module tothesystem three changes mustbemade: l)update theModule Properties List (HPL), theExecutive table which contains the(DMAP) nameofthemodule, the number ofinput datablocks, thenumber ofoutput datablocks, thenumber ofscratch datablocks andtheDMAPparameter list(seethedescription oftheMPLinsection 2.4formoredetails); 2)update theLinkSpecification Table (LHKSPC), theExecutive table which contains the(DMAP) nameofthemodule, themodule’s entry point nameandthelinkresidence keysforthefourmachine types (seethedescription oftheLNKSPC table insection 2.4formore details); and3)update oneormore linkdriver routines, XSEMi, (seesection 3.3.7) sothatthemodule iscalled from oneormore links. Steps 2and3havebeen automated within theNASTRAN system. These auto- mated procedures aredescribed insections 6.11.3.1 and6.11.3.2 respectively. 4)Addthemodules totheoverlay structure fortheappropriate link(s). Themeans ofaccomplishing this taskis machine dependent, butabasic picture ofthemodule anditssubroutines andtheir relationships toother NASTRAN subroutines should bedrawn. Anupdated LinkMapsuchasthose insection 5 should bemade. 5)Toactually addthemodule section 5must beconsulted fortheparticular computer which NASTRAN isoperating on. Inaddition considerable number ofdocurmntation changes mustbemade. These aredescribed briefly foreachmanual. l)Programmer’s Manual: Anewsubsection forsection 4.0mustbewritten todescribe themodule. Thevarious table of contents andindexes mustbeupdated including sections 4.1.2 and4.1.3. Theoverlay maps in 6.7-I (311171)" />
 
   
-    <link rel="canonical" href="https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_091/" itemprop="url" />
+    <link rel="canonical" href="http://localhost:1313/docs/programmers/programmers_manual_091/" itemprop="url" />
   
 
   
@@ -77,7 +77,7 @@ Anewsubsection forsection 4.0mustbewritten todescribe themodule. Thevarious tabl
 contents andindexes mustbeupdated including sections 4.1.2 and4.1.3. Theoverlay maps in
 6.7-I (311171)" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://zeyany2.github.io.github.io/docs/programmers/programmers_manual_091/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="http://localhost:1313/docs/programmers/programmers_manual_091/" /><meta property="article:section" content="docs" />
 
 
 
@@ -91,12 +91,11 @@ FUNCTIONAL MODULES 6.7 FUNCTIONAL MODULES Afunctional module communicates with t
   <meta name="twitter:description" content="MODIFICATIONS ANDADDITIONS TONASTRAN Number of Words 3NFILE 3NCARDContents FileNameTable -Eachentry consists of2BCD words giving thedatablock nameofanydata block intheRigid Format andoneinteger giving itsbitposition intheDecision Table. Inthe existing LDiprograms, theFileNameTable isstored in theJNMarray. Number ofentries intheCardNameTable(NCARD). Thisnumber maybezeroifnoCardNameTableisdesired. CardNamefable-Eachentryconsists of2BCDwords giving thecardNameofanyNASTRAN DataCardand oneinteger giving itsbitposition intheDecision Table. Intheexisting LDiprograms, theCardNameTable isstored intheINMarray. Tomodify anexisting rigidformat theappropriate tables (Decision, CardName,FileNameor DMAP)shouldbechanged. Theirlocations intheexisting LDiroutines aredetailed above. 6.6-2
 FUNCTIONAL MODULES 6.7 FUNCTIONAL MODULES Afunctional module communicates with theNASTRAN Executive System, andhence indirectly with other functional modules, onlythrough itsinput datablocks, itsoutput datablocks andits DMAPparameters. Hence amodification toafunctional module which disturbs neither itsoutput datablocks noritsDMAPparameters canbemadewithout changing anyother functional modules. Ifamodification toafunctional module affects itsoutput datablocks oritsDMAPparameters, itmustbedetermined (byreferring tosection 4,Module Functional Descriptions, ofthePro- grammer’s Manual and/or section 3,Rigid Formats, oftheUser’s Manual) whatmodules usethese output datablocks andDMAPparameters asinput. Ifthese modules arenumercus, orifthe changes tothemareveryextensive, itmaybemoreprofitable towrite anewmodule(s) to accomplish thetaskathand. Toaddafunctional module tothesystem three changes mustbemade: l)update theModule Properties List (HPL), theExecutive table which contains the(DMAP) nameofthemodule, the number ofinput datablocks, thenumber ofoutput datablocks, thenumber ofscratch datablocks andtheDMAPparameter list(seethedescription oftheMPLinsection 2.4formoredetails); 2)update theLinkSpecification Table (LHKSPC), theExecutive table which contains the(DMAP) nameofthemodule, themodule’s entry point nameandthelinkresidence keysforthefourmachine types (seethedescription oftheLNKSPC table insection 2.4formore details); and3)update oneormore linkdriver routines, XSEMi, (seesection 3.3.7) sothatthemodule iscalled from oneormore links. Steps 2and3havebeen automated within theNASTRAN system. These auto- mated procedures aredescribed insections 6.11.3.1 and6.11.3.2 respectively. 4)Addthemodules totheoverlay structure fortheappropriate link(s). Themeans ofaccomplishing this taskis machine dependent, butabasic picture ofthemodule anditssubroutines andtheir relationships toother NASTRAN subroutines should bedrawn. Anupdated LinkMapsuchasthose insection 5 should bemade. 5)Toactually addthemodule section 5must beconsulted fortheparticular computer which NASTRAN isoperating on. Inaddition considerable number ofdocurmntation changes mustbemade. These aredescribed briefly foreachmanual. l)Programmer’s Manual: Anewsubsection forsection 4.0mustbewritten todescribe themodule. Thevarious table of contents andindexes mustbeupdated including sections 4.1.2 and4.1.3. Theoverlay maps in 6.7-I (311171)">
 
-    <link rel="preload" href="/css/compiled/main.min.23a12191daf50c320fcb5ce50e8c895a47f37ce361f66be7c771e19f254b32b2.css" as="style" integrity="sha256-I6Ehkdr1DDIPy1zlDoyJWkfzfONh9mvnx3HhnyVLMrI=" />
-    <link href="/css/compiled/main.min.23a12191daf50c320fcb5ce50e8c895a47f37ce361f66be7c771e19f254b32b2.css" rel="stylesheet" integrity="sha256-I6Ehkdr1DDIPy1zlDoyJWkfzfONh9mvnx3HhnyVLMrI=" />
+    <link href="/css/compiled/main.css" rel="stylesheet" />
 
 
 
-  <link href="/css/custom.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" rel="stylesheet" integrity="sha256-47DEQpj8HBSa&#43;/TImW&#43;5JCeuQeRkm5NMpJWZG3hSuFU=" />
+  <link href="/css/custom.css" rel="stylesheet" />
 
 
 
@@ -2964,11 +2963,11 @@ Generates thestiffness matrix fornonlinear elements
   </div>
 </footer>
     
-    <script defer src="/js/main.min.50a0d894de45456461df15a40fda1d0185bbc2595f2abd5b149a74387527f0d9.js" integrity="sha256-UKDYlN5FRWRh3xWkD9odAYW7wllfKr1bFJp0OHUn8Nk="></script>
+    <script defer src="/js/main.js" integrity=""></script>
 
 
 <script defer src="/lib/flexsearch/flexsearch.bundle.min.0425860527cc9968f9f049421c7a56b39327d475e2e3a8f550416be3a9134327.js" integrity="sha256-BCWGBSfMmWj58ElCHHpWs5Mn1HXi46j1UEFr46kTQyc="></script>
-    <script defer src="/en.search.min.af48afc03adde8983ff621cfde8f8d4deff4f8d2ee47b3d5b2442835a8d92cf2.js" integrity="sha256-r0ivwDrd6Jg/9iHP3o&#43;NTe/0&#43;NLuR7PVskQoNajZLPI="></script>
+    <script defer src="/en.search.js" integrity=""></script>
 
 
   </body>
