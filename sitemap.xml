@@ -2,280 +2,546 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/docs/summary/</loc>
+    <loc>//uildDrafts:1313/docs/summary/</loc>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>//uildDrafts:1313/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>//uildDrafts:1313/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/</loc>
+    <loc>//uildDrafts:1313/docs/</loc>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>//uildDrafts:1313/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_001/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_index/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_010/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_001/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_100/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_001/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_101/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_010/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_102/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_010/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_103/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_100/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_104/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_100/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_105/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_101/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_106/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_101/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_107/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_102/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_108/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_102/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_011/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_103/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_012/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_103/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_013/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_104/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_014/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_104/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_015/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_105/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_016/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_105/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_017/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_106/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_018/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_106/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_019/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_107/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_002/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_107/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_020/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_108/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_021/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_108/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_022/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_011/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_023/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_011/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_024/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_012/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_025/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_012/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_026/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_013/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_027/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_013/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_028/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_014/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_029/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_014/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_003/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_015/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_030/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_015/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_031/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_016/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_032/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_016/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_033/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_017/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_034/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_017/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_035/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_018/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_036/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_018/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_037/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_019/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_038/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_019/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_039/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_002/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_004/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_002/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_040/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_020/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_041/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_020/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_042/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_021/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_043/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_021/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_044/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_022/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_045/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_022/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_046/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_023/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_047/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_023/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_048/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_024/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_049/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_024/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_005/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_025/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_050/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_025/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_051/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_026/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_052/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_026/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_053/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_027/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_054/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_027/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_055/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_028/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_056/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_028/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_057/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_029/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_058/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_029/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_059/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_003/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_006/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_003/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_060/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_030/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_061/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_030/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_062/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_031/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_063/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_031/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_064/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_032/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_065/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_032/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_066/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_033/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_067/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_033/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_068/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_034/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_069/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_034/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_007/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_035/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_070/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_035/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_071/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_036/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_072/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_036/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_073/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_037/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_074/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_037/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_075/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_038/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_076/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_038/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_077/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_039/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_078/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_039/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_079/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_004/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_008/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_004/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_080/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_040/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_081/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_040/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_082/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_041/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_083/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_041/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_084/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_042/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_085/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_042/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_086/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_043/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_087/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_043/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_088/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_044/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_089/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_044/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_009/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_045/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_090/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_045/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_091/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_046/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_092/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_046/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_093/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_047/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_094/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_047/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_095/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_048/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_096/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_048/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_097/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_049/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_098/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_049/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/programmers/programmers_manual_099/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_005/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_005/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/users/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_050/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/users/users_manual_001/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_050/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/users/users_manual_010/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_051/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/users/users_manual_011/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_051/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/users/users_manual_012/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_052/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/users/users_manual_013/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_052/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/users/users_manual_014/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_053/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/users/users_manual_015/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_053/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/users/users_manual_016/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_054/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/users/users_manual_017/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_054/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/users/users_manual_018/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_055/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/users/users_manual_019/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_055/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/users/users_manual_002/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_056/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/users/users_manual_020/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_056/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/users/users_manual_021/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_057/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/users/users_manual_022/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_057/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/users/users_manual_003/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_058/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/users/users_manual_004/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_058/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/users/users_manual_005/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_059/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/users/users_manual_006/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_059/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/users/users_manual_007/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_006/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/users/users_manual_008/</loc>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_006/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/users/users_manual_009/</loc>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_060/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_060/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_061/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_061/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_062/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_062/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_063/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_063/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_064/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_064/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_065/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_065/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_066/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_066/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_067/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_067/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_068/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_068/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_069/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_069/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_007/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_007/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_070/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_070/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_071/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_071/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_072/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_072/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_073/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_073/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_074/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_074/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_075/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_075/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_076/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_076/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_077/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_077/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_078/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_078/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_079/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_079/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_008/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_008/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_080/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_080/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_081/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_081/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_082/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_082/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_083/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_083/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_084/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_084/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_085/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_085/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_086/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_086/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_087/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_087/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_088/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_088/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_089/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_089/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_009/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_009/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_090/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_090/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_091/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_091/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_092/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_092/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_093/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_093/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_094/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_094/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_095/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_095/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_096/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_096/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_097/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_097/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_098/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_098/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/programmers/programmers_manual_099/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/programmers_manual_099/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/tags/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/users_manual_index/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/users_manual_001/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_001/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/users_manual_010/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_010/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/users_manual_011/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_011/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/users_manual_012/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_012/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/users_manual_013/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_013/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/users_manual_014/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_014/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/users_manual_015/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_015/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/users_manual_016/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_016/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/users_manual_017/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_017/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/users_manual_018/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_018/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/users_manual_019/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_019/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/users_manual_002/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_002/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/users_manual_020/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_020/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/users_manual_021/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_021/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/users_manual_022/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_022/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/users_manual_003/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_003/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/users_manual_004/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_004/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/users_manual_005/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_005/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/users_manual_006/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_006/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/users_manual_007/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_007/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/users_manual_008/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_008/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/test/users_manual_009/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_009/</loc>
   </url>
 </urlset>
