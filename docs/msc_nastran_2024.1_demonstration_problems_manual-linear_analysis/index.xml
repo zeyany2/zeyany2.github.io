@@ -1,0 +1,1957 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DOC REPO – MSC Nastran manuals</title>
+    <link>//uildDrafts:1313/docs/msc_nastran_2024.1_demonstration_problems_manual-linear_analysis/</link>
+    <description>Recent content in MSC Nastran manuals on DOC REPO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="//uildDrafts:1313/docs/msc_nastran_2024.1_demonstration_problems_manual-linear_analysis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>User&#39;s Manual P1</title>
+      <link>//uildDrafts:1313/docs/msc_nastran_2024.1_demonstration_problems_manual-linear_analysis/msc_nastran_2024.1_demonstration_problems_manual-linear_analysis_001/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//uildDrafts:1313/docs/msc_nastran_2024.1_demonstration_problems_manual-linear_analysis/msc_nastran_2024.1_demonstration_problems_manual-linear_analysis_001/</guid>
+      <description>
+        
+        
+        &lt;p&gt;MSC Nastran 2024.1
+Demonstration Problems Manual&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Linear AnalysisMSC Nastran Demonstration Problems Manual: Linear Analysis&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Worldwide Web
+&lt;a href=&#34;https://www.hexagon.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;www.hexagon.com&lt;/a&gt;
+Support
+&lt;a href=&#34;https://simcompanion.hexagon.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://simcompanion.hexagon.com&lt;/a&gt;
+Disclaimer
+Hexagon reserves the right to make changes in specifications and other information contained in this document without prior notice.
+The concepts, methods, and examples presented in this text are for illustrative and educational purposes only, and are not intended
+to be exhaustive or to apply to any particular engineering problem or design. Hexagon assumes no liability or responsibility to any
+person or company for direct or indirect damages resulting from the use of any information contained herein.
+User Documentation: Copyright 2024 Hexagon AB and/or its subsidiaries. All Rights Reserved.
+This notice shall be marked on any reproduction of this documentation, in whole or in part. Any reproduction or distribution of this
+document, in whole or in part, without the prior written consent of Hexagon is prohibited.
+This software may contain certain third-party software that is protected by copyright and licensed from Hexagon suppliers. Additional
+terms and conditions and/or notices may apply for certain third party software. Such additional third party software terms and
+conditions and/or notices may be set forth in documentation and/or at third-party software information  (or successor website designated
+by Hexagon from time to time).
+PCGLSS 8.0, Copyright © 1992-2016, Computational Applications and System Integration Inc. All rights reserved. PCGLSS 8.0 is
+licensed from Computational Applications and System Integration Inc.
+The Hexagon logo, Hexagon, MSC Software logo, MSC, Dytran, Marc, MSC Nastran, Patran, e -Xstream, Digimat, and Simulating
+Reality are trademarks or registered trademarks of Hexagon AB and/or its subsidiaries in the United States and/or other countries.
+NASTRAN is a registered trademark of NASA. FLEXlm and FlexNet Publisher are trademarks or registered trademarks of Flexera
+Software. All other trademarks are the property of their respective owners.
+Use, duplicate, or disclosure by the U.S. Government is subjected to restrictions as set forth in FAR 12.212 (Commercial Computer
+Software) and DFARS 227.7202 (Commercial Computer Software and Commercial Computer Software Documentation), as
+applicable.
+U.S. Patent 9,361,413
+May 16, 2024
+NA:V2024.1:Z:Z:Z:DC-DPM-PDFCorporate Office
+Hexagon Manufacturing Intelligence, Inc. UK
+78 Portsmouth Road Cedar House
+Cobham, Surrey KT11 1HY
+Telephone: (+44) 02070686555&lt;/p&gt;
+&lt;p&gt;C o n t e n t s
+MSC Nastran Demonstration Problems Manual&lt;br&gt;
+Main Index
+Preface
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  2
+Typographical Conventions  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  2
+Feature Cross Referenc e. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  3
+List of MSC Nastran Guides  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  3
+Technical Support . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  5
+Training and Internet Resources  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  5
+1 Rapid Road Response Optimization of a Camaro Model using Automatic External
+Superelement Optimization
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  8
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  9
+Model Setup . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  10
+Optimization Solutions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  10
+Case A . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  10
+Case B . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  14
+Case C . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  15
+Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  16
+Modeling Tips  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  16
+Input File(s)  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  17
+2 Modal Analysis with Glued Contact
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  21
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  22
+Solution Requirements  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  22
+FEM Solutions  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  22
+Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  24
+Modeling Tips  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  27
+Input File(s)  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  27Contents&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems Manual ii
+Main Index
+Video . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  27
+Apex Example Video . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  27
+Patran Example Video  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  28
+3 Beams: Composite Materials and Open Cross Sections
+Summary - Composite Beam . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  31
+Introduction  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  32
+Solution Requirements  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  32
+FEM Solution  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  34
+Modeling Tips . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  35
+Input File(s)  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  35
+Summary - VKI and VAM Beam Formulations  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  35
+Introduction  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  36
+Solution Requirements  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  36
+FEM Solution  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  37
+Input File(s)  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  39
+4 Topology Optimization MBB Beam and Torsion
+Summary - Beam . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  41
+Introduction  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  41
+Solution Requirements  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  42
+Optimization Solution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  43
+Modeling Tips . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  45
+Summary - Torsion  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  47
+Introduction  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  48
+Solution Requirements  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  48
+Optimization Solution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  49
+Modeling Tips . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  53
+Input File(s)  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  54
+5 Engine Mount Topology Optimization
+Summary  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  56
+Introduction  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  57
+Solution Requirements  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  58
+FEM Solutions  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  58&lt;/p&gt;
+&lt;p&gt;iii
+Main Index
+Results  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  61
+Modeling Tips . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  61
+Input File(s) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  62
+6 Wheel Topology Optimization
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  65
+Introduction  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  66
+Solution Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  66
+FEM Solution s. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  67
+Results  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  67
+Modeling Tips . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  68
+Input File(s) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  68
+7 Fluid-structure Interaction (FSI) Frequency Responses
+Introduction  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  71
+Model Setup  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  71
+Modelling Guidelines  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  77
+Input File(s) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  77
+Results  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  77&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems Manual iv
+Main Index&lt;/p&gt;
+&lt;p&gt;Documentation Feedback
+At Hexagon Manufacturing Intelligence, we strive to produce the highest quality documentation and
+welcome your feedback. If you have comments or suggestions about our documentation, write to us .
+Please include the following information with your feedback:
+Document name
+Release/Version number
+Chapter/Section name
+Topic title (for Online Help)
+Brief description of the content (for example, incomplete/incorrect information, grammatical
+errors, information that requires clarification or more details and so on).
+Your suggestions for correcting/improving documentation
+Note:   The above mentioned e-mail address is only for providing documentation specific
+feedback. If you have any technical problems, issues, or queries, please contact Technical
+Support .&lt;/p&gt;
+&lt;p&gt;Main Index
+Preface
+Preface
+Introduction     2
+Typographical Conventions     2
+Feature Cross Reference     3
+List of MSC Nastran Guides     3
+Technical Support     5
+Training and Internet Resources     5&lt;/p&gt;
+&lt;p&gt;2 MSC Nastran Demonstration Problems
+Preface
+Main Index
+Introduction
+This demonstration problems manual, written for those with a working knowledge of Nastran, highlights the steps
+necessary to use the advanced features of the MSC Nastran, including contact, elastic-plastic creep, elastomeric material
+nonlinearities and heat transfer. The subsequent application examples focus on how to include these advanced features by
+making relatively modest changes to existing MSC Nastran bulk data files using either a text editor or using a pre- and post-
+processing program like SimXpert.
+Every application example has a working input file(s) available to simulate the results found in each chapter, and upon
+clicking its name, it will be downloaded into your browser to use. Once an understanding of how to invoke a new feature
+has been reached, you are encouraged to experiment by changing some of the input parameters and rerunning the
+application. Furthermore, as confidence grows, these models can serve as stepping stones to more complex simulations that
+can help you better understand and improve your simulations.
+Typographical Conventions
+The section provides a brief overview of the typographical conventions used in the document to help the user better follow
+the MSC Nastran documentation.
+This section describes some syntax that will help you in understanding text in the various chapters and thus in facilitating
+your learning process. It contains stylistic conventions to denote user action, to emphasize particular aspects of a MSC
+Nastran run or to signal other differences within the text.
+Courier New Represents command-line options of MSC Nastran and results from f04/f06 files.
+Example : nast20224 memorymax=16gb  myjob.dat
+“Quoted Text” Represents command-line options of MSC Nastran for in-line text.
+Example : memorymax=16gb
+Arial Font T o represent elements properties and GUI elements. It is also used to highlight
+Interface elements in steps.
+Example : RBE3  and RSPLINE  are interpolation elements and are not rigid.
+Red T ext Represents items in the examples that we to emphasize.
+Example : smp =16&lt;/p&gt;
+&lt;p&gt;3
+Main Index
+Feature Cross Referenc e
+The basic features in Table P-1 are cross referenced to each chapter for your convenience. Click the chapter number in the
+table to go to the summary of that chapter.
+List of MSC Nastran Guides
+A list of some of the MSC Nastran guides is as follows:Blue T ext Represent cross-reference to elements within guides and elements of other guides.
+Example : The nonlinear procedure ( NLSTEP ) is used.
+Bold T ext Represents items in the text that we want to emphasize.
+Example : dmp =4&lt;br&gt;
+Italic Text Represents references to manuals/documents.
+Model properties in example summary.
+Equations used for analytical solutions.
+Note:   Since there is no user interface in MSC Nastran, we shall use bold font to emphasize.
+Table P-1  Feature Cross Reference
+Ch. Sol Element Type(s) Material Loads/BC ContactLoad
+Control
+1 200 3-D Isotropic Elastic Point Load no
+2 103 3-D Isotropic Elastic Glued Contact yes NLPARM
+3 101 Beam Composites Point Load no
+4 200 2-D, &amp;amp; 3-D Isotropic Elastic Point Load no
+5 200 3-D Isotropic Elastic Point Load no
+6 200 3-D Isotropic Elastic Point Load no
+Installation and Release Guides
+Installation and Operations Guide
+Release Guide
+Reference Guides
+Quick Reference Guide&lt;/p&gt;
+&lt;p&gt;4 MSC Nastran Demonstration Problems
+Preface
+Main Index
+You may find any of these documents from Hexagon at:
+&lt;a href=&#34;https://simcompanion.hexagon.com/customers/s/article/MSC-Nastran-Support-Home-Page&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://simcompanion.hexagon.com/customers/s/article/MSC-Nastran-Support-Home-Page&lt;/a&gt;DMAP Programmer’s Guide
+Reference Guide
+Utilities Guide
+Getting Started Guide
+SOL 400 Getting Started Guide
+MSC Nastran Error Messages Guide
+Demonstration Guides
+Linear Analysis
+Implicit Nonlinear (SOL 400)
+Explicit Nonlinear (SOL 700)
+MSC Nastran Verification Guide
+User’s Guides
+Automated Component Modal Synthesis (ACMS)
+Access Manual
+Aeroelastic Analysis
+Design Sensitivity and Optimization
+DEMATD
+Dynamic Analysis
+Embedded Fatigue
+Embedded Vibration Fatigue
+Explicit Nonlinear (SOL 700)
+High Performance Computing
+Linear Static Analysis
+Nonlinear (SOL 400)
+Numerical Methods
+Rotordynamics
+Superelements and Modules
+Thermal Analysis
+User Defined Services&lt;/p&gt;
+&lt;p&gt;5
+Main Index
+Technical Support
+For technical support phone numbers and contact information, please visit:
+&lt;a href=&#34;https://simcompanion.hexagon.com/customers/s/article/support-contact-information-kb8019304&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://simcompanion.hexagon.com/customers/s/article/support-contact-information-kb8019304&lt;/a&gt;
+Support Center ( &lt;a href=&#34;http://simcompanion.hexagon.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://simcompanion.hexagon.com&lt;/a&gt;)
+The SimCompanion link above gives you access to the wealth of resources for Hexagon products. Here you will find
+product and support contact information, product documentations, knowledge base articles, product error list, knowledge
+base articles and SimAcademy Webinars. It is a searchable database which allows you to find articles relevant to your
+inquiry. Valid MSC customer entitlement and login is required to access the database and documents. It is a single sign-on
+that gives you access to product documentation for complete list of products from Hexagon, allows you to manage your
+support cases, and participate in our discussion forums.
+Training and Internet Resources
+The Hexagon corporate site has the information on the latest events, products, and services for the CAD/CAE/CAM
+marketplace.
+Design and Engineering e-Learning
+The above link will point you to schedule and description of seminars. Following courses are recommended
+for beginning MSC Nastran users.
+NAS120 - Linear Static Analysis using MSC Nastran and Patran
+This seminar introduces basic finite element analysis techniques for linear static, normal modes, and buckling analysis of
+structures using MSC Nastran and Patran. MSC Nastran data structure, the element library, modeling practices, model
+validation, and guidelines for efficient solutions are discussed and illustrated with examples and workshops. Patran will be
+an integral part of the examples and workshops and will be used to generate and verify illustrative MSC Nastran models,
+manage analysis submission requests, and visualize results. This seminar provides the foundation required for intermediate
+and advanced MSC Nastran applications.&lt;/p&gt;
+&lt;p&gt;6 MSC Nastran Demonstration Problems
+Preface
+Main Index&lt;/p&gt;
+&lt;p&gt;Main Index
+Chapter 1: Rapid Road Response Optimization of a Camaro Model using Automatic External Superelement
+Optimization
+1Rapid Road Response
+Optimization of a Camaro
+Model using Automatic
+External Superelement
+Optimization
+Summary     8
+Introduction     9
+Optimization Solutions     10
+Results     16
+Modeling Tips     16
+Input File(s)     17&lt;/p&gt;
+&lt;p&gt;8 CHAPTER 1
+Rapid Road Response Optimization of a Camaro Model using Automatic External Superelement Optimization
+Main Index
+Summary
+Title Chapter 1: Rapid Road Response Optimization of a Camaro Model using Automatic
+External Superelement Optimization, AESO
+Features •Grids  23K
+•Total degrees of freedom  137K
+•Degrees of freedom in residual  7K
+•Elements  37K
+•Subcases 2
+•Frequencies  3
+Geometry
+Material properties Mild Steel (E = 2x107 Psi, nu = 0.28, rho = 7.835x10-5 lbf-s2/in4)
+Analysis type Modal/Direct Frequency Analysis
+Boundary conditions See the asm file, aeso9.asm , containing boundary connection data
+Element type CQUAD4, CTRIA3, CROD
+Loads Random inputs applied on left and right suspension, including cross -correlation (see
+Figure 1-2)
+FE results&lt;br&gt;
+0.0E+001.0E-032.0E-033.0E-034.0E-035.0E-03
+468 1 0 1 2 1 4
+Frequency (Hz)Summed Accel erati o
+SUM I nit
+Sum  final&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 19
+Main Index
+Introduction
+The purpose of the example is to illustrate how to run an Automatic External Superelement Optimization, AESO, job and
+to demonstrate significant performance gain can be achieved with AESO. Learn more about the capability, consult MSC
+Nastran Design Sensitivity and Optimization User’s Guide. It is assumed that the reader is experienced in performing
+modal frequency analysis. The discussion of the analysis modeling is kept to minimum.
+The Camaro model is provided by General Motor Corp ( Figure 1-1). Random inputs are applied on left and right
+suspension, including cross-correlation ( Figure 1-2). The road response optimization task is solved by varying spring
+constants of the engine mount to achieve maximum ride comfort. Both a regular (or a single shot) optimization run and
+an AESO run are performed. The efficiency and accuracy of the solutions are compared between two approaches.
+Figure 1-1  Camaro Model
+Figure 1-2  Input Load Power Spectra
+-4.00E-030.00E+004.00E-038.00E-031.20E-021.60E-02
+468 1 0 1 2 1 4
+FrequencyInput Spectra LEFT SUSP
+RIGHT SUSP
+REAL L/R
+IMAG L/R&lt;/p&gt;
+&lt;p&gt;10 CHAPTER 1
+Rapid Road Response Optimization of a Camaro Model using Automatic External Superelement Optimization
+Main Index
+Model Setup
+The task will be solved in three design scenarios that are described in detail in the Optimization Solution section. Each of
+three cases is solved by a single run approach and the AESO run approach. Then, the results and performance data are
+compared between two approaches. It has been observed that the single shot run may fail without any appropriate
+diagnostic error message in the log file when design cycle is greater than 1 due to some modeling issue. However, this
+behavior does not show up in the AESO runs. In this document, the results from good single shot runs will be presented
+but the input file is not included.
+The AESO approach should demonstrate that
+Accurate and very efficient solution can be obtained
+The reduced model allows to perform re-analyses and/or optimization tasks many times rapidly
+Much larger performance gain is achieved with Analysis=DFREQ
+Optimization Solutions
+Case A
+This design case is to minimize the sum of RMS acceleration at driver’s seat and passenger’s seat while limiting the PSD
+response at steering column by varying nine spring constants of the engine mount. Listing 1 shows the required design
+model set up for Case A.&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 111
+Main Index
+Listing 1 Design model set up for Case A
+Each AESO job requires two separate runs: an AESO creation run and an AESO assembly run.
+T o activate an AESO creation run, you need to add the following user input to a regular optimization job (bold face in
+Listing 2): 1) an FMS ASSIGN  statement that specifies the file name for the assembly run that will be generated from the
+AESO creation run and 2) a keyword on DOPTPRM  entry, autose = 1  that activates an AESO creation run.
+Listing 2 Required user inputs for activating AESO creation run
+After the creation run is complete, search for the user information message 9181 in the f06 file that indicates a successful
+run&amp;hellip;.
+DESOBJ = 1020
+DESSUB = 101
+&amp;hellip;
+BEGIN BULK $ design model set up
+DESVAR 11      K5307 1.0 0.01 3.0
+&amp;hellip;&amp;hellip;
+DESVAR 24 K5018 1.0 0.01 3.0 DVCREL1 5307 CELAS2 5307 K
+11 1246.3
+&amp;hellip;&amp;hellip;
+DVCREL1 5018 CELAS2 5018 K
+24 1120.
+FREQ1 4 6.0     0.1     60
+$ LHS - Acceleration at Driver&amp;rsquo;s seat DRESP1 1033 ACC1033 RMSaccl    3 620 1033 $ RHS - Acceleration at Passenger&amp;rsquo;s seat DRESP1 2033 ACC2033 RMSaccl   3 620 2033&lt;/p&gt;
+&lt;p&gt;$
+$ sum of RMS accelerations at Driver&amp;rsquo;s and Passenger&amp;rsquo;s seats DRESP2  1020 sumrms 1020  dresp1 1033 2033  DEQATN  1020 object(driver,pass) = driver + pass&lt;br&gt;
+$
+DRESP1 9105 ACC9005 PSDACCL 620  3 MAX 9005&lt;/p&gt;
+&lt;p&gt;DCONSTR 101 9105         2.5e-3&lt;br&gt;
+DOPTPRM DE SMAX 20 P1 1 P2 1 5 conv1 5.e-3
+assign aeso=&amp;lsquo;test9_2.dat&amp;rsquo;
+&amp;hellip;..
+begin bulk doptprm desmax 5 p1 1 P2 15&lt;br&gt;
+delx    0.2     delp    0.8 autose 1&lt;/p&gt;
+&lt;p&gt;12 CHAPTER 1
+Rapid Road Response Optimization of a Camaro Model using Automatic External Superelement Optimization
+Main Index
+The input file for the assembly run ( aeso9_2.dat ) is automatically generated from the creation run. Its Bulk Data section
+contains the residual model (or the design model) while the Control Section is the identical copy from the original
+optimization job. Some special contents in an assembly run are shown in bold face in Listing 3. The FMS ASSIGN  statement
+references the Nastran Master database file and the DBLOCATE  statement identifies the data block that contains various
+boundary matrices. The INCLUDE  statement includes an assembly file that include boundary connection data. Notice that
+the AUTOSE = 1  request on the DOPTPRM  entry added for the creation run has been changed to AUTOSE = 0 .
+Listing 3 Special contents in an assembly file
+Figure 1-3 shows that the sum of RMS is reduced from the initial value of 0.154 to the final of  0.130 by the road response
+optimization. Table 1-1 compares the accuracy of the results and performance in terms of Clock time between the regular
+approach and the AESO approach and clearly shows that the AESO is able to obtain the same final design but with one
+fifth of the time spent by a single shot run. ^^^   &lt;br&gt;
+^^^ USER INFORMATION MESSAGE 9181 (FEA)&lt;br&gt;
+^^^ THE JOB IS TERMINATED FOR AN AUTO   EXTERNAL CREATION RUN&lt;br&gt;
+^^^&lt;br&gt;
+nastran buffsize=   65537                                          &lt;br&gt;
+nastran rseqcont=1                                                 &lt;br&gt;
+assign se1=   &amp;lsquo;./test9.MASTER&amp;rsquo;                                     &lt;br&gt;
+dblocate datablk(EXTDB) logical=se1, CONVERT(SEID=1)                &lt;br&gt;
+SOL 200                                                            &lt;br&gt;
+CEND   &amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;BEGIN BULK                                                         &lt;br&gt;
+include &amp;lsquo;./test9 .asm&amp;rsquo;                                              &lt;br&gt;
+DOPTPRM DESMAX  5       P1      1       P2      15                 &lt;br&gt;
+DELX    0.2     DELP    0.8                                   AUTOSE 0&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 113
+Main Index
+Figure 1-3  Sum of RMS Reduced from 0.154 to 0.130
+Table 1-1  Results and Performance Data for Case A
+Case A Initial OBJ Final OBJInit. Max
+ConstInit. Max
+Const# Design
+CycleClock Time
+(Minute)
+Single Shot Run 0.1534 0.0639 0.1329 -0.2102 9 37
+AESO Creation
+Run5
+AESO Assembly
+Run0.1534 0.0639 0.1319 -0.2102 9 1
+ASEO T otal 6
+Performance
+Ratio6
+0.0E+001.0E-032.0E-033.0E-034.0E-035.0E-03
+468 1 0 1 2 1 4
+Frequency (Hz)Summed Accelerati o
+SUM I nit
+Sum final&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>User&#39;s Manual P2</title>
+      <link>//uildDrafts:1313/docs/msc_nastran_2024.1_demonstration_problems_manual-linear_analysis/msc_nastran_2024.1_demonstration_problems_manual-linear_analysis_002/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//uildDrafts:1313/docs/msc_nastran_2024.1_demonstration_problems_manual-linear_analysis/msc_nastran_2024.1_demonstration_problems_manual-linear_analysis_002/</guid>
+      <description>
+        
+        
+        &lt;p&gt;14 CHAPTER 1
+Rapid Road Response Optimization of a Camaro Model using Automatic External Superelement Optimization
+Main Index
+Case B
+This case minimizes the RMS acceleration at Driver’s seat and maintains frequency dependent limits on PSD acceleration
+at driver’s seat by varying nine spring constants of the engine mount. Listing 4 shows the required design model set up for
+Case B.
+Listing 4 Design Model Set up for Case B
+Notice that in Case B, the design objective now is to minimize an RMS acceleration at Driver&amp;rsquo;s seat while limiting
+maintaining the frequency dependent limits on the PSD acceleration at Driver seat. The rest of the analysis model is kept
+the same. Therefore, the outputs from the creation run for Case A can be reused here except replacing the objective and
+constraints for Case A (Listing 1) with that for Case B formulation (Listing 4).
+Figure 1-4 shows that the RMS acceleration at Driver&amp;rsquo;s seat is reduced from the initial of 0.071 to the final of 0.058. Table 1-2
+compares the accuracy of the results and performance dat between the regular approach and the AESO approach. Again,
+AESO achieves the same final design as the single shot run. Since no creation run is required because it can reuse the results
+from the Case A&amp;rsquo;s creation run, the speed up by the AESO run vs. a single shot run for Case B is a factor of 33&amp;hellip;.
+DESPBJ = 1033
+DESSUB = 101
+&amp;hellip;BEGIN BULK
+$ design model set up
+$ Desin model set up
+$
+DESVAR  11      K5307   1.0     0.01    3.0                                &amp;hellip;&amp;hellip;
+DESVAR  24      K5018   1.0     0.01    3.0                             &lt;br&gt;
+DVCREL1 5307    CELAS2  5307    K                                                  11      1246.3                                                     &amp;hellip;&amp;hellip;
+DVCREL1 5018    CELAS2  5018    K                                       &lt;br&gt;
+24      1120.                                                      $ LHS - Driver&amp;rsquo;s seat to floor (Response for Objective to be minimized)DRESP1 1033 ACC1033 RMSaccl           3 620 1033
+DRESP1 1133 ACC1033 PSDACCL 620  3     1033
+DCONSTR 101 1133  1133       DOPTPRM DESMAX 20 P1 1 P2 15 conv1 5.e-3TABLED1 1133
+0.0     1.0e03  6.0     1.0e-3  7.0     1.7e-3  8.0     1.7e-3
+12.0    2.0e-4  endt&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 115
+Main Index
+Figure 1-4  RMS Reduced from 0.071 to 0.058
+Case C
+This case is exactly the same as Case A except the frequency response is solved by the Direct Frequency Analysis Solver.
+Specifically, the ANALYSIS (Case)=MFREQ  Case Control command in Case A is replaces by ANALYSIS (Case)=DFREQ&lt;br&gt;
+command in Case C.Table 1-2  Results and Performance Data for Case B
+Case B Initial OBJ Final OBJInit. Max
+ConstFinal Max
+Const# Design
+CycleClock Time
+(Minute)
+Single Shot Run 0.0713 0.0586 0.2855 -0.0025 14 33
+AESO Creation
+Run0
+AESO Assembly
+Run0.0713 0.0584 0.2855 -0.0201 9 1
+ASEO T otal 1
+Performance
+Ratio330.0E+005.0E-041.0E-031.5E-032.0E-032.5E-033.0E-03
+4 6 8 1 01 21 4
+Frequency (Hz) Passenger Acceler a
+2033 Init
+2033 Final&lt;/p&gt;
+&lt;p&gt;16 CHAPTER 1
+Rapid Road Response Optimization of a Camaro Model using Automatic External Superelement Optimization
+Main Index
+Therefore, the same discussions presented for Case A can be directly applied here. Table 3 compares the results and
+performance data between a single shot run and shows the relationship to Case C. Again, the final design from AESO agrees
+well with that from a single shot run. However, the performance gain by AESO is a factor of 40.
+In fact, the assembly run could be run directly by assessing the database file and asm file and the assembly run file generated
+from the creation run for Case A since these files are identical if ANALYSIS=MFREQ  or ANALYSIS=DFREQ . Therefore, the
+performance gain would be a factor of 244 (i.e. 244=244/1) assuming the time spent by the assembly run for Case B is still
+five minutes.
+Results
+Figure 1-3 and Figure 1-4 are the results of the sum of RMS Reduced for Case A and Case B respectively.
+Table 1-1 list the results and performance data for CaseA.
+Table 1-2 list the results and performance data for Case B.
+Table 1-3 list the results and performance data for Case C.
+Modeling Tips
+This section provides some guideline or modeling tips for performing AESO tasks:
+Only database option is supported in AESO. No op2 or punch option is supported.
+The nondesigned part is treated as a single part component and can not be further partitioned.Table 1-3  Results and Performance Data for Case C
+Case A Initial OBJ Final OBJInit. Max
+ConstInit. Max
+Const# Design
+CycleClock Time
+(Minute)
+Single Shot Run 0.1535 0.1327 -0.0631 -0.2073 9 244
+AESO Creation
+Run5
+AESO Assembly
+Run0.1534 0.1327 -0.0636 -0.2062 9 1
+ASEO T otal 6
+Performance
+Ratio40&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 117
+Main Index
+The performance gain achieved by an AESO job depends on the size of the analysis model, the ratio of the design
+model size vs. the analysis model size and number of boundary points shared by designed part and nondesigned
+part. A general rule of thumb is that the relative ratio should be less than 10%. The smaller the ratio, the more
+performance gain can be achieved.
+The UIM 7824 from the creation run lists the size of your analysis model and design model (in terms of number
+of the grid points). DRATIO may be adjusted for a larger or smaller residual model.
+Submit the AESO creation run with SCR=NO option to store the Nastran database. An assembly run does not
+require that option.
+It is recommended to use Matrix domain based domain decomposition (domain solver acms(partopt=dof) for
+large scale normal modes or model frequency tasks, say the total number of degrees of freedom is half million or
+higher.
+ASSIGN AESO= ’fn’ is required in the creation to define a file name of the assembly file. Directly assigning the
+original job name to filename should be avoided. A good practice is to add some suffix to the original file name
+such as myjob_2nd.dat  where myjob  is the original file name.
+General guidelines or limitations to the manual External Superelement analysis also apply to AESO.
+Refer to the MSC Nastran Release Guide  for more guidelines and limitations.
+Input File(s)
+Case A
+File Description
+nug_29.dat Minimize the sum of RMS acceleration at the driver&amp;rsquo;s seat and passenger&amp;rsquo;s
+seat while limiting the PSD response at steering column by varying nine
+spring constants of the engine mount. The Modal Frequency Response
+Analysis is performed using ANALYSIS=MFREQ in the Case Control
+Command.&lt;/p&gt;
+&lt;p&gt;18 CHAPTER 1
+Rapid Road Response Optimization of a Camaro Model using Automatic External Superelement Optimization
+Main Index
+Case B
+Case CFile Description
+nug_29b.dat Minimizes the RMS acceleration at Driver&amp;rsquo;s seat and maintains frequency
+dependent limits on PSD acceleration at driver&amp;rsquo;s seat by varying nine spring
+constants of the engine mount. The Modal Frequency Response Analysis is
+performed using ANALYSIS=MFREQ in the Case Control Command.
+File Description
+nug_29c.dat Exactly the same as Case A except the Direct frequency Analysis Solver is
+utilized. Specifically, the ANALYSIS=MFREQ Case Control command in
+Case A is replaced by ANALYSIS=DFREQ command in Case C.&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 119
+Main Index&lt;/p&gt;
+&lt;p&gt;Main Index
+Chapter 2: Modal Analysis with Glued Contact
+2Modal Analysis with
+Glued Contact
+Summary      21
+Introduction      22
+Solution Requirements     22
+FEM Solutions      22
+Results     24
+Modeling Tips      27
+Input File(s)     27
+Video     27&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 221
+Main Index
+Summary
+Title Chapter 2: Modal Analysis with Glued Contact
+Contact  features •Glued Contact between two bodies with dissimilar meshes
+•Stress Free Projection
+•Contact tolerance bias factor = 0.0
+Geometry •Shroud outside diameter = 0.46 m
+•Hub diameter = 0.26 m
+•Width = 0.12 m
+•Shroud thickness = 0.02 m
+Material  properties E = 210 × 109 Pa,  = 0.3,  = 7850 kg/m3
+Linear elastic material
+Analysis type Modal analysis using SOL 103
+Boundary  conditions •Free-Free
+•Glued contact between vanes and shroud
+Applied  loads None
+Element type •8-node hexahedral elements
+•10-node tetrahedral elements
+FE results Natural frequencies and mode shapes&lt;br&gt;
+wd1t
+d2
+Mode Shape 7 @ 1,130 Hz
+Mode Shape 9 @ 1,168 HzMode Shape 8 @ 1,131 Hz
+Mode Shape 10 @1,774 Hz&lt;/p&gt;
+&lt;p&gt;22 CHAPTER 2
+Modal Analysis with Glued Contact
+Main Index
+Introduction
+The shrouded vanes shown in Figure 2-1, consisting of twelve vanes with a central hub and an outer shroud, uses contact to
+join dissimilar meshes during a modal analysis. The hub and vanes contain higher-order tetrahedral elements while the
+shroud has linear hexahedral elements. The glued contact parameters preclude separation after initial contact and change
+the original coordinates of the nodes in contact to insure stress free contact between the dissimilar meshes.
+Figure 2-1  Shrouded Vanes Model
+Solution Requirements
+The modal analysis assumes free-free boundary conditions and returns ten natural frequencies and their associated mode
+shapes of which the lowest six correspond to rigid body motion.
+FEM Solutions
+An eigenvalue analysis has been performed with MSC Nastran’s SOL 103 for the element mesh shown in Figure 2-2. The
+vanes and the hub are modeled using higher order tetrahedral elements while the shroud is modeled using linear hexahedral
+elements. Both using BCBODY  and BSURF  entries. Contact body ID 1 is identified as all the elements making the vanes and
+hub whereas contact body ID 2 is identified as the elements making the shroud respectively as:
+BCBODY   1       3D      DEFORM  1       0
+BSURF    1       10000   10001   10002   10003   10004   10005   10006
+&amp;hellip;
+and
+BCBODY   2       3D      DEFORM  2       0
+BSURF    2       100000  100001  100002  100003  100004  100005  100006
+&amp;hellip;&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 223
+Main Index
+Figure 2-2  FEA Mesh for the Shrouded Vanes Model
+The BCTABLE - Glued Option  entries shown below identify that these bodies are glued to each other:
+BCTABLE  0                       1
+SECNDRY 2       0.      0.      0.      0.      1
+1       1       0
+PRIMARY 1
+BCTABLE  1                       1
+SECNDRY 2       0.      0.      0.      0.      1
+1       1       0
+PRIMARY 1
+The BCTABLE  option shows that contact body ID 2, the shroud, has been selected as the touching body, the SECNDRY ,
+whereas contact body ID 1, the vanes, has been selected as the touched body, the PRIMARY . This selection is due to the
+fact the average element size for the vanes in the contact area is slightly larger than that of the shroud as shown in Figure 2-3.
+The IGLUE  parameter of the BCTABLE  option activates the glue option. The JGLUE  parameter is turned off to ensure
+that no nodes separate once in contact. Additionally, the ICOORD  parameter is turned on to modify the coordinates of the
+nodes in contact to ensure stress-free initial contact.
+The BCPARA  entries activate the quadratic contact option and indicate that a bias factor of 0 (actually a small nonzero
+number of 1 x 10-16) has been selected:
+BCPARA 0     NBODIES 2    MAXENT  13824   MAXNOD  18348
+IBSEP 2      BIAS 1.-16&lt;/p&gt;
+&lt;p&gt;24 CHAPTER 2
+Modal Analysis with Glued Contact
+Main Index
+Figure 2-3  Relative Element Size Between the Shroud and Vanes in the Contact Area
+The vanes and the shroud are both modeled using the same material. The material properties are isotropic and elastic with
+Young’s modulus, Poisson’s ratio, and density defined with MATBV  as
+$ Referenced Material Records
+$ Material Record : inner_mat
+$ Description of Material :
+MAT1     1      2.1+11          .3      7.85+3
+$ Material Record : outer_mat
+$ Description of Material :
+MAT1     2      2.1+11          .3      7.85+3
+The Lanczos procedure is selected for the real eigenvalue problem using the METHOD  (Case)  and EIGRL  entries in which ten
+modes are desired:
+METHOD=13
+&amp;hellip;
+EIGRL,13,,,10
+Results
+The obtained modes are listed in Table 2-1. The first six modes are rigid body modes. Mode shapes 7 to 10 are shown in
+Figure 2-4.
+Table 2-1  Obtained Modes and Frequencies
+Mode Frequency (Hz)
+1 6.911939E-04
+2 6.290693E-04
+3 4.908829E-04
+4 4.434468E-04&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 225
+Main Index
+Figure 2-4  Mode Shapes and Corresponding Frequencies5 2.943299E-04
+6 7.051053E-05
+7 1.130332E+03
+8 1.131441E+03
+9 1.168441E+03
+10 1.774218E+03Table 2-1  Obtained Modes and Frequencies  (continued)
+Mode Frequency (Hz)
+Mode Shape 7 @ 1,130 Hz
+Mode Shape 9 @ 1,168 HzMode Shape 8 @ 1,131 Hz
+Mode Shape 10 @1,774 Hz&lt;/p&gt;
+&lt;p&gt;26 CHAPTER 2
+Modal Analysis with Glued Contact
+Main Index
+To check the efficacy of gluing dissimilar messes on natural frequencies, Test 53 (Selected Benchmarks for Natural
+Frequency Analysis, Abbassian, F , Dawswell, D J, and Knowles, N C, NAFEMS Ref R0015, 1987) was performed on glued
+mesh below.
+Title Simply-Supported Solid Annular Plate, Axisymmetric Vibration
+Contact  features Glued Contact between two bodies with dissimilar meshes
+Stress Free Projection
+Geometry and Mesh&lt;br&gt;
+Material  properties E = 210 × 109 Pa,  = 0.3,  = 8000 kg/m3
+Linear elastic material
+Analysis type Modal analysis using SOL 103
+Boundary  conditions u = 0 for all nodes on axial planes of symmetry . uz = 0 along section AA
+Element type 10-node tetrahedral element s, 20-node hexahedral elements
+FE resultsMeshGluing
+Surfaceα = 10 ZR
+AAθ
+4.2 m
+1.6 m0.6 moGeometry
+z
+Rz
+R
+z
+Rz
+Rr
+Rf        =    18.583 Hzreff        =   140.15 Hzreff        =    224.16 Hzref
+f        =    18.666 HzMDf        =   140.03 HzMDf        =    224.56 HzMD
+f        =    358.29 Hzreff        =    629.19 Hzref
+f        =    362.71 HzMDf        =    658.97 HzMDFlexural
+Mode 1Flexural
+Mode 2Extensional
+Mode 3
+Flexural
+Mode 4Flexural
+Mode 5&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 227
+Main Index
+Modeling Tips
+Glued contact with no separation ensures that nodes do not separate once in contact. Stress-free initial contact modifies
+the coordinates of the nodes in contact to close any gaps between the two bodies. Quadratic contact allows midside nodes
+to participate in the glued contact. Insuring that the dissimilar meshes join properly requires there are no artificial stresses
+induced by nodes slightly off the contact surface, and the displacement field is completely continuous across the contact
+surface.
+This technique of “gluing” dissimilar meshes together facilitates faster model building by not requiring the meshes to be
+contiguous across all nodes. Furthermore, as in this application example, joining different element types assists modeling
+flexibility.
+Input File(s)
+Video
+Apex Example Video
+Click on the link below to view a streaming video of this problem; it lasts approximately two minutes and explains how the
+steps are performed.
+Figure 2-5  Video of the Above StepsFile Description
+nug_25_1.dat Linear Hexahedral and Parabolic T etrahedral Elements
+nug_25_2.dat Glued Annular Plates NAFEMS T est #53&lt;/p&gt;
+&lt;p&gt;28 CHAPTER 2
+Modal Analysis with Glued Contact
+Main Index
+Patran Example Video
+Click on the link below to view a streaming video of this problem; it lasts approximately two minutes and explains how the
+steps are performed.
+Figure 2-6  Video of the Above Steps&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 229
+Main Index&lt;/p&gt;
+&lt;p&gt;Main Index
+Chapter 3: Beams: Composite Materials and Open Cross Sections s
+3Beams: Composite
+Materials and Open Cross
+Sections
+Summary - Composite Beam     31
+Introduction     32
+Solution Requirements     32
+FEM Solution     34
+Modeling Tips     35
+Input File(s)     35
+Summary - VKI and VAM Beam Formulations     35
+Introduction     36
+Solution Requirements     36
+FEM Solution     37
+Input File(s)     39&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 331
+Main Index
+Summary - Composite Beam
+Title Chapter 3: Composite Beam
+Geometry
+Material properties •Linear elastic orthotropic material using MAT8
+•Assumptions: E33 = 0.8E22; E13= E23= E12
+•Theta on PCOMP /PCOMPG  specifies the angle between X-axis of material coordinate
+and X-axis of element coordinate.
+Analysis type Linear static analysis
+Boundary conditions Cantilever configuration
+Applied loads Bending
+Element type CBEAM3
+FE results •Converted PBEAM3  from PBMSECT
+•Stress recovery - screened based on max failure index
+•bdf file for FE mesh of cross section shown hereFy
+Fz&lt;br&gt;
+X, Xe Y, Ye
+Z, Ze
+Straight Cantilever Beam with load (Fy or Fz) applied at Free-End
+Element coordinate (Xe, Ye, Ze) coincides with Basic Coordinate (X,Y,Z)
+Z
+Y X&lt;/p&gt;
+&lt;p&gt;32 CHAPTER 3
+Beams: Composite Materials and Open Cross Sections
+Main Index
+Introduction
+Composite materials have found increasing applications in many applications and slender structures like rotor blades or
+high-aspect-ratio wings may be modeled in one-dimension as a 1-D beam provided the complex cross sectional properties
+(ultimately represented as a 2-D finite element mesh) can be captured properly. Here, a new way for composite beam
+analysis is introduced. The Variational Asymptotic Method (VAM) computes the properties of a beam’s arbitrary cross
+section containing composite materials. VAM, the mathematical basis of VABS, splits a general 3-D nonlinear elasticity
+problem for a beam-like structure into a two-dimensional (2-D) linear cross-sectional analysis and a 1-D nonlinear beam
+analysis. For details on VAM, refer to Yu, W., Volovoi, V., Hodges, D. and Hong, X. “Validation of the Variational
+Asymptotic Beam Sectional Analysis (VABS)”, AIAA Journal , Vol. 40, No. 10, 2002 (available at
+&lt;a href=&#34;http://www.ae.gatech.edu/people/dhodges/papers/AIAAJ2002.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://www.ae.gatech.edu/people/dhodges/papers/AIAAJ2002.pdf&lt;/a&gt; ). VAM’s key benefit lies in the ability to model a beam
+made of composite material with only 1-D elements, namely CBEAM3.
+Solution Requirements
+In general, the solution requires the layup of composite material MAT8  and the description of this general or arbitrary cross
+section. PCOMP  entries are used to provide the composite layup and PBMSECT  entry is utilized to describe the profile of cross
+section and the link to the composite layup via PCOMP . An example is shown as follows:
+The theta field on PCOMP  is utilized to specify the angle between the X-axis of the material coordinate and the X-axis of
+the element coordinate. A cutout of the FEM mesh at the intersect of OUTP=101  and BRP=103  illustrates the ply layup
+shown in Figure 3-1.$
+$ Composite case
+PBMSECT 32 1 OP 0.015
+OUTP=101,C=101,brp=103,c(1)=[201,pt=(15,34)]
+pcomp 101 -0.1 5000. hill 0.0
+501 0.05 0.0 501 0.05 90.0
+501 0.05 -45.0 501 0.05 45.0
+501 0.05 0.0
+pcomp 201  5000. tsai 0.0 SYM
+501 0.05 -45.0 501 0.05 45.0
+501 0.05 0.0
+$MAT1 501 3.6 .3
+mat8,501,2.0e7,2.0e6,.35,1.0e6,1.0e6,1.0e6,0.0,+
++,0.0,0.0,0.0,2.3e5, 1.95e5, 13000., 32000., 12000.&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 333
+Main Index
+Figure 3-1  Intersection of Ply Layups 101 and 201
+Z
+Y X-45, PCOMP 201 -45  45,  45, 0, 0,
+0
+45
+-45
+90
+0 0
+45
+-45
+90
+0P
+C
+O
+M
+P
+1
+01P
+C
+O
+M
+P
+101&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>User&#39;s Manual P3</title>
+      <link>//uildDrafts:1313/docs/msc_nastran_2024.1_demonstration_problems_manual-linear_analysis/msc_nastran_2024.1_demonstration_problems_manual-linear_analysis_003/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//uildDrafts:1313/docs/msc_nastran_2024.1_demonstration_problems_manual-linear_analysis/msc_nastran_2024.1_demonstration_problems_manual-linear_analysis_003/</guid>
+      <description>
+        
+        
+        &lt;p&gt;34 CHAPTER 3
+Beams: Composite Materials and Open Cross Sections
+Main Index
+FEM Solution
+The converted PBEAM3  for PBMSECT ,32 is as follows:
+Note that the MID field of above PBEAM3  has value of 0 which is a flag for using the Timoshenko 6 x 6 matrix stored from
+the seventh line of PBEAM3 . Timoshenko 6 x 6 matrix includes cross sectional and material properties. The cross-sectional
+shape and the FE mesh is shown in Figure 3-2. The coordinate shown in the figure matches with element coordinate.
+Figure 3-2  Cross-sectional Shape and the Corresponding FE Mesh
+Full cross sectional stress recovery can be performed with PARAM, ARBMSS,YES  in bulk data and FORCE (Case)=setid  in
+case control. The stresses screened based on maximum failure index is shown as follows:*** USER INFORMATION MESSAGE 4379 (IFP9B)
+THE USER SUPPLIED PBMSECT BULK DATA ENTRIES ARE REPLACED BY THE FOLLOWING PBEAM3 ENTRIES.
+CONVERSION METHOD FOR PBARL/PBEAML - .
+PBEAM3 32 04.7202E+00 8.3059E+01 2.9578E+01 -1.5664E+01 3.2316E+01 0.0000E+00
+1.8014E+01 4.2136E+00 1.7100E+01 -2.7858E+00 3.8881E+00 -3.5404E+00 4.7202E+00 2.6994E+00
+0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00
+0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00
+0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00
+0.0000E+00 0.0000E+00
+1.2253E+08 -2.1160E+05 8.1193E+04 -2.4761E+06 -3.7193E+06 7.9049E+06 -2.1160E+05 2.1792E+06
+-1.7859E+06 1.9780E+07 5,4643E+05 -3.5845E+05 8.1193E+04 -1.7859E+06 2.7228E+07 1.7190E+07
+2.9835E+04 2.1407E+06 -2.4761E+06 1.9780E+07 1.7190E+07 2.2332E+08 5.8182E+06 -1.2186E+06
+-3.7193E+06 5.4643E+05 2.9835E+04 5.8182E+06 2.1349E+09 -4.0706E+08 8.9040E+06 -3.5845E+05
+2.1407E+06 -1.2186E+06 -4.0706E+08 7.5602E+08
+Z
+Y X&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 335
+Main Index
+Modeling Tips
+CBEAM3  is considered a straight beam if PID points to PBMSECT , ID. The third point is ignored during the formation of
+element matrices. During data recovery, the stresses for the third point are computed based on the forces recovered which
+may not be correct.
+PARAM, ARBMSTYP ,TIMOSHEN  must be present to access VAM for composite beam.
+Input File(s)
+Summary - VKI and VAM Beam Formulations1VAB ALGORITHM USING CORE OF PBMSECT MARCH 6, 2007 MSC Nastran 3/ 6/07 PAGE 14
+TRANSVERSE TIP LOAD
+0 SUBCASE 1
+S T R E S S E S I N L A Y E R E D C O M P O S I T E E L E M E N T S ( BEAM3 )
+ELEMENT GRID PLY D I R E C T S T R E S S E S FAILURE MAXIMUM STRENGTH
+ID ID ID NORMAL-1 NORMAL-2 NORMAL-3 SHEAR-12 SHEAR-23 SHEAR-13 THEORY FAIL. INDEX RATIO
+FLAG
+2 302 2 2.468E+01 1.601E+01 2.670E+00 2.323E+01 4.991E-01 3.724E+00 TSIA-WU 7.161E-04 4.035E+02
+102 2 1.685E+01 1.619E+01 -7.230E-01 1.993E+01 -1.377E-01 -5.572E-01 TSAI-WU 7.258E-04 4.470E+02
+1301 2 1.588E+01 1.594E+01 -7.167E-01 1.938e+-1 -1.162e-01 -5.280e-01 TSAI-WU 7.193E-04 4.569E+02
+File Description
+Vabcore1.dat Composite beam with MAT1 .
+Title Chapter 33: VKI and VAM Beam Formulations
+Geometry
+Material properties Linear elastic isotropic material
+Analysis type Linear static analysis
+Boundary conditions Cantilever configurationFy
+Fz&lt;br&gt;
+X, Xe Y, Ye
+Z, Ze
+Straight Cantilever Beam with load (Fy or Fz) applied at Free-End
+Element coordinate (Xe, Ye, Ze) coincides with Basic Coordinate (X,Y,Z)
+0.5 0.04
+1.0 Z
+Y X&lt;/p&gt;
+&lt;p&gt;36 CHAPTER 3
+Beams: Composite Materials and Open Cross Sections
+Main Index
+Introduction
+In MSC Nastran, there are two formulations to compute sectional properties. Both formulations use the finite element
+method. The first one is named after its third party vender, VKI, which solves a series of equations (see documentation of
+PBMSECT  in Quick Look Guide ) to obtain sectional properties. The other formulation is Variational Asymptotic Method
+(VAM), see attached for details on VAM Theory. While VKI formulation is for isotropic material only, VAM is capable to
+compute beam sectional properties for isotropic and composite material.
+Solution Requirements
+PBMSECT  bulk data entry is utilized to describe the shape of I section and PARAM,ARBMSTYP  is used to control the
+selection of formulation. Note that default value for PARAM,ARBMSTYP  select VKI formulation to compute sectional
+properties of arbitrary cross section with isotropic material. However, PARAM,ARBMSTYP,TIMISHEN  must be present in
+the bulk data section if PBMSECT  entry with Core and/or Layer keywords exists in the file.Applied loads Bending load with forces applied at free end
+Element type CBEAM, CBEAM3
+FE results •Converted PBEAM /PBEAM3  from PBMSECT
+•bdf file for FE mesh of cross section
+•Stress recovery - screened based on max failure index
+Z
+Y X
+Results  Isotropic with VKI Isotropic with
+VAM  Composite with
+MAT1 using VAM
+Disp at free end  49.987 49.974 49.977
+Smax at fixed end 74974 74956 75351&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 337
+Main Index
+FEM Solution
+The converted BEAM  for PBMSECT,31  from VKI is as follows:$ to select VAM
+PARAM,ARBMSTYPE,TIMOSHEN
+.
+$&amp;hellip;&amp;hellip;.2&amp;hellip;&amp;hellip;.3&amp;hellip;&amp;hellip;.4&amp;hellip;&amp;hellip;.5&amp;hellip;&amp;hellip;.6&amp;hellip;&amp;hellip;.7&amp;hellip;&amp;hellip;.8&amp;hellip;&amp;hellip;.9&amp;hellip;&amp;hellip;.10&amp;hellip;..
+$ Section profile
+$
+$1 &amp;ndash; 2 &amp;ndash; 3
+|
+|
+$4 &amp;ndash; 5 &amp;ndash; 5
+$
+point 1 -0.50 0.23
+point 2 0.00 0.23
+point 3 0.50 0.23
+point 4 -0.50 -0.23
+point 5 0.00 -0.23
+point 6 0.50 -0.23
+$
+$&amp;hellip;&amp;hellip;.2&amp;hellip;&amp;hellip;.3&amp;hellip;&amp;hellip;.4&amp;hellip;&amp;hellip;.5&amp;hellip;&amp;hellip;.6&amp;hellip;&amp;hellip;.7&amp;hellip;&amp;hellip;.8&amp;hellip;&amp;hellip;.9&amp;hellip;&amp;hellip;.10&amp;hellip;..
+SET1 101 1 2 5 6
+SET1 201 2 3
+SET1 102 5 4
+$
+$ Ply properties
+$&amp;hellip;&amp;hellip;.2&amp;hellip;&amp;hellip;.3&amp;hellip;&amp;hellip;.4&amp;hellip;&amp;hellip;.5&amp;hellip;&amp;hellip;.6&amp;hellip;&amp;hellip;.7&amp;hellip;&amp;hellip;.8&amp;hellip;&amp;hellip;.9&amp;hellip;&amp;hellip;.10&amp;hellip;..
+$MAT8 501 20.59e6 1.42e6 0.42 0.89e6 0.89e6 0.89e6
+$MAT1 501 1.+7 .3
+$
+$isotropic case using T keyword
+PBMSECT 31 1 OP +
+OUTP=101,t=0.04,BRP(1)=201,BRP(3)=102
+$
+$ isotropic case using C and MAT1
+PBMSECT 32 OP +
+OUTP=101,CORE=301,CORE(1)=[101,PT=(1,2)],CORE(2)=[202,PT=(5,6)],+
+BRP(1)=201,CORE(3)=[201,PT=(2,3)], +
+BRP(3)=102,CORE(3)=[102,PT=(5,4)]
+*** USER INFORMATION MESSAGE 4379 (IFP9A)
+THE USER SUPPLIED PBEAML/PBMSECT BULK DATA ENTRIES ARE REPLACED BY THE FOLLOWING PBEAM ENTRIES.
+CONVERSION METHOD FOR PBARL/PBEAML - FINITE ELEMENT METHOD.
+PBEAM3 31 19.6800E-02 4.4896E-03 6.6689E-03 -8.0299E-19 5.2448E-05 0.0000E+00
+2.5000E-01 5.0000E-01 2.5000E-01 -5.0000E-01 -2.5000E-01 -5.0000E-01 -2.5000E-01 5.0000E-01
+1.5197E-01 6.9769E-01 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 3.6170E-04 3.6170E-04
+0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 4.1043E-11 7.5134E-10 4.1043E-11 7.5134E-10&lt;/p&gt;
+&lt;p&gt;38 CHAPTER 3
+Beams: Composite Materials and Open Cross Sections
+Main Index
+The converted BEAM/PBEAM3  for PBMSECT,31  and 32 from VAM is as follows:
+Note that the MID field of above PBEAM3  has value of 0 which is a flag for using the Timoshenko 6 x 6 matrix stored from
+the seventh line of PBEAM3 . Timoshenko 6 x 6 matrix includes cross-sectional and material properties. The cross-sectional
+shape and the FE mesh is shown in the following Figure 3-3:
+Figure 3-3  Cross sectional Shape and the Corresponding FE Mesh
+Regular beam stresses at extreme point from different formulation is shown in following table:*** USER INFORMATION MESSAGE 4379 (IFP9A)
+THE USER SUPPLIED PBEAML/PBMSECT BULK DATA ENTRIES ARE REPLACED BY THE FOLLOWING PBEAM ENTRIES.
+CONVERSION METHOD FOR PBARL/PBEAML - FINITE ELEMENT METHOD.
+PBEAM3 31 19.6800E-02 4.4902E-03 6.6696E-03  0.0000E+00 5.5566E-05 0.0000E+00
+2.5000E-01 5.0000E-01 2.5000E-01 -5.0000E-01 -2.5000E-01 -5.0000E-01 -2.5000E-01 5.0000E-01
+1.5346E-01 7.0201E-01 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 3.5121E-04 3.4121E-04
+0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00
+*** USER INFORMATION MESSAGE 4379 (IFP9B)
+THE USER SUPPLIED PBMSECT BULK DATA ENTRIES ARE REPLACED BY THE FOLLOWING PBEAM3 ENTRIES.
+CONVERSION METHOD FOR PBARL/PBEAML - .
+PBEAM3 32 09.6800E-02 4.4902E-03 6.6696E-03  0.0000E+00 5.5566E-05 0.0000E+00
+2.5000E-01 5.0000E-01 2.5000E-01 -5.0000E-01 -2.5000E-01 -5.0000E-01 -2.5000E-01 5.0000E-01
+0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00
+0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00
+0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00
+0.0000E+00 0.0000E+00
+9.6800E+05 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 2.6041E+05
+-5.9944E-04 1.5708E-04 0.0000E+00 0.0000E+00 0.0000E+00 -5.9944E-04 5.6910E+04 -7.1497E-05
+0.0000E+00 0.0000E+00 0.0000E+00 0.0000E+00 4.4898E+04 0.0000E+00 0.0000E+00 0.0000E+00
+0.0000E+00 0.0000E+00 0.0000E+00 6.6693E+04
+Results Isotropic with VKI Isotropic with VAMComposite with MAT1
+using VAM
+Disp at free end 49.987 49.974 49.977
+Smax at fixed end 74974 74956 75351Z
+Y X&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 339
+Main Index
+Input File(s)
+File Description
+nug_33a.dat Isotropic and Composite beam with MAT1  using VAM
+nug_33b.dat Isotropic beam using VKI&lt;/p&gt;
+&lt;p&gt;Main Index
+Chapter 4: Topology Optimization MBB Beam and Torsion&lt;br&gt;
+4Topology Optimization
+MBB Beam and Torsion
+Summary - Beam     41
+Introduction     41
+Solution Requirements     42
+Modeling Tips     45
+Summary - Torsion     47
+Introduction     48
+Solution Requirements     48
+Modeling Tips     53
+Input File(s)     54&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 441
+Main Index
+Summary - Beam
+Introduction
+An MBB beam example (a half model shown in Figure 4-1) is used to demonstrate (a) basic MSC Nastran topology
+optimization capabilities without manufacturing constraints, (b) minimum member size control, and (c) mirror symmetry
+constraints. The structural compliance (i.e., total strain energy) is minimized with a mass target 0.5 (i.e., 50% material
+savings). The loading and boundary conditions are shown in Figure 4-1. The structure is modeled with 4800 CQUAD4&lt;br&gt;
+elements.Title Chapter 4: T opology Optimization MBB Beam and T orsion
+Topology optimization
+features•Compliance minimization
+•Mass target
+•Checkerboard free
+•Minimum member size control
+•Mirror symmetry constraints
+Geometry
+Material properties Young’s Modulus = 2×105 MPa, Poisson’s ratio = 0.3
+Analysis type Static analysis
+Boundary conditions Supported on rollers at one point and fixed support at another point.
+Applied loads A concentrated force = 100.0 N (half model)
+Element type 4-node liner QUAD elements
+Topology result Material distribution
+)(Symmetry) (Mesh 4800 Elements)Units: m
+12 x 2 x 0.01 PlateP = 200.0 N
+P = 200.0 N&lt;/p&gt;
+&lt;p&gt;42 CHAPTER 4
+Topology Optimization MBB Beam and Torsion
+Main Index
+Figure 4-1  MBB Beam
+Solution Requirements
+This MBB beam is well accepted by academic and industry for topology optimization validation.
+Design Model Description
+These solutions demonstrate:
+A distinct design can be obtained by MSC Nastran topology optimization with checkerboard free algorithm (as
+default)
+The minimum member size is mainly used to control the size of members in topology optimal designs.
+Preventing thin members enhances the simplicity of the design and, hence, its manufacturability. Minimum
+member size is more like quality control than quantity control.
+By using symmetry constraints in topology optimization, a symmetric design can be obtained regardless of the
+boundary conditions or loads.Objective: Minimize compliance
+Topology design region: PSHELL
+Constraints: Mass target = 0.5 (i.e., mass savings 50%)
+(a) Minimum member size control and/or
+(b) Mirror symmetry constraints
+P = 100.0 N&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 443
+Main Index
+Optimization Solution
+Basic compliance minimization
+The input data for this example related to topology optimization model is given in Listing 1. A TOPVAR  =1 Bulk Data
+entry is used to define a topological design region. XINIT=0.5  on the TOPVAR  entry matches the mass target constraint
+so that the initial design is feasible. The rest values on the TOPVAR  entry are default values that are recommended for
+general topology optimization applications. Type one design responses DRESP11 and 2 identify compliance and fractional
+mass, respectively. DCONSTR1 specifies the mass target. DESOBJ (Case)=1 in Case Control Command selects DRESP11
+entry to be used as a design objective (minimization as default) and DESGLB (Case)  = 1 selects the design constraint
+DCONSTR1 to be applied in this topology optimization task.
+Listing 1 Input File for MBB Beam
+DESOBJ = 1
+DESGLB = 1
+SUBCASE 1
+$ Subcase name : Default
+SUBTITLE=Default
+SPC = 2
+LOAD = 2
+ANALYSIS = STATICS
+BEGIN BULK
+DCONSTR 1       2               .5
+TOPVAR,    1  ,     Tshel,     Pshell, , , , ,   1
+DRESP1   1       COMPL    COMP
+DRESP1   2       FRMASS   FRMASS
+Figure 4-2 shows the topology optimized result that is smoothed and remeshed by using Patran. This optimal design is
+very clear without any checkerboard effect. It is noticed that there are some small members.
+Figure 4-2  MBB Beam Topology Design
+Minimum Member Size Control
+The MBB beam (shown in Figure 4-1) is used here to demonstrate the minimum member size control capability.&lt;/p&gt;
+&lt;p&gt;44 CHAPTER 4
+Topology Optimization MBB Beam and Torsion
+Main Index
+The input data for this example related to topology optimization with “minimum member size” is given in Listing 2. The
+minimum member size value is defined by the TDMIN = 0.5  parameter on the DOPTPRM  entry and corresponds to the
+length of 10 elements.
+Listing 2 Input File for MBB Beam with Minimum Member Size
+DESOBJ = 1
+DESGLB = 1
+SUBCASE 1
+$ Subcase name : Default
+SUBTITLE=Default
+SPC = 2
+LOAD = 2
+ANALYSIS = STATICS
+BEGIN BULK
+DOPTPRM, TDMIN, 0.5
+DCONSTR 1       2               .5
+TOPVAR,    1  ,     Tshel,     Pshell, , , , ,   1
+DRESP1   1       COMPL    COMP
+DRESP1   2       FRMASS   FRMASS
+The Figure 4-3 shows the topology optimized result with “minimum member size” TDMIN=0.5 . Compared the design
+shown in Figure 4-2, this design with “minimum member size” is obviously much simpler and there are no tiny members at
+all.
+Figure 4-3  MBB Beam Topology Design with “Minimum Member Size”
+Mirror Symmetric Constraints
+Since the loads applied on the MBB beam are not symmetric, the topology optimized designs Figures 4-2 and 4-3 are not
+symmetric. The MBB beam is employed again to demonstrate the mirror symmetric constraint capability that enforces the
+design to be symmetric about a given plane.
+To apply symmetric constraints on designed properties, users need to create a reference coordinate system using a
+rectangular coordinate system CORD1R  or CORD2R . In this example, grid 10001 (location x=3, y=1, and z=0) is defined as
+the origin. Grid 10002 (x=3, y=1, and z=1) lies on the z-axis, and grid 1003 (x=4, y=1, and z=0) lies in the x-z plane.
+CORD1R CID=1  defines a reference coordinate system. A continuation line “ SYM” enforces the property PSHELL=1  to be
+symmetric about the planes YZ and ZX in the reference coordinate system CID=1. In addition, a minimum member size
+TDMIN=0.15  is applied. The input data for this example is given in Listing 3.&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 445
+Main Index
+Listing 3 Input File for MBB Beam with Mirror Symmetry Constraints
+DESOBJ = 1
+DESGLB = 1
+SUBCASE 1
+$ Subcase name : Default
+SUBTITLE=Default
+SPC = 2
+LOAD = 2
+ANALYSIS = STATICS
+BEGIN BULK
+CORD1R   1       10001    10002   10003
+GRID     10001            3.      1.     0.0
+GRID     10002            3.      1.     1.0
+GRID     10003            4.      1.     0.0
+TOPVAR,  1     , Tshel,   Pshell, , , , ,   1
+,  SYM   ,    1 ,   YZ    ,   ZX
+, TDMIN,  0.15
+DRESP1   1       COMPL    COMP
+DRESP1   2       FRMASS   FRMASS
+DCONSTR  1       2               .5
+Figure 4-3 shows the topology optimal result with symmetric constraints and minimum member size.
+Figure 4-4  MBB Beam with Symmetric Constraints and Minimum Member Size
+Modeling Tips
+The quality of the results of a topology optimization task is a strong function of how the problem is posed in MSC Nastran.
+This section contains a number of tips:
+A DRESP1=COMP  is introduced to define the compliance of structures for topology optimizations. The response is
+usually used as an objective to maximize structural stiffness in static analysis problems.
+A DRESP1=FRMASS  is introduced to define the mass fraction of topology designed elements. The
+DRESP1=WEIGHT  is the total weight of all structural and nonstructural mass. For topology optimization tasks, a
+DRESP1=FRMASS  response is recommended to define a mass reduction target in a design constraint.&lt;/p&gt;
+&lt;p&gt;46 CHAPTER 4
+Topology Optimization MBB Beam and Torsion
+Main Index
+The POWER  field on the TOPVAR  entry has a large influence on the solution of topology optimization problems.
+A lower POWER  often produces a solution that contains large “grey” areas (area with intermediate densities 0.3 –
+0.7). A higher value produces more distinct black and white (solid and void) designs. However, near singularities
+often occur when a high POWER  is selected.
+A TCHECK  parameter on DOPTPRM  is used to turn on/off the checkerboard free algorithm. This default normally
+results in a better design for general finite element mesh. However, if high order elements and/or a coarser mesh is
+used, turning off the filtering algorithm may produce a better result.
+The TDMIN  parameter is mainly used to control the degree of simplicity in terms of manufacturing
+considerations. It is common to see some members with smaller size than TDMIN  at the final design since the small
+members have contributions to the objective. Minimum member size is more like quality control than quantity
+control. It is in general recommended that TDMIN  should not be less than the length of 3 elements .
+Maximum design cycle DESMAX=30  (as default) is often required to produce a reasonable result. More design
+cycles may be required to achieve a clear 0/1 material distribution, particularly when manufacturability constraints
+are used.
+There are many solutions to a topology optimization: one global and many local minimization. It is not unusual
+to see different solutions to the same problem with the same discretization by using different optimization solvers
+or the same optimization solver with different starting values of design variables.
+In a multiple subcase problem, a DRSPAN (Case)  Case Control Command can be used to construct a weighting
+function via a DRESP2  or DRESP3 . For example, a static and normal mode combined problem, the objective can be
+defined as
+where weight1  and weight2 are two weighting factors. c1 is the calculated compliance and 1 isthe calculated
+eigenvalue via DRESP1  definition. c0 and 0 are the initial value of these responses.
+To obtain a rib pattern by topology optimization, a core non-designable shell element thickness must be defined
+together with two designable above and below the core thicknesses. That is, add two designable elements for each
+regular element.
+If some elements are disconnected on the final topology design proposal, the mass target may be too small to fill
+the design space.objweight1c1
+c0&amp;mdash;&amp;ndash;
+weight20
+1&amp;mdash;&amp;ndash;
++ =&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 447
+Main Index
+Summary - Torsion
+Title Chapter 34: A Torsion Beam
+Topology optimization
+features•Compliance minimization
+•Mass target
+•Checkerboard free
+•Minimum member size control
+•Mirror symmetry constraints
+Geometry
+Material properties Young’s Modulus = 2.1×105MPa, Poisson’s ratio = 0.3, density = 1.0
+Analysis type Static analysis
+Boundary conditions Cantilever
+Applied loads A pair of twisting forces = 1000.0 N at the free end
+Element type 8-node HEXA elements
+Topology result Material distribution
+)Units: m
+Length = 16 and width = 4 and height = 4+
++P = 1000
+P = 1000
+Z&lt;/p&gt;
+&lt;p&gt;48 CHAPTER 4
+Topology Optimization MBB Beam and Torsion
+Main Index
+Introduction
+A torsion beam is used here to demonstrate the extrusion and casting constraints. Figure 4-5 shows the FEM model of the
+torsion beam. A pair of twisting forces is applied on one end while the other end is fixed. 2048 CHEXA  elements are used for
+this model. The objective is to minimize the structural compliance with mass target of 0.3 (i.e., 70% material savings).
+Figure 4-5  Torsion Beam
+Solution Requirements
+This torsion beam is utilized to show MSC Nastran topology optimization extrusion and casting constraint capabilities.
+Design Model Description
+Three solutions demonstrate:
+By using extrusion constraints in topology optimization, a constant cross-section design along the given extrusion
+direction can be obtained regardless of the boundary conditions or loads.
+The use of casting constraints can prevent hollow profiles in topology optimization so that the die can slide in a
+given direction. One or two die options are available for selection.
+Some combined manufacturing constraints are allowed in topology optimization to achieve design goal.Objective: Minimize compliance
+Topology design region: PSOLID
+Constraints: Mass target = 0.3 (i.e., mass savings 70%)
+(a) Extrusion constraints
+(b) Casting constraints with one or two diesUnits: m
+Length = 16 and width = 4 and height = 4+
++P = 1000
+P = 1000
+Z&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 449
+Main Index
+Optimization Solution
+Extrusion Constraints With One Die
+If is often to see some topology optimized designs can contain cavities that are not achievable or require a high cost
+manufacturing process. For example, the result from the torsion beam without manufacturing constraints is shown in
+Figure 4-6. Clearly, this topology design proposal is not achievable by casting.
+Figure 4-6  Torsion Beam without Manufacturing Constraints
+The extrusion constraints enforce a constant cross-section design along the given extrusion direction. The input data related
+to imposing an extrusion constraint along the z-axis in the basic coordinate system (as the default option) is given in Listing
+4.
+Listing 4 Input File for Torsion Beam with Extrusion
+DESOBJ = 1
+DESGLB = 1
+SUBCASE 1
+$ Subcase name : Default
+SUBTITLE=Default
+ANALYSIS = STATICS
+SPC = 2
+LOAD = 2
+$ Direct Text Input for this Subcase&lt;/p&gt;
+&lt;p&gt;50 CHAPTER 4
+Topology Optimization MBB Beam and Torsion
+Main Index
+BEGIN BULK
+DRESP1   2       Frmass   FRMASS
+DRESP1   1       COMPL    COMP
+DCONSTR  1       2                .3
+TOPVAR,  1    ,     TSOLID,     PSOLID, .3, , , ,   1
+,  EXT  ,           ,       Z
+PSOLID   1       1        0
+Figure 4-7 shows the topology optimized result with extrusion constraints. It is obvious that the design has a constant cross-
+section along the z-axis.
+Figure 4-7  Torsion Beam with Extrusion Constraints in Z-Axis
+Casting Constraints with One Die
+A torsion beam (shown in Figure 4-5 is used here to demonstrate the combination of one die casting manufacturability
+constraints and mirror symmetric constraints.
+The casting constraints with one die option enforce that the material can only be added to the region by “filling up” in the
+given draw direction from the bottom (or, stated another way, that voids extend from the top surface and do not reappear
+in the die direction). T o apply casting constraints and symmetric constraints on designed properties, a reference coordinate
+system CID=1  is defined by using a rectangular coordinate system CORD1R . A CAST  continuation line defines casting
+constraints in the Y direction and one die is a default option. Another SYM continuation line defines symmetric constraints
+about the YZ plane. The input data related to the topology optimization model is given in Listing 5.&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 451
+Main Index
+Listing 5 Input File for Torsion with One Die
+DESOBJ = 1
+DESGLB = 1
+SUBCASE 1
+$ Subcase name : Default
+SUBTITLE=Default
+ANALYSIS = STATICS
+SPC = 2
+LOAD = 2
+$ Direct Text Input for this Subcase
+BEGIN BULK
+DRESP1   2       Frmass   FRMASS
+DRESP1   1       COMPL    COMP
+DCONSTR  1       2                 .3
+CORD1R   1       5        167      7
+PSOLID   1       1        0
+TOPVAR,    1 ,      TSOLID,     PSOLID,    .3, , , ,   1
+,        CAST,          1 ,    Y, , YES
+,         SYM,          1 ,   YZ
+Figure 4-8 shows the topology optimized result with one die casting constraints. It is observed that the design material is
+added by “filling up” in the Y direction from the bottom. In addition, the design is symmetric about the YZ plane in the
+reference coordinate system CID=1 .
+Figure 4-8  Torsion Beam with One Die Casting Constraints in Y Direction&lt;/p&gt;
+&lt;p&gt;52 CHAPTER 4
+Topology Optimization MBB Beam and Torsion
+Main Index
+Casting Constraints with Two Dies
+A torsion beam (shown in Figure 4-5 is also used here to demonstrate two die casting manufacturability constraints.
+The input for two die casting constraints is similar to the one die option in Example 5. Here, the difference is that 2 are
+selected for the DIE field on the TOPVAR  entry. The input data related to imposing two die casting constraints is given in
+Listing 6.
+Listing 6 Input File for Torsion with Two Dies
+DESOBJ = 1
+DESGLB = 1
+SUBCASE 1
+$ Subcase name : Default
+SUBTITLE=Default
+ANALYSIS = STATICS
+SPC = 2
+LOAD = 2
+$ Direct Text Input for this Subcase
+BEGIN BULK
+DRESP1   2       Frmass   FRMASS
+DRESP1   1       COMPL    COMP
+DCONSTR  1       2                 .3
+CORD1R   1       5        167      7
+PSOLID   1       1        0
+TOPVAR,    1 ,      TSOLID,     PSOLID, ,    ,   ,   ,   1
+,        CAST,         1 ,     Y,     2 , YES
+,        SYM ,         1 ,    YZ
+PSOLID      1                  1                    0
+Figure 4-9 shows the topology optimized result with two die casting constraints. It is observed that the design material grows
+from the splitting plane in opposite directions along the y-axis specified in the reference coordinate system CID=1. The
+splitting plane is determined by optimization and in this case corresponds to the&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 453
+Main Index
+Figure 4-9  Torsion Beam with Two Die Casting Constraints in Y-Axis
+Modeling Tips
+It is recommended that a base line topology optimization job (without any manufacturability constraints) be
+carried out before a topology optimization solution with manufacturability constraints. Benefits are:
+a.A topology optimization without restriction may result in a better design
+b.The design proposal from the no restriction run may give some hints for imposing manufacturability
+constraints.
+Topology optimization with manufacturability constraints often needs more material to fill the design space.
+Therefore, the design with manufacturability constraints usually requires a relatively bigger mass target (less
+material savings) than the one without manufacturability constraints.
+The casting constraints may have difficulty dealing with a design model that has one or more non-smoothed
+boundary surfaces to be designed. It is recommended to use smooth surfaces for topology designed boundary
+surfaces.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>User&#39;s Manual P4</title>
+      <link>//uildDrafts:1313/docs/msc_nastran_2024.1_demonstration_problems_manual-linear_analysis/msc_nastran_2024.1_demonstration_problems_manual-linear_analysis_004/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//uildDrafts:1313/docs/msc_nastran_2024.1_demonstration_problems_manual-linear_analysis/msc_nastran_2024.1_demonstration_problems_manual-linear_analysis_004/</guid>
+      <description>
+        
+        
+        &lt;p&gt;54 CHAPTER 4
+Topology Optimization MBB Beam and Torsion
+Main Index
+Input File(s)
+File Description
+nug_34a.dat Basic compliance minimization
+nug_34b.dat Minimum member size
+nug_34c.dat Mirror symmetry constraints
+nug_34d.dat Extrusion constraints
+nug_34e.dat One die casting constraints
+nug_34f.dat Casting constraints with two dies&lt;/p&gt;
+&lt;p&gt;Main Index
+Chapter 5: Engine Mount Topology Optimization&lt;br&gt;
+5Engine Mount Topology
+Optimization
+Summary     56
+Introduction     57
+Solution Requirements     58
+FEM Solutions     58
+Results     61
+Modeling Tips     61
+Input File(s)     62&lt;/p&gt;
+&lt;p&gt;56 CHAPTER 5
+Engine Mount Topology Optimization
+Main Index
+Summary
+Title Chapter 5: Engine Mount Topology Optimization
+Topology optimization
+features•Averaged compliance minimization
+•Multiple TOPVAR  entries
+•Multiple load cases
+•Displacement constraints
+Geometry
+Material properties Young’s Modulus = 1.05×105 MPa, Poisson’s ratio = 0.32
+Boundary conditions Supported on rollers at one point and fixed support at another point.
+Applied loads 14 load cases (forces)
+Element type HEXA, PENTA, TETRA, and RBE3
+Topology result Material distribution
+)
+Front Mount RingLink
+Front Mount Beam
+Trunnion
+Thrust StrutFront Mount Beam&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 557
+Main Index
+Introduction
+The main goal is to minimize the compliance of the engine-front-mount-beam (shown in Figure 5-1) with mass target 0.3
+(material savings 70%) and displacements within a range (-0.6, 0.6) at selected 5 grids. The analysis model has 14 load
+cases. The finite element model is shown in Figure 5-2. There are 62306 CHEXA  elements, 703 CPENTA  elements, 31 CTETRA&lt;br&gt;
+elements, and 5 RBE3 elements.
+Figure 5-1  Front-Mount-Beam
+Figure 5-2  Front-Mount-Beam FE Model
+Front Mount RingLink
+Front Mount Beam
+Trunnion
+Thrust Strut
+Front Mount Beam&lt;/p&gt;
+&lt;p&gt;58 CHAPTER 5
+Engine Mount Topology Optimization
+Main Index
+Solution Requirements
+Design Model Description
+This solutions demonstrates:
+The averaged compliance can be used for topology optimization problems with multiple load case to achieve an
+efficient design concept.
+Multiple topological design parts are allowed.
+Displacement constrains can be well treated in topology optimization.
+FEM Solutions
+The input data related to the topology optimization model is given in Listing 7.
+The TOPVAR  entries define five topological design parts with XINIT  (initial design) =0.3  that matches the mass target so
+the initial design is feasible (reduce CPU time spent on optimizer).
+In order for a structural response to be used either as an objective or a constraint, it first must be identified on a DRESPi&lt;br&gt;
+Bulk Data entry. The DRESP1  entries 720-850, for example, identify the compliance. DRSPAN (Case)  and SET (Case)  Case
+Control Commands are then used to select one compliance DRESP1  entry for each subcase that are used in DRESP2,1000&lt;br&gt;
+response. The equation response DRESP2,1 with the attribute FUNC=AVG  spans all subcases to calculate averaged
+compliance of the structure. A DESOBJ (Case)  Case Control Command selects DRESP2,1 to be an objective.
+DRESP1 ,282 defines a fractional mass response. This mass target is imposed by the upper bound on the DCONSTR,200  entry.
+As always, fractional mass constraints should be applied at the global level in a design optimization by using DESGLB
+(Case) . Separate DRESP1  entries 1 -5 identify displacements responses at gird points. There responses are constrained by
+the bounds set using a corresponding set of DCONSTR entries.
+Listing 7 Input File for Engine Mount
+analysis=statics
+set 1 = 200
+set 2 = 201
+set 3 = 202
+set 4 = 203
+set 5 = 204
+set 6 = 205Objective: Minimize averaged compliance
+Topology design region: PSOLID = 1 , 2, 3, 8, 9, and 10
+Constraints: Mass target = 0.3 (i.e., mass savings 70%)
+Displacements at grid points 76095, 76096, 76419, 76420, and 76421 for all
+14 load cases within the range (-6.0, 6.0)&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 559
+Main Index
+set 7 = 206
+set 8 = 207
+set 9 = 208
+set 10 = 209
+set 11 = 210
+set 12 = 211
+set 13 = 212
+set 14 = 213
+DESOBJ = 1000
+DESGLB = 50
+DESSUB = 1
+$ Direct Text Input for Global Case Control Data
+$ ==================================================================
+$ ==================================================================
+SUBCASE 1
+LOAD = 1
+DRSPAN = 1
+SUBCASE 2
+LOAD = 2
+DRSPAN = 2
+SUBCASE 3
+LOAD = 3
+DRSPAN = 3
+SUBCASE 4
+LOAD = 4
+DRSPAN = 4
+SUBCASE 5
+LOAD = 5
+DRSPAN = 5
+SUBCASE 6
+LOAD = 6
+DRSPAN = 6
+SUBCASE 7
+LOAD = 7
+DRSPAN = 7
+SUBCASE 8
+LOAD = 8
+DRSPAN = 8
+SUBCASE 9
+LOAD = 9
+DRSPAN = 9
+SUBCASE 10
+LOAD = 10
+DRSPAN = 10
+SUBCASE 11
+LOAD = 11
+DRSPAN = 11
+SUBCASE 12
+LOAD = 12
+DRSPAN = 12
+SUBCASE 13
+LOAD = 13&lt;/p&gt;
+&lt;p&gt;60 CHAPTER 5
+Engine Mount Topology Optimization
+Main Index
+DRSPAN = 13
+SUBCASE 14
+LOAD = 14
+DRSPAN = 14
+$ ===================================================================
+BEGIN BULK
+$ *******************************************************************
+$   Written by : MSC/NASTRAN
+$   Version    : 4.51
+$   Translator : MSC/NASTRAN
+$   From Model : D:\users\mulf\bmwroll\fmb.mod
+$   Date       :
+$ *******************************************************************
+$
+$234567812345678123456781234567812345678
+$DCONSTR 1       20      6.       6.1
+$23456781234567812345678123456781234567812345678123456781234567812345678
+$DCONADD  1      15      16       17      18      19      21      22
+$        23      24      25       50
+DCONSTR  1       1      -6.      6.0
+DCONSTR  1       2      -6.      6.0
+DCONSTR  1       3      -6.      6.0
+DCONSTR  1       4      -6.      6.0
+DCONSTR  1       5      -6.      6.0
+DCONSTR  50      50              .3
+TOPVAR,    1  ,    psolid,      Psolid, .3, , , ,   1
+TOPVAR,    2  ,    psolid2,     Psolid, .3, , , ,   2
+TOPVAR,    3  ,    psolid3,     Psolid, .3, , , ,   3
+TOPVAR,    4  ,    psolid8,     Psolid, .3, , , ,   8
+TOPVAR,    5  ,    psolid9,     Psolid, .3, , , ,   9
+TOPVAR,    6  ,    psolid10,    Psolid, .3, , , ,  10
+$234567812345678123456781234567812345678123456781234567812345678
+DRESP1  50       w       FRMASS
+DRESP1   1       d       disp                   123             76095
+DRESP1   2      d1       disp                   123             76096
+DRESP1   3      d2       disp                   123             76419
+DRESP1   4      d3       disp                   123             76420
+DRESP1   5      d4       disp                   123             76421
+$234567812345678123456781234567812345678123456781234567812345678
+DRESP1, 200,    COMP1,      COMP
+DRESP1, 201,    COMP2,      COMP
+DRESP1, 202,    COMP3,      COMP
+DRESP1, 203,    COMP4,      COMP
+DRESP1, 204,    COMP5,      COMP
+DRESP1, 205,    COMP6,      COMP
+DRESP1, 206,    COMP7,      COMP
+DRESP1, 207,    COMP8,      COMP
+DRESP1, 208,    COMP9,      COMP
+DRESP1, 209,    COMP10,     COMP
+DRESP1, 210,    COMP11,     COMP
+DRESP1, 211,    COMP12,     COMP&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 561
+Main Index
+DRESP1, 212,    COMP13,     COMP
+DRESP1, 213,    COMP14,     COMP
+$234567812345678123456781234567812345678123456781234567812345678
+DRESP2   1000     COMPL     AVG&lt;br&gt;
+DRESP1   200      201    202     203     204      205    206
+207      208    209     210     211      212    213
+Results
+A topology result shown in Figure 5-3 is obtained by MSC Nastran. The topology optimization design proposal is smoothed
+by Patran.
+Figure 5-3  Front-Mount-Beam Topology Optimization Proposal
+Modeling Tips
+If multiple mass targets (multiple DRESP1=FRMASS ) are used, it is recommended each TOPVAR &amp;rsquo;s initial value
+XINIT  matches its corresponding mass target.&lt;/p&gt;
+&lt;p&gt;62 CHAPTER 5
+Engine Mount Topology Optimization
+Main Index
+Input File(s)
+File Description
+nug_35.dat Minimize averaged compliance/displacement constraints&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 563
+Main Index&lt;/p&gt;
+&lt;p&gt;Main Index
+Chapter 6: Wheel Topology Optimization&lt;br&gt;
+6Wheel Topology
+Optimization
+Summary     65
+Introduction     66
+Solution Requirements     66
+FEM Solution s     67
+Results     67
+Modeling Tips     68
+Input File(s)     68&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 665
+Main Index
+Summary
+Title Chapter 6: Wheel Topology Optimization
+Topology optimization
+featuresCyclical symmetry constraints
+Geometry
+Material properties Young’s Modulus = 1.0×107 PSI, Poisson’s ratio = 0.3, density = 1.0 LBF/in3
+Boundary conditions Fixed at some points
+Applied loads Force = 1000.0 LBS in direction of gravity
+Element type HEXA, RBE3
+Topology result Material distribution
+)&lt;/p&gt;
+&lt;p&gt;66 CHAPTER 6
+Wheel Topology Optimization
+Main Index
+Introduction
+A wheel model shown in Figure 6-1 is used to demonstrate MSC N astran topology optimization cyclical symmetry
+capabilities. The wheel is modeled with six-sided solid elements (118156 CHEXA ). The wheel outer layers and bolts are
+nondesignable. One load case is considered. The structural compliance is minimized (i.e., minimize the total strain energy
+of the structure) with a mass target 0.1 (i.e., remove 90% of the material). Although the load is not cyclically symmetric
+about the Y-axis, the design is required to be cyclically symmetric about the Y-axis with five segments.
+Figure 6-1  Wheel FE Model
+Solution Requirements
+Design Model Description
+This solutions demonstrates:
+By using cyclical symmetry constraints in topology optimization, a rotational symmetric design can be obtained
+regardless of the boundary conditions or loads.
+CASI solver provides a major speed up for large 3-D problems in static analysis.Objective: Minimize averaged compliance
+Topology design region: PSOLID (blue)
+Constraints: Mass target = 0.1 (i.e., mass savings 90%)
+The design is forced to be cyclical symmetry about the Y-axis with five
+segments.&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 667
+Main Index
+FEM Solution s
+The input data for this example related to topology optimization model is given in Listing 8. The coordinate system
+(CORD2R  = 1) is created to be used to specify cyclical symmetric constraints. The field CS (cyclical symmetric axis) on the
+SYM line is Y-axis with NCS (number of cyclical symmetric segments) = 5. It is noticed that SMETHOD (Case)= ELEMENT&lt;br&gt;
+is used to select CASI iterative solver. The CASI iterative solver released in MSC N astran can provide a major speedup in
+the solution of large static analyses.
+Listing 8 Input File for Wheel
+DESOBJ = 10
+DESGLB = 1
+ANALYSIS = STATICS
+SMETHOD = ELEMENT
+SUBCASE 1
+SPC = 2
+LOAD = 2
+BEGIN BULK
+CORD2R   1            10.512  33.3312 12.9921 -22.209833.3312 4.88385
+28.388  33.3313 -19.7297
+DCONSTR  1       2               .1
+TOPVAR   1       PSOLID  PSOLID  .1                               2
+SYM        1                             Y        5
+DRESP1   2       FRM     FRMASS
+DRESP1   10      COMP    COMP
+Results
+Figure 6-2 shows the topology optimized result that is smoothed by using Patran. It is noticed that cyclical symmetry is
+obtained even though the loading is not cyclically symmetric.
+Figure 6-2  Wheel Topology Design&lt;/p&gt;
+&lt;p&gt;68 CHAPTER 6
+Wheel Topology Optimization
+Main Index
+Modeling Tips
+CASI solver is limited to compliance minimization topology optimization problem only.
+The cyclical symmetry constraints can also be used for rotational parts &amp;lt;60°. In addition, the starting surface must
+be XY plane for cyclical symmetric CS=X, YZ plane for CS=Y; ZX plane for CS=Z, respectively. The cyclical
+symmetric segment (NCS) must also be defined in 360 for this case. For example, a 90° rotational part has three
+segments, NCS must be set to NCS=12  in 360°.
+Input File(s)
+File Description
+nug_36.dat Cyclical symmetry constraints&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 669
+Main Index&lt;/p&gt;
+&lt;p&gt;Main Index
+Chapter 7: Fluid-structure Interaction (FSI) Frequency Responses&lt;br&gt;
+7Fluid-structure Interaction
+(FSI) Frequency
+Responses
+Introduction     71
+Model Setup     71
+Modelling Guidelines     77
+Input File(s)     77
+Results     77&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 771
+Main Index
+Introduction
+The coupled fluid-structure method can be utilized to analyze the dynamics of compressible fluids contained within
+arbitrarily shaped structures. To model a three-dimensional fluid with conventional solid elements (CHEXA, etc.) using
+acoustic property and material data. Each grid point in the fluid defines the pressure at its location as its degree of freedom.
+The fluid is automatically connected to the structure via the geometry and ACMODL Bulk Data inputs. Porous-Elastic
+Material, PEM, positioned between structure and fluid can simulate soundproofing material. Panels can be defined to
+provide integrated response data. Applications for the coupled fluid-structure option are automotive and truck interiors,
+aircraft cabins, and acoustic devices, such as loudspeakers and microphones.
+Model Setup
+A basic Nascar model is used to demonstrate FSI with PEM in frequency response analysis. There are three major
+components in FSI with PEM input deck setup, namely structure ( Figure 7-1), cavity (or fluid; Figure 7-2) and trim
+components ( Figure 7-3). T rim components are used to model non-structural items such as dashboard padding, carpet and
+roof lining and, in general, positioned between structure and cavity.
+Figure 7-1  Structure&lt;/p&gt;
+&lt;p&gt;72 CHAPTER 7
+Fluid-structure Interaction (FSI) Frequency Responses
+Main Index
+Figure 7-2  Cavity
+Figure 7-3  Trim Components&lt;/p&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 773
+Main Index
+Figure 7-4  Full (Structure+Cavity+Trim Components)
+Case control and bulk data entries specific to FSI with PEM will be mentioned in following sections.
+Case Control
+TRIMGRP is used to select trim component IDs, TRMCID, for the analysis.  In following example, trim component 1
+and 2 are included for the analysis.
+SET 99 = 1,2
+$
+TRIMGRP = 99
+Note:   TRIMGRP can be changed at SUBCASE level which is similar to SPC/MPC and etc.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>User&#39;s Manual P5</title>
+      <link>//uildDrafts:1313/docs/msc_nastran_2024.1_demonstration_problems_manual-linear_analysis/msc_nastran_2024.1_demonstration_problems_manual-linear_analysis_005/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//uildDrafts:1313/docs/msc_nastran_2024.1_demonstration_problems_manual-linear_analysis/msc_nastran_2024.1_demonstration_problems_manual-linear_analysis_005/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;74 CHAPTER 7
+Fluid-structure Interaction (FSI) Frequency Responses
+Main Index
+Main Bulk Data section:
+Bulk data entries, ACPEMCP and TRMCPL, must be prepared for each trim component, TRMC. AEPEMCP is to
+describe the interfacing conditions between structure and TRMC in field 3 and 4 and interfacing conditions between
+TRMC and cavity in field 5 and 6. The input for field 3 to 6 of ACPEMCP is the SET1/SET3 ID which has the interfacing
+GIDs of trim component and must be placed under the corresponding &amp;lsquo;BEGIN BULK TRMC=tmrcid&amp;rsquo;.   TRMCPL is to
+provide the parameters (or tolerance) for the coupling logic.
+$============================================================================&lt;/h1&gt;&lt;h1&gt;$                          Trim Interface Definition
+$============================================================================&lt;/h1&gt;&lt;h2&gt;$&amp;mdash;&amp;mdash;-2&amp;mdash;&amp;mdash;-3&amp;mdash;&amp;mdash;-4&amp;mdash;&amp;mdash;-5&amp;mdash;&amp;mdash;-6&amp;mdash;&amp;mdash;-7&amp;mdash;&amp;mdash;-8&amp;mdash;&amp;mdash;-9&amp;mdash;&amp;mdash;-0&amp;mdash;-&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;-------2-------3-------4-------5-------6-------7-------8-------9-------0----&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#-------2-------3-------4-------5-------6-------7-------8-------9-------0----&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h2&gt;$ACPEMCPTID     SGLUED  SSLIDE  SOPEN   SIMPER
+$       SCUX    SCUY    SCUZ    SCRX    SCRY    SCRZ    SCFP
+$&amp;mdash;&amp;mdash;-2&amp;mdash;&amp;mdash;-3&amp;mdash;&amp;mdash;-4&amp;mdash;&amp;mdash;-5&amp;mdash;&amp;mdash;-6&amp;mdash;&amp;mdash;-7&amp;mdash;&amp;mdash;-8&amp;mdash;&amp;mdash;-9&amp;mdash;&amp;mdash;-0&amp;mdash;-&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;-------2-------3-------4-------5-------6-------7-------8-------9-------0-----1&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#-------2-------3-------4-------5-------6-------7-------8-------9-------0-----1&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h2&gt;ACPEMCP 1       101     102     103     104
+ACPEMCP 2       201     202     203     204
+$ Interface Coupling Parameters
+$&amp;mdash;&amp;mdash;-2&amp;mdash;&amp;mdash;-3&amp;mdash;&amp;mdash;-4&amp;mdash;&amp;mdash;-5&amp;mdash;&amp;mdash;-6&amp;mdash;&amp;mdash;-7&amp;mdash;&amp;mdash;-8&amp;mdash;&amp;mdash;-9&amp;mdash;&amp;mdash;-0&amp;mdash;-&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;-------2-------3-------4-------5-------6-------7-------8-------9-------0-----2&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#-------2-------3-------4-------5-------6-------7-------8-------9-------0-----2&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h2&gt;$TRMCPL TID     CTYPE   PLTOL   GAPTOL1 GAPTOL2 GAPTOL3 GAPTOL4
+$&amp;mdash;&amp;mdash;-2&amp;mdash;&amp;mdash;-3&amp;mdash;&amp;mdash;-4&amp;mdash;&amp;mdash;-5&amp;mdash;&amp;mdash;-6&amp;mdash;&amp;mdash;-7&amp;mdash;&amp;mdash;-8&amp;mdash;&amp;mdash;-9&amp;mdash;&amp;mdash;-0&amp;mdash;-&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;-------2-------3-------4-------5-------6-------7-------8-------9-------0-----3&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#-------2-------3-------4-------5-------6-------7-------8-------9-------0-----3&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;TRMCPL  1       SGLUED  0.01    0.01&lt;br&gt;
+TRMCPL  1       SSLIDE  0.25    0.1
+TRMCPL  1       SIMPER  0.01    0.01&lt;br&gt;
+TRMCPL  1       SOPEN   0.25    0.1
+TRMCPL  2       SGLUED  0.01    0.01&lt;br&gt;
+TRMCPL  2       SSLIDE  0.25    0.1
+TRMCPL  2       SIMPER  0.01    0.01&lt;br&gt;
+TRMCPL  2       SOPEN   0.25    0.1
+$&lt;/p&gt;
+&lt;h1&gt;MSC Nastran Demonstration Problems
+CHAPTER 775
+Main Index
+$============================================================================&lt;/h1&gt;&lt;p&gt;For frequency response loading, RLOAD1, DAREA, and FREQ1 bulk data entries are utilized to define frequency
+dependent loads as follows.
+$&amp;hellip;&amp;hellip;1&amp;hellip;&amp;hellip;.2&amp;hellip;&amp;hellip;.3&amp;hellip;&amp;hellip;.4&amp;hellip;&amp;hellip;.5&amp;hellip;&amp;hellip;.6&amp;hellip;&amp;hellip;.7&amp;hellip;&amp;hellip;.8&amp;hellip;&amp;hellip;.9&amp;hellip;..
+..0
+$ Set of frequencies range used for FRF
+FREQ1,10,1.0,1.0,199
+$ Subcase_1 Data
+$ &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
+$ Dynamic loading condition
+DLOAD,1,1.,1.,10
+$ Frequency-dependent dynamic load
+RLOAD1,10,110,,,1000
+$ Scale factors for dynamics loads &amp;ndash;&amp;gt; along Z axis grid 7154
+DAREA,110,7154,3,1.
+The FREQ1 in above example is known as forcing frequencies which is specific for loading and can be selected via
+FREQUENCY=fid in case control.
+Encapsulated Bulk Data under &amp;lsquo;BEGIN BULK TRMC=trmcid&amp;rsquo;:
+This section is similar to main bulk. It has GRID, connection, property and material entries which are specific to trim
+component trmcid . In addition, it also has the SET1/SET3 entries that are mentioned on ACPEMCP of trim component
+trmcid .
+For trim component, only 3D element types are supported. Since each 3D element of a trim component has both solid
+and fluid phases, PSOLID with &amp;lsquo;PORO&amp;rsquo; for field 8 of PSOLID and MATPE1 were implemented for user to provide
+material properties of PEM. A set of PSOLID/.MATPE1/MAT1/MAT10 for TRMC=1 is shown as follows. Detail
+description for each field of MATPE1  and PSOLID  can be found in Quick Reference Guide and will not be repeated here.
+BEGIN BULK TRMC=1
+$$&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;$
+$ STRUCTURE FACE
+$&amp;mdash;&amp;mdash;-2&amp;mdash;&amp;mdash;-3&amp;mdash;&amp;mdash;-4&amp;mdash;&amp;mdash;-5&amp;mdash;&amp;mdash;-6&amp;mdash;&amp;mdash;-7&amp;mdash;&amp;mdash;-8&amp;mdash;&amp;mdash;-9&amp;mdash;&amp;mdash;-0&amp;mdash;&amp;mdash;-
+$PSOLID PID     MID             IN              ISOP    PORO
+$ Porous part 1 (FOAM 1)
+PSOLID  10      101              TWO             FULL    PORO&lt;/p&gt;
+&lt;p&gt;76 CHAPTER 7
+Fluid-structure Interaction (FSI) Frequency Responses
+Main Index
+$
+$ CAVITY FACE
+$&amp;mdash;&amp;mdash;-2&amp;mdash;&amp;mdash;-3&amp;mdash;&amp;mdash;-4&amp;mdash;&amp;mdash;-5&amp;mdash;&amp;mdash;-6&amp;mdash;&amp;mdash;-7&amp;mdash;&amp;mdash;-8&amp;mdash;&amp;mdash;-9&amp;mdash;&amp;mdash;-0&amp;mdash;&amp;mdash;-
+$ Solid part 1 (SOLID 1)
+PSOLID  12      100               &lt;br&gt;
+$$&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;$
+$$                      Material Definition Cards                               $
+$$&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;$
+$ FOAM 1
+$ POROUS PARAMETERS
+$&amp;mdash;&amp;mdash;-2&amp;mdash;&amp;mdash;-3&amp;mdash;&amp;mdash;-4&amp;mdash;&amp;mdash;-5&amp;mdash;&amp;mdash;-6&amp;mdash;&amp;mdash;-7&amp;mdash;&amp;mdash;-8&amp;mdash;&amp;mdash;-9&amp;mdash;&amp;mdash;-0&amp;mdash;&amp;mdash;-
+$MATPE1 MID     MAT1    MAT10   BIOT
+$       VISC    GAMMA   PRANDTL POR     TOR     AFR     VLE     TLE
+$&amp;mdash;&amp;mdash;-2&amp;mdash;&amp;mdash;-3&amp;mdash;&amp;mdash;-4&amp;mdash;&amp;mdash;-5&amp;mdash;&amp;mdash;-6&amp;mdash;&amp;mdash;-7&amp;mdash;&amp;mdash;-8&amp;mdash;&amp;mdash;-9&amp;mdash;&amp;mdash;-0&amp;mdash;&amp;mdash;-
+MATPE1  101      1001    1101    1.0                                     +&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;pre&gt;&lt;code&gt;  1.82-5  1.40    7.138-1 9.21-1  1.74    43588   6.68-5  1.223-4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$&amp;mdash;&amp;mdash;-2&amp;mdash;&amp;mdash;-3&amp;mdash;&amp;mdash;-4&amp;mdash;&amp;mdash;-5&amp;mdash;&amp;mdash;-6&amp;mdash;&amp;mdash;-7&amp;mdash;&amp;mdash;-8&amp;mdash;&amp;mdash;-9&amp;mdash;&amp;mdash;-0&amp;mdash;&amp;mdash;-
+$ ELASTIC PARAMETERS
+$MAT1   MID     E       G       NU      RHO     A       TREF    GE
+MAT1    1001     16000           0.3     950.56                  0.34
+$ FLUID PARAMETERS
+$MAT10  MID     BULK    RHO     C       GE      ALPHA
+MAT10   1101             1.225   340.0
+$ FLUID PARAMETERS EQUIVALENT TO MAT10 OF FOAM 1
+$$&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;$
+$ SOLID 1
+$ ELASTIC PARAMETERS
+$MAT1   MID     E       G       NU      RHO     A       TREF    GE
+MAT1    100      77.0+6          0.35    3800                    0.236
+$$&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;$
+FREQ    1        1.0     2.0     3.0     5.0     10.0    20.0    30.0    +&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;pre&gt;&lt;code&gt;  50.0    70.0    100.0   150.0   200.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;MSC Nastran Demonstration Problems
+CHAPTER 777
+Main Index
+FREQ or FREQx entry is a required input for each trim component which specifies master frequencies and must have same
+ID as TRMCID. The reduced impedance matrix, contributed of trim component on system viscous damping matrix, will
+be generated at master frequencies. For a forcing frequency at solution generation process, interpolation among RIM at
+master frequencies occurs to process RIM at the forcing frequency.
+Modelling Guidelines
+Features
+A typical PEM job can have three disjoint models; namely structure, cavity and, at least one trim component (TRMC).
+T rim components are positioned between structure and cavity. Coupling between structure/TRMC, TRMC/cavity and
+structure/cavity are detected automatically with consideration of user provide tolerance.
+Material Properties :
+MATPE1 entry is used specifically for PEM under &amp;lsquo;BEGIN BULK TRMC=&amp;rsquo;.
+Input File(s)
+The description and type of file is given in the table below.
+Results
+The fluid-structure interaction, FSI, analysis with PEM is performed using the input deck discussed in previous sections.
+The sound pressure at Grid 30606 of cavity is shown in Figure 7-5. Load 1 is applied at engine mount and the results at grid
+30606 with 3 separate trim component configurations are compared with no PEM setup. In general, PEM lowered the
+peak responses. However, sound pressure below 20hz is not audible by human ear. Hence, results below 20Hz should be
+ignored.File Description
+pemtmgp3.dat Modal frequency response with PEM input file.&lt;/p&gt;
+&lt;p&gt;78 CHAPTER 7
+Fluid-structure Interaction (FSI) Frequency Responses
+Main Index
+Figure 7-5&lt;br&gt;
+Structure response can be impacted by FSI with PEM as well. Displacement of Z-direction of grid 161 is shown in
+following plot.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
