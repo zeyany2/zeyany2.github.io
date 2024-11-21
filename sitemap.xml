@@ -70,6 +70,8 @@
   </url><url>
     <loc>//uildDrafts:1313/tags/</loc>
   </url><url>
+    <loc>//uildDrafts:1313/docs/users/</loc>
+  </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_access_user_manual/msc_nastran_2024.1_access_user_manual_001/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_aeroelastic_analysis_user_guide/msc_nastran_2024.1_aeroelastic_analysis_user_guide_001/</loc>
@@ -126,6 +128,8 @@
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_verification_guide/msc_nastran_2024.1_verification_guide_001/</loc>
   </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_001/</loc>
+  </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_access_user_manual/msc_nastran_2024.1_access_user_manual_010/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_aeroelastic_analysis_user_guide/msc_nastran_2024.1_aeroelastic_analysis_user_guide_010/</loc>
@@ -173,6 +177,8 @@
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_user_defined_services_user_guide/msc_nastran_2024.1_user_defined_services_user_guide_010/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_verification_guide/msc_nastran_2024.1_verification_guide_010/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_010/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_dmap_programmer_guide/msc_nastran_2024.1_dmap_programmer_guide_100/</loc>
   </url><url>
@@ -260,6 +266,8 @@
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_verification_guide/msc_nastran_2024.1_verification_guide_011/</loc>
   </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_011/</loc>
+  </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_dmap_programmer_guide/msc_nastran_2024.1_dmap_programmer_guide_110/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_quick_reference_guide/msc_nastran_2024.1_quick_reference_guide_110/</loc>
@@ -342,6 +350,8 @@
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_verification_guide/msc_nastran_2024.1_verification_guide_012/</loc>
   </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_012/</loc>
+  </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_dmap_programmer_guide/msc_nastran_2024.1_dmap_programmer_guide_120/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_quick_reference_guide/msc_nastran_2024.1_quick_reference_guide_120/</loc>
@@ -419,6 +429,8 @@
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_user_defined_services_user_guide/msc_nastran_2024.1_user_defined_services_user_guide_013/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_verification_guide/msc_nastran_2024.1_verification_guide_013/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_013/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_dmap_programmer_guide/msc_nastran_2024.1_dmap_programmer_guide_130/</loc>
   </url><url>
@@ -498,6 +510,8 @@
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_verification_guide/msc_nastran_2024.1_verification_guide_014/</loc>
   </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_014/</loc>
+  </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_dmap_programmer_guide/msc_nastran_2024.1_dmap_programmer_guide_140/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_quick_reference_guide/msc_nastran_2024.1_quick_reference_guide_140/</loc>
@@ -564,6 +578,8 @@
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_verification_guide/msc_nastran_2024.1_verification_guide_015/</loc>
   </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_015/</loc>
+  </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_quick_reference_guide/msc_nastran_2024.1_quick_reference_guide_150/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_quick_reference_guide/msc_nastran_2024.1_quick_reference_guide_151/</loc>
@@ -612,6 +628,8 @@
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_verification_guide/msc_nastran_2024.1_verification_guide_016/</loc>
   </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_016/</loc>
+  </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_aeroelastic_analysis_user_guide/msc_nastran_2024.1_aeroelastic_analysis_user_guide_017/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_demonstration_problem_manual-explicit_nonlinear_sol_700/msc_nastran_2024.1_demonstration_problem_manual-explicit_nonlinear_sol_700_017/</loc>
@@ -645,6 +663,8 @@
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_thermal_analysis_user_guide/msc_nastran_2024.1_thermal_analysis_user_guide_017/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_verification_guide/msc_nastran_2024.1_verification_guide_017/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_017/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_aeroelastic_analysis_user_guide/msc_nastran_2024.1_aeroelastic_analysis_user_guide_018/</loc>
   </url><url>
@@ -680,6 +700,8 @@
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_verification_guide/msc_nastran_2024.1_verification_guide_018/</loc>
   </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_018/</loc>
+  </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_aeroelastic_analysis_user_guide/msc_nastran_2024.1_aeroelastic_analysis_user_guide_019/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_demonstration_problem_manual-explicit_nonlinear_sol_700/msc_nastran_2024.1_demonstration_problem_manual-explicit_nonlinear_sol_700_019/</loc>
@@ -713,6 +735,8 @@
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_thermal_analysis_user_guide/msc_nastran_2024.1_thermal_analysis_user_guide_019/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_verification_guide/msc_nastran_2024.1_verification_guide_019/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_019/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_access_user_manual/msc_nastran_2024.1_access_user_manual_002/</loc>
   </url><url>
@@ -770,6 +794,8 @@
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_verification_guide/msc_nastran_2024.1_verification_guide_002/</loc>
   </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_002/</loc>
+  </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_aeroelastic_analysis_user_guide/msc_nastran_2024.1_aeroelastic_analysis_user_guide_020/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_demonstration_problem_manual-explicit_nonlinear_sol_700/msc_nastran_2024.1_demonstration_problem_manual-explicit_nonlinear_sol_700_020/</loc>
@@ -804,6 +830,8 @@
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_verification_guide/msc_nastran_2024.1_verification_guide_020/</loc>
   </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_020/</loc>
+  </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_aeroelastic_analysis_user_guide/msc_nastran_2024.1_aeroelastic_analysis_user_guide_021/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_demonstration_problem_manual-explicit_nonlinear_sol_700/msc_nastran_2024.1_demonstration_problem_manual-explicit_nonlinear_sol_700_021/</loc>
@@ -836,6 +864,8 @@
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_verification_guide/msc_nastran_2024.1_verification_guide_021/</loc>
   </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_021/</loc>
+  </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_aeroelastic_analysis_user_guide/msc_nastran_2024.1_aeroelastic_analysis_user_guide_022/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_demonstration_problem_manual-explicit_nonlinear_sol_700/msc_nastran_2024.1_demonstration_problem_manual-explicit_nonlinear_sol_700_022/</loc>
@@ -867,6 +897,8 @@
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_thermal_analysis_user_guide/msc_nastran_2024.1_thermal_analysis_user_guide_022/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_verification_guide/msc_nastran_2024.1_verification_guide_022/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_022/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_aeroelastic_analysis_user_guide/msc_nastran_2024.1_aeroelastic_analysis_user_guide_023/</loc>
   </url><url>
@@ -1111,6 +1143,8 @@
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_utilities_guide/msc_nastran_2024.1_utilities_guide_003/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_verification_guide/msc_nastran_2024.1_verification_guide_003/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_003/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_aeroelastic_analysis_user_guide/msc_nastran_2024.1_aeroelastic_analysis_user_guide_030/</loc>
   </url><url>
@@ -1396,6 +1430,8 @@
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_verification_guide/msc_nastran_2024.1_verification_guide_004/</loc>
   </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_004/</loc>
+  </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_aeroelastic_analysis_user_guide/msc_nastran_2024.1_aeroelastic_analysis_user_guide_040/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_dmap_programmer_guide/msc_nastran_2024.1_dmap_programmer_guide_040/</loc>
@@ -1582,6 +1618,8 @@
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_verification_guide/msc_nastran_2024.1_verification_guide_005/</loc>
   </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_005/</loc>
+  </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_dmap_programmer_guide/msc_nastran_2024.1_dmap_programmer_guide_050/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_dynamic_analysis_user_guide/msc_nastran_2024.1_dynamic_analysis_user_guide_050/</loc>
@@ -1712,6 +1750,8 @@
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_verification_guide/msc_nastran_2024.1_verification_guide_006/</loc>
   </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_006/</loc>
+  </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_dmap_programmer_guide/msc_nastran_2024.1_dmap_programmer_guide_060/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_error_messages_guide/msc_nastran_2024.1_error_messages_guide_060/</loc>
@@ -1810,6 +1850,8 @@
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_verification_guide/msc_nastran_2024.1_verification_guide_007/</loc>
   </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_007/</loc>
+  </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_dmap_programmer_guide/msc_nastran_2024.1_dmap_programmer_guide_070/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_quick_reference_guide/msc_nastran_2024.1_quick_reference_guide_070/</loc>
@@ -1900,6 +1942,8 @@
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_verification_guide/msc_nastran_2024.1_verification_guide_008/</loc>
   </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_008/</loc>
+  </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_dmap_programmer_guide/msc_nastran_2024.1_dmap_programmer_guide_080/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_quick_reference_guide/msc_nastran_2024.1_quick_reference_guide_080/</loc>
@@ -1989,6 +2033,8 @@
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_user_defined_services_user_guide/msc_nastran_2024.1_user_defined_services_user_guide_009/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_verification_guide/msc_nastran_2024.1_verification_guide_009/</loc>
+  </url><url>
+    <loc>//uildDrafts:1313/docs/users/users_manual_009/</loc>
   </url><url>
     <loc>//uildDrafts:1313/docs/msc_nastran_2024.1_dmap_programmer_guide/msc_nastran_2024.1_dmap_programmer_guide_090/</loc>
   </url><url>

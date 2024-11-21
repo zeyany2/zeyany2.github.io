@@ -16013,6 +16013,717 @@ T wist 0.03208 0.026731 0.02923 0.028937 0.30652 0.03577 0.02820 0.043161&lt;/p&
     </item>
     
     <item>
+      <title>User&#39;s Manual P1</title>
+      <link>//uildDrafts:1313/docs/users/users_manual_001/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//uildDrafts:1313/docs/users/users_manual_001/</guid>
+      <description>
+        
+        
+        &lt;p&gt;NASASP-222(08)
+VOLUME II
+NASTRAN@ USER’S MANUAL
+JUNE 1986
+runm&lt;/p&gt;
+&lt;p&gt;NASASP-222(08)
+Volume 11
+NASTRAN USER’S MANUAL
+June1986&lt;/p&gt;
+&lt;p&gt;ForsalefromComputer Software Management andInformation Center(COSMIC)
+Computer Services Annex,University ofGeorgia, Athens, Georgia 30602 ‘
+●&lt;/p&gt;
+&lt;p&gt;COSMIC
+TheUniversity ofGeorgia
+Computer Services Annex
+Athens, GA30602
+(404) 542-3265
+NASTWN USER MANUAL UPDATE NOTE
+TheNASTRAN User Manual isscheduled forreview
+each year todetermine whether updates are
+required. Toaddyour name tothedatabase to
+receive notification when updates areavailable,
+youwill need tocomplete this form andreturn to
+COSMIC .This will betheonly mailing list for
+keeping users informed about themanual updates.
+Your Name:
+Company:
+Mailing Address:
+City:
+State: Zip:
+June, 1986
+Fold, staple, and
+return this form
+asaself-mailer.&lt;/p&gt;
+&lt;p&gt;II
+BUSINESS REPLYMAIL
+1FIRSTCLASS PERMITNO,559 ATHENS, CiEORGIA I
+F’OSTAGE WILLBEPAIDBYADDRESSES
+COSMIC
+TheUniversity ofGeorgia
+Computer Services Annex
+Athens, GA30602NOPOSTAGE
+NECESSARY
+IFMAILED
+INTHE
+UNITEDSTATES&lt;/p&gt;
+&lt;p&gt;INTRODUCTION
+TheUser’sManualisoneoffourmanuals thatconstitute thedocumentation forNASTRAN, the
+otherthreebeingtheTheoretical Manual, theProgrammer’s ManualandtheDemonstration Problem
+Manual.Although theUser’sManualcontains alloftheinformation thatisdirectly associated
+withthesolution ofproblems withNASTRAN, theuserwillfinditdesirable torefertotheother
+manuals forassistance inthesolution ofspecific userproblems.
+TheTheoretical Manualgivesanexcellent introduction toNASTRAN andpresents developments of
+theanalytical andnumerical procedures thatunderlie theprogram. TheUser’sManual is
+instructive andencyclopedic innature, butisrestricted tothoseitemsrelated totheuseof
+NASTRAN thataregenerally independent ofthecomputing systembeingused.Computer-dependent
+topicsandinformation thatisrequired forthemaintenance andmodification oftheprogram are
+treated intheProgrammer’s Manual. TheProgrammer’s Manualalsoprovides acomplete description
+oftheprogram, including themathematical equations implemented inthecode.TheDemonstration
+Problem Manualpresents adiscussion ofthesampleproblems delivered w!thNASTRAN, thereby
+illustrating theformulation ofthedifferent typesofprob’!ems thatcanb&lt;del&gt;solvedwithNASH?PN.
+Inaddition tothefourmanual&lt;/del&gt; described above,thereisalsoaNASTRAN User’sGuidethat
+servesasahandbook forusers. Itdescribes alloftheNASTRAN features andoptions and
+illustrates thembyexamples. Otherexcellent sources forNASTRAN-related topicsarethe
+proceedings oftheNASTRAN Users’Colloquia (heldnormally everyyear)whichprovide alargebody
+ofinformation basedonuserexperiences withNASTRAN.
+TheUser’sManualhasrecently beencompletely revised andupdated. Withaviewtofacilitate
+easierupdating ofthemanualinthefuturetokeepupwithnewerreleases ofNASTRAN, ithasnow
+beendivided intotwovolumes.
+VolumeIconsists ofsevensections dIldcontains allofthematerial thatwasintheold
+singlevolume, exceptSection 3.Thissection hasbeenre-arranged intofoursections andforms
+VolumeII.Inordertoavoidconfusion, Section 3ofVolumeIdoesnotcontain anything otherthan
+areference tothenewVolumeII.Also,itshouldbenotedherethat,unlessexplicitly indicated
+otherwise, allreferences tosections ineachvolumereferonl ——..—.—-—.. —&amp;hellip;.—.&amp;ndash;&amp;hellip;&amp;hellip;&amp;hellip;——..ytosections inthatvolume,—.——.—&amp;mdash; —— ..——. .
+NASTRAN usesthefiniteelement approach tostructural modeling, wherein thedistributed
+physical properties ofastructure arerepresented byafinitenumberofstructural elements which
+areinterconnected atafinitenumberofgridpoints, towhichloadsareapplied andforwhich
+displacements are’calculated. Theprocedures fordefining andloading astructural modelare
+i(05/30/86)&lt;/p&gt;
+&lt;p&gt;described inVolumeI,Section 1.Thissection contains afunctional reference foreverycardthat
+isusedforstructural modeling.
+TheNASTRAN DataDeck,including thedetails foreachofthedatacards,isdescribed in
+VolumeI,Section 2.Thissection alsodiscusses theNASTRAN control cardsthatareassociated
+withtheuseoftheprogram.
+Asmentioned earlier, VolumeI,Section 3doesnotcontain anything otherthanareference to
+VolumeII.
+Theprocedures forusingtheNASTRAN plotting capability aredescribed inVolumeI,Section 4.
+Bothdeformed andundeformed plotsofthestructural modelareavailable. Response curvesarealso
+available forstatic, transient response, frequency response, modalflutter andmodalaeroelastic
+response analyses.
+NASTRAN contains problem solution sequences, calledrigidformats, Eachoftheserigid
+formats isassociated withthesolution ofproblems foraparticular typeofstaticordynamic
+analysis. inaddition totherigidformatprocedures, theusermaychoosetowritehisownDirect
+Abstraction Program (DMAP), Thisprocedure permits theusertoexecute aseriesofmatrix
+operations ofhischoicealongwithanyutility modules orexecutive operations thathemayneed.
+Therulesgoverning thecreation ofDMAPprograms aredescribed inVolumeI,Section 5.
+TheNASTRAN diagnostic messages aredocumented andexplained inVolumeI,Section 6.The
+NASTRAN Dictionary, inVolumeI,Section 7,contains descriptions ofmnemonics, acronyms, phrases,
+andothercommonly usedNASTRAN terms.
+VolumeII,Section 1contains ageneral description ofrigidformatprocedures. Specific
+instructions andinformation fortheuseofeachrigidformataregiveninVolumeII,Sections 2,3
+and4,whichdealwiththerigidformats associated withtheDISPLACEMENT, HEATandAERO
+approaches, respectively.
+Thereisalimited numberofsampleproblems included intheUser’sManual. However, amore
+comprehensive setofdemonstration problems, atleastoneforeachoftherigidformats, is
+described intheNASTRAN Demonstration Problem Manual, Thedatadecksareavailable ontapefor
+eachofthecomputer systems onwhichNASTRAN hasbeenimplemented. Samples oftheprinter output
+andofstructure plotsandresponse plotscanbeobtained byexecuting thesedemonstration
+problems. Theprinter outputfortheseproblems isalsoavailable onmicrofiche.
+ii(05/30/86)Matrix
+@
+I&lt;/p&gt;
+&lt;p&gt;TABLEOFCONTENTS
+Section PageNo.
+1.RIGIDFORMATS
+1.1GENERAL DESCRIPTION OFRIGIDFORMATS &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.1.1-1
+1.1.1 InputFileProcessor &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;1.1-2
+1.1,2 Functional Modules andSupporting DMAPOperations &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.1.1-4
+1.1.3 Checkpoint/Restart Procedures &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;1.1-5
+1.1.4 TypesofRestarts &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;1.1-7
+1.1.4.1 Unmodified Restart &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..1.1-8
+1.1.4.2 Modified Restart &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.1.1-8
+1.1.4,3 Modified Restart withRigidFormatSwitch&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;1.1-10
+1.1.5 UseofDMAPALTERs inRestarts &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..1.1-10
+1.1.6 RigidFormatOutput&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.1.1-11
+1.1.7 RigidFormatDataBase&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.1.1-13
+1.1.7.1 DesignoftheDataBase&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;1.1-13
+1.1.7.2 Implementation oftheDataBase&amp;hellip;&amp;hellip;.,.’&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.1.1-17
+1.1.7,3 UsageoftheDataBase&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.1.1-17
+1.1.7.4 Development ofUserRigidFormats &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..1.1-18
+1.1.7.5 UsageofUser-Developed RigidFormats &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.1.1-20
+2.DISPLACEMENT RIGIDFORMATS
+2.1STATICANALYSIS &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..0&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;2.1-1
+2.1.1
+2.1.2
+2.1.3
+2.1.4
+2.1,5
+2.1.6
+2.1.7
+2.2STATIC
+2.2.1
+2.2.2
+2.2.3
+2.2.4DMAPSequence forStaticAnalysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..2.1-1
+Description ofImportant DMAPOperations forStaticAnalysis &amp;hellip;&amp;hellip;..2.1-9
+OutputforStaticAnalysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;2.1-16
+CaseControl DeckforStaticAnalysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.2.1-16
+Parameters forStaticAnalysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..4&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..2.1-16
+Automatic AI.TERsforAutomated Multi-stage Substructuring &amp;hellip;&amp;hellip;&amp;hellip;..2.1-19
+RigidFormatErrorMessages fromStaticAnalysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..2.1-19
+ANALYSIS WITHINERTIA RELIEF&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..0&amp;hellip;.0&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;2.2-1
+DMAPSequence forStaticAnalysis withInertia Relief&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;2.2-1
+Description ofImportant DMAPOperations forStaticAnalysis
+withInertia Relief&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;,&amp;hellip;.,,.,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.2.2-6
+OutputforStaticAnalysis withInertia Relief&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.2.2-11
+CaseControl DeckforStaticAnalysis withInertia Relief&amp;hellip;&amp;hellip;&amp;hellip;..2.2-11
+iii(05/30/86)&lt;/p&gt;
+&lt;p&gt;TABLEOFCONTENTS (Continued)
+Section PageNo.
+2.2.5 Parameters forStaticAnalysis withInertia Relief&amp;hellip;&amp;hellip;,&amp;hellip;&amp;hellip;&amp;hellip;..2.2-11
+2.2.6 Automatic ALTERsforAutomated Multi-stage Substructuring &amp;hellip;&amp;hellip;&amp;hellip;..2.2-13
+2.2.7 RigidFormatErrorMessages fromStaticAnalysis
+withInertia Relief&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..,&amp;hellip;&amp;hellip;.2.2-13
+2.3NORMALMODESANALYSIS &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.2.3-1
+2.3.1
+2.3.2
+2.3.3
+2.3.4
+2.3.5
+2,3.6
+2.3.7
+2.3.8
+2.3.9DMAPSequence forNormalModesAnalysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..2.3-1
+Description ofImportant DMAPOperations forNormalModesAnalysis ..2.3-6
+OutputforNormalModesAnalysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.O2.3-11
+CaseControl DeckforNormalModesAnalysis &amp;hellip;&amp;hellip;,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;2.3-13
+Parameters forNormalModesAnalysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.,&amp;hellip;&amp;hellip;&amp;hellip;,&amp;hellip;,,2.3-14
+Optional Diagnostic OutputforFEER&amp;hellip;&amp;hellip;.,,&amp;hellip;..,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;2.3-15
+TheAPPENDFeature &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..,&amp;hellip;..2,3-17
+Automatic ALTERsforAutomated Multi-stage Substructuring &amp;hellip;&amp;hellip;&amp;hellip;..2.3-18
+RigidFormatErrorPles$ages fromNormalModesAnalysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..2.3-18
+2.4STATICANALYSIS WITFIDIFFERENTIAL STIFFNESS .0&amp;hellip;&amp;hellip;&amp;hellip;..,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.2.4-1
+2.4.1 DMAPSequence forStaticAnalysis with
+Differential Stiffness &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..
+2.4.2 Description ofImportant DMAPOperations forStaticAnalys
+withDifferential Stiffness &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;0..,.,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;
+2.4.3 OutputforStaticAnalysis withDifferential Stiffness &amp;hellip;
+2.4.4 CaseControl DeckforStaticAnalysis withDifferential St”
+2.4.5 Parameters forStaticAnalysis withDifferential Stiffness
+2.4.6 RigidFormatErrorMessaaes fromStaticAnalysis with&amp;hellip;&amp;hellip;&amp;hellip;.2.4-1
+s
+&amp;hellip;&amp;hellip;&amp;hellip;.2.4-9
+..,&amp;hellip;&amp;hellip;.2.4-17
+ffness&amp;hellip;.2.4-18
+&amp;hellip;&amp;hellip;&amp;hellip;.2.4-18
+Differential Stiffness -&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.2.4-19
+2.5BUCKLING ANALYSIS .,&amp;hellip;&amp;hellip;&amp;hellip;,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;2.5-1
+2.5.1 DMAPSequence forBuckling Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;2.5-1
+2.5.2 Description ofImportant DMAPOperations forBuckling Analysis &amp;hellip;&amp;hellip;2.5-7
+2.5.3 OutputforBuckling Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.,&amp;hellip;.0&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;,..2.5-13
+2.5.4 CaseControl DeckforBuckling Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..2.5-13
+2.5.5 Parameters forBuckling Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.0&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;,2.5-14
+2.5.6 Optional Diagnostic OutputforFEER&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;,&amp;hellip;,..,.2.5-14
+2.5.7 RigidFormatErrorMessages fromBuckling Analysis &amp;hellip;&amp;hellip;&amp;hellip;,&amp;hellip;&amp;hellip;..2.5-15
+2.6PIECEWISE LINEARSTATICANALYSIS &amp;hellip;&amp;hellip;&amp;hellip;..,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..2.6-1
+2.6.1 DMAPSequence forPiecewise LinearStaticAnalysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;2.6-1
+iv(05/30/86)&lt;/p&gt;
+&lt;p&gt;TABLEOFCONTENTS (Continued
+Section
+●
+2.7
+2.8
+2.9PageNo.
+2.6.2 Description ofImportant DMAPOperations forPiecewise Linear
+StaticAnalysis ,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.,&amp;hellip;0&amp;hellip;&amp;hellip;&amp;hellip;,&amp;hellip;..0&amp;hellip;.,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.2.6-7
+2.6.3 OutputforPiecewise LinearStaticAnalysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.2.6-13
+?.6.4 CaseControl DeckforPiecewise LinearStaticAnalysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..2.6-13
+2.6.5 Parameters forPiecewise LinearStaticAnalysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;2.6-13
+2.6.6 RigidFormatErrorMessages fromPiecewise LinearStaticAnalysis &amp;hellip;2.6-14
+DIRECTCOMPLEX EIGENVALUE ANALYSIS .,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.2.7-1
+2.7.: DMAPSequence forDirectComplex Eigenv.1
+?,7.2 Description ofImportant DMAPOperations
+Eigenvalue Analysis &amp;hellip;.,&amp;hellip;.,&amp;hellip;&amp;hellip;&amp;hellip;.
+2.7.3 output forDirectComplex Eigenvalue ha’reanalysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.2.7-I
+forDirectComplex
+&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.2.7-7
+ysis,.,.,..,&amp;hellip;&amp;hellip;&amp;hellip;.,.,..2.7-13
+2,7.4 CaseContro”l DeckforDirectComplex Eigenvalue Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;2.7-15
+2.7.5 Parameters forDirectComplex Eigenvalu: Al:alysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.?.7-1.6
+2.7.6 RigidFormatErrorMessages frpm!&lt;del&gt;irectComplex EigenYalue Analysis .?.7-17
+DIRECTFREQUENCY ANDRANDOMRESp&lt;/del&gt;NSE&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.!&amp;hellip;&amp;hellip;&amp;hellip;.2.8-1
+2.8.1 DMAPSequence forDirectFrequency andRandomResponse ?.G-l &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..
+2.8.2 Description ofImportant DMAPOperations forDirectFrequency and
+RandomResponse &amp;hellip;&amp;hellip;&amp;hellip;.,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..-&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..2.8-9
+2.8.3 OutputforDirect,Frequency andRandomResponse &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;2.8-16
+2.8.4 CaseContro”l Deck,forDirectFrequency andRandomResponse &amp;hellip;&amp;hellip;&amp;hellip;.2.8-16
+2.8.5 Parameters forDirectFrequency andRandomResponse &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..2.8-17
+2.8.6 Automatic ALTERsforAutomated Multi-stage Substructuring &amp;hellip;&amp;hellip;&amp;hellip;..2.8-18
+2.8.7 RigidFormatErrorMessages fromDirectFrequency
+andRandomResponse &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;0&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.,&amp;hellip;.2.8-18
+DIRECTTRANSIENT RESPONSE &amp;hellip;&amp;hellip;.,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.2.9-1
+2.9.1
+2.9.2
+2.9.3
+2.9.4
+2.9.5
+2.9.6
+2.9.7
+2.9,8DMAPSequence forDirectTransient Response &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.2.9-1
+Description ofImportant DMAPOperations forDirect
+Transient Response &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;o&amp;hellip;.&lt;em&gt;o&amp;hellip;&amp;hellip;.&lt;/em&gt;.””. 2“9-8
+OutputforDirectTransient Response &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..2,9-15
+CaseControl DeckforDirectTransient Response &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.“.2.9-:.5
+Parameters forDirectTransient Response &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.2.9-16
+TheCONTINUE Feature &amp;hellip;&amp;hellip;..0..,&amp;hellip;..,&amp;hellip;&amp;hellip;&amp;hellip;,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..2.9-17
+Automatic ALTERsforAutomated Multi-staSe Substructuring &amp;hellip;&amp;hellip;&amp;hellip;..2.9-18
+RigidFormatErrorMessages fromDirect
+V(05/30/86)Transient Response &amp;hellip;&amp;hellip;&amp;hellip;.2.9-18&lt;/p&gt;
+&lt;p&gt;TABLEOFCONTENTS (Continued)
+..&amp;gt;ecrlon~
+2.10MODALCOMPLEX EIGENVALUE ANALYSIS &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.2.10-1
+2.10.1
+2.10.2
+2.10.3
+2.10.4
+2.10.5
+2.10.6
+2.10.7
+2.10.8DMAPSequence forModalComplex Eigenvalue Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..2.10-1
+Description ofImportant DMAPOperations forModalComplex
+Eigenvalue Analysis &amp;hellip;&amp;hellip;&amp;hellip;..,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.,&amp;hellip;&amp;hellip;..2.10-7
+OutputforModalComplex Eigenvalue Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;,&amp;hellip;&amp;hellip;..2.10-13
+CaseControl DeckforModalComplex Eigenvalue Analysis &amp;hellip;&amp;hellip;&amp;hellip;,&amp;hellip;2.10-13
+Parameters forModalComplex Eigenvalue Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..2,10-13
+Optional Diagnostic OutputforFEER&amp;hellip;&amp;hellip;,&amp;hellip;&amp;hellip;..,..,.,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;2.10-14
+TheAPPENDFeature &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..0&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;,2.10-15
+RigidFormatErrorMessages fromModalComplex Eigenvalue Analysis ,.2.10-15
+2.11MODALFREQUENCY ANDRANDOMRESPONSE &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.,“.e&amp;hellip;.,&amp;hellip;&amp;hellip;&amp;hellip;.,..2.11-1
+2.11.1
+2.11.2
+2.11.3
+2.11.4
+2.11.5
+2.11.6
+2.11.7
+2.11.8DMAPSequence forModalFrequency andRandomResponse &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;2.11-1
+Description ofImportant DMAPOperations forModalFrequency and
+RandomResponse &amp;hellip;..,,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;,.,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..,.,,&amp;hellip;&amp;hellip;.,..2.11-9
+OutputforModalFrequency andRandomResponse &amp;hellip;&amp;hellip;&amp;hellip;..,&amp;hellip;&amp;hellip;&amp;hellip;.2.11-17
+CaseControl DeckforModalFrequency andRandomResponse &amp;hellip;&amp;hellip;&amp;hellip;..2.11-17
+Parameters forModalFrequency andRandomResponse &amp;hellip;&amp;hellip;..,&amp;hellip;.,&amp;hellip;.2,11-17
+Optional Diagnostic OutputforFEER&amp;hellip;&amp;hellip;&amp;hellip;.,.,&amp;hellip;.,&amp;hellip;.,&amp;hellip;&amp;hellip;&amp;hellip;.2,11-18
+TheAPPENDFeature &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.,&amp;hellip;&amp;hellip;.,&amp;hellip;&amp;hellip;.,,&amp;hellip;..,.2.11-19
+RigidFormatErrorMessages fromModalFrequency
+andRandomResponse &amp;hellip;,.,,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;,&amp;hellip;..,2.11-19
+2.12MODALTRANSIENT RESPONSE &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;0..,&amp;hellip;&amp;hellip;.,.,&amp;hellip;,.,,..,,&amp;hellip;.,.2,12-1
+2.12.1
+2.12,2
+2.12.3
+2.12.4
+2.12.5
+2.12.6
+2.12.7
+2.12.8
+2.12.9DMAPSequence forModalTransient Response &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;,&amp;hellip;..,.,..,..2.12-1
+Description ofImportant DMAPOperations forModal
+Transient Response &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.,&amp;hellip;.,&amp;hellip;,&amp;hellip;..,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;2.12-8
+OutputforModalTransient Response &amp;hellip;&amp;hellip;&amp;hellip;..,,&amp;hellip;,&amp;hellip;&amp;hellip;,.,&amp;hellip;..,,2.12-15
+CaseControl DeckforModalTransient Response &amp;hellip;&amp;hellip;,&amp;hellip;&amp;hellip;,&amp;hellip;&amp;hellip;,.2.12-15
+Parameters forModalTransient Response &amp;hellip;..,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.,&amp;hellip;..,&amp;hellip;2,12-15
+Optional Diagnostic OutputforFEER&amp;hellip;&amp;hellip;,&amp;hellip;.,,..,&amp;hellip;,,&amp;hellip;,&amp;hellip;&amp;hellip;..2,12’-17
+TheAPPENDFeature ..,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.,&amp;hellip;&amp;hellip;.,&amp;hellip;..,&amp;hellip;..,&amp;hellip;&amp;hellip;&amp;hellip;.2.12-17
+TheCONTINUE Feature &amp;hellip;.,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.,&amp;hellip;&amp;hellip;,..,&amp;hellip;&amp;hellip;,,..2,12-17
+RigidFormatErrorMessages fromModalTransient Response &amp;hellip;&amp;hellip;&amp;hellip;..?!.12-1.7
+2.13NORMALMODESWITHDIFFERENTIAL STIFFNESS .,
+2.13.1 DMAPSequence forNormalModeswith
+vi(05/30/86)?,~~-1&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;,.,,,&amp;hellip;&amp;hellip;&amp;gt;
+Differential Stiffue$s ..,,..,.“~,13-!I&lt;/p&gt;
+&lt;p&gt;TABLEOFCONTENTS (Continued)
+Section
+2.13.2
+2,13.3
+2.13.4
+2.13.5
+2.13.6
+2.13.7
+2.1.3
+2.14STAT
+2.14c
+1
+2.14.2
+2.14.3
+2.14.4
+2.14,5
+2.14.6PageNo.
+Description ofImportant DMAPOperations forNormalModeswith
+Differential Stiffness &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.0&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.2.13-8
+OutputforNormalModeswithDifferential Stiffness &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..2.13-16
+CaseControl DeckforNormalModeswithDifferential Stiffness &amp;hellip;&amp;hellip;2.13-16
+Parameters forNormalModeswithDifferential Stiffness &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.2.13-17
+Optional Diagnostic OutputforFEER&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;2.13-18
+TheAPPENDFeature &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..c2.13-18
+RigidFormatErrorMessages fromNormalModeswith
+Differential Stiffness &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.2.13-18
+ANALYSIS USINGCYCLICSYMMETRY &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;2.14-1
+DMAPSequence forStaticAnalysis UsingCyclicSymmetry &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.2.14-1
+Description ofImportant DMAPOperations forStaticAnalysis Using
+CyclicSymmetry ,&amp;hellip;&amp;hellip;.0&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;2.14-7
+OutputforStaticAnalysis UsingCyclicSymmetry &amp;hellip;&amp;hellip;,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.2.14-12
+CaseControl DeckforStaticAnalysis UsingCyclic’Symmetry &amp;hellip;&amp;hellip;&amp;hellip;2.14-12
+Parameters forStaticAnalysis UsingCyclicSymmetry &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.2.14-12
+RigidFormatErrorMessages fromStaticAnalysis Using
+CyiilicSymmetry &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;+&amp;hellip;&amp;hellip;&amp;hellip;.2.14-14
+2.15NORMALMODESANALYSIS USINGCYCLICSYMMETRY &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;2.15-1
+2.15.1
+2.15.2
+2.15.3
+2.15.4
+2.15.5
+2.15.6
+2.15.7
+2.15.8DMAPSequence forNormalModesAnalysis UsingCyclicSymmetry &amp;hellip;&amp;hellip;.2.15-1
+Description ofImportant DMAPOperations forNormalModesAnalysis
+UsingCyclicSymmetry &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.2.15-6
+OutputforNormalModesAnalysis UsingCyclicSymmetry &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..2.15-10
+CaseControl DeckforNormalModesAnalysis UsingCyclicSymnetry &amp;hellip;2.15-10
+Parameters forNormalModesAnalysis UsingCyclicSymmetry &amp;hellip;&amp;hellip;&amp;hellip;.2.15-10
+Optional Diagnostic OutputforFEER&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;2.15-12
+TheAPPENDFeature &amp;hellip;..0&amp;hellip;. &amp;hellip;&amp;hellip;0&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;2.15-12
+RigidFormatErrorMessages fromNormalModesAnalysis Using &amp;mdash;.-
+CyclicSymmetry .,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..0&amp;hellip;&amp;hellip;&amp;hellip;0&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..Z.15-lZ
+?.1.6(STATIC AEROTHERMOELASTIC DESIGN/ANALYSIS OFAXIAL-FLOW COMPRESSORS &amp;hellip;&amp;hellip;&amp;hellip;.2.16-1
+‘2.16.1
+?,16.2
+2.16.3DMAPSequence forStaticAerothermoelastic Design/Analysis of
+Axial-Flow Compressors o&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;2.16-1
+Description ofImportant DMAPOperations forStatic
+Aerothermoelastic Design/Analysis ofAxial-Flow Compressors &amp;hellip;&amp;hellip;&amp;hellip;2.16-10
+OutputforStaticAerothermoelastic Design/Analysis ofAxial-Flow
+Compressors &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;2.16-19
+vii(05/30/86)&lt;/p&gt;
+&lt;p&gt;TABLEOFCONTENTS (Continued)
+Section
+2.16.4
+2.16.5
+2.16.6PageNo,
+CaseControl DeckforStaticAerothem,~elastic Design/Analysis of
+Axial-Flow Compressors &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.2.16-20
+Parameters forStaticAerothermoelastic Design/Analysis ofAxial-
+FlowCompressors &amp;hellip;&amp;hellip;,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;#&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..2.16-20
+RigidFormatErrorMessages fromStaticAerothermoelastic Design/
+Analysis ofAxial-Flow Compressors &amp;hellip;,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;2.16-22
+3.HEATRIGIDFORMATS
+3.1STATICHEATTRANSFER ANALYSIS &amp;hellip;,..,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..3.1-1
+3.1,1
+3.1.2
+3.1.3
+3.1.4
+3.1.5
+3.1.6DMAPSequence forStaticHeatTransfer Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;3.I-1
+Description ofImportant DMAPOperations forStaticHeat
+Transfer Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;3.1-6
+OutputforStaticHeatTransfer Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.,&amp;hellip;,.3.1-11
+CaseControl DeckforStaticHeatTransfer Analysis &amp;hellip;..
+Parameters forStaticHeatTransfer Analysis ,&amp;hellip;..,0&amp;hellip;.
+RigidFormatErrorMessages fromStaticHeatTransfer Aria’
+3,2NONLINEAR STATICHEATTRANSFER ANALYSIS &amp;hellip;.,.,&amp;hellip;..,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;3.1-11
+&amp;hellip;&amp;hellip;&amp;hellip;..3.1-11
+ysis&amp;hellip;&amp;hellip;3.1-12
+&amp;hellip;&amp;hellip;&amp;hellip;..3.2-1
+3.2.1 DMAPSequence forNonlinear StaticHeatTransfer Analysis &amp;hellip;&amp;hellip;&amp;hellip;..3.2-1
+3.2.2 Description ofImportant DMAPOperations forNonlinear StaticHeat
+Transfer Analysis &amp;hellip;&amp;hellip;&amp;hellip;..,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..3.2-5
+3.2.3 OutputforNonlinear StaticHeatTransfer Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;3.2-8
+3.2.4 CaseControl DeckforNonlinear StaticHeatTransfer Analysis &amp;hellip;&amp;hellip;.3.2-8
+3.2.5 Parameters forNonlinear StaticHiatTransfer Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..3.2-8
+3.2.6 RigidFormatErrorMessages fromNonlinear StaticHeat
+Transfer Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.,..,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.,..3.2-9
+3.3TRANSIENT HEATTRANSFER ANALYSIS &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..3,3-1
+3.3.1 DMAPSequence forTransient HeatTransfer Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;3.3-1
+3.3.2 Description ofImportant DMAPOperations forTransient HeatTransfer
+Analysis &amp;hellip;&amp;hellip;&amp;hellip;,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.,&amp;hellip;&amp;hellip;..,,..,.3.3-7
+3,3.3 OutputforTransient HeatTransfer Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.3.3-13
+3.3.4 CaseControl DeckforTransient HeatTransfer Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..3.3-13
+3.3.5 Parameters forTransient HeatTransfer
+3.3.6 RigidFormatErrorMessages fromTrans
+4.AERORIGIDFORMATS
+4,1BLADECYCLICMODALFLUTTER ANALYSIS &amp;hellip;&amp;hellip;&amp;hellip;.Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;3.3-14
+entHeatTransfer Analysis &amp;hellip;3,3-14
+&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;4.1-1
+4.1.1 DMAPSequence forBladeCyclicModalFlutter Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;4.1-1
+viii(05/30/86)&lt;/p&gt;
+&lt;p&gt;Section
+4.1.2
+4.1.3
+4.1.4
+4.1.5
+4.1.6
+4.1.7
+4.1.8TABLEOFCONTENTS (Continued)
+PageNo.
+Description ofImportant DMAPOperations forBladeCyclicModal
+Flutter Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.4.1-9
+OutputforBladeCyclicModalFlutter Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.4.1-17
+CaseControl DeckforBladeCyclicModalFlutter Analysis &amp;hellip;&amp;hellip;&amp;hellip;..4.1-17
+Parameters forBladeCyclicModalFlutter Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;4.1-18
+Optional Diagnostic OutputforFEER&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;4.1-20
+TheAPPENDFeature &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.,&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;4.1-20
+RigidFormatErrorMessages fromBladeCyclicModalFlutter&amp;mdash;-
+Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.0&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.4.1-ZU
+4.2MODALFLUTTER ANALYSIS &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;4.2-1
+4.2.1
+4.2.2
+4.2.3
+4.2.4
+4.2.5
+4.2.6
+4.2.7DMAPSequence forModalFlutter Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.4.2-1
+Description ofImportant DMAPOperations forModalFlutter Analysis .4.2-8
+OutputforModalFlutter Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..4.2-16
+CaseControl DeckforModalFlutter Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;4.2-17
+Parameters forModalFlutter Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.4.2-17
+Optional Diagnostic OutputforFEER&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;4.2-18
+TheAPPENDFeature &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..4.2-18
+4.2.8 RigidFormatErrorMessages fromModalFlutter Analysis &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.4.2-18
+4.3MODALAEROELASTIC RESPONSE &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.:&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;4.3-1
+4.3.1 DMAPSequence forModalAeroelastic Response &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;4.3-1
+4.3.2 Description ofImportant DMAPOperations forModalAeroelastic
+Response &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;4.3-8
+4.3.3 OutputforModalAeroelastic Response &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.4.3-16
+4.3.4 CaseControl DeckforModalAeroelastic Response &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..4.3-17
+4.3.5 Parameters forModalAeroelastic Response &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;4.3-17
+4.3.6 Optional Diagnostic OutputforFEER&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;4.3-19
+4.3.7 TheAPPENDFeature &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..4.3-19
+4.3.8 RigidFormatErrorMessages fromModalAeroelastic Response &amp;hellip;&amp;hellip;&amp;hellip;4.3-19
+ix(05/30/86)&lt;/p&gt;
+&lt;p&gt;1.RIGIDFORMATS
+1.1GENERAL DESCRIPTION OFRIGIDFORMATS
+Themostgeneral wayofusingNASTRAN iswithauser-written DirectMatrixAbstraction
+Program (DMAP). Thisprocedure permits theusertoexecute aseriesofmatrixoperations ofhis
+choicealongwithanyutility modules orexecutive operations thathemayneed.Theusermayeven
+choosetowriteamoduleofhisown.Therulesgoverning alloftheseoperations aredescribed in
+VolumeI,Section 5.
+Inordertorelieve theuserofthenecessity ofconstructing aDMAPsequence foreachofhis
+problems, anumberofsuchsequences, calledrigidformats, havebeenincluded withNASTRAN, All
+oftheserigidformats areresident onadatabasecalledtheRigidFormatDataBase,whfchis
+described indetailinSection 1.1.7. Eachrigidformatinthisdatabaseconsists ofaDMAP
+sequence andtheassociated restart tables. Theserestart tablesareautomatically usedbythe
+program tomodifytheseriesofDMAPoperations toaccount foranychanges thataremadeinany
+partoftheDataDeckwhenmakingarestart, afterhavingpreviously runall,orapart,ofthe
+problem. Without suchtables, theuserwouldhavetocarefully modifyhisDMAPsequence toaccount
+fortheconditions surrounding eachrestart. Thechances forerrorinmakingthesemodifications
+forrestart areverygreat. Therestart tablesnotonlyrelieve theuseroftheburdenof
+modifying hisDMAPsequence, butalsoassurehimofacorrect andefficient program execution.
+Inaddition totheDkiAPsequence provided witheachrigidformat, anumberofoptions are
+available, whicharesubsets ofeachcomplete DMAPsequence. Subsets areselected byspecifying
+thesubsetnumbers (zeroforthecomplete DMAPsequence) alongwiththerigidformatnumberonthe
+SOLcardintheExecutive Control Deck.Seethedescription oftheSOLcardinVolumeI,Section
+2.2forthelistofavailable subsets.
+IftheuserwishestomodifytheDMAPsequence ofarigidformatinsomemannernotprovided
+forintheavailable subsets, hecanusetheALTERfeature described inSection 2.2.Typical uses
+aretoschedule anEXITpriortocompletion, inordertocheckintermediate output, schedule the
+printing ofatableoramatrixfordiagnostic purposes, andtodeleteoraddafunctional module
+totheDMAPsequence. (ThemannerinwhichDMAPALTERsarehandled inrestarts isdiscussed in
+Section 1.1.5.) Theusershouldbefamilfar withtherulesforDMAPprograming, asdescribed in
+VolumeI,Section 5,priortomakingALTERstoarigidformat.
+Thefollowing rigidformats forstructural analysis arecurrently included inNASTRAN:
+1.StaticAnalysis
+1.1-1(05/30/86)&lt;/p&gt;
+&lt;p&gt;RIGIDFORMATS
+2.StaticAnalysis withInertia Relief
+3.NormalModesAnalysis
+4.StaticAnalysis withDifferential Stiffness
+5.Buckling Analysis
+6.Piecewise LinearStaticAnalysis
+7.DirectComplex Eigenvalue Analysis
+8.DirectFrequency andRandomResponse
+9.DirectTransient Response
+10.ModalComplex Eigenvalue Analysis
+11.ModalFrequency andRandomResponse
+12.ModalTransient Response
+13.NormalModesAnalysis withDifferential Stiffness
+14.StaticAnalysis withCyclicSynnnetry
+15.NormalModesAnalysis with’CyclicSymmetry
+16.StaticAerothermoelastic Design/Analysis ofAxial-Flow Compressors
+Thefollowing rigidformats forheattransfer analysis areincluded inNASTRAN:
+1.LinearStaticHeatTransfer Analysis
+3.Nonlinear StaticHeatTransfer Analysis
+9.Transient HeatTransfer Analysis
+Thefollowing rigidformats foraeroelastic analysis areincluded inNASTRAN:
+9.BladeCyclicModalFlutter Analysis
+10.ModalFlutter Analysis
+11.ModalAeroelastic Response
+1.1.1InputFileProcessor
+TheInputFileProcessor operates inthePreface priortotheexecution oftheDMAP
+operations intherigidformat. Acomplete description oftheoperations inthePreface isgiven
+intheProgrammer’s Manual. Themaininterest hereistoindicate thesourceofdatablocksthat
+arecreated inthePreface andhenceappearonlyasinputsintheDMAPsequences oftherigid
+formats. Noneofthedatablockscreated bytheInputFileProcessor arecheckpointed, astheyare
+alwaysregenerated onrestart. TheInputFileProcessor isdivided intofiveparts, Thefirst
+part(IFP1)processes theCaseControl Deck,thesecondpart(IFP)processes theBulkDataDeck,
+1.1-2(05/30/86)I&lt;/p&gt;
+&lt;p&gt;GENERAL DESCRIPTION OF
+thethirdpart(IFP3)performs additional processingRIGIDFORMATS
+ofthebulkdatacardsassociated withthe
+aconical shellelement, andthefourthpart(IFP4)performs additional processing ofthebulkdata
+cardsassociated withthefluidelement. Thefifthsection (IFP5)processes datarelated to
+acoustic cavityanalysis.
+IFP1processes theCaseControl Deckandcreates theCaseControl DataBlock(CASECC), the
+PlotControl Dat~Block(PCDB), andtheXY-Plot Control DataBlock(XYCDB). IFP1alsoexamines all
+ofthecards,exceptthoseassociated withplotting, forerrorsinformatoruse.Iferrorsare
+detected, theyareclassed aseitherfatalorwarning, andsuitable errormessages areprovided.
+Reference toVolumeI,Section 2.3willassisttheuserincorrecting errorsintheCaseControl
+Deck.Iftheerrorisfatal,theExecutive Systemwillnotallowtheexecution tocontinue beyond
+thecompletion ofthePreface.
+TheBulkDataDeckissortedinthePreface, ifnecessary, beforetheexecution ofthesecond
+partoftheInputFileProcessor. IFPchecksallofthebulkdatacardsforerrorsaccording to
+therulesgivenforeachcardinVolum(iI,Section 2.4.Iferrorsaredetected, suitable messages
+areprovided totheuser.Iftheerlorisclassed asfatal,theExecutive Systemwillnotallow
+theexecution tocontinue beyondthecompletion ofthePreface. IFPcreates thedatablocksthat
+areinputtothevarious partoftheGeometry Processor (GEOMl, GE!3M2,GE@M3andGE@M4), the
+oElement Properties Table(EP?’),theMaterial Properties Table(MPT),theElement Deformation Table
+(EDT),andtheDirectInputTable(DIT).
+ThethirdpartoftheInputFileProcessor (IFP3)converts theinformation onthespecial
+conical shellcards(CCONEAX, CTRAPAX, CTRIAAX, F!3RCEAX, M!3MAX,MPCAX,OMITAX, PCONEAX, P@INTAX,
+PRESAX, PTRAPAX, PTRIAAX, RINGAX, SECTAX, SPCAX,SUPAX,andTEMPAX) toreflect thenumberof
+harmonics specified bytheuserontheAXICcard.Thisconverted information isaddedtoany
+existing information ondatablocksGEfJMl,GEk3M2,GE!3M3andGE!3M4.
+Thefourthpartoftheinputfileprocessor (IFP4)converts theinformation onthefluid-
+related cards(AXIF,BDYLIST, CFLUID2, CFLUII13, CFLUID4, DMIAX,FLSYM,FREEPT, FSLIST, GRIDB,
+PRESPT, andRINGFL) toreflect thedesired harmonics, bolmdaries, andmatrixinput. Thisconverted
+information isaddedtoGEOMl,GE@M2,GE0M4andMATP!30L.
+Thefifthpartoftheinputfileprocessor (IFP5)converts theinformation ontheacoustic
+cavityrelated cards(AXSi.OT, CAXIF2, CAXIF3, CAXIF4, CSL0T3, CSL0T4, GRIDF,GRIDS,andSLBDY)to
+equivalent structural scalarpoints, elements, scalarsprings andplotting elements. This
+converted information isaddedtotheGEflMl
+1.andGE0M2datablocks.
+-3(05/30/86)&lt;/p&gt;
+&lt;p&gt;RIGIDFORMATS
+1.1.2Functional Modules andSupporting DMAPOperations
+TheDMAPlistings oftherigidformats currently included withNASTRAN arepresented inthe
+following sections. Following eachlisting aresubsections thatdealwiththefollowing itemsfor e
+eachrigidformat:
+1.Briefdescription ofimportant DMAPoperations fortherigidformat
+2.Outputavailable fromtherigidformat
+3.CaseControl Decksetupfortherigidformat
+4.Parameters usedintherigidformat
+5.Automatic ALTERsforAutomated Multi-stage Substructuring (ifapplicable totherigid
+format)
+6.Rigidformaterrormessages
+7.Anyotherfeatures peculiar totherigidformat
+Descriptions ofallmajorfunctional modules aregivenintheProgrammer’s Manual.
+Additional information isalsogivenintheTheoretical Manual. Descriptions ofallotherNASTRAN
+modules aregiveninVolumeI,Section 5.
+Themodules inthefollowing listappearrepeatedly intherigidformats. Sincethepurpose
+oftheseoperations inarigidformatisobvious, theyaregenerally omitted fromthedescriptions
+oftheDMAPoperations inthefollowing sections.
+giveninVolumeI,Section 5.
+1.BEGINindicates thebeginning oftheDMAPMorecomplete descriptions ofthesemodules are
+●sequence constituting therigidformat.
+2.ENDindicates theendoftheDMAPsequence constituting therigidformat
+&lt;del&gt;maltermination whenexecuted.
+3._FILEmakesdeclarations relative toaparticular file.
+ABC=TAPEstatesthatfileABCwillbeassigned asasequential file.
+DEF=APPENDstatesthatfileDEFmaybeextended astheresultofan
+intherigidformat.
+GHI=SAVEstatesthatfileGHIshouldnotbedropped afteruseasit
+forsubsequent executions ofaninterna&lt;/del&gt;oop.
+4,LABELspecifies alabeled pointinthesequence ofDMAPinstructions.
+referenced byREPT,JUMPandCI?JNDinstructions.
+5.PARAMperforms specified operations oninteger DMAPparameters.andcausesa
+internal loop
+maybeneeded
+Labelsare
+6.PRECHKactuates theautomatic generation ofexplicit CHKPNTinstructions. (PRECHK ALL
+Immediately andautomatically CHKPNTS alloutputdatablocksfromeachfunctional module,
+alldatablocksmentioned ineachPURGEinstruction andallsecondary datablocksineach
+EQUIVinstruction.)* TheCHKPNTinstruction specifies alistoffilestobewritten on
+%Theonlyexceptions to
+outputinsubstructurethisaretheCASESS, CASEIandCASECCdatablocksappearing as
+analyses.
+1.1-4(05/30/86)&lt;/p&gt;
+&lt;p&gt;GENERAL DESCRIPTION OFRIGIDFORMATS
+thenewproblem tape(NPTP), including filesthatmayhavebeenpurged, eitherbecause
+theywerenotgenerated inthisparticular execution orwereexplicitly purgedwitha
+PURGEinstruction.
+7.PURGEspecifies thenamesoffilesthat.areconditionally dropped basedontheparameter
+named.
+1.1.3Checkpoint/Restart Procedures
+Thecheckpoint/restart feature available inNASTRAN isaverysophisticated anduseful
+capability. Thepurpose ofttlisfeature istoenableausertocheckpoint aNASTRAN runandthen
+restart it(withorwithout changes indata)byexecuting onlythosemodules thatneedtobe
+executed fortherestart.
+Thereareseveral situations inwhichtheuseofthecheckpoint/restart feature maybe
+desirable. Someofthesearelistedbelow:
+1.Theusermaywishtoperform hisanalysis taskintwoormorestagesbyspecifying
+scheduled exitsinoneormoreruns.
+2.Theusermaywanttoensurethatunscheduled exits(resulting fromsuchcausesasdata
+errors, insufficient timejii;suffic,ient coreorhardware failures) willnotrequire him
+torepeathisentireanalysis.
+3.Theusermaywishtorerunhisproblem bymakinglimited changes inhisdata.
+Scheduled exitscanberequested atanypointinarigidformatbymeansoftheALTER
+feature. (ThemannerinwhichALTERsarehandled inrestarts isdiscussed inSection 1.1.5). An
+exitisscheduled byinsertirl~ thefollowing cardsintheExecutive Ccmtt’ol Deck:
+ALTER K1$
+EXIT K2$
+ENDALTER $
+where K1=DMAPstatement numberafterwhichexitwilltakeplace
+and K2=NumberoftimesEXITinstruction willbeskipped before
+zero,Forusewithloops,wheretheuserwishestoexecute
+scheduling theexit.
+Iftheuserchooses torestart theproblem without makinganychanges,
+execute anunmodified restart following thelastcompleted checkpoint.
+Unscheduled exitsareusually causedbyerrorsoninputcardsorI~eingexecuted -default is
+theloopK2timesbefore
+theExecutive Systerrjwill
+errorsinthestructural
+modelresulting frommissing orinconsistent inputdata.Whensucherrorsaredetected, an
+unscheduled exitisperformed accompanied withtheolutputoftheapplicable usererrormessages.
+Following thecorrection oftheinputdataerrors, amodified restart canbeperformed.
+1.1-5(05/30/86)&lt;/p&gt;
+&lt;p&gt;RIGIDFORMATS
+Unscheduled exitsmayalsooccurbecause ofmachine failure orinsufficient timeallowance.
+Inthesecases,anunmodified restart isusually madefollowing thelastcompleted checkpoint. In
+somecases,whereaportion oftheproblem hasbeencompleted, including theoutputforthe
+completed portion, amodified restart mustbemadefollowing anunscheduled exitdueto
+insufficient timeallowance. Thesesituations arediscussed underCaseControl Deckrequirements
+inthesections dealing withtheindividual rigidformats.
+Theinitial execution ofanyproblem mustbemadewithacomplete NASTRAN DataDeck,
+including allofthebulkdata.However, allorpartofthebulkdatamaybeassembled from
+alternate inputsources, suchastheUser’sMasterFileoramodulewritten bytheusertogenerate
+input. TheUser’sMasterFileisdescribed inVolumeI,Section 2.5
+discussed inVolumeI,Section 2,6.
+Forrestarts, theBulkDataDeckconsists onlyofdeletecards
+andnewcardswhichtheuserwishestoadd.Theprevious BulkDataandusergenerated inputis
+(seeVolumeI,Section 2.4)
+DeckisreadfromtheOld
+Problem Tape.AllotherpartsoftheNASTRAN DataDeck,including theExecutive Control Deck,the
+CaseControl Deck,theBEGINBULKcardandtheENDDATA cardmustberesubmitted eventhoughno
+changes aremadeinthecontrol decksandnonewbulkdataisadded. Inaddition, theRESTART
+cards(ordictionary) punched duringtheprevious execution mustbeincluded intheExecutive
+Control Deck.Whenchanging rigidformats, thesolution number
+ofthenewrigidformat.
+ANewProblem Tape(NPTP)isconstructed onlywhencheckpoS@L)mustbechanged tothenumber
+ntingisrequested (CHKPNT YES)in
+theExecutive Control Deck.TheNPTPshouldbeassigned toaphysical tapeorotherstorage device
+thatcanbedismounted andsavedattheconclusion oftheexecution. Atthecompletion ofan
+initial execution, theNPTPcontains theinputdeck,withthebulkdatainsortedform,andallof
+thefilesthatwerecheckpointed duringtheexecution.
+Forrestarts, theOldProblem Tape(13PTP)isdefined astheProblem Tapethatwaswritten
+duringtheprevious execution. TheNPTPisdefined astheProblem Tapewritten duringthecurrent
+execution, beginning withtherestart. Atthecompletion ofanunmodified restart, theNPTP
+contains theinputdeck,withthebulkdatainsortedform,allfilesfromtheOPTPthatare
+necessary tocomplete thesolution, andallofthefilescheckpointed duringthecurrent executicn.
+Atthecompletion ofamodified restart, theNPTPissimilar, except thattheinFutdeckis
+modified according totheinformation shbmitted fortherestart.
+1.1-6(05/30/86)&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>User&#39;s Manual P10</title>
       <link>//uildDrafts:1313/docs/msc_nastran_2024.1_access_user_manual/msc_nastran_2024.1_access_user_manual_010/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -27723,641 +28434,6 @@ to the desired level of accuracy. Even if convergence is achieved, it is strongl
 many iterations were required and to consider if this was a reasonable number or an excessive number.
 Recall that the number of iterations has a significant influence on the computational costs, so not only is there
 the requirement that the solution converges, but that it also converges efficiently.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>User&#39;s Manual P10</title>
-      <link>//uildDrafts:1313/docs/msc_nastran_2024.1_superelements_and_modules_user_guide/msc_nastran_2024.1_superelements_and_modules_user_guide_010/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//uildDrafts:1313/docs/msc_nastran_2024.1_superelements_and_modules_user_guide/msc_nastran_2024.1_superelements_and_modules_user_guide_010/</guid>
-      <description>
-        
-        
-        &lt;p&gt;159 CHAPTER 3
-Single Level Superelement Analysis
-Main Index
-Listing 3-6  SESET Entries Associated with List Superelement
-After running doc/seug/chapter3/seset/seset.bdf, the .f06 file and results can be interrogated.  The first thing
-is the SEMAP .  This indicates the processing order and the superelement tree.  Note that every superelement
-has a “DOWNSTREAM SE” of 0 (or the residual) confirming that this is a single-level superelement tree.$ SE.50
-SESET         50       9    THRU      12
-SESET         50      21      22
-$ SE.60
-SESET         60      15    THRU      18
-SESET         60      25      26
-$ SE.70
-SESET         70       1    THRU       8
-SUPERELEMENT DEFINITION TABLE
-(SORTED BY SEID)
-INDEX   SUPERELEMENT   PROCESS ORDER   DOWNSTREAM SE       SUPERELEMENT TYPE
-0            0                8               0    RESIDUAL STRUCTURE   &lt;br&gt;
-1           10                1               0    PRIMARY SUPERELEMENT &lt;br&gt;
-2           20                2               0    PRIMARY SUPERELEMENT &lt;br&gt;
-3           30                3               0    PRIMARY SUPERELEMENT &lt;br&gt;
-4           40                4               0    PRIMARY SUPERELEMENT &lt;br&gt;
-5           50                5               0    PRIMARY SUPERELEMENT &lt;br&gt;
-6           60                6               0    PRIMARY SUPERELEMENT &lt;br&gt;
-7           70                7               0    PRIMARY SUPERELEMENT &lt;br&gt;
-SUPERELEMENT DEFINITION TABLE
-(SORTED BY PROCESS ORDER)
-INDEX   SUPERELEMENT   PROCESS ORDER   DOWNSTREAM SE       SUPERELEMENT TYPE
-0           10                1               0    PRIMARY SUPERELEMENT &lt;br&gt;
-1           20                2               0    PRIMARY SUPERELEMENT &lt;br&gt;
-2           30                3               0    PRIMARY SUPERELEMENT &lt;br&gt;
-3           40                4               0    PRIMARY SUPERELEMENT &lt;br&gt;
-4           50                5               0    PRIMARY SUPERELEMENT &lt;br&gt;
-5           60                6               0    PRIMARY SUPERELEMENT &lt;br&gt;
-6           70                7               0    PRIMARY SUPERELEMENT &lt;br&gt;
-7            0                8               0    RESIDUAL STRUCTURE   &lt;br&gt;
-TABLE OF DOWNSTREAM CONNECTIONS FOR EACH SUPERELEMENT
-INDEX          SE ID   ID-S OF DOWNSTREAM CONNECTIONS IN DOWNSTREAM ORDER
-1              10            0&lt;/p&gt;
-&lt;p&gt;Superelements and Modules User’s Guide
-Single-Level Analysis Using List Superelements 160
-Main Index
-2              20            0
-3              30            0
-4              40            0
-5              50            0
-6              60            0
-7              70            0&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;                              S U P E R E L E M E N T   T R E E
-               ( NO. LEVELS =  1     NO. TIPS =   7     * = PROCESS ORDER )
- TIP                          L E V E L   N U M B E R
-INDEX
-            -1-
-    1        10
-             1*
-    2        20
-             2*
-    3        30
-             3*
-    4        40
-             4*
-    5        50
-             5*
-    6        60
-             6*
-    7        70
-             7*
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;UNIQUE SUPERELEMENT CONNECTIVITY LIST &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; CONNECTED TO &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;
-(SORTED BY SE-ID)&lt;br&gt;
-COUNT   1ST GRD   TYPE  INT.-TO-SE      SE-ID    SE-ID    SE-ID    SE-ID    SE-ID    SE-ID    SE-ID    S
-1         13                 0          50       70
-2         27                 0          40       60
-2         35                 0          10       30
-2         19                 0          30       50
-1         24                 0          60
-1         23                 0          50
-1         14                 0          60       70&lt;/p&gt;
-&lt;p&gt;161 CHAPTER 3
-Single Level Superelement Analysis
-Main Index
-Listing 3-7  SEMAP of Process Order for List Superelement Example
-Next comes the listing of interior grids, exterior grids, and elements associated with each superelement:&lt;br&gt;
-Listing 3-8  SEMAP of Interior Grids, Exterior Grids, and Elements for Each Superelement
-Next, the partitioned geometry and bulk data associated to each superelement is written to the output2 file.&lt;br&gt;
-Refer to Figure 1-9 for a schematic representation of these steps.   The following table lists the datablocks that    2         41                 0          20       40
-28         33                10
-6         34                10           0
-6         40                20           0
-28         39                20
-2         29                30           0
-2         31                40           0
-6          9                50           0
-6         15                60           0
-6          1                70
-2          7                70           0
-SUPERELEMENT       10
-LIST OF INTERIOR GRID POINTS        ( TOTAL NO. OF INTERIOR POINTS =       34 )
-INDEX                  -1-       -2-       -3-       -4-       -5-       -6-       -7-       -8-       -9-      -10-
-1                   33        34        37        38        45        46        47        48        49        50
-11                   57        58        59        60        61        62        69        70        71        72
-21                   73        74        81        82        83        84        85        86        93        94
-31                   95        96        97        98
-SUPERELEMENT       10
-LIST OF EXTERIOR POINTS               ( TOTAL NO. OF EXTERIOR POINTS =     2 )
-INDEX                  -1-       -2-       -3-       -4-       -5-       -6-       -7-       -8-       -9-      -10-
-1                   35        36
-SUPERELEMENT       10
-LIST OF ELEMENT ID-S              ( TOTAL NO. OF ELEMENTS =     25 )
-INDEX                  -1-       -2-       -3-       -4-       -5-       -6-       -7-       -8-       -9-      -10-
-1                   18        19        20        21        22        23        24        25        26        27
-11                   28        29        30        31        32        33        34        35        36        37
-21                   38        39        40        41        42
-…
-… continues for each SEID&lt;/p&gt;
-&lt;p&gt;Superelements and Modules User’s Guide
-Single-Level Analysis Using List Superelements 162
-Main Index
-are output for each superelement.  For a more detailed description of each datablock refer to the DMAP
-Programmer’s Guide  or the nddl listings in the MSC Nastran delivery.
-The following table lists the Phase 0 data written to the .op2 for this example.  Note that datablocks that are
-null are not output.  Table 3-2  Data Written to Output2 (PARAM,POST,-1) by PHASE 0 Processing
-Datablock Name NDDL Datablock Name Data Contents
-GEOM1X GEOM168 Geometry data (v68 format): CORD2x, GRID, POINT
-GEOM2X GEOM201 Table of Bulk Data entries related to element connectivity
-for MSC Nastran Version  2001.  (CBAR, CBEAM,
-CQUAD4, etc.)
-GEOM3X GEOM301 Table of Bulk Data entry images related to static and
-thermal loads for MSC Nastran  Version 2001.
-GEOM4X GEOM4705 Table of Bulk Data entry images related to constraints for&lt;br&gt;
-MSC Nastran Version 70.5
-EPTX EPT01 Element property table for MSC Nastran Version 2001
-MPTS MPTS Table of Bulk Data entry images related to material
-properties and nonlinear solution parameters (MAT1,
-MAT2, NLPARM, etc.)
-DITS DIT Direct Input T ables (TABLE1D, TABLE2D,
-TABRND1, etc.)
-DYNAMICS DYNAMIC Table of Bulk Data entry images related to dynamics
-(DLOAD, DPHASE, EIGRL, FREQ1, etc.)
-PCOMPT PCOMPT Supplemental data related to composites elements.
-EDTS EDT Data related Aeroelastic entries (ACMODL, AECOMP ,
-SPLINEi, etc.)
-BGPDTX BGPDT68 Basic grid point definition table (Pre-Version 69)
-Contains a list of all grid points in internal sort, with (for
-grid points) their x, y, z locations in the basic coordinate
-system along with a displacement coordinate system
-identification number.  (output only if PARAM
-POSTEXT=&amp;lsquo;YES&amp;rsquo;)
-^^^ USER INFORMATION MESSAGE 9044 (PHASE0)&lt;br&gt;
-^^^ BULK DATA AND CASE CONTROL PARTITIONING,    RESTART CHECKING, AND UNDEFORMED PLOTTING IS &lt;br&gt;
-^^^ INITIATED FOR SUPERELEMENT 10      &lt;br&gt;
-*** USER WARNING MESSAGE 2053 (GP4)
-UNDEFINED SINGLE-POINT CONSTRAINT SET        1
-*** SYSTEM WARNING MESSAGE 3002 (MAKEOLD)
-EOF ENCOUNTERED WHILE READING DATA BLOCK GEOM2S   (FILE  101) IN SUBROUTINE MAKoG2&lt;/p&gt;
-&lt;p&gt;163 CHAPTER 3
-Single Level Superelement Analysis
-Main Index
-*** USER INFORMATION MESSAGE 4114 (OUTPX2)
-DATA BLOCK GEOM1X   WRITTEN ON FORTRAN UNIT  12  IN BINARY (LTLEND) FORMAT USING NDDL DESCRIPTION FOR GEOM16, TRL =
-101                 0                 0                 8                 0                 0              &lt;br&gt;
-NAME OF DATA BLOCK WRITTEN ON FORTRAN UNIT IS GEOM1&lt;br&gt;
-(MAXIMUM POSSIBLE FORTRAN RECORD SIZE =       16386 WORDS.)
-(MAXIMUM SIZE OF FORTRAN RECORDS WRITTEN =         291 WORDS.)
-(NUMBER OF FORTRAN RECORDS WRITTEN =          15 RECORDS.)
-(TOTAL DATA WRITTEN FOR DATA BLOCK =         315 WORDS.)
-*** USER INFORMATION MESSAGE 4114 (OUTPX2)
-DATA BLOCK GEOM2X   WRITTEN ON FORTRAN UNIT  12  IN BINARY (LTLEND) FORMAT USING NDDL DESCRIPTION FOR GEOM20, TRL =
-102                 0                 0                 0              8192                 0              &lt;br&gt;
-NAME OF DATA BLOCK WRITTEN ON FORTRAN UNIT IS GEOM2&lt;br&gt;
-(MAXIMUM POSSIBLE FORTRAN RECORD SIZE =       16386 WORDS.)
-(MAXIMUM SIZE OF FORTRAN RECORDS WRITTEN =         353 WORDS.)
-(NUMBER OF FORTRAN RECORDS WRITTEN =          15 RECORDS.)
-(TOTAL DATA WRITTEN FOR DATA BLOCK =         377 WORDS.)
-1    MSC NASTRAN JOB CREATED ON 02-APR-11 AT 08:53:17                          APRIL   2, 2011  MSC NASTRAN   7/15/10   PAGE &lt;br&gt;
-16
-CREATED BY LANCE PROCTOR, EAGLESIM                                                                SUPERELEMENT 10        &lt;br&gt;
-0                                                                                                                              &lt;br&gt;
-0&lt;/p&gt;
-&lt;p&gt;*** USER INFORMATION MESSAGE 4114 (OUTPX2)
-DATA BLOCK GEOM3X   WRITTEN ON FORTRAN UNIT  12  IN BINARY (LTLEND) FORMAT USING NDDL DESCRIPTION FOR GEOM30, TRL =
-103                 0                 0                64                 8               256              &lt;br&gt;
-NAME OF DATA BLOCK WRITTEN ON FORTRAN UNIT IS GEOM3&lt;br&gt;
-(MAXIMUM POSSIBLE FORTRAN RECORD SIZE =       16386 WORDS.)
-(MAXIMUM SIZE OF FORTRAN RECORDS WRITTEN =         303 WORDS.)
-(NUMBER OF FORTRAN RECORDS WRITTEN =          30 RECORDS.)
-(TOTAL DATA WRITTEN FOR DATA BLOCK =         380 WORDS.)
-*** USER INFORMATION MESSAGE 4114 (OUTPX2)
-DATA BLOCK GEOM4X   WRITTEN ON FORTRAN UNIT  12  IN BINARY (LTLEND) FORMAT USING NDDL DESCRIPTION FOR GEOM470, TRL =
-104                 0                 0                 0                32                16              &lt;br&gt;
-NAME OF DATA BLOCK WRITTEN ON FORTRAN UNIT IS GEOM4&lt;br&gt;
-(MAXIMUM POSSIBLE FORTRAN RECORD SIZE =       16386 WORDS.)
-(MAXIMUM SIZE OF FORTRAN RECORDS WRITTEN =           7 WORDS.)
-(NUMBER OF FORTRAN RECORDS WRITTEN =          25 RECORDS.)
-(TOTAL DATA WRITTEN FOR DATA BLOCK =          48 WORDS.)
-*** USER INFORMATION MESSAGE 4114 (OUTPX2)
-DATA BLOCK EPTX     WRITTEN ON FORTRAN UNIT  12  IN BINARY (LTLEND) FORMAT USING NDDL DESCRIPTION FOR EPT0, TRL =
-105                 0               512                 0                 0                 0              &lt;br&gt;
-NAME OF DATA BLOCK WRITTEN ON FORTRAN UNIT IS EPT  &lt;br&gt;
-(MAXIMUM POSSIBLE FORTRAN RECORD SIZE =       16386 WORDS.)
-(MAXIMUM SIZE OF FORTRAN RECORDS WRITTEN =          14 WORDS.)&lt;/p&gt;
-&lt;p&gt;Superelements and Modules User’s Guide
-Single-Level Analysis Using List Superelements 164
-Main Index
-Listing 3-9  PHASE 0 Output2 Datablocks.
-After the Phase 0 processing is complete for each superelement, the Phase 1 processing begins. Again a
-superelement loop is used and each superelement is processed in the order determined by the SEMAP .  The
-Phase 1 processing includes the following operations:           (NUMBER OF FORTRAN RECORDS WRITTEN =          20 RECORDS.)
-(TOTAL DATA WRITTEN FOR DATA BLOCK =          45 WORDS.)
-*** USER INFORMATION MESSAGE 4114 (OUTPX2)
-DATA BLOCK MPTS     WRITTEN ON FORTRAN UNIT  12  IN BINARY (LTLEND) FORMAT USING NDDL DESCRIPTION FOR MPT, TRL =
-101             32768                 0                 0                 0                 0              &lt;br&gt;
-NAME OF DATA BLOCK WRITTEN ON FORTRAN UNIT IS MPTS &lt;br&gt;
-(MAXIMUM POSSIBLE FORTRAN RECORD SIZE =       16386 WORDS.)
-(MAXIMUM SIZE OF FORTRAN RECORDS WRITTEN =          15 WORDS.)
-(NUMBER OF FORTRAN RECORDS WRITTEN =          20 RECORDS.)
-(TOTAL DATA WRITTEN FOR DATA BLOCK =          46 WORDS.)
-^^^ USER INFORMATION MESSAGE 9044 (PHASE0)&lt;br&gt;
-^^^ BULK DATA AND CASE CONTROL PARTITIONING,    RESTART CHECKING, AND UNDEFORMED PLOTTING IS &lt;br&gt;
-^^^ INITIATED FOR SUPERELEMENT 20      &lt;br&gt;
-…
-[Continues for each superelement]
-…&lt;/p&gt;
-&lt;p&gt;165 CHAPTER 3
-Single Level Superelement Analysis
-Main Index
-Figure 3-22  Phase 1 Superelement Reduction Process Schematic
-To relate this process to the operations performed by MSC Nastran and the associated output in the .f06 file,
-this example performs the following operations:
-Formulation of global stiffness matrix, , for the elements of superelement
-Element Matrix Generation (EMG)
-Element Matrix Assembly (EMA)
-Formulation of global mass matrix, , for each superelement
-.f06 output of Grid Point Weight Generator (GPWG)
-Kjj
-Mjj&lt;/p&gt;
-&lt;p&gt;Superelements and Modules User’s Guide
-Single-Level Analysis Using List Superelements 166
-Main Index
-Formulation of global loads matrix , for each superelement
-.f06 output of OLOAD RESULTANT
-Static Condensation to boundary stiffness , for each superelement
-.f06 output for statistics on DCMP of KOO – refer to Equation (1-6)Kjj
-Kaa
-*** USER INFORMATION MESSAGE 7325 (SEP2DR)
-PROCESSING OF SUPERELEMENT       10 IS NOW INITIATED.
-^^^ USER INFORMATION MESSAGE 9045 (PHASE1DR) &lt;br&gt;
-^^^ PHASE 1 - SUPERELEMENT GENERATION, ASSEMBLY AND REDUCTION.&lt;br&gt;
-MSC NASTRAN JOB CREATED ON 02-APR-11 AT 08:53:17                          APRIL   2, 2011  MSC NASTRAN   7/15/10        CREATED
-BY LANCE PROCTOR, EAGLESIM                                                                SUPERELEMENT 10&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;                      O U T P U T   F R O M   G R I D   P O I N T   W E I G H T   G E N E R A T O R
-                                                 REFERENCE POINT =        0
-                                                           M O
-                 *  1.172800E-02  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00 -9.382400E-02 *
-                 *  0.000000E+00  1.172800E-02  0.000000E+00  0.000000E+00  0.000000E+00 -3.752960E-02 *
-                 *  0.000000E+00  0.000000E+00  1.172800E-02  9.382400E-02  3.752960E-02  0.000000E+00 *
-                 *  0.000000E+00  0.000000E+00  9.382400E-02  7.674803E-01  3.002368E-01  0.000000E+00 *
-                 *  0.000000E+00  0.000000E+00  3.752960E-02  3.002368E-01  1.369830E-01  0.000000E+00 *
-                 * -9.382400E-02 -3.752960E-02  0.000000E+00  0.000000E+00  0.000000E+00  9.044634E-01 *
-                                                            S
-                                      *  1.000000E+00  0.000000E+00  0.000000E+00 *
-                                      *  0.000000E+00  1.000000E+00  0.000000E+00 *
-                                      *  0.000000E+00  0.000000E+00  1.000000E+00 *
-                          DIRECTION
-                     MASS AXIS SYSTEM (S)     MASS              X-C.G.        Y-C.G.        Z-C.G.
-                             X            1.172800E-02      0.000000E+00  8.000000E+00  0.000000E+00
-                             Y            1.172800E-02     -3.200000E+00  0.000000E+00  0.000000E+00
-                             Z            1.172800E-02     -3.200000E+00  8.000000E+00  0.000000E+00
-                                                           I(S)
-                                      *  1.688832E-02  5.551115E-17  0.000000E+00 *
-                                      *  5.551115E-17  1.688832E-02  0.000000E+00 *
-                                      *  0.000000E+00  0.000000E+00  3.377664E-02 *
-                                                           I(Q)
-                                      *  1.688832E-02                             *
-                                      *                1.688832E-02               *
-                                      *                              3.377664E-02 *
-                                                            Q
-                                      *  1.000000E+00  0.000000E+00  0.000000E+00 *
-                                      *  0.000000E+00  1.000000E+00  0.000000E+00 *
-                                      *  0.000000E+00  0.000000E+00  1.000000E+00 *
-MSC NASTRAN JOB CREATED ON 02-APR-11 AT 08:53:17                          APRIL   2, 2011  MSC NASTRAN   7/15/10   
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;167 CHAPTER 3
-Single Level Superelement Analysis
-Main Index
-CREATED BY LANCE PROCTOR, EAGLESIM                                                                SUPERELEMENT 10&lt;/p&gt;
-&lt;p&gt;RESULTANTS ABOUT ORIGIN OF SUPERELEMENT BASIC COORDINATE SYSTEM IN SUPERELEMENT BASIC SYSTEM COORDINATES.
-OLOAD    RESULTANT    &lt;br&gt;
-SUBCASE/    LOAD
-DAREA ID    TYPE       T1            T2            T3            R1            R2            R3
-1     FX    0.000000E+00     &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00  0.000000E+00              &lt;br&gt;
-FY       &amp;mdash;-       0.000000E+00     &amp;mdash;-       0.000000E+00     &amp;mdash;-       0.000000E+00              &lt;br&gt;
-FZ       &amp;mdash;-          &amp;mdash;-       2.000000E+00  2.000000E+01  1.040000E+01     &amp;mdash;-                   &lt;br&gt;
-MX       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00     &amp;mdash;-          &amp;mdash;-                   &lt;br&gt;
-MY       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00     &amp;mdash;-                   &lt;br&gt;
-MZ       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00              &lt;br&gt;
-TOTALS  0.000000E+00  0.000000E+00  2.000000E+00  2.000000E+01  1.040000E+01  0.000000E+00
-2     FX    0.000000E+00     &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00  0.000000E+00              &lt;br&gt;
-FY       &amp;mdash;-       0.000000E+00     &amp;mdash;-       0.000000E+00     &amp;mdash;-       0.000000E+00              &lt;br&gt;
-FZ       &amp;mdash;-          &amp;mdash;-       2.000000E+00  2.000000E+01  1.040000E+01     &amp;mdash;-                   &lt;br&gt;
-MX       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00     &amp;mdash;-          &amp;mdash;-                   &lt;br&gt;
-MY       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00     &amp;mdash;-                   &lt;br&gt;
-MZ       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00              &lt;br&gt;
-TOTALS  0.000000E+00  0.000000E+00  2.000000E+00  2.000000E+01  1.040000E+01  0.000000E+00
-3     FX    0.000000E+00     &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00  0.000000E+00              &lt;br&gt;
-FY       &amp;mdash;-       0.000000E+00     &amp;mdash;-       0.000000E+00     &amp;mdash;-       0.000000E+00              &lt;br&gt;
-FZ       &amp;mdash;-          &amp;mdash;-      -1.600000E+01 -1.280000E+02 -5.120000E+01     &amp;mdash;-                   &lt;br&gt;
-MX       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00     &amp;mdash;-          &amp;mdash;-                   &lt;br&gt;
-MY       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00     &amp;mdash;-                   &lt;br&gt;
-MZ       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00              &lt;br&gt;
-TOTALS  0.000000E+00  0.000000E+00 -1.600000E+01 -1.280000E+02 -5.120000E+01  0.000000E+00&lt;/p&gt;
-&lt;p&gt;*** SYSTEM INFORMATION MESSAGE 4159 (DFMSA)
-THE DECOMPOSITION OF KOO      YIELDS A MAXIMUM MATRIX-TO-FACTOR-DIAGONAL RATIO OF    5.006693E+00
-*** USER INFORMATION MESSAGE 5293 (SSG3A)
-FOR DATA BLOCK KOO  &lt;br&gt;
-LOAD SEQ. NO.             EPSILON              EXTERNAL WORK      EPSILONS LARGER THAN 0.001 ARE FLAGGED WITH ASTERI
-1          8.5530295E-15          1.1700904E-05
-2          6.9137383E-15          1.1700904E-05
-3          6.9176406E-15          9.7933684E-05
-MSC NASTRAN JOB CREATED ON 02-APR-11 AT 08:53:17                          APRIL   2, 2011  MSC NASTRAN   7/15/10&lt;br&gt;
-CREATED BY LANCE PROCTOR, EAGLESIM                                                                SUPERELEMENT 20
-*** USER INFORMATION MESSAGE 7325 (SEP2DR)
-PROCESSING OF SUPERELEMENT       20 IS NOW INITIATED.
-^^^ USER INFORMATION MESSAGE 9045 (PHASE1DR) &lt;br&gt;
-^^^ PHASE 1 - SUPERELEMENT GENERATION, ASSEMBLY AND REDUCTION.                                                                                                                  &lt;br&gt;
-…&lt;/p&gt;
-&lt;p&gt;Superelements and Modules User’s Guide
-Single-Level Analysis Using List Superelements 168
-Main Index
-Listing 3-10  Phase 1 Superelement Processing (typical)
-Note that the results are on a superelement basis, so we cannot compare the Grid Point Weight Generator or
-OLOAD RESULTANT to the baseline run.  Also note that these tables do not contain the data from
-upstream superelements, so the residual structure will only contain mass and loads associated with the
-processing of its partition.
-For some superelements, there will be no loading.  A warning message 3204 is provided to the user.  If there
-are not supposed to be any loads associated with the superelement, then the message can be safely ignored.
-Listing 3-11  Example of Warning Message 3204 Issued when there are no Loads on a Superelement
-After all of the upstream superelements are processed, the data is brought into the residual structure and
-solved.  Data recovery is performed on the residual:[Continues for each superelement]
-…&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;MSC NASTRAN JOB CREATED ON 02-APR-11 AT 08:53:17                          APRIL   2, 2011  MSC NASTRAN   7/15/10   
- CREATED BY LANCE PROCTOR, EAGLESIM                                                                SUPERELEMENT 40
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;*** USER WARNING MESSAGE 3204 (SSG1)
-UNABLE TO FIND SELECTED SET (     303) IN TABLE (SLT ) IN SUBROUTINE (SSG1).
-*** USER WARNING MESSAGE 3204 (SSG1)
-UNABLE TO FIND SELECTED SET (     305) IN TABLE (SLT ) IN SUBROUTINE (SSG1).
-*** USER WARNING MESSAGE 3204 (SSG1)
-UNABLE TO FIND SELECTED SET (     307) IN TABLE (SLT ) IN SUBROUTINE (SSG1).&lt;/p&gt;
-&lt;p&gt;169 CHAPTER 3
-Single Level Superelement Analysis
-Main Index
-Figure 3-23  Residual Structure Processing Schematic
-Note that in static analysis, the matix is further reduced to the  matrix in order to account for
-any dof associated with the reference set (R-set), which is most commonly associated with inertia relief.&lt;br&gt;
-Kaa Kll&lt;/p&gt;
-&lt;p&gt;Superelements and Modules User’s Guide
-Single-Level Analysis Using List Superelements 170
-Main Index
-Thus, the decomposition statistics are associated with matrix .  After the solution of the residual,
-normal back expansion to the G-Set matrices is performed and data recovery is calculated.  The results are
-also placed on the output2 file.  In this case, since there are no SPC Forces in the residual structure, the output
-is for displacement and stress.&lt;br&gt;
-For a more comprehensive listing of output2 datablocks, refer to PARAM,POST  in the Quick Reference
-Guide.  Table 3-3  Result Datablock Names for Output2
-Data Block Name Output Quantity
-OUG1 Displacements
-OES1X1 Element Stresses
-OQG1 SPC ForcesKll
-MSC NASTRAN JOB CREATED ON 02-APR-11 AT 08:53:17                          APRIL   2, 2011  MSC NASTRAN   7/15/10&lt;br&gt;
-CREATED BY LANCE PROCTOR, EAGLESIM                                                                SUPERELEMENT 0    &lt;br&gt;
-SUBCASE 1&lt;/p&gt;
-&lt;p&gt;*** SYSTEM INFORMATION MESSAGE 4159 (DFMSA)
-THE DECOMPOSITION OF KLL      YIELDS A MAXIMUM MATRIX-TO-FACTOR-DIAGONAL RATIO OF    2.280555E+02
-*** USER INFORMATION MESSAGE 5293 (SSG3A)
-FOR DATA BLOCK KLL  &lt;br&gt;
-LOAD SEQ. NO.             EPSILON              EXTERNAL WORK      EPSILONS LARGER THAN 0.001 ARE FLAGGED WITH ASTERISKS
-1         -2.3362402E-13          1.5033779E-03
-2         -7.3558232E-14          1.2672746E-03
-3         -1.0165675E-13          4.9308721E-02
-MSC NASTRAN JOB CREATED ON 02-APR-11 AT 08:53:17                          APRIL   2, 2011  MSC NASTRAN   7/15/10&lt;br&gt;
-CREATED BY LANCE PROCTOR, EAGLESIM                                                                SUPERELEMENT 0&lt;/p&gt;
-&lt;p&gt;*** USER INFORMATION MESSAGE 7321 (SEDRDR)
-DATA RECOVERY FOR SUPERELEMENT        0 IS NOW INITIATED.
-MSC NASTRAN JOB CREATED ON 02-APR-11 AT 08:53:17                          APRIL   2, 2011  MSC NASTRAN   7/15/10&lt;br&gt;
-CREATED BY LANCE PROCTOR, EAGLESIM                                                                SUPERELEMENT 0&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;                                              MAXIMUM  DISPLACEMENTS   
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;SUBCASE/
-DAREA ID        T1             T2             T3             R1             R2             R3
-1   0.0000000E+00  0.0000000E+00  3.4402413E-04  9.5935357E-05  1.5204940E-05  0.0000000E+00
-2   0.0000000E+00  0.0000000E+00  3.4337837E-04  3.8530961E-05  8.5337437E-05  0.0000000E+00
-3   0.0000000E+00  0.0000000E+00  1.9924592E-03  5.5037666E-04  2.8907216E-05  0.0000000E+00
-MSC NASTRAN JOB CREATED ON 02-APR-11 AT 08:53:17                          APRIL   2, 2011  MSC NASTRAN   7/15/10&lt;br&gt;
-CREATED BY LANCE PROCTOR, EAGLESIM                                                                SUPERELEMENT 0&lt;/p&gt;
-&lt;p&gt;171 CHAPTER 3
-Single Level Superelement Analysis
-Main Index
-MAXIMUM  APPLIED LOADS&lt;br&gt;
-SUBCASE/
-DAREA ID        T1             T2             T3             R1             R2             R3
-1   0.0000000E+00  0.0000000E+00  0.0000000E+00  0.0000000E+00  0.0000000E+00  0.0000000E+00
-2   0.0000000E+00  0.0000000E+00  0.0000000E+00  0.0000000E+00  0.0000000E+00  0.0000000E+00
-3   0.0000000E+00  0.0000000E+00  0.0000000E+00  0.0000000E+00  0.0000000E+00  0.0000000E+00
-*** USER INFORMATION MESSAGE 4114 (OUTPX2)
-DATA BLOCK OUG1     WRITTEN ON FORTRAN UNIT  12  IN BINARY (LTLEND) FORMAT USING NDDL DESCRIPTION FOR OUG, TRL =
-101                 0               288                 0                 0                 0  &lt;br&gt;
-NAME OF DATA BLOCK WRITTEN ON FORTRAN UNIT IS OUG1 &lt;br&gt;
-(MAXIMUM POSSIBLE FORTRAN RECORD SIZE =       16386 WORDS.)
-(MAXIMUM SIZE OF FORTRAN RECORDS WRITTEN =         146 WORDS.)
-(NUMBER OF FORTRAN RECORDS WRITTEN =          40 RECORDS.)
-(TOTAL DATA WRITTEN FOR DATA BLOCK =         775 WORDS.)
-DOUBLE FLYSWATTER MODEL                                                   APRIL   2, 2011  MSC NASTRAN   7/15/10&lt;br&gt;
-IN PHASE LOADS                                                                                     SUPERELEMENT 0
-SUBCASE 1
-D I S P L A C E M E N T   V E C T O R
-POINT ID.   TYPE          T1             T2             T3             R1             R2             R3
-13      G      0.0            0.0            1.142174E-04   5.814735E-05   6.925292E-07   0.0
-14      G      0.0            0.0            1.142174E-04   5.814735E-05  -6.925292E-07   0.0
-19      G      0.0            0.0            1.939904E-04   8.944685E-05   9.119628E-06   0.0
-20      G      0.0            0.0            1.859524E-04   8.734564E-05   8.727956E-06   0.0
-…
-Etc.
-DOUBLE FLYSWATTER MODEL                                                   APRIL   2, 2011  MSC NASTRAN   7/15/10&lt;br&gt;
-IN PHASE LOADS                                                                              SUPERELEMENT 0       ,   1&lt;br&gt;
-SUBCASE 1           &lt;br&gt;
-S T R E S S E S   I N   Q U A D R I L A T E R A L   E L E M E N T S   ( Q U A D 4 ) OPTION = BILIN&lt;br&gt;
-ELEMENT        FIBER          STRESSES IN ELEMENT COORD SYSTEM         PRINCIPAL STRESSES (ZERO SHEAR)            &lt;br&gt;
-ID GRID-ID  DISTANCE      NORMAL-X      NORMAL-Y      SHEAR-XY      ANGLE        MAJOR         MINOR        VON MISES
-5    CEN/4 -5.000000E-01 4.440042E+01  5.761679E+01 -3.128198E-11   -90.0000   5.761679E+01  4.440042E+01  5.227697E+01
-5.000000E-01-4.440042E+01 -5.761679E+01  3.128198E-11     0.0000  -4.440042E+01 -5.761679E+01  5.227697E+01
-13 -5.000000E-01 4.325489E+01  5.761679E+01 -3.127998E-11   -90.0000   5.761679E+01  4.325489E+01  5.194682E+01
-5.000000E-01-4.325489E+01 -5.761679E+01  3.127998E-11     0.0000  -4.325489E+01 -5.761679E+01  5.194682E+01
-14 -5.000000E-01 4.325489E+01  5.761679E+01 -3.128264E-11   -90.0000   5.761679E+01  4.325489E+01  5.194682E+01
-5.000000E-01-4.325489E+01 -5.761679E+01  3.128264E-11     0.0000  -4.325489E+01 -5.761679E+01  5.194682E+01
-etc.&lt;/p&gt;
-&lt;p&gt;Superelements and Modules User’s Guide
-Single-Level Analysis Using List Superelements 172
-Main Index
-Listing 3-12  Solution and Data Recovery of the Residual Structure
-Following the data recovery of the residual, the boundary solution for each superelement is partitioned, and
-data recovery for the superelement is performed.  Schematically, this is represented as:
-Figure 3-24  Superelement Data Recovery Schematic*** USER INFORMATION MESSAGE 4114 (OUTPX2)
-DATA BLOCK OES1X1   WRITTEN ON FORTRAN UNIT  12  IN BINARY (LTLEND) FORMAT USING NDDL DESCRIPTION FOR OES1X, TRL =
-101                63                 4                 2                11                 0                 1
-NAME OF DATA BLOCK WRITTEN ON FORTRAN UNIT IS OES1X1&lt;br&gt;
-(MAXIMUM POSSIBLE FORTRAN RECORD SIZE =       16386 WORDS.)
-(MAXIMUM SIZE OF FORTRAN RECORDS WRITTEN =         146 WORDS.)
-(NUMBER OF FORTRAN RECORDS WRITTEN =          40 RECORDS.)
-(TOTAL DATA WRITTEN FOR DATA BLOCK =         748 WORDS.)&lt;/p&gt;
-&lt;p&gt;173 CHAPTER 3
-Single Level Superelement Analysis
-Main Index
-In the MSC Nastran .f06 file, the data recovery for each superelement is as follows:
-*** USER INFORMATION MESSAGE 7321 (SEDRDR)
-DATA RECOVERY FOR SUPERELEMENT       10 IS NOW INITIATED.
-MSC NASTRAN JOB CREATED ON 02-APR-11 AT 08:53:17                          APRIL   2, 2011  MSC NASTRAN   7/15/10&lt;br&gt;
-CREATED BY LANCE PROCTOR, EAGLESIM                                                                SUPERELEMENT 10&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;                                              MAXIMUM  DISPLACEMENTS    
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;SUBCASE/
-DAREA ID        T1             T2             T3             R1             R2             R3
-1   0.0000000E+00  0.0000000E+00  7.6338986E-04  9.9121149E-05  1.6829072E-05  0.0000000E+00
-2   0.0000000E+00  0.0000000E+00  6.4533821E-04  4.1716754E-05  8.6961452E-05  0.0000000E+00
-3   0.0000000E+00  0.0000000E+00  4.2660381E-03  5.5805803E-04  2.8907216E-05  0.0000000E+00
-MSC NASTRAN JOB CREATED ON 02-APR-11 AT 08:53:17                          APRIL   2, 2011  MSC NASTRAN   7/15/10&lt;br&gt;
-CREATED BY LANCE PROCTOR, EAGLESIM                                                                SUPERELEMENT 10&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;                                              MAXIMUM  APPLIED LOADS   
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;SUBCASE/
-DAREA ID        T1             T2             T3             R1             R2             R3
-1   0.0000000E+00  0.0000000E+00  2.0000000E+00  0.0000000E+00  0.0000000E+00  0.0000000E+00
-2   0.0000000E+00  0.0000000E+00  2.0000000E+00  0.0000000E+00  0.0000000E+00  0.0000000E+00
-3   0.0000000E+00  0.0000000E+00  6.3999999E-01  0.0000000E+00  0.0000000E+00  0.0000000E+00
-*** USER INFORMATION MESSAGE 4114 (OUTPX2)
-DATA BLOCK OUG1     WRITTEN ON FORTRAN UNIT  12  IN BINARY (LTLEND) FORMAT USING NDDL DESCRIPTION FOR OUG, TRL =
-101                 0               864                 0                 0                 0   &lt;br&gt;
-NAME OF DATA BLOCK WRITTEN ON FORTRAN UNIT IS OUG1 &lt;br&gt;
-(MAXIMUM POSSIBLE FORTRAN RECORD SIZE =       16386 WORDS.)
-(MAXIMUM SIZE OF FORTRAN RECORDS WRITTEN =         288 WORDS.)
-(NUMBER OF FORTRAN RECORDS WRITTEN =          40 RECORDS.)
-(TOTAL DATA WRITTEN FOR DATA BLOCK =        1351 WORDS.)
-DOUBLE FLYSWATTER MODEL                                                   APRIL   2, 2011  MSC NASTRAN   7/15/10&lt;br&gt;
-IN PHASE LOADS                                                                                 SUPERELEMENT 10, 1
-SUBCASE 1
-D I S P L A C E M E N T   V E C T O R
-POINT ID.   TYPE          T1             T2             T3             R1             R2             R3
-33      G      0.0            0.0            3.683764E-04   9.794447E-05   1.543324E-05   0.0
-34      G      0.0            0.0            3.560836E-04   9.801662E-05   1.548379E-05   0.0
-35      G      0.0            0.0            3.440241E-04   9.593536E-05   1.486124E-05   0.0
-36      G      0.0            0.0            3.321574E-04   9.586434E-05   1.520494E-05   0.0
-37      G      0.0            0.0            3.192997E-04   9.717572E-05   1.586828E-05   0.0
-etc.&lt;/p&gt;
-&lt;p&gt;Superelements and Modules User’s Guide
-Single-Level Analysis Using List Superelements 174
-Main Index
-Listing 3-13  Data Recovery for Superelements (typical)DOUBLE FLYSWATTER MODEL                                                   APRIL   2, 2011  MSC NASTRAN   7/15/10   PAGE    73
-IN PHASE LOADS                                                                                     SUPERELEMENT 10      ,   1&lt;br&gt;
-SUBCASE 1           &lt;br&gt;
-S T R E S S E S   I N   Q U A D R I L A T E R A L   E L E M E N T S   ( Q U A D 4 )        OPTION = BILIN&lt;br&gt;
-ELEMENT         FIBER          STRESSES IN ELEMENT COORD SYSTEM       PRINCIPAL STRESSES (ZERO SHEAR)            &lt;br&gt;
-ID GRID-ID   DISTANCE      NORMAL-X      NORMAL-Y      SHEAR-XY    ANGLE        MAJOR         MINOR       VON MISES
-18  CEN/4  -5.000000E-01  1.147215E+00  5.651187E-01 -1.174470E+00 -38.0409   2.066162E+00 -3.538281E-01  2.263909E+00
-5.000000E-01 -1.147215E+00 -5.651187E-01  1.174470E+00  51.9591   3.538281E-01 -2.066162E+00  2.263909E+00
-33  -5.000000E-01 -7.783450E-01  4.400495E+00 -1.174470E+00 -77.8013   4.654397E+00 -1.032246E+00  5.247230E+00
-5.000000E-01  7.783450E-01 -4.400495E+00  1.174470E+00  12.1987   1.032246E+00 -4.654397E+00  5.247230E+00
-34  -5.000000E-01 -7.783450E-01 -3.270258E+00 -1.174470E+00 -21.6541  -3.120555E-01 -3.736547E+00  3.590704E+00
-5.000000E-01  7.783450E-01  3.270258E+00  1.174470E+00  68.3459   3.736547E+00  3.120555E-01  3.590704E+00
-etc.
-*** USER INFORMATION MESSAGE 4114 (OUTPX2)
-DATA BLOCK OES1X1   WRITTEN ON FORTRAN UNIT  12  IN BINARY (LTLEND) FORMAT USING NDDL DESCRIPTION FOR OES1X, TRL =
-101                63                 4                 2                11                 0                 1
-NAME OF DATA BLOCK WRITTEN ON FORTRAN UNIT IS OES1X1&lt;br&gt;
-(MAXIMUM POSSIBLE FORTRAN RECORD SIZE =       16386 WORDS.)
-(MAXIMUM SIZE OF FORTRAN RECORDS WRITTEN =        2175 WORDS.)
-(NUMBER OF FORTRAN RECORDS WRITTEN =          40 RECORDS.)
-(TOTAL DATA WRITTEN FOR DATA BLOCK =        7012 WORDS.)
-RESULTANTS ABOUT ORIGIN OF SUPERELEMENT BASIC COORDINATE SYSTEM IN SUPERELEMENT BASIC SYSTEM COORDINATES.
-SPCFORCE RESULTANT    &lt;br&gt;
-SUBCASE/    LOAD
-DAREA ID    TYPE       T1            T2            T3            R1            R2            R3
-1     FX    0.000000E+00     &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00  0.000000E+00                     &lt;br&gt;
-FY       &amp;mdash;-       0.000000E+00     &amp;mdash;-       0.000000E+00     &amp;mdash;-       0.000000E+00                     &lt;br&gt;
-FZ       &amp;mdash;-          &amp;mdash;-      -4.000000E+00  0.000000E+00 -9.208634E-12     &amp;mdash;-                          &lt;br&gt;
-MX       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-      -4.000000E+01     &amp;mdash;-          &amp;mdash;-                          &lt;br&gt;
-MY       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-      -1.234923E-11     &amp;mdash;-                          &lt;br&gt;
-MZ       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00                     &lt;br&gt;
-TOTALS  0.000000E+00  0.000000E+00 -4.000000E+00 -4.000000E+01 -2.155787E-11  0.000000E+00
-2     FX    0.000000E+00     &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00  0.000000E+00                     &lt;br&gt;
-FY       &amp;mdash;-       0.000000E+00     &amp;mdash;-       0.000000E+00     &amp;mdash;-       0.000000E+00&lt;/p&gt;
-&lt;p&gt;175 CHAPTER 3
-Single Level Superelement Analysis
-Main Index
-FZ       &amp;mdash;-          &amp;mdash;-      -3.943512E-12  0.000000E+00 -8.907443E+00     &amp;mdash;-                          &lt;br&gt;
-MX       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-      -2.762679E-11     &amp;mdash;-          &amp;mdash;-                          &lt;br&gt;
-MY       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-      -1.189256E+01     &amp;mdash;-                          &lt;br&gt;
-MZ       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00                     &lt;br&gt;
-TOTALS  0.000000E+00  0.000000E+00 -3.943512E-12 -2.762679E-11 -2.080000E+01  0.000000E+00
-3     FX    0.000000E+00     &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00  0.000000E+00                     &lt;br&gt;
-FY       &amp;mdash;-       0.000000E+00     &amp;mdash;-       0.000000E+00     &amp;mdash;-       0.000000E+00                     &lt;br&gt;
-FZ       &amp;mdash;-          &amp;mdash;-       3.200000E+01  0.000000E+00  5.097167E-11     &amp;mdash;-                          &lt;br&gt;
-MX       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       2.560000E+02     &amp;mdash;-          &amp;mdash;-                          &lt;br&gt;
-MY       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       6.834711E-11     &amp;mdash;-                          &lt;br&gt;
-MZ       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00                     &lt;br&gt;
-TOTALS  0.000000E+00  0.000000E+00  3.200000E+01  2.560000E+02  1.193188E-10  0.000000E+00
-MSC NASTRAN JOB CREATED ON 02-APR-11 AT 08:53:17                          APRIL   2, 2011  MSC NASTRAN   7/15/10&lt;br&gt;
-CREATED BY LANCE PROCTOR, EAGLESIM&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;                                              MAXIMUM  DISPLACEMENTS    
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;SUBCASE/
-DAREA ID        T1             T2             T3             R1             R2             R3
-1   0.0000000E+00  0.0000000E+00  7.6338986E-04  9.9121149E-05  1.6829072E-05  0.0000000E+00
-2   0.0000000E+00  0.0000000E+00  6.4533821E-04  4.1716754E-05  8.6961452E-05  0.0000000E+00
-3   0.0000000E+00  0.0000000E+00  4.2660381E-03  5.5805803E-04  3.4896173E-05  0.0000000E+00
-MSC NASTRAN JOB CREATED ON 02-APR-11 AT 08:53:17                          APRIL   2, 2011  MSC NASTRAN   7/15/10&lt;br&gt;
-CREATED BY LANCE PROCTOR, EAGLESIM&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;                                              MAXIMUM  APPLIED LOADS   
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;SUBCASE/
-DAREA ID        T1             T2             T3             R1             R2             R3
-1   0.0000000E+00  0.0000000E+00  2.0000000E+00  0.0000000E+00  0.0000000E+00  0.0000000E+00
-2   0.0000000E+00  0.0000000E+00  2.0000000E+00  0.0000000E+00  0.0000000E+00  0.0000000E+00
-3   0.0000000E+00  0.0000000E+00  6.3999999E-01  0.0000000E+00  0.0000000E+00  0.0000000E+00
-MSC NASTRAN JOB CREATED ON 02-APR-11 AT 08:53:17                          APRIL   2, 2011  MSC NASTRAN   7/15/10     &lt;br&gt;
-CREATED BY LANCE PROCTOR, EAGLESIM&lt;/p&gt;
-&lt;p&gt;RESULTANTS ABOUT ORIGIN OF SUPERELEMENT BASIC COORDINATE SYSTEM IN SUPERELEMENT BASIC SYSTEM COORDINATES.
-APP LOAD RESULTANT    &lt;br&gt;
-SUBCASE/    LOAD
-DAREA ID    TYPE       T1            T2            T3            R1            R2            R3
-1     FX    0.000000E+00     &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00  0.000000E+00                     &lt;br&gt;
-FY       &amp;mdash;-       0.000000E+00     &amp;mdash;-       0.000000E+00     &amp;mdash;-       0.000000E+00                     &lt;br&gt;
-FZ       &amp;mdash;-          &amp;mdash;-       4.000000E+00  4.000000E+01  0.000000E+00     &amp;mdash;-                          &lt;br&gt;
-MX       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00     &amp;mdash;-          &amp;mdash;-                          &lt;br&gt;
-MY       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00     &amp;mdash;-                          &lt;br&gt;
-MZ       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00                     &lt;br&gt;
-TOTALS  0.000000E+00  0.000000E+00  4.000000E+00  4.000000E+01  0.000000E+00  0.000000E+00&lt;/p&gt;
-&lt;p&gt;Superelements and Modules User’s Guide
-Single-Level Analysis Using List Superelements 176
-Main Index
-Listing 3-14  Listing        2     FX    0.000000E+00     &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00  0.000000E+00                     &lt;br&gt;
-FY       &amp;mdash;-       0.000000E+00     &amp;mdash;-       0.000000E+00     &amp;mdash;-       0.000000E+00                     &lt;br&gt;
-FZ       &amp;mdash;-          &amp;mdash;-       0.000000E+00  0.000000E+00  2.080000E+01     &amp;mdash;-                          &lt;br&gt;
-MX       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00     &amp;mdash;-          &amp;mdash;-                          &lt;br&gt;
-MY       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00     &amp;mdash;-                          &lt;br&gt;
-MZ       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00                     &lt;br&gt;
-TOTALS  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  2.080000E+01  0.000000E+00
-3     FX    0.000000E+00     &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00  0.000000E+00                     &lt;br&gt;
-FY       &amp;mdash;-       0.000000E+00     &amp;mdash;-       0.000000E+00     &amp;mdash;-       0.000000E+00                     &lt;br&gt;
-FZ       &amp;mdash;-          &amp;mdash;-      -3.200000E+01 -2.560000E+02  0.000000E+00     &amp;mdash;-                          &lt;br&gt;
-MX       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00     &amp;mdash;-          &amp;mdash;-                          &lt;br&gt;
-MY       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00     &amp;mdash;-                          &lt;br&gt;
-MZ       &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-          &amp;mdash;-       0.000000E+00                     &lt;br&gt;
-TOTALS  0.000000E+00  0.000000E+00 -3.200000E+01 -2.560000E+02  0.000000E+00  0.000000E+00
-DOUBLE FLYSWATTER MODEL                                                   APRIL   2, 2011  MSC NASTRAN   7/15/10&lt;br&gt;
-IN PHASE LOADS&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;                                            E Q U I L I B R I U M   C H E C K
-                                       RESULTANT LOADS IN BASIC COORDINATE SYSTEM
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;SUBCASE  REFERENCE    LOAD           T1             T2             T3             R1             R2             R3
-NO.      POINT      TYPE
-1     ORIGIN   APP-LOAD    0.000000E+00   0.000000E+00   4.000000E+00   4.000000E+01   0.000000E+00   0.000000E+00
-F-OF-SPC    0.000000E+00   0.000000E+00  -4.000000E+00  -4.000000E+01  -2.155787E-11   0.000000E+00
-&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-  &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-  &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-  &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-  &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-  &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-
-&lt;em&gt;TOTALS&lt;/em&gt;    0.000000E+00   0.000000E+00   0.000000E+00   0.000000E+00  -2.155787E-11   0.000000E+00
-2     ORIGIN   APP-LOAD    0.000000E+00   0.000000E+00   0.000000E+00   0.000000E+00   2.080000E+01   0.000000E+00
-F-OF-SPC    0.000000E+00   0.000000E+00  -3.943512E-12  -2.762679E-11  -2.080000E+01   0.000000E+00
-&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-  &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-  &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-  &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-  &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-  &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-
-&lt;em&gt;TOTALS&lt;/em&gt;    0.000000E+00   0.000000E+00  -3.943512E-12  -2.762679E-11   0.000000E+00   0.000000E+00
-3     ORIGIN   APP-LOAD    0.000000E+00   0.000000E+00  -3.200000E+01  -2.560000E+02   0.000000E+00   0.000000E+00
-F-OF-SPC    0.000000E+00   0.000000E+00   3.200000E+01   2.560000E+02   1.193188E-10   0.000000E+00
-&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-  &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-  &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-  &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-  &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-  &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-
-&lt;em&gt;TOTALS&lt;/em&gt;    0.000000E+00   0.000000E+00   0.000000E+00   0.000000E+00   1.193188E-10   0.000000E+00&lt;/p&gt;
-&lt;p&gt;177 CHAPTER 3
-Single Level Superelement Analysis
-Main Index
-Figure 3-25  Deflections for Pressure Loads – SESET Model
-Figure 3-26  Deflections for In Phase Point Loads – SESET Model&lt;/p&gt;
-&lt;p&gt;Superelements and Modules User’s Guide
-Single-Level Analysis Using List Superelements 178
-Main Index
-Figure 3-27  Deflections for Opposing Point Loads – SESET Model
-Figure 3-28  Stress Tensor for Pressure Load (max = 1.79E+3) – SESET Model&lt;/p&gt;
 
       </description>
     </item>
