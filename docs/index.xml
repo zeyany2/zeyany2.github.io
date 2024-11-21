@@ -38,6 +38,377 @@
     
     <item>
       <title>User&#39;s Manual P1</title>
+      <link>//uildDrafts:1313/docs/accessmanaual/msc_nastran_2024.1_access_user_manual_001/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//uildDrafts:1313/docs/accessmanaual/msc_nastran_2024.1_access_user_manual_001/</guid>
+      <description>
+        
+        
+        &lt;p&gt;MSC Nastran Access User&amp;rsquo;s Manual
+MSC Nastran 2024.1
+Access User&amp;rsquo;s Manual&lt;/p&gt;
+&lt;p&gt;Corporate Office
+Hexagon Manufacturing Intelligence, Inc. UK
+78 Portsmouth Road Cedar HouseCobham, Surrey KT11 1HYTelephone: (+44) 02070686555
+Worldwide Web
+&lt;a href=&#34;https://www.hexagon.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;www.hexagon.com&lt;/a&gt;
+Support
+&lt;a href=&#34;https://simcompanion.hexagon.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://simcompanion.hexagon.com&lt;/a&gt;
+Disclaimer
+Hexagon reserves the right to make changes in specifications and other information contained in this document without prior notice.
+The concepts, methods, and examples presented in this text are for illustrative and educational purposes only, and are not intended
+to be exhaustive or to apply to any particular engineering problem or design. Hexagon assumes no liability or responsibility to any person or company for direct or indirect damages resulting from the use of any information contained herein.
+User Documentation: Copyright
+2024 Hexagon AB and/or its subsidiaries. All Rights Reserved.
+This notice shall be marked on any reproduction of this documentation, in whole or in part. Any reproduction or distribution of this
+document, in whole or in part, without the prior written consent of Hexagon is prohibited.
+This software may contain certain third-party software that is protected by copyright and licensed from Hexagon suppliers. Additional
+terms and conditions and/or notices may apply for certain third party software. Such additional third party software terms and conditions and/or notices may be set forth in documentation and/or at third-party software information  (or successor website designated
+by Hexagon from time to time).
+PCGLSS 8.0, Copyright © 1992-2016, Computational Applications and System Integration Inc. All rights reserved. PCGLSS 8.0 is
+licensed from Computational Applications and System Integration Inc.
+The Hexagon logo, Hexagon, MSC Software logo, MSC, Dytran, Marc, MSC Nastran, Patran, e -Xstream, Digimat, and Simulating
+Reality are trademarks or registered trademarks of Hexagon AB and/or its subsidiaries in the United States and/or other countries.NASTRAN is a registered trademark of NASA. FLEXlm and FlexNet Publisher are trademarks or registered trademarks of Flexera
+Software. All other trademarks are the property of their respective owners.
+Use, duplicate, or disclosure by the U.S. Government is subjected to restrictions as set forth in FAR 12.212 (Commercial Computer
+Software) and DFARS 227.7202 (Commercial Computer Software and Commercial Computer Software Documentation), as applicable.
+U.S. Patent 9,361,413May 16, 2024NA:V2024.1:Z:Z:Z:DC-UTIL-PDF&lt;/p&gt;
+&lt;p&gt;Contents
+MSC Nastran Access User’s Manual&lt;/p&gt;
+&lt;p&gt;Main Index
+Contents
+Preface
+About this Book . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  2
+List of MSC Nastran Guides . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  2
+Technical Support  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  3
+Training and Internet Resources . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  3
+1 MSC Access
+Overview. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  6
+Definitions and Acronyms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  6Compatibility with Previous Versions of MSC Access  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  7DBC Module Differences  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  8Data base Input/Output (DBIO) Differences  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  8Timeline for MSC Access and MSC Nastran Releases . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  9Interrelationships of MSC Access with Other MSC Products . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  11
+2 Database Converter Module (DBC)
+Overview. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  16DBC Functions  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  16
+DBC Default Values. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  16
+Overriding DBC Default Values . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  17
+3 Creation of MSC Access Databases
+Overview. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  22
+Conversion Using MSC Nastran Version 66 and Subsequent Versions . . . . . . . . . . . . . . . . . . . . . . . . . . .  22Conversion Using Pre-MSC Nastran Version 66 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  22&lt;/p&gt;
+&lt;p&gt;MSC Nastran Access User’s Manualii
+Main Index
+4 Contents of MSC Access Database
+Overview. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  24
+Model Geometry Data. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  24
+Model Loads and Restraint Data. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  24Solution Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  24Problem Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  25
+Database Dictionary Entry Description . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  25
+Object Name Field . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  26Project Attribute Field. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  28Superelement/Part Attribute Field. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  28Path Attribute Field. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  28SUBCASE Attribute Field. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  29Set Attribute Field  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  30Approach Attribute Field. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  30Design Cycle Attribute Field . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  31
+P-element Iteration Attribute Field  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  31Cyclic Symmetry Segment Field . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  31Undefined Field  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  32Determination of Object Attribute Usage. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  32
+Data Block Description  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  32
+Keyed Entries. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  33Sequential Object. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  33
+5 Accessing The Database
+Overview. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  36
+General Access Database Processing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  36
+Database Validation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  37
+Access Block (Page) Allocation. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  37OPEN/CLOSE of an Access Database . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  39Access Database Dictionary Inquiry . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  40Allocating/Freeing Access Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  42Working Access Object Entries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  43Access Purge Object  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  43
+Access Database Usage Hints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  44
+Memory Allocation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  44MSC Nastran Type Definition . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  45Element Data Recovery Naming Conventions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  46External versus Internal Object Access Keys. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  46Access Object Capacity Limit Derivations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  47Special Key Usage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  49Special Number Usage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  49&lt;/p&gt;
+&lt;p&gt;iii Contents
+Main Index
+The CBAR, CBEAM, and CGAP Objects. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  50
+6 Interfacing to The Data Definition Language (DDL)
+Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  52
+The Data Definition Language . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  52
+The MSC Access Data Definition Language. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  52
+Starting the Data Definition Language Interface  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  53
+Labeled Commons Populated by Function MSCLDD  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  54
+Usage of Word Index Functions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  55
+Version Matching DDL to Analysis Database  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  55Using Attribute Definition Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  57DDL Control Entry Description . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  58
+Working with the DDL control entry. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  58
+Working with an Object Entry DDL  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  59Working with the DDL and an Object/Entry . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  61
+7 MSC Access Utilities and Demonstration Programs
+Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  64
+The MSC Access Sampler Demonstration Program (SMPLR). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  64The Demonstration Program DEMO1. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  65The Demonstration Program DEMO2. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  65The Data Definition Language Program DDLADD . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  65
+The Data Definition Language Demonstration Program DDLPRT. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  66The Data Definition Language Demonstration Program DDLQRY. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  67Utility Program QAPRT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  68Utility Program RECEIVE. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  69
+Utility Program TRANS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  70
+8 MSC Access Prototype Program
+Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  74Flow Diagram of the MSC Access Prototype Program SMPLR . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  74Subroutine Components of the SMPLR Program  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  80
+Common Blocks used by the SMPLR Program . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  80&lt;/p&gt;
+&lt;p&gt;MSC Nastran Access User’s Manualiv
+Main Index
+9 Additional MSC Access Example Programs (DEMO1 and DEMO2)
+Overview. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  82
+General Description of the Two Demo Programs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  82DEMO1 Example Program . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  84
+Driver Program for Example 1 (DEMO1) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  84
+9.2.2     Data base Inquiry for Example 1 (DATINT) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  86Grid Point Data in Example 1 (PRTGRD)  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  91Element Connectivity in Example 1 (PRTCON). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  92Displacement Data in Example 1 (PRTDIS) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  94Grid Point Stress Data in Example 1 (PRTGPS) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  95
+DEMO2 Example Program . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  99
+Driver Program for Example 2 (DEMO2) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  99Data base Inquiry and Grid Point Data for Example 2 (PRTGRD)  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  103
+Data base Inquiry and Connectivity Data for Example 2 (PRTCON)  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  104Data base Inquiry and Displacement Data for Example 2 (PRTDIS) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  106Data base Inquiry and Grid Point Stress Data for Example 2 (PRTGPS)  . . . . . . . . . . . . . . . . . . . . . . . . . . .  108
+10 Usage of Data Definition Language Interface
+Overview. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  112
+High Level Interactive Driver . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  112Support Subroutine to Process DDL Schema . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  119
+11 Installation
+Overview. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  128Building DDLPRT  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  128Building DDLQRY . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  128Building DEMO1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  129Building DEMO2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  129Building SMPLR . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  129
+A MSC Access DBIO Subroutine Descriptions
+DBIO Subroutine Descriptions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  132
+Subroutine Name: CLOSGR  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  132
+Subroutine Name: DBCLOS  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  132
+Subroutine Name: DBOPEN  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  133
+Subroutine Name: DBFLOC. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  134
+Subroutine Name: DBVALD. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  135&lt;/p&gt;
+&lt;p&gt;v Contents
+Main Index
+Subroutine Name: DELREC . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  136
+Subroutine Name: DICENT  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  136
+Subroutine Name: DICPRT  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  137
+Subroutine Name: DICRDR . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  138
+Subroutine Name: GRPURG. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  139Subroutine Name: OPENC. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  140
+Subroutine Name: OPENR. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  141
+Subroutine Name: OPENS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  142
+Subroutine Name: OPENSQ. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  143Subroutine Name: PAGCFGX  PAGCFG. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  143Subroutine Name: PAGCLR . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  145Subroutine Name: READBS. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  145Subroutine Name: READR . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  146
+Subroutine Name: READS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  147
+Subroutine Name: READSQ. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  148Subroutine Name: WRITEI. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  149
+Subroutine Name: WRITES . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  149
+Block Data Descriptions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  150
+Block Data: DBCTBD. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  150
+Differences from MSC Nastran . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  151
+Block Data: GRSPBD. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  155
+Additional DBIO Information  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  156
+Additional DBIO Subroutines . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  156Labeled Common Blocks  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  156
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  157
+B MSC Access Data Definition Language Interface Routines
+Introduction  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  160
+Subroutines. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  160
+Subroutine Name: MSCASM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  160
+Function Name: MSCDLC . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  160
+Function Name: MSCKTY  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  161
+Function Name: MSCLDD . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  161
+Function Name: MSCLRA . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  162
+Function Name: MSCLRT  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  163
+Subroutine Name: MSCPIV . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  164
+Subroutine Name: MSCPPT. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  164Subroutine Name: MSCPTX. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  165Function Name: MSCRTI . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  165
+Function Name: MSCTFA  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  166
+Function Name: MSCVDR . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  167&lt;/p&gt;
+&lt;p&gt;MSC Nastran Access User’s Manualvi
+Main Index
+Function Name: MSCXII . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  167
+Function Name: MSCXTI. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  168
+Static COMMON Specifications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  168
+Additional Support Routines . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  169
+C Input/Output Examples
+MSC Nastran Input Data  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  172MSC Nastran Output  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  175MSC Access SMPLR Program Output . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  190&lt;/p&gt;
+&lt;p&gt;Main Index
+Preface
+Preface
+About this Book     2
+List of MSC Nastran Guides     2
+Technical Support     3
+Training and Internet Resources     3&lt;/p&gt;
+&lt;p&gt;MSC Nastran Access User’s Manual
+About this Book2
+Main Index
+About this Book
+This guide elaborates different functionalities of MSC Access in detail.
+List of MSC Nastran Guides
+A list of some of the MSC Nastran guides is as follows:
+Installation and Release Guides
+Installation and Operations Guide
+Release Guide
+Reference Guides
+Quick Reference Guide
+DMAP Programmer’s Guide
+Reference Guide
+Utilities Guide
+Getting Started Guide
+SOL 400 Getting Started Guide
+MSC Nastran Error Messages Guide
+Demonstration Guides
+Linear Analysis
+Implicit Nonlinear (SOL 400)
+Explicit Nonlinear (SOL 700)
+MSC Nastran Verification Guide
+User’s Guides
+Automated Component Modal Synthesis (ACMS)
+Access Manual
+Aeroelastic Analysis
+Design Sensitivity and Optimization
+DEMATD
+Dynamic Analysis
+Embedded Fatigue
+Embedded Vibration Fatigue
+Explicit Nonlinear (SOL 700)
+High Performance Computing
+Linear Static Analysis
+Nonlinear (SOL 400)&lt;/p&gt;
+&lt;p&gt;3 MSC Nastran Access User’s Manual
+Preface
+Main Index
+You may find any of these documents from Hexagon at:
+&lt;a href=&#34;https://simcompanion.hexagon.com/customers/s/article/MSC-Nastran-Support-Home-Page&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://simcompanion.hexagon.com/customers/s/article/MSC-Nastran-Support-Home-Page&lt;/a&gt;
+Technical Support
+For technical support phone numbers and contact information, please visit:
+&lt;a href=&#34;https://simcompanion.hexagon.com/customers/s/article/support-contact-information-kb8019304&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://simcompanion.hexagon.com/customers/s/article/support-contact-information-kb8019304&lt;/a&gt;
+Support Center (&lt;a href=&#34;http://simcompanion.hexagon.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://simcompanion.hexagon.com&lt;/a&gt;)
+The SimCompanion link above gives you access to the wealth of resources for Hexagon products. Here you
+will find product and support contact information, product documentations, knowledge base articles, product error list, knowledge base articles and SimAcademy Webinars. It is a searchable database which allows you to find articles relevant to your inquiry. Valid MSC customer entitlement and login is required to access the database and documents. It is a single sign-on that gives you access to product documentation for complete list of products from Hexagon, allows you to manage your support cases, and participate in our discussion forums.
+Training and Internet Resources
+The Hexagon corporate site has the information on the latest events, products, and services for the CAD/CAE/CAM marketplace.
+Design and Engineering e-Learning
+The above link will point you to schedule and description of seminars. Following courses are recommended
+for beginning MSC Nastran users.NAS120 - Linear Static Analysis using MSC Nastran and Patran
+This seminar introduces basic finite element analysis techniques for linear static, normal modes, and
+buckling analysis of structures using MSC Nastran and Patran. MSC Nastran data structure, the element library, modeling practices, model validation, and guidelines for efficient solutions are discussed and illustrated with examples and workshops. Patran will be an integral part of the examples and workshops and will be used to generate and verify illustrative MSC Nastran models, manage analysis submission requests, and visualize results. This seminar provides the foundation required for intermediate and advanced MSC Nastran applications.Numerical Methods
+Rotordynamics
+Superelements and Modules
+Thermal Analysis
+User Defined Services&lt;/p&gt;
+&lt;p&gt;MSC Nastran Access User’s Manual
+Training and Internet Resources4
+Main Index&lt;/p&gt;
+&lt;p&gt;Main Index
+Chapter 1: MSC Access
+MSC Nastran Implicit Nonlinear (SOL 600) User’s GuideMSC Nastran Access User&amp;rsquo;s Man -
+ual
+1 MSC Access
+Overview     6
+Definitions and Acronyms     6
+Compatibility with Previous Versions of MSC Access     7
+DBC Module Differences     8
+Data base Input/Output (DBIO) Differences     8
+Timeline for MSC Access and MSC Nastran Releases     9
+Interrelationships of MSC Access with Other MSC Products     11&lt;/p&gt;
+&lt;p&gt;MSC Nastran Access User’s Manual
+Overview6
+Main Index
+Overview
+MSC Access is a complete set of FORTRAN callable utility subroutines delivered as an object library. These
+routines enable pre- and post- processor software developers to write communications subroutines that enhance the interaction between their applications and the results generated by MSC Nastran.
+The finite element database generated by MSC Nastran cannot, until recently, be read directly by an
+application program. Without MSC Access, application programs must either read through one or more of the sequential files generated or create their own database. Either process can be very slow. Starting with 2001 of MSC Nastran an offering known as the MSC Nastran T oolkit is available as an alternative method.
+MSC Access provides a way for interfacing pre- and post- processing applications with MSC Nastran. End
+users of either a packaged Computer Aided Design (CAD) systems or a system developed in-house application can quickly and efficiently search and query the finite element analysis information from MSC Nastran.
+The inter-relationship of MSC Access with other MSC products is given in Section 1.6.This release of MSC Access includes major enhancements to the original product. These enhancements are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Improved performance of the data base input/output access capability&lt;/li&gt;
+&lt;li&gt;Improved data base dictionary content descriptions3. Increased types of analysis results data available4. Increased number of MSC Nastran elements supported5. Larger data base size, number of databases and logical files allowed6. Heterogeneous data access between big and little endian machines
+Not all of these changes are invisible to the user. Consequently, some modification to existing application
+codes may be necessary to take full advantage of these improvements.
+Definitions and Acronyms
+This section shall specify definitions and acronyms applicable to this document. Other definition of terms will occur when first utilized.
+Attribute A dictionary entry qualifier for a data base object
+BBBT Binary Blocked Balanced T ree Method of entry key storage
+Database The MSC Access database unless otherwise stated
+DBC Database Conversion module used by MSC Nastran to create MSC Access database
+DBIO MSC Access Database Input/Output subroutine library
+DDL Data Definition Language used by MSC Access
+DDLADD Utility Program used to add/replace DDL to an existing Access database&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;7 CHAPTER 1
+MSC Access
+Main Index
+Compatibility with Previous Versions of MSC Access
+This document is intended for use with MSC Nastran Version 2001.5 and later.
+Applications written with previous versions of MSC Access should continue to function provided that they
+are not re-linked with the new object library. The database created by the DBC module using the PROGRAM=&amp;lsquo;GRASP&amp;rsquo; option is the same as those created by stand -alone DBCs of pre- MSC Nastran 66
+versions.
+To re-link old applications with the new object library, it is necessary to incorporate the new paging pool
+control subroutines PAGCFGX and the database and data definition validation function DBVALD into the application. Old databases can be read and processed by the re-linked system. T o utilize the machine heterogeneous features, refer to the DDLADD program in the utility chapter.DDLPRT Utility Program used to format the DDL into a printable file
+DDLQRY Utility Program used to interactive recover information from DDL
+DEMO1,2 Demonstration programs illustrating programming conventions
+DMAP Direct Matrix Abstraction Program or process language for MSC Nastran
+DRA Direct Results Access that represents the MSC.Patran interface
+FMS File Management Section of MSC Nastran Data Deck
+HK Hiearchial Key Method of entry key storage
+MSC/GRASP MSC interactive product during the 1981-1986 timeframe
+MSC.Patran MSC current interactive product
+MSC/XL MSC interactive product during the 1985-1992 timeframe
+NDDL MSC Nastran Data Definition Language
+Object A data component of the MSC Access database
+OUTPUT2 An alternate means for exporting information from MSC Nastran in binary format
+QAPRT Utility Program used to format objects contained in database
+RECEIVE Utility Program used for translate neutral format to binary database
+SMPLR Demonstration program illustrating programming conventions
+TRANS Utility Program used to translate database to machine neutral format&lt;/p&gt;
+&lt;p&gt;MSC Nastran Access User’s Manual
+DBC Module Differences8
+Main Index
+The MSC/DBC executable program for converting MSC Nastran databases is no longer being delivered.
+Starting with Version 66, the database converter (DBC) has become a module of MSC Nastran and has been included within all MSC Nastran solution sequences. DMAP writers should review the DBC module and its capabilities in Section 5.4 of the MSC Nastran Users Manual and the DMAP Module Dictionary.
+The Data Base Input/Output (DBIO) subroutines have added buffer pooling techniques to relieve memory
+management.
+The write facilities of DBIO from Version 2 have been restored since Version 6.
+DBC Module Differences
+As a module, DBC does not require any output blocks to be permanently stored in the MSC Nastran
+database. The conversion occurs as MSC Nastran executes. As a result, the MSC Nastran database contains fewer data blocks and may be smaller. Post-processing activity can begin as soon as MSC Nastran execution is completed and the conversion is verified (i.e., there are no FATAL messages from the DBC module or other MSC Nastran modules).
+DBC was added to MSC Nastran using the same philosophy of output data recovery as other output
+modules. It does not stop MSC Nastran execution when an error is detected. Instead an error message is printed and control returned to the Executive System. When a fatal DBC error occurs, further Executive System calls to the DBC module are not executed.
+The module allows modification of old data and appendage of new information to the database. In previous
+releases of the stand -alone data base converter, the database, once created, could not be modified. The only
+error occurs when inconsistent model structure is detected. Care should be exercised when updating old databases that modifications do not compromise the existing data model. It is normally safe to update databases for additional solution results.
+The DBC module is capable of translating the MSC Nastran information using three different sets of criteria.
+The default conversion is the modern and expanded MSC/XL structure, but an alternate form for p-elements is designated XLPLUS. Optionally, the MSC/GRASP structure corresponding to prior field systems is available but is not compatible with the BBBT Method of storage of keyed objects. These structures should not be mixed in the same database. MSC.Patran, via the DRA tool, uses the MSC/XL conversion format.
+To take advantage of the expanded object structure, current applications of the product need to be modified.Additional information about the DBC module will be found in Chapter 2 of this manual.
+Data base Input/Output (DBIO) Differences
+The Data Base Input/Output (DBIO) Facility has been enhanced. For most existing applications, only minor
+changes are necessary to use the new DBIO library routines.
+Database buffer pooling or caching has been introduced into the DBIO routines. This relieves the application
+of some memory management issues and decisions that arise when using the DBIO open routines. When the pages are faulted to the device, heterogeneous device characteristics are noted and the page information is translated to the targets native mode. It is up to the MSC Access user to determine if the database is locally present or accessed across the network.&lt;/p&gt;
+&lt;p&gt;9 CHAPTER 1
+MSC Access
+Main Index
+The argument lists of the open subroutines were retained from the previous versions for compatibility. The
+positional requirements are the same in all MSC Access releases. However, in this release, the application&amp;rsquo;s input for the buffer areas is ignored. The former buffer areas can be reduced to arrays containing one element to save space or replaced with a constant zero since the input location is unused. In the 2005.1 release, either one or two positions have been re-activated to allow for the BBBT Method of storage of keyed entries. The application concern is related to the open APIs since values will be returned to the argument locations.
+A new database validation function has been provided. The DBVALD subroutine attempt to verify that the
+physical file is truly and MSC Access database. It returns to the application the block size that was used to create the database, the Data Definition Language (DDL) version and control information, and whether the database is native to the current machine. Only databases that contain DDL can be processed between heterogeneous machine environments. It should be noted that information can be exchanged between big and little endian machine of 32-bit word lengths.
+A new subroutine PAGCFGX has been introduced which replaces the older PAGCFG. This subroutine must
+be called before any other DBIO processing routine is called other than DBVALD as previously mentioned. This call, used to establish the buffer pooling area, should be done only once during an application program&amp;rsquo;s execution. When all databases have been closed, the application can re-execute the routine to change the memory configurations, however, ALL databases MUST BE CLOSED. See application interface section for further discussion.
+Timeline for MSC Access and MSC Nastran Releases
+Both MSC Nastran and MSC Access have been released over multiple decades and have serviced numerous application products. Unlike MSC Nastran, the database produced by MSC Access have little sensitivity to timeline or release synchronization if both the MSC Nastran defaults were utilized and application programs were developed using the conventions specified within this manual. Briefly, the timeline, version synchronization and product correlation follows:
+Year MSC Access
+ReleaseMSC Nastran
+ReleaseProduct / Object or Approach Availability
+1982 1 62 MSC/GRASP introduced
+Basic geometry, loads, results such as displacements, stresses &amp;amp;
+forces
+Supported Linear Statics, Real Eigenvalues, T ransient &amp;amp;
+Frequency solutions
+1983 2 63 Support of Nonlinear Solutions
+1985 3 65 Support of scalar and mass elements&lt;/p&gt;
+&lt;p&gt;MSC Nastran Access User’s Manual
+Timeline for MSC Access and MSC Nastran Releases10
+Main Index
+1989 4 66 MSC/XL and MSC/EMAS introduced
+Added multi-project/path database modelInstalled access factor into database objectsAdded Design Optimization object attributeSupport of Complex Eigenvalues SolutionsSupport of QUADR and TRIAR objects
+1991 6 67 Introduced Acoustic elements and resultsAdded Grid and Element Discontinuity objectsSupported Buckling Analysis Approach
+1994 68 68 Aries formats incorporated using MSC/XL object definitionChanged Element Discontinuity Object DefinitionsAdded QUAD4 corner technologyAdded support for Heat T ransfer and p-element technologyMore Design Optimization Response data supported
+1996 69 69 Support for Part SuperelementsAdded BUSH and Absorber elementsp-element supported expanded to include Beam &amp;amp; Shell
+elements
+1997 70 70 MSC.Patran integrated via DRA interface
+Added support for Enthalpy and MPC forces objects
+1998 70.5 70.5 Added BUSH1D element support
+1998 70.6 70.6 MSC/EMAS support discontinuedAdded support for Aeroelastic ModelAdded Hyperelastic elements and Plain Strain Surface Recovery
+1999 70.7 70.7 Minor corrections to object attributes
+2001 2001.0 2001.0 Added Element Kinetic Energy and Energy Loss per Cycle
+objects
+WELD element supported&lt;/p&gt;
+&lt;p&gt;11 CHAPTER 1
+MSC Access
+Main Index
+Interrelationships of MSC Access with Other MSC
+Products
+The relationship between the various MSC products is illustrated in section 1.6.1. Please note that the
+CAD/CAM systems have legal permission to redistribute the sections of MSC Access used. There is no additional cost to mutual clients.2001 2001.0.5 2001.0.5 Allow database to have variable block sizes
+Allow databases to operate hetrogeneously between platforms
+2004 2004 2004 DMIG/GENEL limited element supportComposite output for QUADR/TRIAR elementsMAXMIN (grid) responses (MAXMIN (element) missing)Superelement Map object support identical/mirrorsScaled Response Spectra Analysis
+2005 2005 2005 BBBT Storage Method Added to Keyed ObjectsFASTNER element supportedSEAM weld element supportedCyclic Symmetry Attribute added to object definitions&lt;/p&gt;
+&lt;p&gt;MSC Nastran Access User’s Manual
+Interrelationships of MSC Access with Other MSC Products12
+Main Index
+MSC Nastran Version 66 and Subsequent Versions&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>User&#39;s Manual P1</title>
       <link>//uildDrafts:1313/docs/users/users_manual_001/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

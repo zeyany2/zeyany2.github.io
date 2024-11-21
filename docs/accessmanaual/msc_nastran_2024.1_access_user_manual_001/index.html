@@ -12,70 +12,59 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 
   <title>User&#39;s Manual P1 – DOC REPO</title>
-  <meta name="description" content="NASASP-222(08) VOLUME II NASTRAN@ USER’S MANUAL JUNE 1986 runm
-NASASP-222(08) Volume 11 NASTRAN USER’S MANUAL June1986
-ForsalefromComputer Software Management andInformation Center(COSMIC) Computer Services Annex,University ofGeorgia, Athens, Georgia 30602 ‘ ●
-COSMIC TheUniversity ofGeorgia Computer Services Annex Athens, GA30602 (404) 542-3265 NASTWN USER MANUAL UPDATE NOTE TheNASTRAN User Manual isscheduled forreview each year todetermine whether updates are required. Toaddyour name tothedatabase to receive notification when updates areavailable, youwill need tocomplete this form andreturn to COSMIC .This will betheonly mailing list for keeping users informed about themanual updates. Your Name: Company: Mailing Address: City: State: Zip: June, 1986 Fold, staple, and return this form asaself-mailer." />
+  <meta name="description" content="MSC Nastran Access User’s Manual MSC Nastran 2024.1 Access User’s Manual
+Corporate Office Hexagon Manufacturing Intelligence, Inc. UK 78 Portsmouth Road Cedar HouseCobham, Surrey KT11 1HYTelephone: (&#43;44) 02070686555 Worldwide Web www.hexagon.com Support https://simcompanion.hexagon.com Disclaimer Hexagon reserves the right to make changes in specifications and other information contained in this document without prior notice. The concepts, methods, and examples presented in this text are for illustrative and educational purposes only, and are not intended to be exhaustive or to apply to any particular engineering problem or design. Hexagon assumes no liability or responsibility to any person or company for direct or indirect damages resulting from the use of any information contained herein. User Documentation: Copyright 2024 Hexagon AB and/or its subsidiaries. All Rights Reserved. This notice shall be marked on any reproduction of this documentation, in whole or in part. Any reproduction or distribution of this document, in whole or in part, without the prior written consent of Hexagon is prohibited. This software may contain certain third-party software that is protected by copyright and licensed from Hexagon suppliers. Additional terms and conditions and/or notices may apply for certain third party software. Such additional third party software terms and conditions and/or notices may be set forth in documentation and/or at third-party software information (or successor website designated by Hexagon from time to time). PCGLSS 8.0, Copyright © 1992-2016, Computational Applications and System Integration Inc. All rights reserved. PCGLSS 8.0 is licensed from Computational Applications and System Integration Inc. The Hexagon logo, Hexagon, MSC Software logo, MSC, Dytran, Marc, MSC Nastran, Patran, e -Xstream, Digimat, and Simulating Reality are trademarks or registered trademarks of Hexagon AB and/or its subsidiaries in the United States and/or other countries.NASTRAN is a registered trademark of NASA. FLEXlm and FlexNet Publisher are trademarks or registered trademarks of Flexera Software. All other trademarks are the property of their respective owners. Use, duplicate, or disclosure by the U.S. Government is subjected to restrictions as set forth in FAR 12.212 (Commercial Computer Software) and DFARS 227.7202 (Commercial Computer Software and Commercial Computer Software Documentation), as applicable. U.S. Patent 9,361,413May 16, 2024NA:V2024.1:Z:Z:Z:DC-UTIL-PDF" />
 
   
-    <link rel="canonical" href="//uildDrafts:1313/docs/users/users_manual_001/" itemprop="url" />
+    <link rel="canonical" href="//uildDrafts:1313/docs/accessmanaual/msc_nastran_2024.1_access_user_manual_001/" itemprop="url" />
   
 
   
 
 <meta property="og:title" content="User&#39;s Manual P1" />
-<meta property="og:description" content="NASASP-222(08)
-VOLUME II
-NASTRAN@ USER’S MANUAL
-JUNE 1986
-runm
-NASASP-222(08)
-Volume 11
-NASTRAN USER’S MANUAL
-June1986
-ForsalefromComputer Software Management andInformation Center(COSMIC)
-Computer Services Annex,University ofGeorgia, Athens, Georgia 30602 ‘
-●
-COSMIC
-TheUniversity ofGeorgia
-Computer Services Annex
-Athens, GA30602
-(404) 542-3265
-NASTWN USER MANUAL UPDATE NOTE
-TheNASTRAN User Manual isscheduled forreview
-each year todetermine whether updates are
-required. Toaddyour name tothedatabase to
-receive notification when updates areavailable,
-youwill need tocomplete this form andreturn to
-COSMIC .This will betheonly mailing list for
-keeping users informed about themanual updates.
-Your Name:
-Company:
-Mailing Address:
-City:
-State: Zip:
-June, 1986
-Fold, staple, and
-return this form
-asaself-mailer." />
+<meta property="og:description" content="MSC Nastran Access User&rsquo;s Manual
+MSC Nastran 2024.1
+Access User&rsquo;s Manual
+Corporate Office
+Hexagon Manufacturing Intelligence, Inc. UK
+78 Portsmouth Road Cedar HouseCobham, Surrey KT11 1HYTelephone: (&#43;44) 02070686555
+Worldwide Web
+www.hexagon.com
+Support
+https://simcompanion.hexagon.com
+Disclaimer
+Hexagon reserves the right to make changes in specifications and other information contained in this document without prior notice.
+The concepts, methods, and examples presented in this text are for illustrative and educational purposes only, and are not intended
+to be exhaustive or to apply to any particular engineering problem or design. Hexagon assumes no liability or responsibility to any person or company for direct or indirect damages resulting from the use of any information contained herein.
+User Documentation: Copyright
+2024 Hexagon AB and/or its subsidiaries. All Rights Reserved.
+This notice shall be marked on any reproduction of this documentation, in whole or in part. Any reproduction or distribution of this
+document, in whole or in part, without the prior written consent of Hexagon is prohibited.
+This software may contain certain third-party software that is protected by copyright and licensed from Hexagon suppliers. Additional
+terms and conditions and/or notices may apply for certain third party software. Such additional third party software terms and conditions and/or notices may be set forth in documentation and/or at third-party software information  (or successor website designated
+by Hexagon from time to time).
+PCGLSS 8.0, Copyright © 1992-2016, Computational Applications and System Integration Inc. All rights reserved. PCGLSS 8.0 is
+licensed from Computational Applications and System Integration Inc.
+The Hexagon logo, Hexagon, MSC Software logo, MSC, Dytran, Marc, MSC Nastran, Patran, e -Xstream, Digimat, and Simulating
+Reality are trademarks or registered trademarks of Hexagon AB and/or its subsidiaries in the United States and/or other countries.NASTRAN is a registered trademark of NASA. FLEXlm and FlexNet Publisher are trademarks or registered trademarks of Flexera
+Software. All other trademarks are the property of their respective owners.
+Use, duplicate, or disclosure by the U.S. Government is subjected to restrictions as set forth in FAR 12.212 (Commercial Computer
+Software) and DFARS 227.7202 (Commercial Computer Software and Commercial Computer Software Documentation), as applicable.
+U.S. Patent 9,361,413May 16, 2024NA:V2024.1:Z:Z:Z:DC-UTIL-PDF" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="//uildDrafts:1313/docs/users/users_manual_001/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="//uildDrafts:1313/docs/accessmanaual/msc_nastran_2024.1_access_user_manual_001/" /><meta property="article:section" content="docs" />
 
 
 
   
   <meta itemprop="name" content="User&#39;s Manual P1">
-  <meta itemprop="description" content="NASASP-222(08) VOLUME II NASTRAN@ USER’S MANUAL JUNE 1986 runm
-NASASP-222(08) Volume 11 NASTRAN USER’S MANUAL June1986
-ForsalefromComputer Software Management andInformation Center(COSMIC) Computer Services Annex,University ofGeorgia, Athens, Georgia 30602 ‘ ●
-COSMIC TheUniversity ofGeorgia Computer Services Annex Athens, GA30602 (404) 542-3265 NASTWN USER MANUAL UPDATE NOTE TheNASTRAN User Manual isscheduled forreview each year todetermine whether updates are required. Toaddyour name tothedatabase to receive notification when updates areavailable, youwill need tocomplete this form andreturn to COSMIC .This will betheonly mailing list for keeping users informed about themanual updates. Your Name: Company: Mailing Address: City: State: Zip: June, 1986 Fold, staple, and return this form asaself-mailer.">
-  <meta itemprop="wordCount" content="2313">
+  <meta itemprop="description" content="MSC Nastran Access User’s Manual MSC Nastran 2024.1 Access User’s Manual
+Corporate Office Hexagon Manufacturing Intelligence, Inc. UK 78 Portsmouth Road Cedar HouseCobham, Surrey KT11 1HYTelephone: (&#43;44) 02070686555 Worldwide Web www.hexagon.com Support https://simcompanion.hexagon.com Disclaimer Hexagon reserves the right to make changes in specifications and other information contained in this document without prior notice. The concepts, methods, and examples presented in this text are for illustrative and educational purposes only, and are not intended to be exhaustive or to apply to any particular engineering problem or design. Hexagon assumes no liability or responsibility to any person or company for direct or indirect damages resulting from the use of any information contained herein. User Documentation: Copyright 2024 Hexagon AB and/or its subsidiaries. All Rights Reserved. This notice shall be marked on any reproduction of this documentation, in whole or in part. Any reproduction or distribution of this document, in whole or in part, without the prior written consent of Hexagon is prohibited. This software may contain certain third-party software that is protected by copyright and licensed from Hexagon suppliers. Additional terms and conditions and/or notices may apply for certain third party software. Such additional third party software terms and conditions and/or notices may be set forth in documentation and/or at third-party software information (or successor website designated by Hexagon from time to time). PCGLSS 8.0, Copyright © 1992-2016, Computational Applications and System Integration Inc. All rights reserved. PCGLSS 8.0 is licensed from Computational Applications and System Integration Inc. The Hexagon logo, Hexagon, MSC Software logo, MSC, Dytran, Marc, MSC Nastran, Patran, e -Xstream, Digimat, and Simulating Reality are trademarks or registered trademarks of Hexagon AB and/or its subsidiaries in the United States and/or other countries.NASTRAN is a registered trademark of NASA. FLEXlm and FlexNet Publisher are trademarks or registered trademarks of Flexera Software. All other trademarks are the property of their respective owners. Use, duplicate, or disclosure by the U.S. Government is subjected to restrictions as set forth in FAR 12.212 (Commercial Computer Software) and DFARS 227.7202 (Commercial Computer Software and Commercial Computer Software Documentation), as applicable. U.S. Patent 9,361,413May 16, 2024NA:V2024.1:Z:Z:Z:DC-UTIL-PDF">
+  <meta itemprop="wordCount" content="12769">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="User&#39;s Manual P1">
-  <meta name="twitter:description" content="NASASP-222(08) VOLUME II NASTRAN@ USER’S MANUAL JUNE 1986 runm
-NASASP-222(08) Volume 11 NASTRAN USER’S MANUAL June1986
-ForsalefromComputer Software Management andInformation Center(COSMIC) Computer Services Annex,University ofGeorgia, Athens, Georgia 30602 ‘ ●
-COSMIC TheUniversity ofGeorgia Computer Services Annex Athens, GA30602 (404) 542-3265 NASTWN USER MANUAL UPDATE NOTE TheNASTRAN User Manual isscheduled forreview each year todetermine whether updates are required. Toaddyour name tothedatabase to receive notification when updates areavailable, youwill need tocomplete this form andreturn to COSMIC .This will betheonly mailing list for keeping users informed about themanual updates. Your Name: Company: Mailing Address: City: State: Zip: June, 1986 Fold, staple, and return this form asaself-mailer.">
+  <meta name="twitter:description" content="MSC Nastran Access User’s Manual MSC Nastran 2024.1 Access User’s Manual
+Corporate Office Hexagon Manufacturing Intelligence, Inc. UK 78 Portsmouth Road Cedar HouseCobham, Surrey KT11 1HYTelephone: (&#43;44) 02070686555 Worldwide Web www.hexagon.com Support https://simcompanion.hexagon.com Disclaimer Hexagon reserves the right to make changes in specifications and other information contained in this document without prior notice. The concepts, methods, and examples presented in this text are for illustrative and educational purposes only, and are not intended to be exhaustive or to apply to any particular engineering problem or design. Hexagon assumes no liability or responsibility to any person or company for direct or indirect damages resulting from the use of any information contained herein. User Documentation: Copyright 2024 Hexagon AB and/or its subsidiaries. All Rights Reserved. This notice shall be marked on any reproduction of this documentation, in whole or in part. Any reproduction or distribution of this document, in whole or in part, without the prior written consent of Hexagon is prohibited. This software may contain certain third-party software that is protected by copyright and licensed from Hexagon suppliers. Additional terms and conditions and/or notices may apply for certain third party software. Such additional third party software terms and conditions and/or notices may be set forth in documentation and/or at third-party software information (or successor website designated by Hexagon from time to time). PCGLSS 8.0, Copyright © 1992-2016, Computational Applications and System Integration Inc. All rights reserved. PCGLSS 8.0 is licensed from Computational Applications and System Integration Inc. The Hexagon logo, Hexagon, MSC Software logo, MSC, Dytran, Marc, MSC Nastran, Patran, e -Xstream, Digimat, and Simulating Reality are trademarks or registered trademarks of Hexagon AB and/or its subsidiaries in the United States and/or other countries.NASTRAN is a registered trademark of NASA. FLEXlm and FlexNet Publisher are trademarks or registered trademarks of Flexera Software. All other trademarks are the property of their respective owners. Use, duplicate, or disclosure by the U.S. Government is subjected to restrictions as set forth in FAR 12.212 (Commercial Computer Software) and DFARS 227.7202 (Commercial Computer Software and Commercial Computer Software Documentation), as applicable. U.S. Patent 9,361,413May 16, 2024NA:V2024.1:Z:Z:Z:DC-UTIL-PDF">
 
     <link href="/css/compiled/main.css" rel="stylesheet" />
 
@@ -196,13 +185,14 @@ COSMIC TheUniversity ofGeorgia Computer Services Annex Athens, GA30602 (404) 542
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a>
               <div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
     href="/docs/accessmanaual/msc_nastran_2024.1_access_user_manual_001/"
     
   >User&#39;s Manual P1
     </a>
+  
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -231,14 +221,13 @@ COSMIC TheUniversity ofGeorgia Computer Services Annex Athens, GA30602 (404) 542
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a>
               <div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/users/users_manual_001/"
     
   >User&#39;s Manual P1
     </a>
-  
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -431,9 +420,9 @@ COSMIC TheUniversity ofGeorgia Computer Services Annex Athens, GA30602 (404) 542
   >MSC Nastran manuals
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
     href="/docs/accessmanaual/msc_nastran_2024.1_access_user_manual_001/"
     
   >User&#39;s Manual P1
@@ -465,9 +454,9 @@ COSMIC TheUniversity ofGeorgia Computer Services Annex Athens, GA30602 (404) 542
   >User&#39;s Manual
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/users/users_manual_001/"
     
   >User&#39;s Manual P1
@@ -681,718 +670,378 @@ COSMIC TheUniversity ofGeorgia Computer Services Annex Athens, GA30602 (404) 542
           <a href="/docs/">Documentation</a>
         </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
         <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
-          <a href="/docs/users/">User&#39;s Manual</a>
+          <a href="/docs/accessmanaual/">MSC Nastran manuals</a>
         </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">User&#39;s Manual P1</div>
   </div>
 
         <div class="content">
           <h1>User&#39;s Manual P1</h1>
-          <p>NASASP-222(08)
-VOLUME II
-NASTRAN@ USER’S MANUAL
-JUNE 1986
-runm</p>
-<p>NASASP-222(08)
-Volume 11
-NASTRAN USER’S MANUAL
-June1986</p>
-<p>ForsalefromComputer Software Management andInformation Center(COSMIC)
-Computer Services Annex,University ofGeorgia, Athens, Georgia 30602 ‘
-●</p>
-<p>COSMIC
-TheUniversity ofGeorgia
-Computer Services Annex
-Athens, GA30602
-(404) 542-3265
-NASTWN USER MANUAL UPDATE NOTE
-TheNASTRAN User Manual isscheduled forreview
-each year todetermine whether updates are
-required. Toaddyour name tothedatabase to
-receive notification when updates areavailable,
-youwill need tocomplete this form andreturn to
-COSMIC .This will betheonly mailing list for
-keeping users informed about themanual updates.
-Your Name:
-Company:
-Mailing Address:
-City:
-State: Zip:
-June, 1986
-Fold, staple, and
-return this form
-asaself-mailer.</p>
-<p>II
-BUSINESS REPLYMAIL
-1FIRSTCLASS PERMITNO,559 ATHENS, CiEORGIA I
-F’OSTAGE WILLBEPAIDBYADDRESSES
-COSMIC
-TheUniversity ofGeorgia
-Computer Services Annex
-Athens, GA30602NOPOSTAGE
-NECESSARY
-IFMAILED
-INTHE
-UNITEDSTATES</p>
-<p>INTRODUCTION
-TheUser’sManualisoneoffourmanuals thatconstitute thedocumentation forNASTRAN, the
-otherthreebeingtheTheoretical Manual, theProgrammer’s ManualandtheDemonstration Problem
-Manual.Although theUser’sManualcontains alloftheinformation thatisdirectly associated
-withthesolution ofproblems withNASTRAN, theuserwillfinditdesirable torefertotheother
-manuals forassistance inthesolution ofspecific userproblems.
-TheTheoretical Manualgivesanexcellent introduction toNASTRAN andpresents developments of
-theanalytical andnumerical procedures thatunderlie theprogram. TheUser’sManual is
-instructive andencyclopedic innature, butisrestricted tothoseitemsrelated totheuseof
-NASTRAN thataregenerally independent ofthecomputing systembeingused.Computer-dependent
-topicsandinformation thatisrequired forthemaintenance andmodification oftheprogram are
-treated intheProgrammer’s Manual. TheProgrammer’s Manualalsoprovides acomplete description
-oftheprogram, including themathematical equations implemented inthecode.TheDemonstration
-Problem Manualpresents adiscussion ofthesampleproblems delivered w!thNASTRAN, thereby
-illustrating theformulation ofthedifferent typesofprob’!ems thatcanb<del>solvedwithNASH?PN.
-Inaddition tothefourmanual</del> described above,thereisalsoaNASTRAN User’sGuidethat
-servesasahandbook forusers. Itdescribes alloftheNASTRAN features andoptions and
-illustrates thembyexamples. Otherexcellent sources forNASTRAN-related topicsarethe
-proceedings oftheNASTRAN Users’Colloquia (heldnormally everyyear)whichprovide alargebody
-ofinformation basedonuserexperiences withNASTRAN.
-TheUser’sManualhasrecently beencompletely revised andupdated. Withaviewtofacilitate
-easierupdating ofthemanualinthefuturetokeepupwithnewerreleases ofNASTRAN, ithasnow
-beendivided intotwovolumes.
-VolumeIconsists ofsevensections dIldcontains allofthematerial thatwasintheold
-singlevolume, exceptSection 3.Thissection hasbeenre-arranged intofoursections andforms
-VolumeII.Inordertoavoidconfusion, Section 3ofVolumeIdoesnotcontain anything otherthan
-areference tothenewVolumeII.Also,itshouldbenotedherethat,unlessexplicitly indicated
-otherwise, allreferences tosections ineachvolumereferonl ——..—.—-—.. —&hellip;.—.&ndash;&hellip;&hellip;&hellip;——..ytosections inthatvolume,—.——.—&mdash; —— ..——. .
-NASTRAN usesthefiniteelement approach tostructural modeling, wherein thedistributed
-physical properties ofastructure arerepresented byafinitenumberofstructural elements which
-areinterconnected atafinitenumberofgridpoints, towhichloadsareapplied andforwhich
-displacements are’calculated. Theprocedures fordefining andloading astructural modelare
-i(05/30/86)</p>
-<p>described inVolumeI,Section 1.Thissection contains afunctional reference foreverycardthat
-isusedforstructural modeling.
-TheNASTRAN DataDeck,including thedetails foreachofthedatacards,isdescribed in
-VolumeI,Section 2.Thissection alsodiscusses theNASTRAN control cardsthatareassociated
-withtheuseoftheprogram.
-Asmentioned earlier, VolumeI,Section 3doesnotcontain anything otherthanareference to
-VolumeII.
-Theprocedures forusingtheNASTRAN plotting capability aredescribed inVolumeI,Section 4.
-Bothdeformed andundeformed plotsofthestructural modelareavailable. Response curvesarealso
-available forstatic, transient response, frequency response, modalflutter andmodalaeroelastic
-response analyses.
-NASTRAN contains problem solution sequences, calledrigidformats, Eachoftheserigid
-formats isassociated withthesolution ofproblems foraparticular typeofstaticordynamic
-analysis. inaddition totherigidformatprocedures, theusermaychoosetowritehisownDirect
-Abstraction Program (DMAP), Thisprocedure permits theusertoexecute aseriesofmatrix
-operations ofhischoicealongwithanyutility modules orexecutive operations thathemayneed.
-Therulesgoverning thecreation ofDMAPprograms aredescribed inVolumeI,Section 5.
-TheNASTRAN diagnostic messages aredocumented andexplained inVolumeI,Section 6.The
-NASTRAN Dictionary, inVolumeI,Section 7,contains descriptions ofmnemonics, acronyms, phrases,
-andothercommonly usedNASTRAN terms.
-VolumeII,Section 1contains ageneral description ofrigidformatprocedures. Specific
-instructions andinformation fortheuseofeachrigidformataregiveninVolumeII,Sections 2,3
-and4,whichdealwiththerigidformats associated withtheDISPLACEMENT, HEATandAERO
-approaches, respectively.
-Thereisalimited numberofsampleproblems included intheUser’sManual. However, amore
-comprehensive setofdemonstration problems, atleastoneforeachoftherigidformats, is
-described intheNASTRAN Demonstration Problem Manual, Thedatadecksareavailable ontapefor
-eachofthecomputer systems onwhichNASTRAN hasbeenimplemented. Samples oftheprinter output
-andofstructure plotsandresponse plotscanbeobtained byexecuting thesedemonstration
-problems. Theprinter outputfortheseproblems isalsoavailable onmicrofiche.
-ii(05/30/86)Matrix
-@
-I</p>
-<p>TABLEOFCONTENTS
-Section PageNo.
-1.RIGIDFORMATS
-1.1GENERAL DESCRIPTION OFRIGIDFORMATS &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.1.1-1
-1.1.1 InputFileProcessor &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;1.1-2
-1.1,2 Functional Modules andSupporting DMAPOperations &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.1.1-4
-1.1.3 Checkpoint/Restart Procedures &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;1.1-5
-1.1.4 TypesofRestarts &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;1.1-7
-1.1.4.1 Unmodified Restart &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..1.1-8
-1.1.4.2 Modified Restart &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.1.1-8
-1.1.4,3 Modified Restart withRigidFormatSwitch&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;1.1-10
-1.1.5 UseofDMAPALTERs inRestarts &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..1.1-10
-1.1.6 RigidFormatOutput&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.1.1-11
-1.1.7 RigidFormatDataBase&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.1.1-13
-1.1.7.1 DesignoftheDataBase&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;1.1-13
-1.1.7.2 Implementation oftheDataBase&hellip;&hellip;.,.’&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.1.1-17
-1.1.7,3 UsageoftheDataBase&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.1.1-17
-1.1.7.4 Development ofUserRigidFormats &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..1.1-18
-1.1.7.5 UsageofUser-Developed RigidFormats &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.1.1-20
-2.DISPLACEMENT RIGIDFORMATS
-2.1STATICANALYSIS &hellip;&hellip;&hellip;&hellip;..0&hellip;&hellip;&hellip;&hellip;,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;2.1-1
-2.1.1
-2.1.2
-2.1.3
-2.1.4
-2.1,5
-2.1.6
-2.1.7
-2.2STATIC
-2.2.1
-2.2.2
-2.2.3
-2.2.4DMAPSequence forStaticAnalysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..2.1-1
-Description ofImportant DMAPOperations forStaticAnalysis &hellip;&hellip;..2.1-9
-OutputforStaticAnalysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;2.1-16
-CaseControl DeckforStaticAnalysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.2.1-16
-Parameters forStaticAnalysis &hellip;&hellip;&hellip;&hellip;&hellip;..4&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..2.1-16
-Automatic AI.TERsforAutomated Multi-stage Substructuring &hellip;&hellip;&hellip;..2.1-19
-RigidFormatErrorMessages fromStaticAnalysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..2.1-19
-ANALYSIS WITHINERTIA RELIEF&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..0&hellip;.0&hellip;&hellip;&hellip;&hellip;2.2-1
-DMAPSequence forStaticAnalysis withInertia Relief&hellip;&hellip;&hellip;&hellip;&hellip;2.2-1
-Description ofImportant DMAPOperations forStaticAnalysis
-withInertia Relief&hellip;&hellip;&hellip;&hellip;&hellip;,&hellip;.,,.,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.2.2-6
-OutputforStaticAnalysis withInertia Relief&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.2.2-11
-CaseControl DeckforStaticAnalysis withInertia Relief&hellip;&hellip;&hellip;..2.2-11
-iii(05/30/86)</p>
-<p>TABLEOFCONTENTS (Continued)
-Section PageNo.
-2.2.5 Parameters forStaticAnalysis withInertia Relief&hellip;&hellip;,&hellip;&hellip;&hellip;..2.2-11
-2.2.6 Automatic ALTERsforAutomated Multi-stage Substructuring &hellip;&hellip;&hellip;..2.2-13
-2.2.7 RigidFormatErrorMessages fromStaticAnalysis
-withInertia Relief&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..,&hellip;&hellip;.2.2-13
-2.3NORMALMODESANALYSIS &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.2.3-1
-2.3.1
-2.3.2
-2.3.3
-2.3.4
-2.3.5
-2,3.6
-2.3.7
-2.3.8
-2.3.9DMAPSequence forNormalModesAnalysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..2.3-1
-Description ofImportant DMAPOperations forNormalModesAnalysis ..2.3-6
-OutputforNormalModesAnalysis &hellip;&hellip;&hellip;&hellip;,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.O2.3-11
-CaseControl DeckforNormalModesAnalysis &hellip;&hellip;,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;2.3-13
-Parameters forNormalModesAnalysis &hellip;&hellip;&hellip;&hellip;&hellip;.,&hellip;&hellip;&hellip;,&hellip;,,2.3-14
-Optional Diagnostic OutputforFEER&hellip;&hellip;.,,&hellip;..,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;2.3-15
-TheAPPENDFeature &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..,&hellip;..2,3-17
-Automatic ALTERsforAutomated Multi-stage Substructuring &hellip;&hellip;&hellip;..2.3-18
-RigidFormatErrorPles$ages fromNormalModesAnalysis &hellip;&hellip;&hellip;&hellip;..2.3-18
-2.4STATICANALYSIS WITFIDIFFERENTIAL STIFFNESS .0&hellip;&hellip;&hellip;..,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.2.4-1
-2.4.1 DMAPSequence forStaticAnalysis with
-Differential Stiffness &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..
-2.4.2 Description ofImportant DMAPOperations forStaticAnalys
-withDifferential Stiffness &hellip;&hellip;&hellip;&hellip;0..,.,&hellip;&hellip;&hellip;&hellip;
-2.4.3 OutputforStaticAnalysis withDifferential Stiffness &hellip;
-2.4.4 CaseControl DeckforStaticAnalysis withDifferential St”
-2.4.5 Parameters forStaticAnalysis withDifferential Stiffness
-2.4.6 RigidFormatErrorMessaaes fromStaticAnalysis with&hellip;&hellip;&hellip;.2.4-1
-s
-&hellip;&hellip;&hellip;.2.4-9
-..,&hellip;&hellip;.2.4-17
-ffness&hellip;.2.4-18
-&hellip;&hellip;&hellip;.2.4-18
-Differential Stiffness -&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.2.4-19
-2.5BUCKLING ANALYSIS .,&hellip;&hellip;&hellip;,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;2.5-1
-2.5.1 DMAPSequence forBuckling Analysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;2.5-1
-2.5.2 Description ofImportant DMAPOperations forBuckling Analysis &hellip;&hellip;2.5-7
-2.5.3 OutputforBuckling Analysis &hellip;&hellip;&hellip;&hellip;&hellip;.,&hellip;.0&hellip;&hellip;&hellip;&hellip;&hellip;,..2.5-13
-2.5.4 CaseControl DeckforBuckling Analysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..2.5-13
-2.5.5 Parameters forBuckling Analysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.0&hellip;&hellip;&hellip;&hellip;,2.5-14
-2.5.6 Optional Diagnostic OutputforFEER&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;,&hellip;,..,.2.5-14
-2.5.7 RigidFormatErrorMessages fromBuckling Analysis &hellip;&hellip;&hellip;,&hellip;&hellip;..2.5-15
-2.6PIECEWISE LINEARSTATICANALYSIS &hellip;&hellip;&hellip;..,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..2.6-1
-2.6.1 DMAPSequence forPiecewise LinearStaticAnalysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;2.6-1
-iv(05/30/86)</p>
-<p>TABLEOFCONTENTS (Continued
-Section
-●
-2.7
-2.8
-2.9PageNo.
-2.6.2 Description ofImportant DMAPOperations forPiecewise Linear
-StaticAnalysis ,&hellip;&hellip;&hellip;&hellip;.,&hellip;0&hellip;&hellip;&hellip;,&hellip;..0&hellip;.,&hellip;&hellip;&hellip;&hellip;.2.6-7
-2.6.3 OutputforPiecewise LinearStaticAnalysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.2.6-13
-?.6.4 CaseControl DeckforPiecewise LinearStaticAnalysis &hellip;&hellip;&hellip;&hellip;..2.6-13
-2.6.5 Parameters forPiecewise LinearStaticAnalysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;2.6-13
-2.6.6 RigidFormatErrorMessages fromPiecewise LinearStaticAnalysis &hellip;2.6-14
-DIRECTCOMPLEX EIGENVALUE ANALYSIS .,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.2.7-1
-2.7.: DMAPSequence forDirectComplex Eigenv.1
-?,7.2 Description ofImportant DMAPOperations
-Eigenvalue Analysis &hellip;.,&hellip;.,&hellip;&hellip;&hellip;.
-2.7.3 output forDirectComplex Eigenvalue ha’reanalysis &hellip;&hellip;&hellip;&hellip;&hellip;.2.7-I
-forDirectComplex
-&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.2.7-7
-ysis,.,.,..,&hellip;&hellip;&hellip;.,.,..2.7-13
-2,7.4 CaseContro”l DeckforDirectComplex Eigenvalue Analysis &hellip;&hellip;&hellip;&hellip;2.7-15
-2.7.5 Parameters forDirectComplex Eigenvalu: Al:alysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.?.7-1.6
-2.7.6 RigidFormatErrorMessages frpm!<del>irectComplex EigenYalue Analysis .?.7-17
-DIRECTFREQUENCY ANDRANDOMRESp</del>NSE&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.!&hellip;&hellip;&hellip;.2.8-1
-2.8.1 DMAPSequence forDirectFrequency andRandomResponse ?.G-l &hellip;&hellip;&hellip;&hellip;..
-2.8.2 Description ofImportant DMAPOperations forDirectFrequency and
-RandomResponse &hellip;&hellip;&hellip;.,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..-&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..2.8-9
-2.8.3 OutputforDirect,Frequency andRandomResponse &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;2.8-16
-2.8.4 CaseContro”l Deck,forDirectFrequency andRandomResponse &hellip;&hellip;&hellip;.2.8-16
-2.8.5 Parameters forDirectFrequency andRandomResponse &hellip;&hellip;&hellip;&hellip;&hellip;..2.8-17
-2.8.6 Automatic ALTERsforAutomated Multi-stage Substructuring &hellip;&hellip;&hellip;..2.8-18
-2.8.7 RigidFormatErrorMessages fromDirectFrequency
-andRandomResponse &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;0&hellip;&hellip;&hellip;&hellip;.,&hellip;.2.8-18
-DIRECTTRANSIENT RESPONSE &hellip;&hellip;.,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.2.9-1
-2.9.1
-2.9.2
-2.9.3
-2.9.4
-2.9.5
-2.9.6
-2.9.7
-2.9,8DMAPSequence forDirectTransient Response &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.2.9-1
-Description ofImportant DMAPOperations forDirect
-Transient Response &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;o&hellip;.<em>o&hellip;&hellip;.</em>.””. 2“9-8
-OutputforDirectTransient Response &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..2,9-15
-CaseControl DeckforDirectTransient Response &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.“.2.9-:.5
-Parameters forDirectTransient Response &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.2.9-16
-TheCONTINUE Feature &hellip;&hellip;..0..,&hellip;..,&hellip;&hellip;&hellip;,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..2.9-17
-Automatic ALTERsforAutomated Multi-staSe Substructuring &hellip;&hellip;&hellip;..2.9-18
-RigidFormatErrorMessages fromDirect
-V(05/30/86)Transient Response &hellip;&hellip;&hellip;.2.9-18</p>
-<p>TABLEOFCONTENTS (Continued)
-..&gt;ecrlon~
-2.10MODALCOMPLEX EIGENVALUE ANALYSIS &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.2.10-1
-2.10.1
-2.10.2
-2.10.3
-2.10.4
-2.10.5
-2.10.6
-2.10.7
-2.10.8DMAPSequence forModalComplex Eigenvalue Analysis &hellip;&hellip;&hellip;&hellip;&hellip;..2.10-1
-Description ofImportant DMAPOperations forModalComplex
-Eigenvalue Analysis &hellip;&hellip;&hellip;..,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.,&hellip;&hellip;..2.10-7
-OutputforModalComplex Eigenvalue Analysis &hellip;&hellip;&hellip;&hellip;&hellip;,&hellip;&hellip;..2.10-13
-CaseControl DeckforModalComplex Eigenvalue Analysis &hellip;&hellip;&hellip;,&hellip;2.10-13
-Parameters forModalComplex Eigenvalue Analysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..2,10-13
-Optional Diagnostic OutputforFEER&hellip;&hellip;,&hellip;&hellip;..,..,.,&hellip;&hellip;&hellip;&hellip;2.10-14
-TheAPPENDFeature &hellip;&hellip;&hellip;&hellip;&hellip;..0&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;,&hellip;&hellip;&hellip;&hellip;,2.10-15
-RigidFormatErrorMessages fromModalComplex Eigenvalue Analysis ,.2.10-15
-2.11MODALFREQUENCY ANDRANDOMRESPONSE &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.,“.e&hellip;.,&hellip;&hellip;&hellip;.,..2.11-1
-2.11.1
-2.11.2
-2.11.3
-2.11.4
-2.11.5
-2.11.6
-2.11.7
-2.11.8DMAPSequence forModalFrequency andRandomResponse &hellip;&hellip;&hellip;&hellip;&hellip;2.11-1
-Description ofImportant DMAPOperations forModalFrequency and
-RandomResponse &hellip;..,,&hellip;&hellip;&hellip;&hellip;,.,&hellip;&hellip;&hellip;&hellip;&hellip;..,.,,&hellip;&hellip;.,..2.11-9
-OutputforModalFrequency andRandomResponse &hellip;&hellip;&hellip;..,&hellip;&hellip;&hellip;.2.11-17
-CaseControl DeckforModalFrequency andRandomResponse &hellip;&hellip;&hellip;..2.11-17
-Parameters forModalFrequency andRandomResponse &hellip;&hellip;..,&hellip;.,&hellip;.2,11-17
-Optional Diagnostic OutputforFEER&hellip;&hellip;&hellip;.,.,&hellip;.,&hellip;.,&hellip;&hellip;&hellip;.2,11-18
-TheAPPENDFeature &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.,&hellip;&hellip;.,&hellip;&hellip;.,,&hellip;..,.2.11-19
-RigidFormatErrorMessages fromModalFrequency
-andRandomResponse &hellip;,.,,&hellip;&hellip;&hellip;&hellip;.,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;,&hellip;..,2.11-19
-2.12MODALTRANSIENT RESPONSE &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;0..,&hellip;&hellip;.,.,&hellip;,.,,..,,&hellip;.,.2,12-1
-2.12.1
-2.12,2
-2.12.3
-2.12.4
-2.12.5
-2.12.6
-2.12.7
-2.12.8
-2.12.9DMAPSequence forModalTransient Response &hellip;&hellip;&hellip;&hellip;,&hellip;..,.,..,..2.12-1
-Description ofImportant DMAPOperations forModal
-Transient Response &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.,&hellip;.,&hellip;,&hellip;..,&hellip;&hellip;&hellip;&hellip;&hellip;2.12-8
-OutputforModalTransient Response &hellip;&hellip;&hellip;..,,&hellip;,&hellip;&hellip;,.,&hellip;..,,2.12-15
-CaseControl DeckforModalTransient Response &hellip;&hellip;,&hellip;&hellip;,&hellip;&hellip;,.2.12-15
-Parameters forModalTransient Response &hellip;..,&hellip;&hellip;&hellip;&hellip;.,&hellip;..,&hellip;2,12-15
-Optional Diagnostic OutputforFEER&hellip;&hellip;,&hellip;.,,..,&hellip;,,&hellip;,&hellip;&hellip;..2,12’-17
-TheAPPENDFeature ..,&hellip;&hellip;&hellip;&hellip;&hellip;.,&hellip;&hellip;.,&hellip;..,&hellip;..,&hellip;&hellip;&hellip;.2.12-17
-TheCONTINUE Feature &hellip;.,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.,&hellip;&hellip;,..,&hellip;&hellip;,,..2,12-17
-RigidFormatErrorMessages fromModalTransient Response &hellip;&hellip;&hellip;..?!.12-1.7
-2.13NORMALMODESWITHDIFFERENTIAL STIFFNESS .,
-2.13.1 DMAPSequence forNormalModeswith
-vi(05/30/86)?,~~-1&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;,.,,,&hellip;&hellip;&gt;
-Differential Stiffue$s ..,,..,.“~,13-!I</p>
-<p>TABLEOFCONTENTS (Continued)
-Section
-2.13.2
-2,13.3
-2.13.4
-2.13.5
-2.13.6
-2.13.7
-2.1.3
-2.14STAT
-2.14c
-1
-2.14.2
-2.14.3
-2.14.4
-2.14,5
-2.14.6PageNo.
-Description ofImportant DMAPOperations forNormalModeswith
-Differential Stiffness &hellip;&hellip;&hellip;&hellip;,&hellip;&hellip;&hellip;&hellip;.0&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.2.13-8
-OutputforNormalModeswithDifferential Stiffness &hellip;&hellip;&hellip;&hellip;&hellip;..2.13-16
-CaseControl DeckforNormalModeswithDifferential Stiffness &hellip;&hellip;2.13-16
-Parameters forNormalModeswithDifferential Stiffness &hellip;&hellip;&hellip;&hellip;.2.13-17
-Optional Diagnostic OutputforFEER&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;2.13-18
-TheAPPENDFeature &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..c2.13-18
-RigidFormatErrorMessages fromNormalModeswith
-Differential Stiffness &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.2.13-18
-ANALYSIS USINGCYCLICSYMMETRY &hellip;&hellip;&hellip;&hellip;..,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;2.14-1
-DMAPSequence forStaticAnalysis UsingCyclicSymmetry &hellip;&hellip;&hellip;&hellip;.2.14-1
-Description ofImportant DMAPOperations forStaticAnalysis Using
-CyclicSymmetry ,&hellip;&hellip;.0&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;2.14-7
-OutputforStaticAnalysis UsingCyclicSymmetry &hellip;&hellip;,&hellip;&hellip;&hellip;&hellip;.2.14-12
-CaseControl DeckforStaticAnalysis UsingCyclic’Symmetry &hellip;&hellip;&hellip;2.14-12
-Parameters forStaticAnalysis UsingCyclicSymmetry &hellip;&hellip;&hellip;&hellip;&hellip;.2.14-12
-RigidFormatErrorMessages fromStaticAnalysis Using
-CyiilicSymmetry &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;+&hellip;&hellip;&hellip;.2.14-14
-2.15NORMALMODESANALYSIS USINGCYCLICSYMMETRY &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;2.15-1
-2.15.1
-2.15.2
-2.15.3
-2.15.4
-2.15.5
-2.15.6
-2.15.7
-2.15.8DMAPSequence forNormalModesAnalysis UsingCyclicSymmetry &hellip;&hellip;.2.15-1
-Description ofImportant DMAPOperations forNormalModesAnalysis
-UsingCyclicSymmetry &hellip;&hellip;&hellip;&hellip;&hellip;,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.2.15-6
-OutputforNormalModesAnalysis UsingCyclicSymmetry &hellip;&hellip;&hellip;&hellip;..2.15-10
-CaseControl DeckforNormalModesAnalysis UsingCyclicSymnetry &hellip;2.15-10
-Parameters forNormalModesAnalysis UsingCyclicSymmetry &hellip;&hellip;&hellip;.2.15-10
-Optional Diagnostic OutputforFEER&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;2.15-12
-TheAPPENDFeature &hellip;..0&hellip;. &hellip;&hellip;0&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;2.15-12
-RigidFormatErrorMessages fromNormalModesAnalysis Using &mdash;.-
-CyclicSymmetry .,&hellip;&hellip;&hellip;&hellip;&hellip;..0&hellip;&hellip;&hellip;0&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..Z.15-lZ
-?.1.6(STATIC AEROTHERMOELASTIC DESIGN/ANALYSIS OFAXIAL-FLOW COMPRESSORS &hellip;&hellip;&hellip;.2.16-1
-‘2.16.1
-?,16.2
-2.16.3DMAPSequence forStaticAerothermoelastic Design/Analysis of
-Axial-Flow Compressors o&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;2.16-1
-Description ofImportant DMAPOperations forStatic
-Aerothermoelastic Design/Analysis ofAxial-Flow Compressors &hellip;&hellip;&hellip;2.16-10
-OutputforStaticAerothermoelastic Design/Analysis ofAxial-Flow
-Compressors &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;2.16-19
-vii(05/30/86)</p>
-<p>TABLEOFCONTENTS (Continued)
-Section
-2.16.4
-2.16.5
-2.16.6PageNo,
-CaseControl DeckforStaticAerothem,~elastic Design/Analysis of
-Axial-Flow Compressors &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.2.16-20
-Parameters forStaticAerothermoelastic Design/Analysis ofAxial-
-FlowCompressors &hellip;&hellip;,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;#&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..2.16-20
-RigidFormatErrorMessages fromStaticAerothermoelastic Design/
-Analysis ofAxial-Flow Compressors &hellip;,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;2.16-22
-3.HEATRIGIDFORMATS
-3.1STATICHEATTRANSFER ANALYSIS &hellip;,..,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..3.1-1
-3.1,1
-3.1.2
-3.1.3
-3.1.4
-3.1.5
-3.1.6DMAPSequence forStaticHeatTransfer Analysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;3.I-1
-Description ofImportant DMAPOperations forStaticHeat
-Transfer Analysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..,&hellip;&hellip;&hellip;&hellip;&hellip;3.1-6
-OutputforStaticHeatTransfer Analysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.,&hellip;,.3.1-11
-CaseControl DeckforStaticHeatTransfer Analysis &hellip;..
-Parameters forStaticHeatTransfer Analysis ,&hellip;..,0&hellip;.
-RigidFormatErrorMessages fromStaticHeatTransfer Aria’
-3,2NONLINEAR STATICHEATTRANSFER ANALYSIS &hellip;.,.,&hellip;..,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;3.1-11
-&hellip;&hellip;&hellip;..3.1-11
-ysis&hellip;&hellip;3.1-12
-&hellip;&hellip;&hellip;..3.2-1
-3.2.1 DMAPSequence forNonlinear StaticHeatTransfer Analysis &hellip;&hellip;&hellip;..3.2-1
-3.2.2 Description ofImportant DMAPOperations forNonlinear StaticHeat
-Transfer Analysis &hellip;&hellip;&hellip;..,&hellip;&hellip;&hellip;&hellip;,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..3.2-5
-3.2.3 OutputforNonlinear StaticHeatTransfer Analysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;3.2-8
-3.2.4 CaseControl DeckforNonlinear StaticHeatTransfer Analysis &hellip;&hellip;.3.2-8
-3.2.5 Parameters forNonlinear StaticHiatTransfer Analysis &hellip;&hellip;&hellip;&hellip;..3.2-8
-3.2.6 RigidFormatErrorMessages fromNonlinear StaticHeat
-Transfer Analysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.,..,&hellip;&hellip;&hellip;&hellip;&hellip;.,..3.2-9
-3.3TRANSIENT HEATTRANSFER ANALYSIS &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..3,3-1
-3.3.1 DMAPSequence forTransient HeatTransfer Analysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;3.3-1
-3.3.2 Description ofImportant DMAPOperations forTransient HeatTransfer
-Analysis &hellip;&hellip;&hellip;,&hellip;&hellip;&hellip;&hellip;&hellip;,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.,&hellip;&hellip;..,,..,.3.3-7
-3,3.3 OutputforTransient HeatTransfer Analysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.3.3-13
-3.3.4 CaseControl DeckforTransient HeatTransfer Analysis &hellip;&hellip;&hellip;&hellip;..3.3-13
-3.3.5 Parameters forTransient HeatTransfer
-3.3.6 RigidFormatErrorMessages fromTrans
-4.AERORIGIDFORMATS
-4,1BLADECYCLICMODALFLUTTER ANALYSIS &hellip;&hellip;&hellip;.Analysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;3.3-14
-entHeatTransfer Analysis &hellip;3,3-14
-&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;4.1-1
-4.1.1 DMAPSequence forBladeCyclicModalFlutter Analysis &hellip;&hellip;&hellip;&hellip;&hellip;4.1-1
-viii(05/30/86)</p>
-<p>Section
-4.1.2
-4.1.3
-4.1.4
-4.1.5
-4.1.6
-4.1.7
-4.1.8TABLEOFCONTENTS (Continued)
-PageNo.
-Description ofImportant DMAPOperations forBladeCyclicModal
-Flutter Analysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.4.1-9
-OutputforBladeCyclicModalFlutter Analysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.4.1-17
-CaseControl DeckforBladeCyclicModalFlutter Analysis &hellip;&hellip;&hellip;..4.1-17
-Parameters forBladeCyclicModalFlutter Analysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;4.1-18
-Optional Diagnostic OutputforFEER&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;4.1-20
-TheAPPENDFeature &hellip;&hellip;&hellip;&hellip;.,&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;4.1-20
-RigidFormatErrorMessages fromBladeCyclicModalFlutter&mdash;-
-Analysis &hellip;&hellip;&hellip;&hellip;&hellip;.0&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.4.1-ZU
-4.2MODALFLUTTER ANALYSIS &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;4.2-1
-4.2.1
-4.2.2
-4.2.3
-4.2.4
-4.2.5
-4.2.6
-4.2.7DMAPSequence forModalFlutter Analysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.4.2-1
-Description ofImportant DMAPOperations forModalFlutter Analysis .4.2-8
-OutputforModalFlutter Analysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..4.2-16
-CaseControl DeckforModalFlutter Analysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;4.2-17
-Parameters forModalFlutter Analysis &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.4.2-17
-Optional Diagnostic OutputforFEER&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;4.2-18
-TheAPPENDFeature &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..4.2-18
-4.2.8 RigidFormatErrorMessages fromModalFlutter Analysis &hellip;&hellip;&hellip;&hellip;.4.2-18
-4.3MODALAEROELASTIC RESPONSE &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.:&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;4.3-1
-4.3.1 DMAPSequence forModalAeroelastic Response &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;4.3-1
-4.3.2 Description ofImportant DMAPOperations forModalAeroelastic
-Response &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;4.3-8
-4.3.3 OutputforModalAeroelastic Response &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.4.3-16
-4.3.4 CaseControl DeckforModalAeroelastic Response &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..4.3-17
-4.3.5 Parameters forModalAeroelastic Response &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;4.3-17
-4.3.6 Optional Diagnostic OutputforFEER&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;4.3-19
-4.3.7 TheAPPENDFeature &hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..4.3-19
-4.3.8 RigidFormatErrorMessages fromModalAeroelastic Response &hellip;&hellip;&hellip;4.3-19
-ix(05/30/86)</p>
-<p>1.RIGIDFORMATS
-1.1GENERAL DESCRIPTION OFRIGIDFORMATS
-Themostgeneral wayofusingNASTRAN iswithauser-written DirectMatrixAbstraction
-Program (DMAP). Thisprocedure permits theusertoexecute aseriesofmatrixoperations ofhis
-choicealongwithanyutility modules orexecutive operations thathemayneed.Theusermayeven
-choosetowriteamoduleofhisown.Therulesgoverning alloftheseoperations aredescribed in
-VolumeI,Section 5.
-Inordertorelieve theuserofthenecessity ofconstructing aDMAPsequence foreachofhis
-problems, anumberofsuchsequences, calledrigidformats, havebeenincluded withNASTRAN, All
-oftheserigidformats areresident onadatabasecalledtheRigidFormatDataBase,whfchis
-described indetailinSection 1.1.7. Eachrigidformatinthisdatabaseconsists ofaDMAP
-sequence andtheassociated restart tables. Theserestart tablesareautomatically usedbythe
-program tomodifytheseriesofDMAPoperations toaccount foranychanges thataremadeinany
-partoftheDataDeckwhenmakingarestart, afterhavingpreviously runall,orapart,ofthe
-problem. Without suchtables, theuserwouldhavetocarefully modifyhisDMAPsequence toaccount
-fortheconditions surrounding eachrestart. Thechances forerrorinmakingthesemodifications
-forrestart areverygreat. Therestart tablesnotonlyrelieve theuseroftheburdenof
-modifying hisDMAPsequence, butalsoassurehimofacorrect andefficient program execution.
-Inaddition totheDkiAPsequence provided witheachrigidformat, anumberofoptions are
-available, whicharesubsets ofeachcomplete DMAPsequence. Subsets areselected byspecifying
-thesubsetnumbers (zeroforthecomplete DMAPsequence) alongwiththerigidformatnumberonthe
-SOLcardintheExecutive Control Deck.Seethedescription oftheSOLcardinVolumeI,Section
-2.2forthelistofavailable subsets.
-IftheuserwishestomodifytheDMAPsequence ofarigidformatinsomemannernotprovided
-forintheavailable subsets, hecanusetheALTERfeature described inSection 2.2.Typical uses
-aretoschedule anEXITpriortocompletion, inordertocheckintermediate output, schedule the
-printing ofatableoramatrixfordiagnostic purposes, andtodeleteoraddafunctional module
-totheDMAPsequence. (ThemannerinwhichDMAPALTERsarehandled inrestarts isdiscussed in
-Section 1.1.5.) Theusershouldbefamilfar withtherulesforDMAPprograming, asdescribed in
-VolumeI,Section 5,priortomakingALTERstoarigidformat.
-Thefollowing rigidformats forstructural analysis arecurrently included inNASTRAN:
-1.StaticAnalysis
-1.1-1(05/30/86)</p>
-<p>RIGIDFORMATS
-2.StaticAnalysis withInertia Relief
-3.NormalModesAnalysis
-4.StaticAnalysis withDifferential Stiffness
-5.Buckling Analysis
-6.Piecewise LinearStaticAnalysis
-7.DirectComplex Eigenvalue Analysis
-8.DirectFrequency andRandomResponse
-9.DirectTransient Response
-10.ModalComplex Eigenvalue Analysis
-11.ModalFrequency andRandomResponse
-12.ModalTransient Response
-13.NormalModesAnalysis withDifferential Stiffness
-14.StaticAnalysis withCyclicSynnnetry
-15.NormalModesAnalysis with’CyclicSymmetry
-16.StaticAerothermoelastic Design/Analysis ofAxial-Flow Compressors
-Thefollowing rigidformats forheattransfer analysis areincluded inNASTRAN:
-1.LinearStaticHeatTransfer Analysis
-3.Nonlinear StaticHeatTransfer Analysis
-9.Transient HeatTransfer Analysis
-Thefollowing rigidformats foraeroelastic analysis areincluded inNASTRAN:
-9.BladeCyclicModalFlutter Analysis
-10.ModalFlutter Analysis
-11.ModalAeroelastic Response
-1.1.1InputFileProcessor
-TheInputFileProcessor operates inthePreface priortotheexecution oftheDMAP
-operations intherigidformat. Acomplete description oftheoperations inthePreface isgiven
-intheProgrammer’s Manual. Themaininterest hereistoindicate thesourceofdatablocksthat
-arecreated inthePreface andhenceappearonlyasinputsintheDMAPsequences oftherigid
-formats. Noneofthedatablockscreated bytheInputFileProcessor arecheckpointed, astheyare
-alwaysregenerated onrestart. TheInputFileProcessor isdivided intofiveparts, Thefirst
-part(IFP1)processes theCaseControl Deck,thesecondpart(IFP)processes theBulkDataDeck,
-1.1-2(05/30/86)I</p>
-<p>GENERAL DESCRIPTION OF
-thethirdpart(IFP3)performs additional processingRIGIDFORMATS
-ofthebulkdatacardsassociated withthe
-aconical shellelement, andthefourthpart(IFP4)performs additional processing ofthebulkdata
-cardsassociated withthefluidelement. Thefifthsection (IFP5)processes datarelated to
-acoustic cavityanalysis.
-IFP1processes theCaseControl Deckandcreates theCaseControl DataBlock(CASECC), the
-PlotControl Dat~Block(PCDB), andtheXY-Plot Control DataBlock(XYCDB). IFP1alsoexamines all
-ofthecards,exceptthoseassociated withplotting, forerrorsinformatoruse.Iferrorsare
-detected, theyareclassed aseitherfatalorwarning, andsuitable errormessages areprovided.
-Reference toVolumeI,Section 2.3willassisttheuserincorrecting errorsintheCaseControl
-Deck.Iftheerrorisfatal,theExecutive Systemwillnotallowtheexecution tocontinue beyond
-thecompletion ofthePreface.
-TheBulkDataDeckissortedinthePreface, ifnecessary, beforetheexecution ofthesecond
-partoftheInputFileProcessor. IFPchecksallofthebulkdatacardsforerrorsaccording to
-therulesgivenforeachcardinVolum(iI,Section 2.4.Iferrorsaredetected, suitable messages
-areprovided totheuser.Iftheerlorisclassed asfatal,theExecutive Systemwillnotallow
-theexecution tocontinue beyondthecompletion ofthePreface. IFPcreates thedatablocksthat
-areinputtothevarious partoftheGeometry Processor (GEOMl, GE!3M2,GE@M3andGE@M4), the
-oElement Properties Table(EP?’),theMaterial Properties Table(MPT),theElement Deformation Table
-(EDT),andtheDirectInputTable(DIT).
-ThethirdpartoftheInputFileProcessor (IFP3)converts theinformation onthespecial
-conical shellcards(CCONEAX, CTRAPAX, CTRIAAX, F!3RCEAX, M!3MAX,MPCAX,OMITAX, PCONEAX, P@INTAX,
-PRESAX, PTRAPAX, PTRIAAX, RINGAX, SECTAX, SPCAX,SUPAX,andTEMPAX) toreflect thenumberof
-harmonics specified bytheuserontheAXICcard.Thisconverted information isaddedtoany
-existing information ondatablocksGEfJMl,GEk3M2,GE!3M3andGE!3M4.
-Thefourthpartoftheinputfileprocessor (IFP4)converts theinformation onthefluid-
-related cards(AXIF,BDYLIST, CFLUID2, CFLUII13, CFLUID4, DMIAX,FLSYM,FREEPT, FSLIST, GRIDB,
-PRESPT, andRINGFL) toreflect thedesired harmonics, bolmdaries, andmatrixinput. Thisconverted
-information isaddedtoGEOMl,GE@M2,GE0M4andMATP!30L.
-Thefifthpartoftheinputfileprocessor (IFP5)converts theinformation ontheacoustic
-cavityrelated cards(AXSi.OT, CAXIF2, CAXIF3, CAXIF4, CSL0T3, CSL0T4, GRIDF,GRIDS,andSLBDY)to
-equivalent structural scalarpoints, elements, scalarsprings andplotting elements. This
-converted information isaddedtotheGEflMl
-1.andGE0M2datablocks.
--3(05/30/86)</p>
-<p>RIGIDFORMATS
-1.1.2Functional Modules andSupporting DMAPOperations
-TheDMAPlistings oftherigidformats currently included withNASTRAN arepresented inthe
-following sections. Following eachlisting aresubsections thatdealwiththefollowing itemsfor e
-eachrigidformat:
-1.Briefdescription ofimportant DMAPoperations fortherigidformat
-2.Outputavailable fromtherigidformat
-3.CaseControl Decksetupfortherigidformat
-4.Parameters usedintherigidformat
-5.Automatic ALTERsforAutomated Multi-stage Substructuring (ifapplicable totherigid
-format)
-6.Rigidformaterrormessages
-7.Anyotherfeatures peculiar totherigidformat
-Descriptions ofallmajorfunctional modules aregivenintheProgrammer’s Manual.
-Additional information isalsogivenintheTheoretical Manual. Descriptions ofallotherNASTRAN
-modules aregiveninVolumeI,Section 5.
-Themodules inthefollowing listappearrepeatedly intherigidformats. Sincethepurpose
-oftheseoperations inarigidformatisobvious, theyaregenerally omitted fromthedescriptions
-oftheDMAPoperations inthefollowing sections.
-giveninVolumeI,Section 5.
-1.BEGINindicates thebeginning oftheDMAPMorecomplete descriptions ofthesemodules are
-●sequence constituting therigidformat.
-2.ENDindicates theendoftheDMAPsequence constituting therigidformat
-<del>maltermination whenexecuted.
-3._FILEmakesdeclarations relative toaparticular file.
-ABC=TAPEstatesthatfileABCwillbeassigned asasequential file.
-DEF=APPENDstatesthatfileDEFmaybeextended astheresultofan
-intherigidformat.
-GHI=SAVEstatesthatfileGHIshouldnotbedropped afteruseasit
-forsubsequent executions ofaninterna</del>oop.
-4,LABELspecifies alabeled pointinthesequence ofDMAPinstructions.
-referenced byREPT,JUMPandCI?JNDinstructions.
-5.PARAMperforms specified operations oninteger DMAPparameters.andcausesa
-internal loop
-maybeneeded
-Labelsare
-6.PRECHKactuates theautomatic generation ofexplicit CHKPNTinstructions. (PRECHK ALL
-Immediately andautomatically CHKPNTS alloutputdatablocksfromeachfunctional module,
-alldatablocksmentioned ineachPURGEinstruction andallsecondary datablocksineach
-EQUIVinstruction.)* TheCHKPNTinstruction specifies alistoffilestobewritten on
-%Theonlyexceptions to
-outputinsubstructurethisaretheCASESS, CASEIandCASECCdatablocksappearing as
-analyses.
-1.1-4(05/30/86)</p>
-<p>GENERAL DESCRIPTION OFRIGIDFORMATS
-thenewproblem tape(NPTP), including filesthatmayhavebeenpurged, eitherbecause
-theywerenotgenerated inthisparticular execution orwereexplicitly purgedwitha
-PURGEinstruction.
-7.PURGEspecifies thenamesoffilesthat.areconditionally dropped basedontheparameter
-named.
-1.1.3Checkpoint/Restart Procedures
-Thecheckpoint/restart feature available inNASTRAN isaverysophisticated anduseful
-capability. Thepurpose ofttlisfeature istoenableausertocheckpoint aNASTRAN runandthen
-restart it(withorwithout changes indata)byexecuting onlythosemodules thatneedtobe
-executed fortherestart.
-Thereareseveral situations inwhichtheuseofthecheckpoint/restart feature maybe
-desirable. Someofthesearelistedbelow:
-1.Theusermaywishtoperform hisanalysis taskintwoormorestagesbyspecifying
-scheduled exitsinoneormoreruns.
-2.Theusermaywanttoensurethatunscheduled exits(resulting fromsuchcausesasdata
-errors, insufficient timejii;suffic,ient coreorhardware failures) willnotrequire him
-torepeathisentireanalysis.
-3.Theusermaywishtorerunhisproblem bymakinglimited changes inhisdata.
-Scheduled exitscanberequested atanypointinarigidformatbymeansoftheALTER
-feature. (ThemannerinwhichALTERsarehandled inrestarts isdiscussed inSection 1.1.5). An
-exitisscheduled byinsertirl~ thefollowing cardsintheExecutive Ccmtt’ol Deck:
-ALTER K1$
-EXIT K2$
-ENDALTER $
-where K1=DMAPstatement numberafterwhichexitwilltakeplace
-and K2=NumberoftimesEXITinstruction willbeskipped before
-zero,Forusewithloops,wheretheuserwishestoexecute
-scheduling theexit.
-Iftheuserchooses torestart theproblem without makinganychanges,
-execute anunmodified restart following thelastcompleted checkpoint.
-Unscheduled exitsareusually causedbyerrorsoninputcardsorI~eingexecuted -default is
-theloopK2timesbefore
-theExecutive Systerrjwill
-errorsinthestructural
-modelresulting frommissing orinconsistent inputdata.Whensucherrorsaredetected, an
-unscheduled exitisperformed accompanied withtheolutputoftheapplicable usererrormessages.
-Following thecorrection oftheinputdataerrors, amodified restart canbeperformed.
-1.1-5(05/30/86)</p>
-<p>RIGIDFORMATS
-Unscheduled exitsmayalsooccurbecause ofmachine failure orinsufficient timeallowance.
-Inthesecases,anunmodified restart isusually madefollowing thelastcompleted checkpoint. In
-somecases,whereaportion oftheproblem hasbeencompleted, including theoutputforthe
-completed portion, amodified restart mustbemadefollowing anunscheduled exitdueto
-insufficient timeallowance. Thesesituations arediscussed underCaseControl Deckrequirements
-inthesections dealing withtheindividual rigidformats.
-Theinitial execution ofanyproblem mustbemadewithacomplete NASTRAN DataDeck,
-including allofthebulkdata.However, allorpartofthebulkdatamaybeassembled from
-alternate inputsources, suchastheUser’sMasterFileoramodulewritten bytheusertogenerate
-input. TheUser’sMasterFileisdescribed inVolumeI,Section 2.5
-discussed inVolumeI,Section 2,6.
-Forrestarts, theBulkDataDeckconsists onlyofdeletecards
-andnewcardswhichtheuserwishestoadd.Theprevious BulkDataandusergenerated inputis
-(seeVolumeI,Section 2.4)
-DeckisreadfromtheOld
-Problem Tape.AllotherpartsoftheNASTRAN DataDeck,including theExecutive Control Deck,the
-CaseControl Deck,theBEGINBULKcardandtheENDDATA cardmustberesubmitted eventhoughno
-changes aremadeinthecontrol decksandnonewbulkdataisadded. Inaddition, theRESTART
-cards(ordictionary) punched duringtheprevious execution mustbeincluded intheExecutive
-Control Deck.Whenchanging rigidformats, thesolution number
-ofthenewrigidformat.
-ANewProblem Tape(NPTP)isconstructed onlywhencheckpoS@L)mustbechanged tothenumber
-ntingisrequested (CHKPNT YES)in
-theExecutive Control Deck.TheNPTPshouldbeassigned toaphysical tapeorotherstorage device
-thatcanbedismounted andsavedattheconclusion oftheexecution. Atthecompletion ofan
-initial execution, theNPTPcontains theinputdeck,withthebulkdatainsortedform,andallof
-thefilesthatwerecheckpointed duringtheexecution.
-Forrestarts, theOldProblem Tape(13PTP)isdefined astheProblem Tapethatwaswritten
-duringtheprevious execution. TheNPTPisdefined astheProblem Tapewritten duringthecurrent
-execution, beginning withtherestart. Atthecompletion ofanunmodified restart, theNPTP
-contains theinputdeck,withthebulkdatainsortedform,allfilesfromtheOPTPthatare
-necessary tocomplete thesolution, andallofthefilescheckpointed duringthecurrent executicn.
-Atthecompletion ofamodified restart, theNPTPissimilar, except thattheinFutdeckis
-modified according totheinformation shbmitted fortherestart.
-1.1-6(05/30/86)</p>
+          <p>MSC Nastran Access User&rsquo;s Manual
+MSC Nastran 2024.1
+Access User&rsquo;s Manual</p>
+<p>Corporate Office
+Hexagon Manufacturing Intelligence, Inc. UK
+78 Portsmouth Road Cedar HouseCobham, Surrey KT11 1HYTelephone: (+44) 02070686555
+Worldwide Web
+<a href="https://www.hexagon.com" target="_blank" rel="noopener">www.hexagon.com</a>
+Support
+<a href="https://simcompanion.hexagon.com" target="_blank" rel="noopener">https://simcompanion.hexagon.com</a>
+Disclaimer
+Hexagon reserves the right to make changes in specifications and other information contained in this document without prior notice.
+The concepts, methods, and examples presented in this text are for illustrative and educational purposes only, and are not intended
+to be exhaustive or to apply to any particular engineering problem or design. Hexagon assumes no liability or responsibility to any person or company for direct or indirect damages resulting from the use of any information contained herein.
+User Documentation: Copyright
+2024 Hexagon AB and/or its subsidiaries. All Rights Reserved.
+This notice shall be marked on any reproduction of this documentation, in whole or in part. Any reproduction or distribution of this
+document, in whole or in part, without the prior written consent of Hexagon is prohibited.
+This software may contain certain third-party software that is protected by copyright and licensed from Hexagon suppliers. Additional
+terms and conditions and/or notices may apply for certain third party software. Such additional third party software terms and conditions and/or notices may be set forth in documentation and/or at third-party software information  (or successor website designated
+by Hexagon from time to time).
+PCGLSS 8.0, Copyright © 1992-2016, Computational Applications and System Integration Inc. All rights reserved. PCGLSS 8.0 is
+licensed from Computational Applications and System Integration Inc.
+The Hexagon logo, Hexagon, MSC Software logo, MSC, Dytran, Marc, MSC Nastran, Patran, e -Xstream, Digimat, and Simulating
+Reality are trademarks or registered trademarks of Hexagon AB and/or its subsidiaries in the United States and/or other countries.NASTRAN is a registered trademark of NASA. FLEXlm and FlexNet Publisher are trademarks or registered trademarks of Flexera
+Software. All other trademarks are the property of their respective owners.
+Use, duplicate, or disclosure by the U.S. Government is subjected to restrictions as set forth in FAR 12.212 (Commercial Computer
+Software) and DFARS 227.7202 (Commercial Computer Software and Commercial Computer Software Documentation), as applicable.
+U.S. Patent 9,361,413May 16, 2024NA:V2024.1:Z:Z:Z:DC-UTIL-PDF</p>
+<p>Contents
+MSC Nastran Access User’s Manual</p>
+<p>Main Index
+Contents
+Preface
+About this Book . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  2
+List of MSC Nastran Guides . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  2
+Technical Support  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  3
+Training and Internet Resources . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  3
+1 MSC Access
+Overview. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  6
+Definitions and Acronyms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  6Compatibility with Previous Versions of MSC Access  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  7DBC Module Differences  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  8Data base Input/Output (DBIO) Differences  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  8Timeline for MSC Access and MSC Nastran Releases . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  9Interrelationships of MSC Access with Other MSC Products . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  11
+2 Database Converter Module (DBC)
+Overview. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  16DBC Functions  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  16
+DBC Default Values. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  16
+Overriding DBC Default Values . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  17
+3 Creation of MSC Access Databases
+Overview. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  22
+Conversion Using MSC Nastran Version 66 and Subsequent Versions . . . . . . . . . . . . . . . . . . . . . . . . . . .  22Conversion Using Pre-MSC Nastran Version 66 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  22</p>
+<p>MSC Nastran Access User’s Manualii
+Main Index
+4 Contents of MSC Access Database
+Overview. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  24
+Model Geometry Data. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  24
+Model Loads and Restraint Data. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  24Solution Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  24Problem Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  25
+Database Dictionary Entry Description . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  25
+Object Name Field . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  26Project Attribute Field. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  28Superelement/Part Attribute Field. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  28Path Attribute Field. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  28SUBCASE Attribute Field. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  29Set Attribute Field  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  30Approach Attribute Field. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  30Design Cycle Attribute Field . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  31
+P-element Iteration Attribute Field  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  31Cyclic Symmetry Segment Field . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  31Undefined Field  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  32Determination of Object Attribute Usage. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  32
+Data Block Description  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  32
+Keyed Entries. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  33Sequential Object. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  33
+5 Accessing The Database
+Overview. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  36
+General Access Database Processing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  36
+Database Validation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  37
+Access Block (Page) Allocation. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  37OPEN/CLOSE of an Access Database . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  39Access Database Dictionary Inquiry . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  40Allocating/Freeing Access Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  42Working Access Object Entries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  43Access Purge Object  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  43
+Access Database Usage Hints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  44
+Memory Allocation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  44MSC Nastran Type Definition . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  45Element Data Recovery Naming Conventions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  46External versus Internal Object Access Keys. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  46Access Object Capacity Limit Derivations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  47Special Key Usage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  49Special Number Usage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  49</p>
+<p>iii Contents
+Main Index
+The CBAR, CBEAM, and CGAP Objects. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  50
+6 Interfacing to The Data Definition Language (DDL)
+Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  52
+The Data Definition Language . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  52
+The MSC Access Data Definition Language. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  52
+Starting the Data Definition Language Interface  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  53
+Labeled Commons Populated by Function MSCLDD  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  54
+Usage of Word Index Functions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  55
+Version Matching DDL to Analysis Database  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  55Using Attribute Definition Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  57DDL Control Entry Description . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  58
+Working with the DDL control entry. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  58
+Working with an Object Entry DDL  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  59Working with the DDL and an Object/Entry . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  61
+7 MSC Access Utilities and Demonstration Programs
+Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  64
+The MSC Access Sampler Demonstration Program (SMPLR). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  64The Demonstration Program DEMO1. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  65The Demonstration Program DEMO2. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  65The Data Definition Language Program DDLADD . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  65
+The Data Definition Language Demonstration Program DDLPRT. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  66The Data Definition Language Demonstration Program DDLQRY. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  67Utility Program QAPRT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  68Utility Program RECEIVE. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  69
+Utility Program TRANS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  70
+8 MSC Access Prototype Program
+Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  74Flow Diagram of the MSC Access Prototype Program SMPLR . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  74Subroutine Components of the SMPLR Program  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  80
+Common Blocks used by the SMPLR Program . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  80</p>
+<p>MSC Nastran Access User’s Manualiv
+Main Index
+9 Additional MSC Access Example Programs (DEMO1 and DEMO2)
+Overview. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  82
+General Description of the Two Demo Programs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  82DEMO1 Example Program . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  84
+Driver Program for Example 1 (DEMO1) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  84
+9.2.2     Data base Inquiry for Example 1 (DATINT) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  86Grid Point Data in Example 1 (PRTGRD)  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  91Element Connectivity in Example 1 (PRTCON). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  92Displacement Data in Example 1 (PRTDIS) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  94Grid Point Stress Data in Example 1 (PRTGPS) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  95
+DEMO2 Example Program . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  99
+Driver Program for Example 2 (DEMO2) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  99Data base Inquiry and Grid Point Data for Example 2 (PRTGRD)  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  103
+Data base Inquiry and Connectivity Data for Example 2 (PRTCON)  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  104Data base Inquiry and Displacement Data for Example 2 (PRTDIS) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  106Data base Inquiry and Grid Point Stress Data for Example 2 (PRTGPS)  . . . . . . . . . . . . . . . . . . . . . . . . . . .  108
+10 Usage of Data Definition Language Interface
+Overview. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  112
+High Level Interactive Driver . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  112Support Subroutine to Process DDL Schema . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  119
+11 Installation
+Overview. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  128Building DDLPRT  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  128Building DDLQRY . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  128Building DEMO1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  129Building DEMO2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  129Building SMPLR . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  129
+A MSC Access DBIO Subroutine Descriptions
+DBIO Subroutine Descriptions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  132
+Subroutine Name: CLOSGR  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  132
+Subroutine Name: DBCLOS  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  132
+Subroutine Name: DBOPEN  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  133
+Subroutine Name: DBFLOC. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  134
+Subroutine Name: DBVALD. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  135</p>
+<p>v Contents
+Main Index
+Subroutine Name: DELREC . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  136
+Subroutine Name: DICENT  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  136
+Subroutine Name: DICPRT  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  137
+Subroutine Name: DICRDR . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  138
+Subroutine Name: GRPURG. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  139Subroutine Name: OPENC. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  140
+Subroutine Name: OPENR. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  141
+Subroutine Name: OPENS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  142
+Subroutine Name: OPENSQ. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  143Subroutine Name: PAGCFGX  PAGCFG. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  143Subroutine Name: PAGCLR . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  145Subroutine Name: READBS. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  145Subroutine Name: READR . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  146
+Subroutine Name: READS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  147
+Subroutine Name: READSQ. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  148Subroutine Name: WRITEI. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  149
+Subroutine Name: WRITES . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  149
+Block Data Descriptions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  150
+Block Data: DBCTBD. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  150
+Differences from MSC Nastran . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  151
+Block Data: GRSPBD. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  155
+Additional DBIO Information  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  156
+Additional DBIO Subroutines . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  156Labeled Common Blocks  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  156
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  157
+B MSC Access Data Definition Language Interface Routines
+Introduction  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  160
+Subroutines. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  160
+Subroutine Name: MSCASM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  160
+Function Name: MSCDLC . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  160
+Function Name: MSCKTY  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  161
+Function Name: MSCLDD . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  161
+Function Name: MSCLRA . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  162
+Function Name: MSCLRT  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  163
+Subroutine Name: MSCPIV . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  164
+Subroutine Name: MSCPPT. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  164Subroutine Name: MSCPTX. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  165Function Name: MSCRTI . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  165
+Function Name: MSCTFA  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  166
+Function Name: MSCVDR . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  167</p>
+<p>MSC Nastran Access User’s Manualvi
+Main Index
+Function Name: MSCXII . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  167
+Function Name: MSCXTI. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  168
+Static COMMON Specifications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  168
+Additional Support Routines . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  169
+C Input/Output Examples
+MSC Nastran Input Data  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  172MSC Nastran Output  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  175MSC Access SMPLR Program Output . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  190</p>
+<p>Main Index
+Preface
+Preface
+About this Book     2
+List of MSC Nastran Guides     2
+Technical Support     3
+Training and Internet Resources     3</p>
+<p>MSC Nastran Access User’s Manual
+About this Book2
+Main Index
+About this Book
+This guide elaborates different functionalities of MSC Access in detail.
+List of MSC Nastran Guides
+A list of some of the MSC Nastran guides is as follows:
+Installation and Release Guides
+Installation and Operations Guide
+Release Guide
+Reference Guides
+Quick Reference Guide
+DMAP Programmer’s Guide
+Reference Guide
+Utilities Guide
+Getting Started Guide
+SOL 400 Getting Started Guide
+MSC Nastran Error Messages Guide
+Demonstration Guides
+Linear Analysis
+Implicit Nonlinear (SOL 400)
+Explicit Nonlinear (SOL 700)
+MSC Nastran Verification Guide
+User’s Guides
+Automated Component Modal Synthesis (ACMS)
+Access Manual
+Aeroelastic Analysis
+Design Sensitivity and Optimization
+DEMATD
+Dynamic Analysis
+Embedded Fatigue
+Embedded Vibration Fatigue
+Explicit Nonlinear (SOL 700)
+High Performance Computing
+Linear Static Analysis
+Nonlinear (SOL 400)</p>
+<p>3 MSC Nastran Access User’s Manual
+Preface
+Main Index
+You may find any of these documents from Hexagon at:
+<a href="https://simcompanion.hexagon.com/customers/s/article/MSC-Nastran-Support-Home-Page" target="_blank" rel="noopener">https://simcompanion.hexagon.com/customers/s/article/MSC-Nastran-Support-Home-Page</a>
+Technical Support
+For technical support phone numbers and contact information, please visit:
+<a href="https://simcompanion.hexagon.com/customers/s/article/support-contact-information-kb8019304" target="_blank" rel="noopener">https://simcompanion.hexagon.com/customers/s/article/support-contact-information-kb8019304</a>
+Support Center (<a href="http://simcompanion.hexagon.com" target="_blank" rel="noopener">http://simcompanion.hexagon.com</a>)
+The SimCompanion link above gives you access to the wealth of resources for Hexagon products. Here you
+will find product and support contact information, product documentations, knowledge base articles, product error list, knowledge base articles and SimAcademy Webinars. It is a searchable database which allows you to find articles relevant to your inquiry. Valid MSC customer entitlement and login is required to access the database and documents. It is a single sign-on that gives you access to product documentation for complete list of products from Hexagon, allows you to manage your support cases, and participate in our discussion forums.
+Training and Internet Resources
+The Hexagon corporate site has the information on the latest events, products, and services for the CAD/CAE/CAM marketplace.
+Design and Engineering e-Learning
+The above link will point you to schedule and description of seminars. Following courses are recommended
+for beginning MSC Nastran users.NAS120 - Linear Static Analysis using MSC Nastran and Patran
+This seminar introduces basic finite element analysis techniques for linear static, normal modes, and
+buckling analysis of structures using MSC Nastran and Patran. MSC Nastran data structure, the element library, modeling practices, model validation, and guidelines for efficient solutions are discussed and illustrated with examples and workshops. Patran will be an integral part of the examples and workshops and will be used to generate and verify illustrative MSC Nastran models, manage analysis submission requests, and visualize results. This seminar provides the foundation required for intermediate and advanced MSC Nastran applications.Numerical Methods
+Rotordynamics
+Superelements and Modules
+Thermal Analysis
+User Defined Services</p>
+<p>MSC Nastran Access User’s Manual
+Training and Internet Resources4
+Main Index</p>
+<p>Main Index
+Chapter 1: MSC Access
+MSC Nastran Implicit Nonlinear (SOL 600) User’s GuideMSC Nastran Access User&rsquo;s Man -
+ual
+1 MSC Access
+Overview     6
+Definitions and Acronyms     6
+Compatibility with Previous Versions of MSC Access     7
+DBC Module Differences     8
+Data base Input/Output (DBIO) Differences     8
+Timeline for MSC Access and MSC Nastran Releases     9
+Interrelationships of MSC Access with Other MSC Products     11</p>
+<p>MSC Nastran Access User’s Manual
+Overview6
+Main Index
+Overview
+MSC Access is a complete set of FORTRAN callable utility subroutines delivered as an object library. These
+routines enable pre- and post- processor software developers to write communications subroutines that enhance the interaction between their applications and the results generated by MSC Nastran.
+The finite element database generated by MSC Nastran cannot, until recently, be read directly by an
+application program. Without MSC Access, application programs must either read through one or more of the sequential files generated or create their own database. Either process can be very slow. Starting with 2001 of MSC Nastran an offering known as the MSC Nastran T oolkit is available as an alternative method.
+MSC Access provides a way for interfacing pre- and post- processing applications with MSC Nastran. End
+users of either a packaged Computer Aided Design (CAD) systems or a system developed in-house application can quickly and efficiently search and query the finite element analysis information from MSC Nastran.
+The inter-relationship of MSC Access with other MSC products is given in Section 1.6.This release of MSC Access includes major enhancements to the original product. These enhancements are:</p>
+<ol>
+<li>Improved performance of the data base input/output access capability</li>
+<li>Improved data base dictionary content descriptions3. Increased types of analysis results data available4. Increased number of MSC Nastran elements supported5. Larger data base size, number of databases and logical files allowed6. Heterogeneous data access between big and little endian machines
+Not all of these changes are invisible to the user. Consequently, some modification to existing application
+codes may be necessary to take full advantage of these improvements.
+Definitions and Acronyms
+This section shall specify definitions and acronyms applicable to this document. Other definition of terms will occur when first utilized.
+Attribute A dictionary entry qualifier for a data base object
+BBBT Binary Blocked Balanced T ree Method of entry key storage
+Database The MSC Access database unless otherwise stated
+DBC Database Conversion module used by MSC Nastran to create MSC Access database
+DBIO MSC Access Database Input/Output subroutine library
+DDL Data Definition Language used by MSC Access
+DDLADD Utility Program used to add/replace DDL to an existing Access database</li>
+</ol>
+<p>7 CHAPTER 1
+MSC Access
+Main Index
+Compatibility with Previous Versions of MSC Access
+This document is intended for use with MSC Nastran Version 2001.5 and later.
+Applications written with previous versions of MSC Access should continue to function provided that they
+are not re-linked with the new object library. The database created by the DBC module using the PROGRAM=&lsquo;GRASP&rsquo; option is the same as those created by stand -alone DBCs of pre- MSC Nastran 66
+versions.
+To re-link old applications with the new object library, it is necessary to incorporate the new paging pool
+control subroutines PAGCFGX and the database and data definition validation function DBVALD into the application. Old databases can be read and processed by the re-linked system. T o utilize the machine heterogeneous features, refer to the DDLADD program in the utility chapter.DDLPRT Utility Program used to format the DDL into a printable file
+DDLQRY Utility Program used to interactive recover information from DDL
+DEMO1,2 Demonstration programs illustrating programming conventions
+DMAP Direct Matrix Abstraction Program or process language for MSC Nastran
+DRA Direct Results Access that represents the MSC.Patran interface
+FMS File Management Section of MSC Nastran Data Deck
+HK Hiearchial Key Method of entry key storage
+MSC/GRASP MSC interactive product during the 1981-1986 timeframe
+MSC.Patran MSC current interactive product
+MSC/XL MSC interactive product during the 1985-1992 timeframe
+NDDL MSC Nastran Data Definition Language
+Object A data component of the MSC Access database
+OUTPUT2 An alternate means for exporting information from MSC Nastran in binary format
+QAPRT Utility Program used to format objects contained in database
+RECEIVE Utility Program used for translate neutral format to binary database
+SMPLR Demonstration program illustrating programming conventions
+TRANS Utility Program used to translate database to machine neutral format</p>
+<p>MSC Nastran Access User’s Manual
+DBC Module Differences8
+Main Index
+The MSC/DBC executable program for converting MSC Nastran databases is no longer being delivered.
+Starting with Version 66, the database converter (DBC) has become a module of MSC Nastran and has been included within all MSC Nastran solution sequences. DMAP writers should review the DBC module and its capabilities in Section 5.4 of the MSC Nastran Users Manual and the DMAP Module Dictionary.
+The Data Base Input/Output (DBIO) subroutines have added buffer pooling techniques to relieve memory
+management.
+The write facilities of DBIO from Version 2 have been restored since Version 6.
+DBC Module Differences
+As a module, DBC does not require any output blocks to be permanently stored in the MSC Nastran
+database. The conversion occurs as MSC Nastran executes. As a result, the MSC Nastran database contains fewer data blocks and may be smaller. Post-processing activity can begin as soon as MSC Nastran execution is completed and the conversion is verified (i.e., there are no FATAL messages from the DBC module or other MSC Nastran modules).
+DBC was added to MSC Nastran using the same philosophy of output data recovery as other output
+modules. It does not stop MSC Nastran execution when an error is detected. Instead an error message is printed and control returned to the Executive System. When a fatal DBC error occurs, further Executive System calls to the DBC module are not executed.
+The module allows modification of old data and appendage of new information to the database. In previous
+releases of the stand -alone data base converter, the database, once created, could not be modified. The only
+error occurs when inconsistent model structure is detected. Care should be exercised when updating old databases that modifications do not compromise the existing data model. It is normally safe to update databases for additional solution results.
+The DBC module is capable of translating the MSC Nastran information using three different sets of criteria.
+The default conversion is the modern and expanded MSC/XL structure, but an alternate form for p-elements is designated XLPLUS. Optionally, the MSC/GRASP structure corresponding to prior field systems is available but is not compatible with the BBBT Method of storage of keyed objects. These structures should not be mixed in the same database. MSC.Patran, via the DRA tool, uses the MSC/XL conversion format.
+To take advantage of the expanded object structure, current applications of the product need to be modified.Additional information about the DBC module will be found in Chapter 2 of this manual.
+Data base Input/Output (DBIO) Differences
+The Data Base Input/Output (DBIO) Facility has been enhanced. For most existing applications, only minor
+changes are necessary to use the new DBIO library routines.
+Database buffer pooling or caching has been introduced into the DBIO routines. This relieves the application
+of some memory management issues and decisions that arise when using the DBIO open routines. When the pages are faulted to the device, heterogeneous device characteristics are noted and the page information is translated to the targets native mode. It is up to the MSC Access user to determine if the database is locally present or accessed across the network.</p>
+<p>9 CHAPTER 1
+MSC Access
+Main Index
+The argument lists of the open subroutines were retained from the previous versions for compatibility. The
+positional requirements are the same in all MSC Access releases. However, in this release, the application&rsquo;s input for the buffer areas is ignored. The former buffer areas can be reduced to arrays containing one element to save space or replaced with a constant zero since the input location is unused. In the 2005.1 release, either one or two positions have been re-activated to allow for the BBBT Method of storage of keyed entries. The application concern is related to the open APIs since values will be returned to the argument locations.
+A new database validation function has been provided. The DBVALD subroutine attempt to verify that the
+physical file is truly and MSC Access database. It returns to the application the block size that was used to create the database, the Data Definition Language (DDL) version and control information, and whether the database is native to the current machine. Only databases that contain DDL can be processed between heterogeneous machine environments. It should be noted that information can be exchanged between big and little endian machine of 32-bit word lengths.
+A new subroutine PAGCFGX has been introduced which replaces the older PAGCFG. This subroutine must
+be called before any other DBIO processing routine is called other than DBVALD as previously mentioned. This call, used to establish the buffer pooling area, should be done only once during an application program&rsquo;s execution. When all databases have been closed, the application can re-execute the routine to change the memory configurations, however, ALL databases MUST BE CLOSED. See application interface section for further discussion.
+Timeline for MSC Access and MSC Nastran Releases
+Both MSC Nastran and MSC Access have been released over multiple decades and have serviced numerous application products. Unlike MSC Nastran, the database produced by MSC Access have little sensitivity to timeline or release synchronization if both the MSC Nastran defaults were utilized and application programs were developed using the conventions specified within this manual. Briefly, the timeline, version synchronization and product correlation follows:
+Year MSC Access
+ReleaseMSC Nastran
+ReleaseProduct / Object or Approach Availability
+1982 1 62 MSC/GRASP introduced
+Basic geometry, loads, results such as displacements, stresses &amp;
+forces
+Supported Linear Statics, Real Eigenvalues, T ransient &amp;
+Frequency solutions
+1983 2 63 Support of Nonlinear Solutions
+1985 3 65 Support of scalar and mass elements</p>
+<p>MSC Nastran Access User’s Manual
+Timeline for MSC Access and MSC Nastran Releases10
+Main Index
+1989 4 66 MSC/XL and MSC/EMAS introduced
+Added multi-project/path database modelInstalled access factor into database objectsAdded Design Optimization object attributeSupport of Complex Eigenvalues SolutionsSupport of QUADR and TRIAR objects
+1991 6 67 Introduced Acoustic elements and resultsAdded Grid and Element Discontinuity objectsSupported Buckling Analysis Approach
+1994 68 68 Aries formats incorporated using MSC/XL object definitionChanged Element Discontinuity Object DefinitionsAdded QUAD4 corner technologyAdded support for Heat T ransfer and p-element technologyMore Design Optimization Response data supported
+1996 69 69 Support for Part SuperelementsAdded BUSH and Absorber elementsp-element supported expanded to include Beam &amp; Shell
+elements
+1997 70 70 MSC.Patran integrated via DRA interface
+Added support for Enthalpy and MPC forces objects
+1998 70.5 70.5 Added BUSH1D element support
+1998 70.6 70.6 MSC/EMAS support discontinuedAdded support for Aeroelastic ModelAdded Hyperelastic elements and Plain Strain Surface Recovery
+1999 70.7 70.7 Minor corrections to object attributes
+2001 2001.0 2001.0 Added Element Kinetic Energy and Energy Loss per Cycle
+objects
+WELD element supported</p>
+<p>11 CHAPTER 1
+MSC Access
+Main Index
+Interrelationships of MSC Access with Other MSC
+Products
+The relationship between the various MSC products is illustrated in section 1.6.1. Please note that the
+CAD/CAM systems have legal permission to redistribute the sections of MSC Access used. There is no additional cost to mutual clients.2001 2001.0.5 2001.0.5 Allow database to have variable block sizes
+Allow databases to operate hetrogeneously between platforms
+2004 2004 2004 DMIG/GENEL limited element supportComposite output for QUADR/TRIAR elementsMAXMIN (grid) responses (MAXMIN (element) missing)Superelement Map object support identical/mirrorsScaled Response Spectra Analysis
+2005 2005 2005 BBBT Storage Method Added to Keyed ObjectsFASTNER element supportedSEAM weld element supportedCyclic Symmetry Attribute added to object definitions</p>
+<p>MSC Nastran Access User’s Manual
+Interrelationships of MSC Access with Other MSC Products12
+Main Index
+MSC Nastran Version 66 and Subsequent Versions</p>
 
         </div>
         <div class="hx-mt-16"></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
-        href="/docs/users/users_manual_010/"
-        title="User&#39;s Manual P10"
+        href="/docs/accessmanaual/test1/"
+        title="User&#39;s Manual P1 x"
         class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-ml-auto ltr:hx-pl-4 ltr:hx-text-right rtl:hx-mr-auto rtl:hx-pr-4 rtl:hx-text-left"
-      >User&#39;s Manual P10<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+      >User&#39;s Manual P1 x<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
         
       </main>
     </article>
