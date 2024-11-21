@@ -10238,6 +10238,25 @@ card.
     
     <item>
       <title>User&#39;s Manual P2</title>
+      <link>//uildDrafts:1313/docs/accessmanaual/test2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//uildDrafts:1313/docs/accessmanaual/test2/</guid>
+      <description>
+        
+        
+        &lt;p&gt;13 CHAPTER 1
+MSC Access
+Main Index&lt;/p&gt;
+&lt;p&gt;MSC Nastran Access User’s Manual
+Interrelationships of MSC Access with Other MSC Products14
+Main Index&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>User&#39;s Manual P2</title>
       <link>//uildDrafts:1313/docs/users/users_manual_002/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -11052,25 +11071,6 @@ LBL9$
 USET,PG,ULV,UOOV,YS,GO,GM,PS, KFS,KSS,QR/UGV,PGG,QG/NSKIP/
 &lt;em&gt;sTATlcs&lt;/em&gt; $
 2.1-4(05/30/86)&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>User&#39;s Manual P2 xxxx</title>
-      <link>//uildDrafts:1313/docs/accessmanaual/test2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//uildDrafts:1313/docs/accessmanaual/test2/</guid>
-      <description>
-        
-        
-        &lt;p&gt;13 CHAPTER 1
-MSC Access
-Main Index&lt;/p&gt;
-&lt;p&gt;MSC Nastran Access User’s Manual
-Interrelationships of MSC Access with Other MSC Products14
-Main Index&lt;/p&gt;
 
       </description>
     </item>
