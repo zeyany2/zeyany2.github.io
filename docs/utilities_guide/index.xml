@@ -1,0 +1,2201 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DOC REPO – MSC Nastran manuals</title>
+    <link>//uildDrafts:1313/docs/utilities_guide/</link>
+    <description>Recent content in MSC Nastran manuals on DOC REPO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="//uildDrafts:1313/docs/utilities_guide/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>User&#39;s Manual P1</title>
+      <link>//uildDrafts:1313/docs/utilities_guide/msc_nastran_2024.1_utilities_guide_001/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//uildDrafts:1313/docs/utilities_guide/msc_nastran_2024.1_utilities_guide_001/</guid>
+      <description>
+        
+        
+        &lt;p&gt;MSC Nastran 202 4.1
+Utilities GuideMSC Nastran Utilities Guide&lt;/p&gt;
+&lt;p&gt;Worldwide Web
+&lt;a href=&#34;https://www.hexagon.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;www.hexagon.com&lt;/a&gt;
+Support
+&lt;a href=&#34;https://simcompanion.hexagon.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://simcompanion.hexagon.com&lt;/a&gt;
+Disclaimer
+Hexagon reserves the right to make changes in specifications and other information contained in this document without prior notice.
+The concepts, methods, and examples presented in this text are for illustrative and educational purposes only, and are not intended
+to be exhaustive or to apply to any particular engineering problem or design. Hexagon assumes no liability or responsibility to any
+person or company for direct or indirect damages resulting from the use of any information contained herein.
+User Documentation: Copyright 2024 Hexagon AB and/or its subsidiaries. All Rights Reserved.
+This notice shall be marked on any reproduction of this documentation, in whole or in part. Any reproduction or distribution of this
+document, in whole or in part, without the prior written consent of Hexagon is prohibited.
+This software may contain certain third-party software that is protected by copyright and licensed from Hexagon suppliers. Additional
+terms and conditions and/or notices may apply for certain third party software. Such additional third party software terms and
+conditions and/or notices may be set forth in documentation and/or at third-party software information  (or successor website designated
+by Hexagon from time to time).
+PCGLSS 8.0, Copyright © 1992-2016, Computational Applications and System Integration Inc. All rights reserved. PCGLSS 8.0 is
+licensed from Computational Applications and System Integration Inc.
+The Hexagon logo, Hexagon, MSC Software logo, MSC, Dytran, Marc, MSC Nastran, Patran, e -Xstream, Digimat, and Simulating
+Reality are trademarks or registered trademarks of Hexagon AB and/or its subsidiaries in the United States and/or other countries.
+NASTRAN is a registered trademark of NASA. FLEXlm and FlexNet Publisher are trademarks or registered trademarks of Flexera
+Software. All other trademarks are the property of their respective owners.
+Use, duplicate, or disclosure by the U.S. Government is subjected to restrictions as set forth in FAR 12.212 (Commercial Computer
+Software) and DFARS 227.7202 (Commercial Computer Software and Commercial Computer Software Documentation), as
+applicable.
+U.S. Patent 9,361,413
+May 16, 2024
+NA:V 2024.1: Z:Z:Z:DC-UTIL-PDFCorporate Office
+Hexagon Manufacturing Intelligence, Inc. UK
+78 Portsmouth Road Cedar House
+Cobham, Surrey KT11 1HY
+Telephone: (+44) 02070686555&lt;/p&gt;
+&lt;p&gt;Documentation Feedback
+At Hexagon Manufacturing Intelligence, we strive to produce the highest quality documentation and
+welcome your feedback. If you have comments or suggestions about our documentation, write to us .
+Please include the following information with your feedback:
+Document name
+Release/Version number
+Chapter/Section name
+Topic title (for Online Help)
+Brief description of the content (for example, incomplete/incorrect information, grammatical
+errors, information that requires clarification or more details and so on).
+Your suggestions for correcting/improving documentation
+Note:   The above mentioned e-mail address is only for providing documentation specific
+feedback. If you have any technical problems, issues, or queries, please contact Technical
+Support .&lt;/p&gt;
+&lt;p&gt;C o n t e n t s
+MSC Nastran Utilities Guide&lt;/p&gt;
+&lt;p&gt;Main Index
+Contents
+Preface
+List of MSC Nastran Guides . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  8
+Technical Support  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  9
+Training and Internet Resources . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  9
+1 Using the Utility Programs
+Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  2
+Key for Readers  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  2
+Definitions Used in this document . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  2
+ABQ2NAS  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  3
+Abaqus translator command . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  3
+Supported entities and the map  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  5
+Important known limitations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  12
+An Example  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  13
+ESTIMATE  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  15
+F04REPRT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  24
+MONITOR . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  27
+MSCACT  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  28
+MSCPLOTPS  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  31
+MSGCMP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  31
+MultiOpt  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  32
+NEUTRL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  33
+OLDNLTO400 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  34
+OP4UTIL  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  36
+PLOTPS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  38
+RCOUT2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  41
+Building the Utilities Delivered in Source Form  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  41&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide6
+Main Index
+2 Building and Using the Sample Programs
+Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  46
+Building and Using BEAMSERV . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  46
+Building and Using DDLPRT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  48
+Building and Using DDLQRY  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  49
+Building and Using DEMO1  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  50
+Building and Using DEMO2  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  51
+Building and Using DR3SERV  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  51
+Building and Using MATTST  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  53
+Building and Using SMPLR  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  54
+Building and Using a Spline Server . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  55
+Spline Server Source Files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  57
+Building and Using TABTST . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  58
+Beam Server Source Files  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  59
+DRESP3 Server Source Files  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  60
+MSC.Access Source Files  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  60&lt;/p&gt;
+&lt;p&gt;Main Index
+MSC Nastran Implicit Nonlinear (SOL 600) User’s Guide MSC Nastran Utilities Guide
+Preface
+Preface
+List of MSC Nastran Guides     8
+Technical Support     9
+Training and Internet Resources     9&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+8
+Main Index
+List of MSC Nastran Guides
+A list of some of the MSC Nastran guides is as follows:
+Installation and Release Guides
+Installation and Operations Guide
+Release Guide
+Reference Guides
+Quick Reference Guide
+DMAP Programmer’s Guide
+Reference Guide
+Utilities Guide
+Getting Started Guide
+SOL 400 Getting Started Guide
+MSC Nastran Error Messages Guide
+Demonstration Guides
+Linear Analysis
+Implicit Nonlinear (SOL 400)
+Explicit Nonlinear (SOL 700)
+MSC Nastran Verification Guide
+User’s Guides
+Automated Component Modal Synthesis (ACMS)
+Access Manual
+Aeroelastic Analysis
+Design Sensitivity and Optimization
+DEMATD
+Dynamic Analysis
+Embedded Fatigue
+Embedded Vibration Fatigue
+Explicit Nonlinear (SOL 700)
+High Performance Computing
+Linear Static Analysis
+Nonlinear (SOL 400)
+Numerical Methods
+Rotordynamics&lt;/p&gt;
+&lt;p&gt;9 MSC Nastran Utilities Guide
+Preface
+Main Index
+You may find any of these documents from Hexagon at:
+&lt;a href=&#34;https://simcompanion.hexagon.com/customers/s/article/MSC-Nastran-Support-Home-Page&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://simcompanion.hexagon.com/customers/s/article/MSC-Nastran-Support-Home-Page&lt;/a&gt;
+Technical Support
+For technical support phone numbers and contact information, please visit:
+&lt;a href=&#34;https://simcompanion.hexagon.com/customers/s/article/support-contact-information-kb8019304&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://simcompanion.hexagon.com/customers/s/article/support-contact-information-kb8019304&lt;/a&gt;
+Support Center ( &lt;a href=&#34;http://simcompanion.hexagon.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://simcompanion.hexagon.com&lt;/a&gt;)
+The SimCompanion link above gives you access to the wealth of resources for Hexagon products. Here you
+will find product and support contact information, product documentations, knowledge base articles,
+product error list, knowledge base articles and SimAcademy Webinars. It is a searchable database which
+allows you to find articles relevant to your inquiry. Valid MSC customer entitlement and login is required to
+access the database and documents. It is a single sign-on that gives you access to product documentation for
+complete list of products from Hexagon, allows you to manage your support cases, and participate in our
+discussion forums.
+Training and Internet Resources
+The Hexagon corporate site has the information on the latest events, products, and services for the
+CAD/CAE/CAM marketplace.
+Design and Engineering e-Learning
+The above link will point you to schedule and description of seminars. Following courses are recommended
+for beginning MSC Nastran users.
+NAS120 - Linear Static Analysis using MSC Nastran and Patran
+This seminar introduces basic finite element analysis techniques for linear static, normal modes, and
+buckling analysis of structures using MSC Nastran and Patran. MSC Nastran data structure, the element
+library, modeling practices, model validation, and guidelines for efficient solutions are discussed and
+illustrated with examples and workshops. Patran will be an integral part of the examples and workshops and
+will be used to generate and verify illustrative MSC Nastran models, manage analysis submission requests,
+and visualize results. This seminar provides the foundation required for intermediate and advanced MSC
+Nastran applications.Superelements and Modules
+Thermal Analysis
+User Defined Services&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+10
+Main Index&lt;/p&gt;
+&lt;p&gt;Main Index
+Chapter 1: Using the Utility Programs
+MSC Nastran  Utilities Guide
+1 Using the Utility Programs
+Overview
+ABQ2NAS
+ESTIMATE
+F04REPRT
+MONITOR
+MSCACT
+MSCPLOTPS
+MSGCMP
+MultiOpt
+NEUTRL
+OLDNLTO400
+OP4UTIL
+PLOTPS
+RCOUT2
+Building the Utilities Delivered in Source Form&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+Overview2
+Main Index
+Overview
+Key for Readers
+The IOG uses certain stylistic conventions to denote user action, to emphasize particular aspects of a&lt;br&gt;
+MSC Nastran run, or to signal other differences within the text.
+Definitions Used in this document
+The IOG uses certain definitions  to denote installation directories, and product versions of MSC Nastran.Italics Represent user-specified variables.
+Example: The system RC file is install_dir /conf/nast 20241r c.
+Courier font Indicates system input or output.
+Example: $ install_dir /bin/msc 20241
+Quote marks Distinguish words or phrases such as lowercase keywords, commands, variables,
+Dbsets or file suffixes from regular text.
+Example: If “out” is not specified, MSC Nastran saves the output files using
+the basename of the input data file as a prefix.
+install_dir The full path to the directory used in the installation
+Example: The system RC file is install_dir /conf/nast 20241r c.
+prod_ver The Product and Version of MSC Nastran
+Example: For MSC Nastran 2024.1
+prod_ver=nast20241
+ver_num The version number. For MSC Nastran 2024.1,  this is 20241.
+util_ver The version number used for building utilities.
+Example: For MSC Nastran 2024.1
+util_ver=msc20241
+msc_arch The architecture of the platform.
+Example: win64i8 for Windows 64 i8 version
+Example: linux64i8 for Linux 64 i8 version&lt;/p&gt;
+&lt;p&gt;3 CHAPTER 1
+Using the Utility Programs
+Main Index
+This chapter describes how to use the various MSC Nastran utility programs. The utility programs are part
+of the standard MSC Nastran delivery.
+Sections ABQ2NAS  through RCOUT2  describe each utility (in alphabetical order), and present applicable
+keywords and examples. Building the Utilities Delivered in Source Form  contains instructions on how to build the
+source code utilities.
+The utilities trans, receive, xmonast, and xnastran are no longer supported. If those utilities are
+needed, please see MSC Nastran 2014.
+ABQ2NAS
+Abaqus translator command
+MSC Nastran has a utility to convert Abaqus input files to MSC Nastran input files, the translator is a
+standard executable with name abq2nas.Table 1-1  Utility Program Functions
+Utility Function
+ABQ2NAS Abaqus to Nastran translator
+ESTIMATE Estimates system requirements of an MSC Nastran job and suggests performance
+improvements.
+F04REPRT Perl script to summarize or compare .f04 files.
+MONITOR          Monitor progress of a nonlinear run
+MSCACT Accumulates and summarizes MSC Nastran accounting data.
+MSGCMP Compiles the message catalog.
+MultiOpt MultiOpt supports Multiple Model Optimization (MMO) and Global
+Optimization (GO).
+NEUTRL Converts MSC Nastran plot files to PostScript or neutral format.
+MSCPLOTPS MSCPLOTPS is very similar to PLOTPS in that it reads plotting commands from
+a single MSC Nastran binary - or neutral -format plot file. The primary difference is
+that MSCPLOTPS automatically determines the format of the input file.
+OP4UTIL OP4UTIL may be used to validate, copy or reformat binary files created using the
+MSC Nastran OUTPUT4 module.
+PLOTPS PLOTPS reads plotting commands from a single MSC Nastran binary - or
+neutral -format plot file and produces a file that can be printed on a PostScript
+device.
+RCOUT2 Converts neutral -format OUTPUT2 files to binary format.&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+ABQ2NAS4
+Main Index
+The format of the “abq2nas” command is:
+The command will translate an_abaqus.inp  to a MSC Nastran input file with name of
+an_nastran.dat . Here abq2nas is the utility executable. The translation processing information including
+warnings and errors will be written to a log file with name an_nastran.abq2nas  file.
+There are some command options, below table show them. Any options can be combined, and for the direct
+text input options CASE, STEP and BULK, multiple lines can be expressed by using semicolons &amp;ldquo;;&amp;rdquo;, it is
+user&amp;rsquo;s responsibility to provide a correct MSC Nastran command.
+Below are some examples
+abq2nas aa.inp bb.bdf CASE=&amp;ldquo;NLOPRM NLDBG=NRDBG&amp;rdquo;&lt;br&gt;
+util_ver abq2nas aa.inp bb.bdf STEP=&amp;ldquo;AUTOSPC(RESIDUAL,PUNCH)=YES&amp;rdquo; util_ver
+abq2nas aa.inp bb.bdf BULK=&amp;ldquo;NLMOPTS,LRGS,1;,,SPROPMAP,2 util_ver abq2nas
+aa.inp bb.bdf tosurf=yes
+util_ver abq2nas aa.inp aa.bdf liston=no pre-tension=bolt1
+Option mergecontact=yes/no controls contact merging, which will be explained later.
+util_ver abq2nas aa.inp bb.bdf mergecontact=yes
+tosurf controls if translate *SURFACE keywords for contact to MSC Nastran BCSURF or BCGRID entries.
+util_ver abq2nas aa.inp bb.bdf tosurf=yes
+if tosurf is yes, *SURFACE keywords for contact to MSC Nastran BCSURF entries if type is ELEMENT or
+BCGRID entries if type is NODE, if it is no, the keyword will be translated to a BCBODY1 entry.util_ver abq2nas an_abaqus.inp an_nastran.dat  &lt;!-- raw HTML omitted --&gt;
+Name Control Values and default
+CASE General direct text of case control Arbitrary texts, no default
+STEP Direct text of case control in STEP Arbitrary texts, no default
+BULK Direct input of bulk data section Arbitrary texts, no default
+mergecontact Merge contact yes(default) or no
+tosurf If translate *SURFACE for contact to
+surface contact entriesyes or no(default) When it is no,
+*SURFACE for contact will be
+translated to BCBODY1 otherwise
+will be translated to BCSURF or
+BCGRID
+liston T urn on or off LISTON option for
+table entriesyes(default) or no, default is yes
+pre-tension Specify entry name which Abaqus
+*PRE-TENSION SECTION
+keyword should be translated toBOLT or BOLT1  (default)&lt;/p&gt;
+&lt;p&gt;5 CHAPTER 1
+Using the Utility Programs
+Main Index
+The liston option is to control if using MSC Nastran /LISTON and /LISTOFF for table entries such as
+TABLED1, TABLES1, for details refer to /LISTON and /LISTOFF commands in MSC Nastran Quick
+Reference Guide .
+The pre-tension option is to specify an Abaqus *PRE-TENSION SECTION keyword should be translated
+to a MSC Nastran bulk data section BOLT or a BOLT1 entry.
+Supported entities and the map
+Below are the supported entities and the map of Abaqus to MSC Nastran.
+Notice here “activate hyperelements formulation” is achieved by adding the card below into the MSC
+Nastran file:
+NLMOPTS LRGSTRN 2
+Abaqus MSC Nastran
+Element
+Element
+Plane Strain
+CPE3 CTRIA3, PLPANE, PSHLN2
+CPE3H CTRIA3, PLPANE, PSHLN2
+CPE4 CQUAD4, PLPLANE + PSHLN2
+CPE4H CQUAD4, PLPLANE + PSHLN2, activate hyperelasticity formulation
+CPE4I CQUAD4, PLPLANE + PSHLN2
+CPE4IH CQUAD4, PLPLANE + PSHLN2, activate hyperelasticity formulation
+CPE4R CQUAD4, PLPLANE + PSHLN2
+CPE4RH CQUAD4, PLPLANE + PSHLN2, activate hyperelasticity formulation
+CPE6 CTRIA6, PLPLANE + PSHLN2
+CPE6H CTRIA6, PLPLANE + PSHLN2, activate hyperelasticity formulation
+CPE6M CTRIA6, PLPLANE + PSHLN2
+CPE6MH CTRIA6, PLPLANE + PSHLN2, activate hyperelasticity formulation
+CPE8 CQUAD8, PLPLANE + PSHLN2
+CPE8H CQUAD8, PLPLANE + PSHLN2, activate hyperelasticity formulation
+CPE8R CQUAD8, PLPLANE + PSHLN2
+CPE8RH CQUAD8, PLPLANE + PSHLN2, activate hyperelasticity formulation
+Plane Stress
+CPS3 CTRIA3, PLPLANE + PSHLN2&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+ABQ2NAS6
+Main Index
+CPS4 CQUAD4, PLPLANE + PSHLN2
+CPS4I CTRIA3, PLPLANE + PSHLN2
+CPS4R CTRIA3, PLPLANE + PSHLN2
+CPS6 CTRIA6, PLPLANE + PSHLN2
+CPS6M CTRIA6, PLPLANE + PSHLN2
+CPS8 CQUAD8, PLPLANE + PSHLN2
+CPS8R CQUAD8, PLPLANE + PSHLN2
+Generalized Plane Strain
+CPEG3 CTRIA3, PLPLANE + PSHLN2
+CPEG3H CTRIA3, PLPLANE + PSHLN2
+CPEG4 CQUAD4, PLPLANE + PSHLN2
+CPEG4H CQUAD4, PLPLANE + PSHLN2, activate hyperelasticity formulation
+CPEG4I CQUAD4, PLPLANE + PSHLN2
+CPEG4IH CQUAD4, PLPLANE + PSHLN2, activate hyperelasticity formulation
+CPEG4R CQUAD4, PLPLANE + PSHLN2
+CPEG4RH CQUAD4, PLPLANE + PSHLN2, activate hyperelasticity formulation
+CPEG6 CTRIA6, PLPLANE + PSHLN2
+CPEG6H CTRIA6, PLPLANE + PSHLN2, activate hyperelasticity formulation
+CPEG6M CTRIA6, PLPLANE + PSHLN2
+CPEG6MH CTRIA6, PLPLANE + PSHLN2, activate hyperelasticity formulation
+CPEG8 CQUAD, PLPLANE + PSHLN2
+CPEG8H CQUAD, PLPLANE + PSHLN2, activate hyperelasticity formulation
+CPEG8R CQUAD, PLPLANE + PSHLN2
+CPEG8RH CQUAD, PLPLANE + PSHLN2, activate hyperelasticity formulation
+Axisymmetric, Stress/displacement elements without twist
+CAX3 CTRIAX, PLPLANE + PSHLN2
+CAX3H CTRIAX, PLPLANE + PSHLN2, activate hyperelasticity formulation
+CAX4 CQUADX, PLPLANE + PSHLN2
+CAX4H CQUADX, PLPLANE + PSHLN2, activate hyperelasticity formulation
+CAX4I CQUADX, PLPLANE + PSHLN2
+CAX4IH CQUADX, PLPLANE + PSHLN2, activate hyperelasticity formulation
+CAX4R CTRIAX, PLPLANE + PSHLN2Abaqus MSC Nastran
+Element&lt;/p&gt;
+&lt;p&gt;7 CHAPTER 1
+Using the Utility Programs
+Main Index
+CAX4RH CQUADX, PLPLANE + PSHLN2, activate hyperelasticity formulation
+CAX6 CTRIAX, PLPLANE + PSHLN2
+CAX6H CTRIAX, PLPLANE + PSHLN2, activate hyperelasticity formulation
+CAX6M CTRIAX, PLPLANE + PSHLN2
+CAX8 CQUADX, PLPLANE + PSHLN2
+CAX8H CQUADX, PLPLANE + PSHLN2, activate hyperelasticity formulation
+CAX8R CQUADX, PLPLANE + PSHLN2
+CAX8RH CQUADX, PLPLANE + PSHLN2, activate hyperelasticity formulation
+Axisymmetric, Stress/displacement elements with twist
+CGAX3 CTRIAX, PLPLANE + PSHLN2
+CGAX3H CTRIAX, PLPLANE + PSHLN2, activate hyperelasticity formulation
+CGAX4 CQUADX, PLPLANE + PSHLN2
+CGAX4H CQUADX, PLPLANE + PSHLN2, activate hyperelasticity formulation
+CGAX4R CQUADX, PLPLANE + PSHLN2
+CGAX4RH CQUADX, PLPLANE + PSHLN2, activate hyperelasticity formulation
+CGAX6 CTRIAX, PLPLANE + PSHLN2
+CGAX6H CQUADX, PLPLANE + PSHLN2, activate hyperelasticity formulation
+CGAX6M CTRIAX, PLPLANE + PSHLN2
+CGAX6MH CTRIAX, PLPLANE + PSHLN2, activate hyperelasticity formulation
+CGAX8 CTRIAX, PLPLANE + PSHLN2
+CGAX8H CQUADX, PLPLANE + PSHLN2
+CGAX8R CQUADX, PLPLANE + PSHLN2, activate hyperelasticity formulation
+CGAX8RH CQUADX, PLPLANE + PSHLN2
+3D Stress/displacement elements
+C3D4 CTETRA, PSOLID + PSLDN1
+C3D4H CTETRA, PSOLID + PSLDN1
+C3D6 CPENTA, PSOLID + PSLDN1
+C3D6H CPENTA, PSOLID + PSLDN1, activate hyperelasticity formulation
+C3D8 CHEXA, PSOLID + PSLDN1
+C3D8H CHEXA, PSOLID + PSLDN1, activate hyperelasticity formulation
+C3D8I CHEXA, PSOLID + PSLDN1Abaqus MSC Nastran
+Element&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+ABQ2NAS8
+Main Index
+C3D8IH CHEXA, PSOLID + PSLDN1, activate hyperelasticity formulation
+C3D8R CHEXA, PSOLID + PSLDN1
+C3D8RH CHEXA, PSOLID + PSLDN1, activate hyperelasticity formulation
+C3D10 CTETRA, PSOLID + PSLDN1
+C3D10H CTETRA, PSOLID + PSLDN1, activate hyperelasticity formulation
+C3D10I CTETRA, PSOLID + PSLDN1
+C3D10M CTETRA, PSOLID + PSLDN1
+C3D10MH CTETRA, PSOLID + PSLDN1, activate hyperelasticity formulation
+C3D15 CPENTA, PSOLID + PSLDN1
+C3D15H CPENTA, PSOLID + PSLDN1, activate hyperelasticity formulation
+C3D20 CHEXA, PSOLID + PSLDN1
+C3D20H CHEXA, PSOLID + PSLDN1, activate hyperelasticity formulation
+C3D20R CHEXA, PSOLID + PSLDN1
+C3D20RH CHEXA, PSOLID + PSLDN1, activate hyperelasticity formulation
+Membrane
+M3D3 CTRIA3, PSHELL
+M3D4 CQUAD4, PSHELL
+M3D4R CQUAD4, PSHELL
+M3D6 CTRIA6, PSHELL
+M3D8 CQUAD8, PSHELL
+M3D8R CQUAD8, PSHELL
+M3D9 CQUAD8, PSHELL
+M3D9R CQUAD8, PSHELL
+2D truss
+T2D2 CROD, PROD
+T2D2H CROD, PROD/PRODN1
+T2D3 CROD, PROD
+T2D3H CROD, PROD/PRODN1
+3D truss
+T3D2 CROD, PROD
+T3D2H CROD, PROD
+T3D3 CROD, PRODAbaqus MSC Nastran
+Element&lt;/p&gt;
+&lt;p&gt;9 CHAPTER 1
+Using the Utility Programs
+Main Index
+T3D3H CROD, PROD
+Beam in plane
+B21 CBEAM, PBEAM/PBEAML  or PBMSECT
+B21H NA, but write out the same one as B21 with a warning
+B22 CBEAM3, PBEAM3/PBMSECT
+B22H NA, but write out the same one as B22 with a warning
+B23 NA, but write out the same one as B21 with a warning
+B23H NA, but write out the same one as B21 with a warning
+Beam in 3D space
+B31 CBEAM, PBEAM/PBEAML  or PBMSECT
+B31H NA, but write out the same one as B31 with a warning
+B32 CBEAM3, PBMSECT/PBEAML3
+B32H NA, but write out the same one as B32 with a warning
+B33 NA, but write out the same one as B31 with a warning
+B33H NA, but write out the same one as B31 with a warning
+Conventional shells
+STRI3 CTRIA3, PSHELL
+S3 CTRIA3, PSHELL
+S3R CTRIA3, PSHELL + PSHLN1
+S3RS CTRIA3, PSHELL + PSHLN1
+STRI65 CTRIA3, PSHELL
+S4 CQUAD4, PSHELL
+S4R CQUAD4, PSHELL + PSHLN1
+S4RS CQUAD4/PSHELL + PSHLN1
+S4RSW CQUAD4/PSHELL + PSHLN1
+S4R5 CQUAD4/PSHELL + PSHLN1
+S8R CQUAD8/PSHELL + PSHLN1
+S8R5 CQUAD8/PSHELL + PSHLN1
+Continuum shell(Solid shell)
+SC8R CHEXA, PCOMPLS
+SpringAbaqus MSC Nastran
+Element&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+ABQ2NAS10
+Main Index
+SPRINGA CBUSH, PBUSH + PBUSHT
+SPRING1 CELAS1, PELAS + PELAST
+SPRING2 CBUSH, PBUSH + PBUSHT
+Dashpot
+DASHPOT1 CBUSH, PBUSH + PBUSHT
+DASHPOT2 CBUSH, PBUSH + PBUSHT
+DASHPOTG CBUSH, PBUSH + PBUSHT
+Flexible joint 　
+JOINTC CBUSH, PBUSH + PBUSHT
+Distributing coupling
+DCOUP2D RBE2/RBE3
+DCOUP3D RBE2/RBE3
+Gasket
+GK3D8 CHEXA, PSOLID, MATG
+GK3D8N CHEXA, PSOLID, MATG
+Other geometry entities
+*NGEN GRID
+*NFILL GRID
+*NCOPY GRID
+*ELGEN Elements
+*ASSEMBLY/*INSTAN
+CE/*PARToffset ids of GRID and elements, *ELSET or *NSET with option
+INSTANCE=part_name is available also
+*SYSTEM CORD2R and write the cord2r id to CP field of related GRID
+*ORENTATION CORD2R and write the cord2r id to CBUSH, COMN1, 2D elements,
+shell elements and PSOLID
+*TRANSFORM CORD2R and write the cord2r id to CD field of related GRID
+Properties
+*SOLID SECTION PSOLID
+*SHELL SECTION PSHELL/PCOMP/PCOMPL/PCOMPLS
+*BEAM SECTION PBEAM/PBEAML
+*BEAM GENERAL
+SECTIONPBEAMLAbaqus MSC Nastran
+Element&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>User&#39;s Manual P2</title>
+      <link>//uildDrafts:1313/docs/utilities_guide/msc_nastran_2024.1_utilities_guide_002/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//uildDrafts:1313/docs/utilities_guide/msc_nastran_2024.1_utilities_guide_002/</guid>
+      <description>
+        
+        
+        &lt;p&gt;11 CHAPTER 1
+Using the Utility Programs
+Main Index
+*GASKET SECTION MATG
+Materials
+*ELASTIC MAT1/MAT8/MATORT/MAT9
+*DENSITY
+*PLASTIC MATEP
+*HYPERELASTIC MATHE
+*VISCOELASTIC MATVE
+*CREEP MATVP
+Contact
+*SURFACE BCBODY1,BSURF , BCNURB2, BCPATCH depending on *RIGID
+BODY
+*RIGID BODY BCNURB2 for analytical curves, a BCPACH for 3D model when the
+elements used by a *SURFACE
+*CONTACT PAIR BCONNECT
+*SURFACE
+INERACTIONBCONPRP
+*TIE Glue contact (BCONNECT)
+Loads Boundaries
+*CLOAD FORCE/MOMENT
+*TEMPERATUE TEMP
+*INTIAL
+CONDITION
+TYPE=TEMPERATUETEMP and TEMPERATURE(INIT) in case control
+*DLOAD PLOAD4/PLOAD1
+GRAV
+RFORCE
+PLOADX
+*DSLOAD PLOAD4 for shell and solid, PLOAD1for beam elements
+PLOADX
+MPC, Coupling, etc
+?*Kinematic Coupling RBE2
+*Distributing Coupling RBE3
+*Coupling + *Kinematic RBE2Abaqus MSC Nastran
+Element&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+ABQ2NAS12
+Main Index
+In the contact area, there is a strict limitation in MSC Nastran: one element can only be used by one contact
+body. The translator is highly likely going to make an element belong to multiple bodies. To overcome this
+issue, merging contact bodies that share common elements into one body is required. The command line
+option mergecontact=yes/no controls this. the default is yes, no is only for debugging purposes.
+Important known limitations
+The following input syntax is not supported. This is not necessarily a complete list:
+*AMPLITUDE
+*BULK VISCOSITY
+*CONTACT
+*CONTACT INCLUSION
+*CONTACT PAIR is not completely supported
+*CONTACT PROPERTY ASSIGNMENT
+*CYCLIC HARDENING
+*DISTRIBUTION
+*DLOAD  - several parameters including PY are not supported
+*DRUCKER PRAGER
+*DRUCKER PRAGER HARDENING
+*DSLOAD – several parameters including EDLD and BX are not
+supported
+*DYNAMIC
+*FRAME SECTION, also B33 element is not supported
+*HYPERELASTIC – parameter MODULI AND POLYNOMIAL
+*INITIAL CONDITIONS type HARDENING
+*INITIAL CONDITIONS type STRESS
+*MOHR COULOMB
+*MOHR COULOMB HARDENING
+*MPC – type C BIQUAD and QUADRATIC are not supported
+*NCOPY
+*PLASTIC, DEPENDENCIES
+*RBE - only 1D analytical surfaces and 2D R3D4, R3D3 elements can
+be translated
+&lt;em&gt;REBAR LAYER&lt;/em&gt;Coupling + *Distributing RBE3
+*MPC Beam type RBAR
+*Pre-tension BOLT  or BOLT1
+*Equation MPC
+Analysis procedure
+*STATIC, Perturbation ANALYSIS=STATIC
+*STATIC, no perturbation ANALYSIS=NLSTATIC
+*Frequency ANALYSIS=MODESAbaqus MSC Nastran
+Element&lt;/p&gt;
+&lt;p&gt;13 CHAPTER 1
+Using the Utility Programs
+Main Index
+*STEADY STATE DYNAMICS
+*STEP – parameter UNSYMM
+*SUBMODEL
+*SURFACE BEHAVIOR
+*SWELLING
+*VISCO
+BEH4 and BEH8 are not supported .
+Generalized plane strain elements are translated into equivalent plane strain elements.
+An Example
+Here is an example based on chapter 4 of the MSC Nastran Demonstration Problems Manual (nug4), please
+refer to this chapter for detailed information.
+Download the Abaqus input file here:
+&lt;a href=&#34;http://www.mscsoftware.com/doc/nastran/mdug/input_files/abaqus_trans/nug_04_abaqus.zip&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://www.mscsoftware.com/doc/nastran/mdug/input_files/abaqus_trans/nug_04_abaqus.zip&lt;/a&gt;
+Use this command to translate it to a MSC Nastran file
+msc20241 abq2nas nug_04_abaqus.inp nug_04_abaqus.bdf
+Below is a side by side illustration to show how the data is translated. The left side shows contents of the
+Abaqus input file and right side shows that of generated MSC Nastran input file.
+….
+*NODE
+1,          250.,            0.
+2,       249.846,       3.92388
+…..
+*ELEMENT , TYPE=C3D8R, ELSET=A3D_1_0_0
+1,      41,      42,      81,      40,     900,     905,
+1100,     895
+2,     900,     905,    1100,     895,     901,     906,
+1101,     896
+3,     901,     906,    1101,     896,     902,     907,  1102,     897
+….….
+BEGIN BULK  &lt;br&gt;
+$ translated from keyword line 4
+GRID    1               250.    0.0     0.0          &lt;br&gt;
+GRID    2               249.846 3.92388 0.0&lt;br&gt;
+…..
+$ translated from type C3D8R, near line 3604
+CHEXA   1       1       41      42      81      40      900     905  &lt;br&gt;
+1100    895  &lt;br&gt;
+CHEXA   2       1       900     905     1100    895     901     906  &lt;br&gt;
+1101    896&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+ABQ2NAS14
+Main Index
+Notice that MSC Nastran 2024.1 d oes not give the same results as nug4 for the translated MSC Nastran
+input file, you will need to make the changes below to obtain the same results:
+$ translated from &lt;em&gt;CONTACT P AIR near line 9143&lt;/em&gt;SOLID SECTION, ELSET=A3D_1_0_0, MATERIAL=MAT1_1_0
+1.,
+*SOLID SECTION, ELSET=A3D_2_0_0, MATERIAL=MAT1_2_0
+1. ,
+*MATERIAL, NAME=MAT1_1_0
+*DENSITY
+1.,
+*ELASTIC, TYPE=ISO
+210000.,         0.3
+….
+** Contact_1
+**
+*SURFACE, TYPE=ELEMENT, NAME=M_CONTACT_1_0
+2306, S6
+2307, S6
+2310, S
+*CONTACT PAIR, INTERACTION=CONTACT_1_0, SMALL
+S_CONTACT_1_0, M_CONTACT_1_0
+*SURFACE INTERACTION, NAME=CONTACT_1_0
+*FRICTION, SLIP TOLERANCE=0.02
+0.1,
+….
+*STEP , NC=10, NLGEOM
+3-D Loaded Pin with Friction ….
+*STATIC
+0.1,          1.
+*BOUNDARY, OP=NEW
+700, 2,,          0.
+701, 2,,          0.
+…….
+*CLOAD, OP=NEW
+FORCE_1_0, 1,      50000$ translated from *SOLID SECTION near line 8874, element type is C3D8R
+PSOLID  1       1    &lt;br&gt;
+$ translated from *SOLID SECTION near line 8879, element type is C3D8R
+PSOLID  2       2&lt;br&gt;
+$ Translated from a *MATERIAL near line 8884
+MAT1    1       210000.         0.3     1.
+…
+$ contact body from line 8904 , element face ids are ignored
+BCBODY1 1               3D      DEFORM  1    &lt;br&gt;
+BSURF   1       2306    2307    2310    2311….
+$ translated from *CONTACT PAIR near line 9143
+BCONECT 101             1       2       1    &lt;br&gt;
+$ Translated from the *SURFACE INTERACTION near line 9145
+BCONPRP 1               FRIC    0.1  &lt;br&gt;
+BCPARA  0       FTYPE   6    &lt;br&gt;
+BCTABL1 10000   101  &lt;br&gt;
+BCTABL1 0       101
+….
+$ from *STEP NLGEOM option
+PARAM   LGDISP  1
+$ translated from the *STEP near line 9152 and the *STATIC near line 9156
+NLSTEP  1       1.   &lt;br&gt;
+ADAPT   0.1                     10                      10
+…..
+$ lbc from keyword line 9173:*BOUNDARY, OP=NEW
+SPC1    3       2       700  &lt;br&gt;
+SPC1    3       2       701  &lt;br&gt;
+……
+$ lbc from keyword line 10201:*CLOAD, OP=NEW
+FORCE   5       1004            1.      50000.  0.0     0.0&lt;/p&gt;
+&lt;p&gt;15 CHAPTER 1
+Using the Utility Programs
+Main Index
+BCONECT 101             1       2       1       ®(change to) BCONECT, 101, 3, 1, 2, 1
+And add below line:
+BCONPRG, 3, , ICOORD, 1, ISEARCH, 1
+The modified file is included in the download zip file with name nug_04_abaqus_modified.dat.
+ESTIMATE
+ESTIMATE may be used to estimate the memory and disk requirements for MSC Nastran jobs and make
+suggestions on improving the performance of these jobs. ESTIMATE will read the input data file and
+estimate the job’s memory and disk requirements. The ESTIMATE program is most accurate in predicting
+the requirements of static analyses that do not have excessive output requests. The memory requirements for
+normal modes analyses using the Lanczos method are reasonably accurate; however, the disk requirements
+are dependent upon the number of modes, this is a value that ESTIMATE cannot determine. Memory and
+disk requirements for other solutions are less accurate.
+The basic format of the “estimate” command is
+where input_file  is the name of the data file. If the file type of the input data file is “.dat”, it may be omitted
+from the command line.
+ESTIMATE processes keywords using the following precedence to resolve conflicts when keywords are
+duplicated (with 1 representing the highest precedence):
+1.The Bulk Data file.
+2.The command line.
+3.The nastran INI and RC files (if “nastrc=yes” is specified).
+4.data-file-directory /.estimaterc on LINUX, or data-file-directory \estimate.rcf on Windows, where
+data-file-directory  is the directory containing the input data file.
+5.$HOME/.estimaterc on LINUX, or %HOMEDRIVE%%HOMEPATH%\estimate.rcf file on
+Windows.
+6.estimate.ini in the directory containing the ESTIMATE executable.
+Please be aware that the Bulk Data file can only contain statements that are accepted by MSC Nastran.  The
+following keywords will be recognized by ESTIMATE when they appear in the Bulk Data file on NASTRAN
+statements:util_ver estimate input_file  [keywords ]
+buffpool, buffsize, real
+Note:   &amp;ldquo;buffsize=estimate&amp;rdquo; is NOT accepted on a NASTRAN statement.&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+ESTIMATE16
+Main Index
+The following Case Control statements will be recognized by ESTIMATE when they appear in the bulk data
+file:
+Similarly, the nastran INI and RC files can only accept keywords that are accepted by the nastran command.&lt;br&gt;
+The following nastran command keywords will be recognized by ESTIMATE when they appear in nastran
+RC files if and only if &amp;ldquo;nastrc=yes&amp;rdquo; is also set:
+The full set of ESTIMATE utility keywords can ONLY appear on the ESTIMATE command line or in the
+ESTIMATE RC files, e.g., &amp;ldquo;.estimaterc&amp;rdquo; on LINUX and &amp;ldquo;estimate.rcf&amp;rdquo; on Windows.
+Keywordsadapt, method, mpc, sp
+Note:    If these statements appear multiple times, e.g., in subcases, only the first occurrence of each
+case control statement will be recognized.
+bpool, buffsize, memory, real, realdelta, smemory, version
+adapt adapt= number Default: None
+Selects an ADAPT set for adaptivity jobs if an ADAPT Case Control command is
+not present or multiple ADAPT Case Control commands are present in the data file.
+By default, ESTIMATE will choose the first ADAPT found.
+bpool bpool= value Default: 150 (all others)
+Same as MSC Nastran keyword, see bpool. This keyword cannot appear in an
+ESTIMATE RC file if “nastrc=yes” is specified.
+buffsize buffsize= number Default: 8193
+Same as MSC Nastran keyword, see buffsize . This keyword cannot appear in an
+ESTIMATE RC file if “nastrc=yes” is specified.
+dballco dballco= value Default: 1
+Allows you to scale DBALL estimates. This scale factor is applied before the
+&amp;ldquo;dballmin&amp;rdquo; value, that provides a lower bound for DBALL estimates.
+Example: util_ver estimate example dballco=2
+This will double the DBALL disk estimate and then apply the &amp;ldquo;dballmin&amp;rdquo; lower
+bound.
+Example: util_ver estimate example dballco=0.5
+This will halve the DBALL disk estimate.  An estimate less than than the lower
+bound specified by &amp;ldquo;dballmin&amp;rdquo; will be set to the lower bound.
+dballmin  dballmin= value Default: 1mb&lt;/p&gt;
+&lt;p&gt;17 CHAPTER 1
+Using the Utility Programs
+Main Index
+Allows you to define the lower bound for all DBALL estimates. This bound is
+applied after the &amp;ldquo;dballco&amp;rdquo; value, that multiplies the actual estimate by a
+&amp;ldquo;conservatism&amp;rdquo; factor.
+Example: util_ver estimate example dballmin=2mb
+This will set the minimum DBALL disk estimate to 2 MB.
+dskco dskco= value Default: 1
+Allows you to define a factor to scale total disk estimates. This scale factor is applied
+before the &amp;ldquo;dskmin&amp;rdquo; value, that provides a lower bound for total disk estimates.
+Example: util_ver estimate example dskco=2
+This doubles the total disk estimate and then applies the &amp;ldquo;dskmin&amp;rdquo; lower bound.
+Example:  util_ver estimate example dskco=0.5
+This will halve the total disk estimate. An estimate less than the lower bound
+specified by &amp;ldquo;dskmin&amp;rdquo; will be set to the lower bound.
+dskmin  dskmin= value Default:  1mb
+Allows you to define the lower bound for all total disk estimates.  This bound is
+applied after the &amp;ldquo;dskco&amp;rdquo; value, that multiplies the actual estimate by a
+&amp;ldquo;conservatism&amp;rdquo; factor.
+Example: util_ver estimate example dskmin=2mb
+This will set the minimum total disk estimate to 2 MB.
+enable The “enable” keyword can be used to explicitly enable rules. This may be useful to
+enable a rule that was automatically suppressed when a value was assigned. For
+example, the following command will now calculate the estimated memory
+requirements for a job even though a value for memory was specified on the
+command line:
+Example: util_ver estimate example memory=5mb
+enable=10
+estimatedof estimatedof=yes,no Default: No
+Indicates if the number of degrees of freedom are to be estimated. By default,
+ESTIMATE will count the DOF . This process takes time, but it is generally more
+accurate. Specifying “estimatedof=no” will result in a less accurate, but faster,
+estimate of the DOF . The presence of any MESH entries in the Bulk Data will force
+“estimatedof=yes”.
+memco memco= number Default: 1.0
+Allows you to specify a constant factor that is either more or less conservative than
+the default.
+Example: util_ver estimate example memco=2
+This setting will double the memory estimate.
+memmin memmin=value Default: 16mb&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+ESTIMATE18
+Main Index
+Allows you to define the lower bound for all memory estimates. This bound is
+applied after the &amp;ldquo;memco&amp;rdquo; value, that multiplies the actual estimate by a
+&amp;ldquo;conservatism&amp;rdquo; factor.
+Example:  util_ver estimate example memmin=8mb
+This will set the minimum memory estimate to 8 MB.
+memory memory= size Default:  16mb
+Same as MSC Nastran keyword, see memory .    This keyword cannot appear in an
+ESTIMATE RC file if “nastrc=yes” is specified.
+method method= number Default: None
+Selects a METHOD for dynamics jobs if a METHOD Case Control command is
+not present or multiple METHOD Case Control commands are present in the data
+file. By default, ESTIMATE will choose the first METHOD found.
+mode mode= keyword Default: suggest
+Selects the program operating mode. Specifying “mode=estimate” will result in
+memory and disk estimates only. Specifying “mode=suggest”, the default, will
+estimate memory and disk requirements for the current job configuration, suggest
+modifications to improve the performance, and provide estimates for the memory
+and disk requirements of the suggested configuration. Specifying “mode=modify”
+does all that “mode=suggest” does plus actually make the suggested changes to your
+data file. See “out” to specify the new data file’s name and information on organizing
+your input file.
+Note:   If “mode=modify” is specified, and ESTIMATE detects errors in the input file or encounters
+valid Bulk Data that is not understood by ESTIMATE, the program will revert to
+“mode=suggest”.
+Example: util_ver estimate example
+mode=estimate
+The memory and disk requirements for the current job are displayed.
+Example: util_ver estimate example
+The memory and disk requirements for the current job, suggestions for improving
+performance, and memory and disk requirements for the suggested configuration are
+displayed.&lt;/p&gt;
+&lt;p&gt;19 CHAPTER 1
+Using the Utility Programs
+Main Index
+Example: util_ver estimate example
+mode=modify
+The memory and disk requirements for the current job, suggestions for improving
+performance, and estimates of memory and disk requirements for the suggested
+configuration are displayed. If, and only if, modifications to “example.dat” are
+suggested, the original input file is versioned (given indices) and the revised data file
+is written to “example.dat”.
+mpc mpc= number Default: None
+Selects an MPC if an MPC Case Control command is not present or multiple MPC
+Case Control commands are present in the data file. By default, ESTIMATE will
+choose the first MPC found.
+nastrc nastrc=yes,no Default: Yes
+The “nastrc” keyword allows you to select the type of RC file processing invoked by
+the ESTIMATE utility. Setting “nastrc=yes”, the default, will process the standard
+MSC Nastran RC files before the standard ESTIMATE RC files, i.e.,
+$HOME/.estimaterc and “ data-file-directory /.estimaterc” on LINUX, and
+%HOMEDRIVE%%HOMEPATH\estimate.rcf and
+“data -file-directory /estimate.rcf” on Windows, are processed. Setting “nastrc=no”
+will only process the standard ESTIMATE RC files.
+out out=pathname Default: input filename
+Specifies the name of the output file if “mode=modify” is specified and
+modifications of the data file are actually required. By default, the original file is
+versioned (given indices) and the revised data file is written to the original input file’s
+name. See Using Filenames and Logical Symbols
+Example: util_ver estimate example
+mode=modify
+If modifications to “example.dat” are suggested, the original input file is versioned
+(given indices) and the revised data file is written to “example.dat”.
+Example: util_ver estimate example
+mode=modify &lt;br&gt;
+out=modified
+The revised data file is written to “modified”.&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+ESTIMATE20
+Main Index
+Note:   In order to minimize the amount of data duplicated between the original input file and the
+modified file, MSC recommends that the Bulk Data that is not subject to modification by
+ESTIMATE (i.e., all Bulk Data except PARAM and EIGRL entries) be placed in an
+INCLUDE file.
+An example of the recommended input file organization is:
+NASTRAN statements
+FMS statements
+Executive
+CEND
+Case Control
+BEGIN BULK
+PARAM,&amp;hellip;
+$
+EIGRL,&amp;hellip;
+$
+INCLUDE file.bulk
+$
+ENDDATA
+pause pause= keyword Default: No
+Pause ESTIMATE before exiting to wait for the “Enter” or “Return” key to be
+pressed. This can be useful when ESTIMATE is embedded within another program.
+The values are “fatal”, “information”, “warning”, “yes”, and “no”. Setting “pause=yes”
+will unconditionally wait; “pause=fatal” will only wait if a fatal message has been
+issued by ESTIMATE; “pause=information” and “pause=warning” will similarly wait
+only if an information or warning message has been issued. The default is
+“pause=no”, i.e., do not wait when ESTIMATE ends.
+real real=value Default: See text.
+Same as MSC Nastran keyword, see real. This keyword cannot appear in an
+ESTIMATE RC file if “nastrc=yes” is specified.
+realdelta realdelta= value Default: See text.
+Same as MSC Nastran keyword, see realdelta . This keyword cannot appear in an
+ESTIMATE RC file if “nastrc=yes” is specified.
+report report= keyword Default: Normal
+Specifies the program’s report format. The “report=normal” format is intended to be
+read by you. The “report=keyword” format is intended to be read by a program.
+scr300co scr300co= value Default: 1
+Allows you to define a factor to scale SCR300 estimates. This scale factor is applied
+before the &amp;ldquo;scr300min&amp;rdquo; value, that provides a lower bound for SCR300 estimates.&lt;/p&gt;
+&lt;p&gt;21 CHAPTER 1
+Using the Utility Programs
+Main Index
+Example: util_ver estimate example
+scr300co=2
+This will double the SCR300 disk estimate and then apply the &amp;ldquo;scr300min&amp;rdquo; lower
+bound.
+Example: util_ver estimate example
+scr300co=0.5
+This will halve the SCR300 disk estimate. An estimate less than the lower bound
+specified by &amp;ldquo;scr300min&amp;rdquo; will be set to the lower bound.
+scr300min scr300min=value  Default: 1mb
+Allows you to define the lower bound for all SCR300 estimates. This bound is
+applied after the &amp;ldquo;scr300co&amp;rdquo; value, that multiplies the actual estimate by a
+&amp;ldquo;conservatism&amp;rdquo; factor.
+Example: util_ver estimate example
+scr300min=2mb
+This will set the minimum SCR300 disk estimate to 2 MB.
+scratchco scratchco= value Default:  1
+Allows the user to define a factor to scale SCRATCH estimates. This scale factor is
+applied before the &amp;ldquo;scratchmin&amp;rdquo; value, that provides a lower bound for SCRATCH
+estimates.
+Example: util_ver estimate example
+scratchco=2
+This will double the SCRATCH disk estimate and then apply the &amp;ldquo;scratchmin&amp;rdquo;
+lower bound.
+Example: util_ver estimate example
+scratchco=0.5
+This will halve the SCRATCH disk estimate.  An estimate less than the lower bound
+specified by &amp;ldquo;scratchmin&amp;rdquo; will be set to the lower bound.
+scratchmin scratchmin=value Default: 1mb
+Allows you to define the lower bound for all SCRATCH estimates. This bound is
+applied after the &amp;ldquo;scratchco&amp;rdquo; value, that multiplies the actual estimate by a
+&amp;ldquo;conservatism&amp;rdquo; factor.
+Example: util_ver estimate example
+scratchmin=2mb
+This will set the minimum SCRATCH disk estimate to 2 MB.
+smemory smemory= size Default: 100 (all others)
+Same as MSC Nastran keyword, see smemory . This keyword cannot appear in an
+ESTIMATE RC file if “nastrc=yes” is specified.
+spc spc=number Default: None&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+ESTIMATE22
+Main Index
+Rules
+ESTIMATE has a fixed rule base that it uses to make suggestions for improvement. Any of the rules may be
+suppressed with the “suppress” keyword. The current rules are:Selects an SPC if an SPC Case Control command is not present or multiple SPC
+Case Control commands are present in the data file. By default, ESTIMATE will
+choose the first SPC found.
+suppress suppress= list Default: None
+Specifies rules that are to be suppressed when “mode=suggest” or “mode=modify” is
+specified. See Rules for the list of rules. If no value is specified, i.e., “suppress=”, then
+any rules previously suppressed are enabled. Multiple rules can be suppressed by
+using the keyword multiple times or by specifying a comma -separated list.
+Example: util_ver estimate example
+suppress=1
+Suppress rule 1, the rule controlling BUFFSIZE.
+Examples: util_verestimate example
+suppress=1,6
+util_verestimate example
+suppress=1 suppress=6
+util_verestimate example
+suppress=2 suppress= &lt;br&gt;
+suppress=1,6
+Suppress rules 1 and 6.
+verbose verbose=yes,no Default: No
+Specifies the amount of information to be displayed. Specifying “verbose=yes” will
+generate a much larger amount of output. The additional information includes a
+more detailed summary of the input file, the parameters used in estimating the
+memory and disk requirements, and the estimates for the original file, even when
+“mode=suggest” or “mode=modify” is specified.
+version version= string Default: 2006
+Specifies the version of MSC Nastran for which the estimates are to be targeted. The
+version will affect the estimated memory requirements and the actions of various
+rules, see Rules. This keyword cannot appear in an ESTIMATE RC file if
+“nastrc=yes” is specified.
+wordsize wordsize= number Default: 64
+Specifies the word size of the estimate’s target computer. By default, ESTIMATE’s
+calculations will be appropriate the current computer. This keyword may be used to
+specify estimates for a computer with a different word size. A comma -separated list
+of values may be specified when estimates and suggestions for multiple machines are
+desired. If “mode=modify” was specified, the modification are based on the last word
+size specified.&lt;/p&gt;
+&lt;p&gt;23 CHAPTER 1
+Using the Utility Programs
+Main Index
+1.Set recommended BUFFSIZE.
+2.Use default BPOOL.
+3.Suppress symmetric decomposition if not enough memory for sparse.
+SYSTEM(166)=0
+4.Make all open core available to modules.
+Delete HICORE.
+5.Select the sparse solver.
+6.Force default rank size.
+Delete SYSTEM(198)
+Delete SYSTEM(205)
+7.Do not sequence.
+8.Use default Lanczos parameters.
+EIGRL,&amp;hellip;,V1=““
+EIGRL,&amp;hellip;,MAXSET=15
+9.Use default SMEMORY.
+10. Use estimated memory size.
+memory= estimated-memory
+11. Use default RAM.BUFFSIZE=8193 DOF ≤ 100000
+BUFFSIZE=16385 100000 &amp;lt; DOF ≤ 400000
+BUFFSIZE=32769 DOF &amp;gt; 400000
+BPOOL=150
+Delete SPARSE density ≤ 12.0
+Delete USPARE
+SPARSE=1 density &amp;gt; 12.0
+USPARSE=0
+PARAM,NEWSEQ, -1 version &amp;lt; 69.0
+INIT SCRATCH (MEM=100) wordsize = 32
+INIT SCRATCH (MEM=0) wordsize = 64&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+F04REPRT24
+Main Index
+INIT MASTER (RAM=30000)
+12. Real.
+Delete REAL.
+13. Do not use Supermodule.
+Delete PARAM,SM,YES.
+14. Do not use Parallel Lanczos.
+Delete NUMSEG.
+Examples
+The ESTIMATE program can be used in several ways. The default mode will make suggestions on improving
+the performance of MSC Nastran and estimate the resource requirements of the job assuming the suggested
+parameters.
+To get an estimate of the job using the current parameters, use the command:
+To have a new input file generated with the suggested changes, use the command:
+To run MSC Nastran with the memory estimated by ESTIMATE, use:
+F04REPRT
+The F04REPRT utility is a Perl script that will summarize and/or compare .f04 files. The utility can
+determine the CPU time consumed by various MSC Nastran modules, i.e., as a DIAG 49 replacement, or
+compare the relative performance of one or more jobs under various configurations.util_ver estimate example
+util_ver estimate example mode=estimate  other_estimate_keywords
+util_ver estimate example mode=modify  other_estimate_keywords
+util_ver nastran example memory=estimate  other_nastran_keywords
+Note:   You must have Perl installed on your system to use this utility. Perl is available from numerous
+sources, including the URL
+&lt;a href=&#34;http://www.perl.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://www.perl.com&lt;/a&gt;
+This is not a  Hexagon AB and/or its subsidiaries s ite and Hexagon h as no control over the site’s
+content. Hexagon c annot guarantee the accuracy of the information on this site and will not
+be liable for any misleading or incorrect information obtained from this site.&lt;/p&gt;
+&lt;p&gt;25 CHAPTER 1
+Using the Utility Programs
+Main Index
+The basic format of the F04REPRT command is
+or
+where “-s” selects the summary mode, “-d” selects the comparison mode, options  are zero or more of the
+options listed below, pathname is a pathname, and oldi and newi are pathnames. If a pathname is a directory,
+all .f04 files in the directory are summarized/compared.
+Running F04REPRT without any arguments will display a help message explaining the utility’s options.util_ver f04reprt.pl -s [ options] pathname [pathname  &amp;hellip;]
+util_ver f04reprt.pl -d [ options] old1 new1 [oldn newn &amp;hellip;]
+Note:   Alternatively, you can run F04REPRT with the command
+perl install-dir /prod_ver/util/f04reprt.pl arguments &amp;hellip;
+on LINUX, or
+perl install-dir \prod_ver\util\f04reprt.pl arguments &amp;hellip;
+on Windows if perl is in your PATH. LINUX users can also use the command
+install-dir /prod_ver/util/f04reprt.pl arguments &amp;hellip;
+if your Perl executable is /usr/local/bin/perl, or the “shbang” line was updated to the
+appropriate path.&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+F04REPRT26
+Main Index
+Options
+-c -c Default: No
+Indicates module times are to be accumulated in a single entry, rather than separate
+entries for each module occurrence
+-d -d Default: None
+Requests a comparison (difference) between each pair of oldi and newi pathnames
+specified on the command line. If only one pair of pathnames are specified, the “-d”
+is optional.
+-e Specifies that module elapsed times are to be used for ordering entries instead of
+CPU times.
+-f -f c Default: Space
+Specifies a field separator character to separate field in the comparison report. This
+character may be inclosed in either single or double quotes to protect it from the
+command shell.
+-m -m number Default: 0.05
+Specifies the minimum CPU time threshold for comparisons or summaries. CPU
+times less than this threshold will be ignored.
+-o -o file-type Default: None
+Specifies an output file-type. If specified, each comparison or summary report will
+be written to a separate file in the current working directory with the name
+basename.ext  where basename  is the base name of the pathname  or oldi.
+If not specified, output will be written to stdout with each report separated by a form
+feed “Ctrl-L” character.
+-r -r number Default: 5
+Specifies the delta percentage used for “FASTER” and “SLOWER” comments in
+comparison (-d) output.
+Any old versus new comparisons that exceed this delta from 100%,eg.,
+(delta &amp;lt; 95%)  or (delta &amp;gt; 105%) , will print the appropriate comment.
+-s -s Default: None
+Requests a summary report for each pathname  specified on the command line. If
+only one pathname is specified, the “-s” is optional.
+-x -x file-type Default: f04
+Specifies an alternate input file type.&lt;/p&gt;
+&lt;p&gt;27 CHAPTER 1
+Using the Utility Programs
+Main Index
+Examples
+If “./example” on LINUX, or “.\example” on Windows, is a subdirectory of the current directory,
+F04REPRT will write a summary report to stdout for every .f04 file in the directory. Otherwise, if
+“./example.f04” on LINUX, or “.\example.f04”, on Windows is a file, a summary report of the one file is
+written to stdout.
+If “old” and “new” are subdirectories of the current working directory, F04REPRT will generate lists of the
+.f04 files in each directory. Comparisons will be made between each pair of files with the same name in the
+two directories. Non-.f04 files and unpaired .f04 files, i.e., .f04 files that exist in either “old” or “new” but
+not both, will be ignored. Otherwise, if “old.f04” and “new.f04” are files, then a comparison of these two files
+will be displayed.
+MONITOR
+The MONITOR utility is a script that starts the convergence_monitor executable. The utility is available for
+the user to monitor the progress of the nonlinear run. It can be used to show the history of the convergence
+behavior to help the user to understand the status of the nonlinear analysis.   MONITOR requires the ability
+to send an display via X-term to your terminal. An example output is :util_ver f04reprt.pl example
+util_ver f04reprt.pl old new&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+MSCACT28
+Main Index
+MSCACT
+MSCACT may be used to generate usage reports from the accounting files generated by MSC Nastran when
+the “acct=yes” keyword is used. The basic format of the “mscact” command is
+where acc-file are the names of the accounting file(s) to be summarized.
+Keywordsutil_ver mscact [keyword s] acc-file [acc -file &amp;hellip;]
+Note:   The keywords only affect files listed after the keyword.
+perfile perfile=yes,no Default: No
+Specifies the summary is to be printed on a per file basis. If “perfile=yes” is specified,
+a summary of each file will be individually printed. By default, the summary will
+include all files.
+sortby sortby= keyword Default: Name
+Sort the report as specified by the keyword. The keywords are:
+Keyword Sort Order
+count Sort by third report column.
+cpu Sort by second report column.
+name Sort by first report column.
+none Do not sort report; report is ordered as found
+in data file.
+Setting “sortby=none” produces a report very similar to the previous versions of this
+utility.
+summary summary= keyword Default: None
+Selects the type of summary. If “summary=none” is specified, the total CPU for all
+entries will be displayed. Otherwise, one of the following summary types may be
+selected:&lt;/p&gt;
+&lt;p&gt;29 CHAPTER 1
+Using the Utility Programs
+Main Index
+Examples
+All of the following examples assume your current working directory is the MSC Nastran accounting
+directory, i.e., install_dir /acct  on LINUX and install_dir \acct  on Windows.
+To summarize accounting data across all files:
+where filei are the filenames, cpu-sec is the total CPU seconds across all files, and count  is the number of entries
+accumulated across all files.
+To summarize accounting data from individual files:
+where filei is the name of each file, cpu-sec is the total number of CPU seconds , and count  is the number of
+entries in each file.
+To summarize accounting data in individual files by user:Keyword Type of Summary
+acdata By acdata
+acid By account ID (acid)
+date By execution date
+jid By job name
+product By product name
+sol By SOL
+user By user name
+version By product name and version
+util_ver mscact file1 file2
+file1 file2 :
+Total: cpu-sec count
+util_ver mscact perfile=yes  file1 file2
+file1:
+Total: cpu-sec count
+file2:
+Total: cpu-sec count&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+MSCACT30
+Main Index
+where filei are the filenames of each file, useri are the names, cpu-seci are the total CPU seconds for each user,
+counti  are the number of entries accumulated for each user, cpu-sec is the number of total CPU seconds, and
+count  is the number of entries in each file.
+Accounting File Format
+A separate file is created for each month of each year and is named
+on LINUX and
+on Windows where yy are the last two digits of the year and mm is the month (01 to 12). Each month’s file
+is independent of every other file.
+The accounting file begins with three header records followed by detail records, one detail record for each
+MSC Nastran job run during the given month and year. Comments, indicated by a hash mark “#” as the first
+character of the line, may be placed anywhere in the file after the header records.
+Detail records (any non-comment line after the third line) include the following data:
+1.The day the job was started (i.e., Sun., Mon., Tue., Wed., Thu., Fri., or Sat.).
+2.The month the job was started (i.e., Jan., Feb., Mar., Apr., May, Jun., Jul., Aug., Sep., Oct., Nov.,
+or Dec.).
+3.The date of the month the job was started (i.e., 01 through 31).
+4.The time the job was started (i.e., hh:mm:ss, where hh is 00 through 23, mm is 00 through 59, and
+ss is 00 through 59).
+5.The time zone (i.e., the “TZ” environment variable).
+6.The year the job was started (four digits).
+7.The name of the user running the job.
+8.The job’s output filename.util_ver mscact summary=user perfile=yes  file1 file2
+file1:
+user1:cpu-sec1 count1
+user2:cpu-sec2 count 2
+&amp;hellip;
+Total: cpu-sec count
+file2:
+user1:cpu-sec1 count1
+user2:cpu-sec2 count2
+&amp;hellip;
+Total: cpu-sec count
+install_dir /acct/msc yymm.acc
+install_dir \acct\msc yymm.acc&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>User&#39;s Manual P3</title>
+      <link>//uildDrafts:1313/docs/utilities_guide/msc_nastran_2024.1_utilities_guide_003/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//uildDrafts:1313/docs/utilities_guide/msc_nastran_2024.1_utilities_guide_003/</guid>
+      <description>
+        
+        
+        &lt;p&gt;31 CHAPTER 1
+Using the Utility Programs
+Main Index
+9.The analysis application, e.g., MSC Nastran.
+10. The version of the application (e.g., 2019.1 ).
+11. The SOL used by the job (e.g., 101, 120).
+12. The total CPU time, in seconds, of the job (from the .f04 file).
+13. The cumulative CPU time, in seconds, of all detail records up to and including this record.
+14. The cumulative CPU time, in minutes, of all detail records up to and including this record.
+15. The account ID as specified by the nastran command’s “acid” keyword.
+16. The account data as specified by the nastran command’s “acdata” keyword.
+MSCPLOTPS
+MSCPLOTPS is very similar to PLOTPS in that it reads plotting commands from a single MSC Nastran
+binary - or neutral -format plot file and produces a file that can be printed on a PostScript device.  The primary
+difference is that MSCPLOTPS automatically determines the format of the input file, i.e., whether it is a
+binary- or a neutral-format plot file, and supports plot files generated on any platform and in any processing
+mode.  Otherwise, the processing capabilities of the two programs are the same.  Except as noted below, the
+use of MSCPLOTPS is the same as the use of PLOTPS.  Please see PLOTPS  and replace the word plotps with
+mscplotps.  The basic format of the “mscplotps” command is :
+util_ver mscplotps input_plot_file  [keywords]
+where input_plot_file  is the name of the plot file generated by MSC Nastran or NEUTRL.  A  neutral-format
+plot file can be read from stdin by specifying “ -” as the filename.  If the extension of the input file is “.plt” or
+“.neu”, the extension may be omitted from tine input_plot_file  specification.
+All keywords are the same as for PLOTPS except that the “format” keyword is optional.  If it is specified, the
+specified type will be checked against the actual type, a warning message issued if the types do not match,
+and the “format” specification ignored.
+MSGCMP
+MSGCMP compiles a text message file and generates a binary message catalog. The basic format of the
+command is
+util_ver msgcmp text_file  [message_catalog ]
+where text_file  is the name of an existing text message file or is “ -” to read from stdin, and message_catalog  is
+the optional name of the message catalog that will be written. The type of the text file must be “.txt”. If a Note:   The cumulative times (fields 13 and 14) are for historical purposes only. These values are
+ignored.
+Note:   MSCPLOTPS command is only used on LINUX systems.&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+MultiOpt32
+Main Index
+message catalog is not named, the message catalog will be written in the local directory as “ text_file .msg”. The
+message catalog can be tested using the “msgcat” keyword (p.193).
+The utility can also regenerate a text file from an existing message catalog using the command
+util_ver msgcmp message_catalog .msg [text_file ]
+where message_catalog .msg is the name of an existing message catalog and text_file  is the optional name of a
+text file that will be written.  The type of the message catalog must be “.msg” and must be entered on the
+command line. If a text file is not named, the text file is written to stdout.
+The text source file for the standard message catalog is
+install_dir /prod_ver/util/analysis.txt
+on LINUX and
+install_dir \prod_ver\util\analysis.txt
+on Windows.  The standard message catalog is
+install_dir /prod_ver/arch/analysis.msg
+on LINUX and
+install_dir \prod_ver\arch\analysis.msg
+on Windows.
+Examples
+The following command will compile the message catalog from a text file named “myfile.txt”
+util_ver msgcmp myfile
+The message catalog will be named “myfile.msg”. This catalog may be used with the nastran command
+util_ver nastran myjob msgcat=myfile.msg  other_nastran_keywords
+MultiOpt
+MSC Nastran utility MultiOpt supports Multiple Model Optimization (MMO) and Global Optimization
+(GO). MMO combines two or more related optimization tasks into a single combined optimization task.
+GO is a practical procedure to find an approximate global optimal solution with reasonable computing cost.
+The way to invoke MultiOpt is using a command line of the following form:
+MSC20241    M ultiOpt     mygofile.xml (or mymmofile.xml)
+Additional guidance on the use of the MultiOpt utility can be found in MultiOpt-Global Optimization and Multi
+Model Optimization  in the MSC Nastran Design Sensitivity and Optimization User’s Guide . Note:   Message catalogs are machine dependent. “Binary File Compatibility” identifies the systems
+that are binary compatible; binary compatible systems can use multiple copies of the same
+message file.&lt;/p&gt;
+&lt;p&gt;33 CHAPTER 1
+Using the Utility Programs
+Main Index
+NEUTRL
+NEUTRL converts a binary -format plot file into a neutral -format plot file. The basic format of the “neutrl”
+command is
+where binary_plot_file  is the name of a binary plot file. If the file type of the plot file is “.plt”, it may be
+omitted from the command line.
+Keywords
+Examples
+To execute the program, enter the following command:
+util_ver neutrl example1
+The name of the output file is
+example1.neuutil_ver msgcmp myfile
+dump dump=yes,no Default: no
+This option enables a raw print of each plot command to be made before it is
+processed. This print is used for debugging purposes only.
+output output= pathname Default: binary_plot_file .neu
+This option specifies the name of the neutral -format file. If “out=—” is specified, the
+neutral plot file is written to stdout. By default, the output file is the name of the
+input file with the new type “.neu”.
+verbose verbose=yes,no Default: yesOutput is a disk file.
+noOutput is stdout.
+This option specifies whether processing messages are to be written.&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+OLDNLTO40034
+Main Index
+OLDNLTO400
+The oldnlto400 utility is a Python script that converts an MSC Nastran SOL 106 or 129 input file to an SOL
+400 input file.
+The basic format of the oldnlto400 command is:
+The command option is &amp;ndash;nlparm2step {ondeman(default), forced} . If you execute the
+command with -h or &amp;ndash;help , you may see below help messages.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;msc20241 oldnlto400.py -h
+usage: oldnlto400.py [-h] [&amp;ndash;nlparm2step {ondemand,forced}] inpfile outfile
+positional arguments:
+inpfile               input file name
+outfile               output file name
+optional arguments:
+-h, &amp;ndash;help            show this help message and exit
+&amp;ndash;nlparm2step {ondemand,forced}
+option of converting NLPARM to NLSTEP. ondemand: convert NLPARM to
+NLSTEP when PARAM BUCKLE 1 or 2 is found, forced: convert NLPARM to
+NLSTEP unconditionally
+By default (ondemand), the utility converts an NLPARM entry to an NLSTEP if the entry is referred by a
+subcase which has a PARAM BUCKLE 1 or 2, or PARAM BUCKLE 1 or 2 entry in the bulk data section.
+If choosing “forced”, all NLPARM entries will be converted to NLSTEP entries.
+The utility supports MSC Nastran INCLUDE command, all included files are extended to the output file
+flatly, nested INCLUDE commands are supported also.
+Below table shows how it worksNote:   You must have Python 3.8 or newer installed on system and python command can be executed
+from command line.
+Python is available from numerous sources, including the URL
+&lt;a href=&#34;https://www.python.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.python.org&lt;/a&gt;
+This is not a Hexagon AB and/or its subsidiaries site and Hexagon has no control over the site&amp;rsquo;s
+content. Hexagon cannot guarantee the accuracy of the information on this site and will not
+be liable for any misleading or incorrect information obtained from this site.
+util_ver oldnlto400.py input_sol106_129.bdf out_sol400.bdf [option]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;35 CHAPTER 1
+Using the Utility Programs
+Main Index
+translation about sol 106/129 to 400
+SOL 106/129 SOL 400
+SOL 106 or 129 Replace SOL 106 with SOL 400 and ANALYSIS=NLSTATIC, SOL 129
+with SOL 400 and ANALYSIS=NLTRAN
+SUBCASE (for single subcase
+input) or no SUBCASE
+SUBCASE (for multiple
+subcase input)No change in input file for single subcase input of SOL106/129
+Add STEP # after SUBCASE # for 1st subcase. From 2nd subcase, replace
+SUBCASE # with STEP # for each subcase.
+RIGID=LINEAR (only
+option in SOL106)RIGID=LINEAR will be added to case control
+ANALYSIS type is not
+specified in SOL 106
+ANALYSIS=MODES or
+DFREQ in perturbation
+analysis
+ANALYSIS=HOT2COLD
+supported only in SOL 106ANALYSIS = NLSTATICS/NLTRAN is used in SOL 400
+Retain ANALYSIS=MODES or DFREQ in perturbation analysis
+ANALYSIS=HOT2COLD is not supported in SOL 400
+PARAM, AUTOSPC, YES &amp;amp;
+PARAM, AUTOSPCR, YES AUTOSPC(RESIDUAL,SPC)=YES in case control section
+When NLGGAP is used in SOL 129, SPCOFF1 to skip the grids of
+NLRGAP from AUTOSPC for SOL 129 will be written
+PARAM, BUCKLE, 1 (or 2) Replace with NLBUCK in case control section and replace NLPARM
+with NLSTEP .
+PARAM, NMLOOP , 1 NLIC and ANALYSIS=MODES in perturbation step will be added.
+NLPARM and TSTEPNL Keep them, and add PARAM,BCSOL129,-1 for SOL 129 deck
+Slideline contact is supported
+in SOL106 with BCONP ,
+BLSEG, BFRIC, BWIDTH
+and BOUTPUT cardsRetain
+NDAMP and NDAMPM of
+SOL 129Retain and write a warning message mentioning SOL 400 has different
+meaning
+NLPARM Retain NLPARM by default if there is no PARAM BUCKLE 1 or 2 in the
+subcase or bulk data section, otherwise convert to NLSTEP . When the
+user specified command option &amp;ldquo;-nlparm2step forced&amp;rdquo; to the translator,
+all NLPARM entries will be converted to NLSTEP&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+OP4UTIL36
+Main Index
+OP4UTIL
+OP4UTIL may be used to validate, copy or reformat binary files created using the MSC Nastran OUTPUT4
+module.  It may also be used to “dump” the contents of any binary format file. The basic format of the
+&amp;ldquo;op4util&amp;rdquo; command is:
+This program is used as follows:
+To generate a usage/help message:
+To copy a file:
+To dump a file or files:
+To query a file or files to determine their format:
+To validate (test) a file or files, i.e., to check their validity as OUTPUT4 files:NLPCI Retain NLPCI by default. When the user specified command option &amp;ldquo;-
+nlparm2step forced&amp;rdquo; to the translator, every pair of NLPARM and NLPCI
+will be converted to an NLSTEP with ARCLN option.
+Large rotation effects are not
+supported in SOL106Large rotation effects are supported by default in SOL 400. To be
+consistent with SOL106, large rotation effects of CBUSH elements can be
+deactivated with MDLPRM,BUSHRT,1 bulk data entry
+Commands other than above RetainSOL 106/129 SOL 400
+util_ver op4util &lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;
+util_ver op4util
+util_ver op4util -h[elp]
+util_ver op4util -?
+util_ver op4util -c[opy] [ -v[erbose]] &amp;lt;from_fname&amp;gt; &amp;lt;to_fname&amp;gt;
+util_ver op4util -d[ump] [ -v[erbose]] &amp;lt;fname_1&amp;gt; [&amp;hellip; &amp;lt;fname_n&amp;gt;]
+util_ver op4util -q[uery] [ -v[erbose]] &amp;lt;fname_1&amp;gt; [&amp;hellip; &amp;lt;fname_n&amp;gt;]
+util_ver op4util -t[est] [ -v[erbose]] [ -m nnn] &amp;lt;fname_1&amp;gt; [&amp;hellip; &amp;lt;fname_n&amp;gt;]&lt;/p&gt;
+&lt;p&gt;37 CHAPTER 1
+Using the Utility Programs
+Main Index
+Keywords
+If more than one processing option is specified, the last one specified is the one that will be in effect.
+The default options (if one of -c, -h, -q, -t, -x, -? or -b, -l or one of their synonyms are not specified) are
+Error messages such as those describing invalid command options are written to stderr.-? Requests that usage information be written to stdout.  This is the same as the
+-h option.
+-c[opy] Requests the copy option.  This option copies the file specified by &amp;lt;from_fname&amp;gt;&lt;br&gt;
+to the file specified by &amp;lt;to_fname&amp;gt; , overwriting any existing file and creating a
+new file if it does not exist.  This option does not validate &amp;lt;from_fname&amp;gt;  or
+change its format in any way.
+-d[ump] Requests the file dump option. This option lists the contents of each file, including
+record number and record length information, in both hexadecimal and character
+formats. Just as will the -query option, it checks each of the files specified by
+&amp;lt;fname_1 &amp;gt; to &amp;lt;fname_n &amp;gt; to see if it is a valid binary file and reports its
+endian. The file need not be a valid OUTPUT4 file.
+-h[elp] Requests that usage information be written to stdout.
+-m nnn This parameter is only required when the -test, -xchange or &amp;lt;endian_opt&amp;gt; options
+fail because of memory allocation errors.  The nnn value is the size of the memory
+to be used, in MB, and must be in the range 1 to 2047. The blank between the -m
+and the nnn value is optional.
+-q[uery] Requests the file query option.  This option checks each of the files specified by
+&amp;lt;fname_1&amp;gt;  to &amp;lt;fname_n&amp;gt;  to see if it is a valid binary file and reports its endian.&lt;br&gt;
+It does not test the actual file data to see if the file is a valid OUTPUT4 file.
+-t[est] Requests the file validate (test) option.  This option reads each of the file specified
+by &amp;lt;fname_1&amp;gt;  to &amp;lt;fname_n&amp;gt; , checking for a valid binary format file
+containing matrices in the proper OUTPUT4 format.
+-v[erbose] Requests &amp;ldquo;verbose&amp;rdquo; output.  Normally, the -copy, -test, -xchange, and
+&amp;lt;endian_opt &amp;gt; options do not generate any output and the -query and -test
+options only write out a single line about each of the files they process.  In verbose
+mode, program headers and detailed file descriptions are generated, and the -test,
+-xchange and &amp;lt; endian_opt &amp;gt; options will list the matrices in the files along with
+their format and size.
+-h If there are no file name options
+-q If one or more than two file name options are specified
+-x If exactly two file name options are specified.&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+PLOTPS38
+Main Index
+Examples:
+1.Copy file  infile_1.op4 to test_file.op4:
+util_ver op4util -c infile_1.op4 test_file.op4
+2.Copy file input_file.op4 to win_file.op4 , forcing win_file.op4  to have Windows
+(little-endian) format.  Also, generate verbose messages about the conversion process:
+util_ver op4util -wind -v input_file.op4 win_file.op4
+3.Dump files input_file.op4  and input_file.op2 , generating verbose messages about the
+file formats:
+util_ver op4util -dump-v input_file.op4 input_file.op2
+PLOTPS
+PLOTPS reads plotting commands from a single MSC Nastran binary - or neutral-format plot file and
+produces a file that can be printed on a PostScript device. The basic format of the “plotps” command is
+where input_plot_file  is the name of the plot file generated by MSC Nastran or NEUTRL. A neutral -format
+plot file can be read from stdin by specifying “-” as the filename. The plot file type “.plt” does not have to be
+specified on the command line.
+Keywordsutil_ver plotps input_plot_file  [keywords ]
+begin begin= number Default: 1
+end end= number Default: 999999
+Plots a selected range of plot frames.
+color color=yes,no Default: No
+Enables or disables color pens. Setting “color=no”, the default, will assign a solid
+line to pen 1 and various dashed lines to pens 2, 3, and 4. Setting “color=yes” will
+assign black to pen 1, red to pen 2, green to pen 3, and blue to pen 4. All text and
+axes will always be written with a solid black pen.
+cscale cscale= number Default: 1.0
+Specifies a scale factor for all characters and special symbols on the plot. By default,
+characters and special symbols are 9 points (about 0.125 inch). The scale value, if
+specified, is also applied to characters and special symbols.
+The “cscale” value is critical to the correct imaging of the plot if
+“optimizestrings=yes” was specified. In general, you must specify the same “cscale”
+value as was specified in the original MSC Nastran job that generated the PLT file.
+dump dump=yes,no Default: No
+Enables a raw print of each plot command before it is processed. This print is used
+for debugging purposes only.&lt;/p&gt;
+&lt;p&gt;39 CHAPTER 1
+Using the Utility Programs
+Main Index
+format format= keyword Default: Binary
+Specifies the input file format. If the file type of the input file is “.neu” or the plot
+file is read from stdin, then “format=neutral is assumed.
+height height= number Default: 10.0 inches
+Specifies the printable page height. The actual page is assumed to be 1 inch larger.
+optimizestrings optimizestrings=yes,no Default: Yes
+Indicates the string optimization feature is to be enabled. This feature can result
+in a substantial reduction in plot file size, printer memory requirements, and print
+speed.
+If “optimizestrings=no” is set, PLOTPS will draw each character individually, at
+the expense of PS file size and the memory and time needed by your PostScript
+printer to image the file.
+output output= pathname Default: plot-file.ps
+Specifies the name of the PostScript output file. If a neutral -format plot file is read
+from stdin, the default output filename is “plotps.ps”. If “out=—” is specified, the
+PostScript output is written to stdout. By default, the output file is named the
+name of the input file with the new type “.ps”.
+rotate rotate= keyword Default: Automatic
+Controls the orientation of the generated image. If “rotate=automatic” is specified,
+the program orients the image so that the long direction of the image is aligned
+with the long direction of the page. If “rotate=no” is specified, the image is
+generated with the horizontal axis aligned with the bottom edge of the page. If
+“rotate=yes” is specified, the image is generated with the horizontal axis aligned
+with the right edge of the page.
+scale scale= number Default: 1.0
+Specifies a scale factor for all elements of the plot.
+Note:   The program will not attempt to print a multipage image if this option is used to enlarge the
+image beyond the size of the available page.
+verbose verbose=yes,no Default: Yes Output is a disk file
+No Output is stdout.
+Specifies whether processing messages are to be written.
+width width= number Default: 7.5 inches
+Specifies the printable page width. The actual page is assumed to be 1 inch larger.&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+PLOTPS40
+Main Index
+Examples
+To translate a binary -format plot file named example1.plt into PostScript, use
+The name of the output file is
+To translate a neutral -format plot file named example2.neu into PostScript, use
+The name of the output file is
+Using the String Optimization Feature
+When the string optimization feature functions correctly, you can realize a substantial reduction in the size
+of the PostScript file and a commensurate reduction in the memory and time needed by your PostScript
+printer to image the file. However, there are some cases where the feature does not function correctly, and
+generates an incorrect plot image.
+The “cscale” value used in the MSC Nastran job that generated the PLT file is critical to the correct operation
+of the “optimizestrings” feature. In general, you need to specify the same value in the PLOTPS run. There
+are some cases, however, where the value should be left at the default, i.e., 1.0. You can determine this by
+imaging and printing the first frame of the PLT file with the following two commands:
+where plt-file  is the MSC Nastran PLT file and cscale-value  is the CSCALE value used in the MSC Nastran
+job that generated the file. A visual comparison of the two PostScript images will identify the correct setting.
+In general, it will be the first command, i.e., the one that set the CSCALE value to the MSC Nastran job’s
+value.Note:   The begin , end, dump , format  and output  keywords are not allowed for PostScript plot
+generation in MSC Nastran.  That is, these keywords may not be specified on the SYS=
+describer or in the SYFIELD keyword for the PLOT logical name.
+util_ver plotps example1
+example1.ps
+util_ver plotps example2.neu
+example2.ps
+util_ver plotps plt-file  end=1 out=value.ps cscale= cscale-value
+util_ver plotps plt-file  end=1 out=default.ps&lt;/p&gt;
+&lt;p&gt;41 CHAPTER 1
+Using the Utility Programs
+Main Index
+RCOUT2
+RCOUT2 is used to convert a neutral -format OUTPUT2 file generated by MSC Nastran into a
+binary -format OUTPUT2 file. Since MSC Nastran can read and write binary -format and neutral -format
+OUTPUT2 files, this utility is generally used to construct a binary OUTPUT2 file for a third -party program
+that can only read a binary OUTPUT2 file. The basic format of the “rcout2” command is
+Keywords
+Examples
+To execute the program, enter the following command:
+The name of the output file is
+Building the Utilities Delivered in Source Form
+Several of the utilities (i.e., PLOTPS, NEUTRL, RCOUT2, and MSCACT) are delivered in source and
+executable form. The source code allows these utilities to be customized or built for other platforms. A script
+and makefile are provided to build and install these utilities. The script determines the architecture of current
+platform and invokes the make utility to perform the actual compilation, link, and installation.
+The utility program source files are located in
+on LINUX and
+on Windows. This directory is an optional component of the MSC Nastran installation. This directory
+includes the following files:util_ver rcout2 neutral_output2_file  [keywords ]
+output output= pathname Default: neutral_file .op2
+This option specifies the name of the binary OUTPUT2 file. By default, the output
+file is the name of the input file with the new type “.op2&amp;quot;.
+util_ver rcout2 example
+example.op2
+install_dir /prod_ver/util
+install_dir \prod_ver\util&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+Building the Utilities Delivered in Source Form42
+Main Index
+Three steps are required to build and install the source utilities. Make sure that you are in the utility program
+source directory, i.e., install_dir /prod_ver /util on LINUX and install_dir \prod_ver \util on Windows.
+1.The first step compiles and links all of the source utility programs. Enter the command
+If only one utility is to be built, use the name of the utility (i.e., “mscact,” “neutrl,” “plotps,” or
+“rcout2&amp;quot;) instead of “build”. For example,
+will only build the PLOTPS utility.
+2.After the programs are generated in the current directory, you can install the executable programs into
+the architecture directory for your computer (i.e., install_dir /prod_ver /arch  on LINUX and
+install_dir \prod_ver \arch  on Windows). Enter the command
+3.The third step deletes all object files and temporary files created by the “make” process. Enter the
+commandTable 1-2  Utility Program Source Files
+File Description
+acnaspat.pl
+ld.F Source for RCOUT2 Utility Routines.
+libfmsc.F Source for FORTRAN Utility Library Routines.
+makefile Makefile to Build Source Utility Programs.
+mattst.F Source for Sample OUTPUT4 File Reader TABTST (see Building and Using TABTST ).
+mscact.c Source for MSC Accounting Programs.
+neutrl.F Source for NEUTRL Utility.
+ngtarg.F Source for Command Line Utilities.
+plotps.F Source for PLOTPS Utility.
+rcout2.F Source for RCOUT2 Utility.
+tabtst.F Source for Sample OUTPUT2 File Reader MATTST (see  Building and Using
+MATTST ).
+util Script to Build Source Utility Programs.
+util_ver util build
+util_ver util plotps
+util_ver util install
+util_ver util clean&lt;/p&gt;
+&lt;p&gt;43 CHAPTER 1
+Using the Utility Programs
+Main Index
+The building and installation process can be repeated if you want to build the utilities for other computer
+architectures at your site.
+To build the utilities on another computer that does not have MSC Nastran installed, copy the complete
+utilities directory to the other computer. Since the util_ver  command will not be available, you must run the
+util script directly. Before you do, however, set the environment variable MSC_ARCH  to the name of a
+supported architecture as shown in Table 3-1. The “install” option cannot be used .&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+Building the Utilities Delivered in Source Form44
+Main Index&lt;/p&gt;
+&lt;p&gt;Main Index
+Chapter 2: Building and Using the Sample Programs
+MSC Nastran Utilities Guide&lt;/p&gt;
+&lt;p&gt;2Building and Using the
+Sample Programs
+Overview
+Building and Using BEAMSERV
+Building and Using DDLPRT
+Building and Using DDLQRY
+Building and Using DEMO1
+Building and Using DEMO2
+Building and Using DR3SERV
+Building and Using MATTST
+Building and Using SMPLR
+Building and Using a Spline Server
+Building and Using TABTST
+Beam Server Source Files
+DRESP3 Server Source Files
+MSC.Access Source Files&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+Overview46
+Main Index
+Overview
+This chapter describes how to build and use the various MSC Nastran sample programs. The sample
+programs are grouped by function as follows:
+Descriptions on building and using the sample programs follow in alphabetical order. If SCONS is being
+used to build a standalone program, it can be installed as part of the MSC SDK.
+&lt;em&gt;When building with SCons on linux, the 32 bit versions of libz and xml2 need to be installed.
+&lt;em&gt;&lt;em&gt;When building on windows, please issue the following first to initialize compilers:
+set Fx=”C:\Program Files (x86)\&lt;br&gt;
+IntelSWTools\compilers_and_libraries_2017.5.267\windows\bin\ipsxe-comp-
+vars.bat”
+call %Fx% intel64 vs2017
+Building and Using BEAMSERV
+BEAMSERV implements a user -defined beam element for MSC Nastran.
+Unlike the other sample programs, a beam  server is not a stand alone program that runs from the command
+line. Instead, the beam  server is started and controlled by MSC Nastran. In the current implementation,
+communications between MSC Nastran and the beam server are accomplished through pipes, with MSC
+Nastran reading and writing BEAMSERV’s stdout and stdin units, respectively.Program Function
+BEAMSERV Implements user -defined bar and beam elements for MSC Nastran.
+DDLPPRT Reads and displays XDB results database files. These sample programs are part of
+MSC.Access and demonstrate how to use the database library routines.DDLQRY
+DEMO1
+DEMO2
+SMPLR
+DR3SERV&lt;/em&gt; Implements user-defined responses for MSC Nastran.
+MATTST ** Reads and displays OUTPUT2 and OUTPUT4 files.
+TABT ST&lt;/em&gt;&lt;/em&gt;
+SPXSRVA* Implements user-defined splines for MSC Nastran
+Note:   The sample beam server source code is only provided as a simple example illustrating basic
+concepts. It is not intended to be a complete or usable program.&lt;/p&gt;
+&lt;p&gt;47 CHAPTER 2
+Building and Using the Sample Programs
+Main Index
+Building BEAMSERV
+The BEAMSERV program source files are located in the directory
+on LINUX and
+on Windows (see Beam Server Source Files ).
+To build the program, change the working directory to the beamlib directory and enter the command:
+NON-SDK/NON-SCons option
+SDK/SCons options:
+It will create beamserv on LINUX or beamserv.exe on Windows and store it in the
+$APPS_LOCAL/arch/bin/  directory. T o learn more about the build environment, please consult the MSC
+Software Development Kit User’s Guide.
+Alternatively, you may copy the entire beamlib directory to another location, change the working directory
+to ~new_path/beamlib/ and issue the command:Note:   1.The MSC Nastran job invoking the beam  server and the beam  server itself may run on
+different computers but they have to be network mounted.
+2.Your program may not read from stdin (FORTRAN logical unit 5) nor write to stdout
+(FORTRAN logical unit 6).
+3.The beam  server cannot write to the .f06, .f04, or .log files of the MSC Nastran job that
+started the beam server.
+4.Debugging must be accomplished by writing to a disk file, or connecting to the running
+beam server executable with a debugger (this may not be available on all systems, and
+debug compiler options should be used).
+install_dir/ prod_ver/nast/beamlib/src/beamserv
+install_dir\ prod_ver\nast\beamlib\src\beamserv
+build_beamlib.sh (linux ) or build_beamlib.bat ( windows )
+scons opt=yes beamserv
+scons opt=yes beamserv&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+Building and Using DDLPRT48
+Main Index
+Using BEAMSERV
+MSC Nastran is made aware of the beam server by the “gmconn” keyword and an external evaluator
+connection file. Entries in the connection file for piped communications are formatted as follows:
+where evaluatorname  is the evaluator name defined on the CONNECT FMS statement and pathname  is the
+pathname of the beam server executable.
+To use the sample beam server and data file, create the file “samp_eval” with the following line:
+where pathname  is the pathname of the beam server built above, e.g.,
+$APPS_LOCAL/arch/bin/beamserv  on LINUX or $APPS_LOCAL\arch\bin\beamserv.exe  on
+Windows.
+MSC Nastran is then run using the following command:
+Building and Using DDLPRT
+DDLPRT illustrates the mass retrieval of data from the MSC.Access Data Definition Language (DDL)
+database.
+Building DDLPRT
+The DDLPRT program source code is in the file “ddlprt.F” (see MSC.Access Source Files, 60 ). To build the
+program, change the working directory to the access directory and type the command:
+If you do not have write access to the source directory, install_dir /prod_ver /access on LINUX and
+install_dir \prod_ver \access on Windows, copy the entire directory to another location, change the working
+directory to the new location, and issue the SCONS command.evaluatorname ,pipe,pathname
+Note:   The evaluator name on the CONNECT FMS statements and in the external evaluator
+connection file must match exactly, including character case. T o use a mixed or lower case
+group name, the name on the CONNECT FMS statement must be in quote marks; the name
+in the external evaluator connection file is never quoted.
+LOCBMLS,pipe,pathname
+prod_ver nastran sample gmconn=samp_eval
+SCONS opt=yes ddlprt&lt;/p&gt;
+&lt;p&gt;49 CHAPTER 2
+Building and Using the Sample Programs
+Main Index
+Using DDLPRT
+DDLPRT is run with the “ddlprt” command. The format of the “ddlprt” command is
+If the DDL XDB file is not specified, the program uses the default MSC.Access DDL file,
+install_dir /prod_ver /arch /dbc.xdb on LINUX and install_dir \prod_ver \arch \dbc.xdb on Windows. The
+optional keywords are:
+To execute the program, enter the command:
+The program displays the filename, version, and compilation date of the DDL file as well as the names of the
+print and table of contents files. Once these files are generated, the program exits. The print and table of
+contents files may then be printed once DDLPRT has completed.
+Building and Using DDLQRY
+DDLQRY illustrates the interactive retrieval of data from the MSC.Access Data Definition Language (DDL)
+database.
+Building DDLQRY
+The DDLQRY program source code is in the file “ddlqry.F” (see MSC.Access Source Files, 60 ). T o build the
+program, change the working directory to the access directory and type the command:
+If you do not have write access to the source directory, install_dir /prod_ver /access on LINUX or
+install_dir \prod_ver \access on Windows, copy the entire directory to another location, change the working
+directory to the new location, and issue the SCONS command.util_ver ddlprt [ ddl_xdb_file ] [keywords ]
+print= print_file Default: ddl_xdb_file .prt
+This keyword specifies the name of the print file documenting
+the format of every MSC.Access relation. By default, the print
+file uses the basename of the input DDL XDB file with the new
+file type “.prt”. Note, the size of this file is approximately one
+megabyte.
+toc=table_of_contents_file Default: ddl_xdb_file .toc
+This keyword specifies the name of the print file’s table of
+contents. By default, the toc file uses the basename of the input
+XDB file with the new file type “.toc”.
+util_ver ddlprt
+SCONS opt=yes ddlqry&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+Building and Using DEMO150
+Main Index
+Using DDLQRY
+DDLQRY is run with the “ddlqry” command. The format of the “ddlqry” command is
+If a file is not specified, the program uses the default MSC.Access DDL file, install_dir /prod_ver /arch /dbc.xdb
+on LINUX and install_dir \prod_ver \arch \dbc.xdb on Windows.
+The program displays the filename, version, and compilation date of the DDL file and prompts you for the
+name of a DDL object:
+After you enter the name of each object, the format of the object is displayed. The program repeats the
+prompt until a blank line is entered.
+Building and Using DEMO1
+DEMO1 prints information about a results database (XDB) file produced by MSC Nastran.
+Building DEMO1
+The DEMO1 program source code is in the file “demo1.F” (see MSC.Access Source Files, 60 ). To build the
+program, change the working directory to the access directory and type the command:
+If you do not have write access to the source directory, install_dir /prod_ver /access on LINUX or
+install_dir \prod_ver \access on Windows, copy the entire directory to another location, change the working
+directory to the new location, and issue the SCONS command.
+Using DEMO1
+DEMO1 is run using the “demo1” command. The installed version of the program is run with the command:
+You are prompted for the input graphics database filename.util_ver ddlqry [ddl_xdb_file]
+Enter Object Name (null to quit)
+Note:   The sample program source code is only provided as a simple example illustrating basic
+concepts. It is not intended to be a complete or usable program.
+scons opt=yes demo1
+util_ver demo1
+Enter the database path name:&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>User&#39;s Manual P4</title>
+      <link>//uildDrafts:1313/docs/utilities_guide/msc_nastran_2024.1_utilities_guide_004/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//uildDrafts:1313/docs/utilities_guide/msc_nastran_2024.1_utilities_guide_004/</guid>
+      <description>
+        
+        
+        &lt;p&gt;51 CHAPTER 2
+Building and Using the Sample Programs
+Main Index
+Running MSC Nastran with a101x.dat (in install_dir /prod_ver /access) produces a101x.xdb that may be used
+as input to this program.
+Building and Using DEMO2
+DEMO2 prints information about a results database (XDB) file produced by MSC Nastran.
+Building DEMO2
+The DEMO2 program source code is in the file “demo2.F” (see MSC.Access Source Files, 60 ). T o build the
+program, change the working directory to the access directory and type the command:
+If you do not have write access to the source directory, install_dir /prod_ver /access on LINUX or
+install_dir \prod_ver \access on Windows, copy the entire directory to another location, change the working
+directory to the new location, and issue the SCONS command.
+Using DEMO2
+DEMO2 is run using the “demo2” command. The installed version of the program is run with the
+command:
+You are prompted for the input graphics database filename.
+Running MSC Nastran with a61x.dat (in install_dir /prod_ver /access) produces a101x.xdb that may be used
+as input to this program.
+Building and Using DR3SERV
+DR3SERV implements user -defined responses for MSC Nastran.Note:   The sample program source code is only provided as a simple example illustrating basic
+concepts. It is not intended to be a complete or usable program.
+scons opt=yes demo2
+util_ver demo2
+Enter the database path name:
+Note:   The sample DRESP3 server source code is only provided as a simple example illustrating basic
+concepts. It is not intended to be a complete or usable program.&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+Building and Using DR3SERV52
+Main Index
+Unlike the other sample programs, a DRESP3 server is not a stand alone program that runs from the
+command line. Instead, the DRESP3 server is started and controlled by MSC Nastran. In the current
+implementation, communications between MSC Nastran and the DRESP3  server are accomplished through
+pipes, with MSC Nastran reading and writing DR3SERV’s stdout and stdin units, respectively.
+Building DR3SERV
+The DR3SE RV program source files are located in the directory
+on LINUX and
+on Windows (see DRESP3 Server Source Files ).
+To build the program, change the working directory to the dr3 directory and enter the command:
+NON-SDK/NON-SCons option
+SDK/SCons options:
+where dr3serv is the target program. This command will create program, dr3serv on LINUX or dr3serv.exe
+on Windows and store it in the $APPS_LOCAL/arch/bin/  directory. T o learn more about the build
+environment, please consult the MSC Software Development Kit User’s Guide.
+Alternatively, you may copy the entire dr3 directory to another location, change the working directory to
+~new_path/dr3 and issue the command:Note:   1.The MSC Nastran job invoking the DRESP3 server and the DRESP3 server itself may
+run on different computers but they have to be network mounted.
+2.Your program may not read from stdin (FORTRAN logical unit 5) nor write to stdout
+(FORTRAN logical unit 6).
+3.The DRESP3 server cannot write to the .f06, .f04, or .log files of the MSC Nastran job
+that started the DRESP3 server.
+4.Debugging must be accomplished by writing to a disk file, or connecting to the running
+dresp3 server executable with a debugger (this may not be available on all systems, and
+debug compiler options should be used).
+install_dir/ prod_ver/nast/dr3/src/dr3serv
+install_dir \prod_ver\dr3srv
+build_dr3.sh (linux) or build_dr3.bat (windows)
+scons opt=yes dr3serv&lt;/p&gt;
+&lt;p&gt;53 CHAPTER 2
+Building and Using the Sample Programs
+Main Index
+scons opt=yes dr3serv
+To build another server program, say dr3serva, change the working directory to dr3 directory and enter the
+same build command with a new target name:
+scons opt=yes dr3serva
+Using DR3SERV
+MSC Nastran is made aware of the DRESP3 server by the “gmconn” keyword and an external evaluator
+connection file. Entries in the connection file for piped communications are formatted as follows:
+where evaluatorname  is the evaluator name defined on the CONNECT FMS statement and pathname  is the
+pathname of the DRESP3 server executable.
+To use the sample DRESP3 server and data file, create the file “samp_eval” with the following line:
+where pathname  is the pathname of the DRESP3 server built above, e.g., of the DRESP3 server built above,
+e.g., $APPS_LOCAL/arch/bin/dr3serv  on LINUX or $APPS_LOCAL\arch\bin\dr3serv .exe on
+Windows.
+MSC Nastran is then run using the following command:
+Building and Using MATTST
+MATTST reads a binary format OUTPUT4 matrix.
+Building MATTST
+The MATTST program source code is in the file “mattst.F” (see Building the Utilities Delivered in Source Form, 41 ).
+To build the program, change the working directory to the util directory and type the command:evaluatorname ,pipe,pathname
+Note:   The evaluator name on the CONNECT FMS statements and in the external evaluator
+connection file must match exactly, including character case. To use a mixed or lower case
+group name, the name on the CONNECT FMS statement must be in quote marks; the name
+in the external evaluator connection file is never quoted.
+myrsp,pipe,pathname
+util_ver nastran sample gmconn=samp_eval
+Note:   The sample program source code is only provided as a simple example illustrating basic
+concepts. It is not intended to be a complete or usable program.&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+Building and Using SMPLR54
+Main Index
+If you do not have write access to the source directory, install_dir /prod_ver /util on LINUX or
+install_dir \prod_ver \util on Windows, copy the entire directory to another location, change the working
+directory to the new location, and issue the command:
+on LINUX, or
+on Windows. Note, the directory specification is required in this circumstance.
+Using MATTST
+MATTST is run with the “mattst” command. The installed version of the program is run with the command:
+You are prompted for the number of matrices.
+You are prompted for the input filename.
+You are prompted for the output binary filename.
+You are prompted for the output text filename.
+Running the MSC Nastran job “DEMODIR:um54.dat” produces a file, “um54.f11”, that may be used as
+input to this program.
+Building and Using SMPLR
+SMPLR reads a results database (XDB) file produced by MSC Nastran.util_ver util mattst
+util_ver ./util mattst
+util_ver .\util mattst
+util_ver mattst
+Please enter the number of matrices:
+Please enter the INPT4 FILENAME:
+Please enter the output binary filename:
+Please enter the output text filename:&lt;/p&gt;
+&lt;p&gt;55 CHAPTER 2
+Building and Using the Sample Programs
+Main Index
+Building SMPLR
+The SMPLR program source code is in the file “smplr.F” (see MSC.Access Source Files, 60 ). T o build the
+program, change the working directory to the access directory and type the command:
+If you do not have write access to the source directory, install_dir /prod_ver /access on LINUX or
+install_dir \prod_ver \access on Windows, copy the entire directory to another location, change the working
+directory to the new location, and issue the SCONS command.
+Using SMPLR
+SMPLR is run using the “smplr” command. The installed version of the program is run with the command:
+You are prompted for the input filename.
+Running MSC Nastran with a101x.dat (see MSC.Access Source Files, 60 ) produces a101x.xdb that may be used
+as input to this program.
+Building and Using a Spline Server
+A spline server implements user-defined spline methods for MSC Nastran.
+Unlike the other sample programs, a spline server is not a stand-alone program that runs from the command
+line. Instead, the spline server is started and controlled by MSC Nastran. In the current implementation, Note:   The sample program source code is only provided as a simple example illustrating basic
+concepts. It is not intended to be a complete or usable program.
+scons opt=yes smplr
+util_ver smplr
+Enter the database name to process:
+Note:   The sample spline server source code is only provided as a simple example illustrating basic
+concepts. It is not intended to be a complete or usable program.&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+Building and Using a Spline Server56
+Main Index
+communications between MSC Nastran and the spline server are accomplished through pipes, with MSC
+Nastran reading and writing the spline server’s stdout and stdin units, respectively.
+Building SPXSERVA
+The spxserva program source files are located in the directory
+on LINUX and
+on Windows (see Spline Server Source Files ).
+To build the program, change the working directory to the spline_server directory and enter the command:
+NON-SDK/NON-SCons option
+SDK/SCons options:
+where spxsrva is the targeted program. This command will create program, spxsrva on LINUX or spxsrva.exe
+on Windows and store it in the $APPS_LOCAL/arch/bin/ directory. T o learn more about the build
+environment, please consult the MSC Software Development Kit User’s Guide.
+Alternatively, you may copy the entire spline_server directory to another location, change the working
+directory to ~new_path/spline_server and issue the command:
+scons opt=yes spxsrvaNote:   1.The MSC Nastran job invoking the spline server and the spline server itself may run
+on different computers but they have to be network mounted.
+2.Your program may not read from stdin (FORTRAN logical unit 5) nor write to stdout
+(FORTRAN logical unit 6).
+3.The spline server cannot write to the .f06, .f04, or .log files of the MSC Nastran job
+that started the spline server.
+4.Debugging must be accomplished by writing to a disk file, or connecting to the running
+spline server executable with a debugger (this may not be available on all systems, and
+debug compiler options should be used).
+install_dir /prod_ver/nast/spline_server/src/spxsrva
+install_dir \prod_ver\nast\spline_server\src\spxsrva
+build_spline_server.sh (linux) or build_spline_server.sh (window)
+scons opt=yes spxserva&lt;/p&gt;
+&lt;p&gt;57 CHAPTER 2
+Building and Using the Sample Programs
+Main Index
+Using the Spline Server
+MSC Nastran is made aware of the spline server by the “gmconn” keyword and an external evaluator
+connection file. Entries in the connection file for piped communications are formatted as follows:
+where evaluatorname  is the evaluator name defined on the CONNECT FMS statement and pathname  is the
+path name of the spline server executable.
+To use the sample spline server and data file, create the file “samp_eval” with the following line:
+where pathname  is the path name of the spline server built above, e.g., my/path/to/spxserva or ./spxserva on
+LINUX and my\path\to \spxserva or .\spxserva on Windows.
+MSC Nastran is then run using the following command:
+Spline Server Source Files
+The spline server program source files are located in the spline server source directory, i.e.,
+install_dir /prod_ver /nast/spline_server/src/spxsrva on LINUX and
+install_dir \prod_ver \nast\spline_server\src\spxsrva on Windows. This directory is an optional component of
+the MSC Nastran installation.
+There are source files for two example spline servers: spxserva and spxservb. The spxserva program is
+implemented entirely in the C programming language. The spxservb program uses a mix of the C and
+Fortran programming languages.
+Table 2-1 lists files contained in the SPXSERVA directoryevaluatorname ,pipe,pathname
+Note:   The evaluator name on the CONNECT FMS statements and in the external evaluator
+connection file must match exactly, including character case. To use a mixed or lower case
+group name, the name on the CONNECT FMS statement must be in quote marks; the name
+in the external evaluator connection file is never quoted.
+EXTSPLN,pipe,pathname
+util_ver nastran sample gmconn=samp_eval for MSC Nastran
+Table 2-1  Spline Server spxserva Sample Program Source Files
+File Description
+SConscript File that is used by scons to guide the build
+sxmsg.c Sample source for the spline server.
+sxsevda.c Sample source for the spline server.&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+Building and Using TABTST58
+Main Index
+Table 2-2 lists files contained in the SPXSERVB directory
+Building and Using TABTST
+TABTST reads a binary format OUTPUT2 file (do not confuse this program with RCOUT2, described in
+RCOUT2, 41 ).
+Building TABTST
+The TABTST program source code is in the file “tabtst.F” (see Building the Utilities Delivered in Source Form, 41 ).
+To build the program, change the working directory to the util directory and type the command:
+If you do not have write access to the source directory, install_dir /prod_ver /util on LINUX or
+install_dir \prod_ver \util on Windows, copy the entire directory to another location, change the working
+directory to the new location, and issue the command:
+on LINUX, or
+on Windows. Table 2-2  Spline Server spxservb Sample Program Source Files
+File Description
+SConscript File that is used by scons to guide the build
+mkgmat.F Sample source for the spline server.
+spxaport.h Sample source for the spline server.
+sxmsg.c Sample source for the spline server.
+sxsevdb.c Sample source for the spline server.
+sxsevdb.h Sample source for the spline server.
+spxaport.h Sample source for the spline server.
+Note:   The sample program source code is only provided as a simple example illustrating basic
+concepts. It is not intended to be a complete or usable program.
+util_ver util tabtst
+util_ver ./util tabtst
+util_ver .\util tabtst&lt;/p&gt;
+&lt;p&gt;59 CHAPTER 2
+Building and Using the Sample Programs
+Main Index
+Using TABTST
+TABTST is run with the “tabtst” command. The installed version of the program is run with the command:
+You are prompted for the input filename.
+You are prompted for the output filename.
+Running the MSC Nastran job “TPLDIR/basic:tabtsta.dat” produces a file, “tabtsta.f11”, that may be used
+as input to this program.
+Beam Server Source Files
+The beam server program source files are located in the beam server source directory, i.e.,
+install_dir/ prod_ver/nast/beamlib/src/beamserv  on LINUX and
+install_dir\ prod_ver\nast\beamlib\src\beamserv  on Windows. This directory is an optional
+component of the MSC Nastran installation.
+Table 2-3 lists files contained in this directory. The Arbitrary Beam Cross-Section (ABCS)  (Ch. 4) in the MSC
+Nastran Linear Static Analysis User’s Guide  can replace this Beam Server.Note:   The directory specification is required  in this circumstance.
+util_ver tabtst
+Please type the INPUT2 filename:
+Please type the output filename:
+Table 2-3  Beam Server Sample Program Source Files
+File Description
+SConscript File used by SCons to guide the build
+brtuc.F Sample source for the beam server
+brtug.F Sample source for the beam server
+brtui.F Sample source for the beam server
+brtup.F Sample source for the beam server
+bsbrc.F Sample source for the beam server
+bsbrg.F Sample source for the beam server
+bsbri.F Sample source for the beam server&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+DRESP3 Server Source Files60
+Main Index
+DRESP3 Server Source Files
+The DRESP3 server program source files are located in the DRESP3 server source directory, i.e.,
+install_dir/ prod_ver/nast/dr3/src/dr3erv on LINUX and
+install_dir\ prod_ver\nast\dr3\src\dr3serv  on Windows. This directory is an optional
+component of the MSC Nastran installation.
+Table 2-4 lists files contained in this directory
+Each server requires a separate source directory. In this delivery, 18 server directories are installed for 18
+sample problems. For example, the source files, SConscript, r3sgrta.F , r3svalda.F and r3svalsa.F for server
+dr3erva are stored in ~ install_dir/ prod_ver/nast/dr3/src/dr3serva  directory.
+MSC.Access Source Files
+The MSC.Access sample source files are located in the MSC.Access source directory
+install_dir /prod_ver /access on LINUX and install_dir \prod_ver \access on Windows. This directory is an
+optional component of the MSC Nastran installation. The src directory contains one subdirectory for each
+the six sample programs, listed in Table 2-5 through Table 2-10.bsbrp.F Sample source for the beam server
+bsgrq.F Sample source for the beam server
+bsmsg.F Sample source for the beam server
+bsbrt.F Sample source for the beam server
+bscon.F Sample source for the beam server
+mevbr.F Sample source for the beam server
+msbrc.F Sample source for the beam server
+msbrg.F Sample source for the beam server
+msbri.F Sample source for the beam serverTable 2-3  Beam Server Sample Program Source Files
+File Description
+Table 2-4  DRESP3 Server Sample Program Source Files
+File Description
+SConscript File used by SCons to guide the build.
+r3sgrt.F Sample source for the DRESP3 server.
+r3svald.F Sample source for the DRESP3 server.
+r3svals.F Sample source for the DRESP3 server.&lt;/p&gt;
+&lt;p&gt;61 CHAPTER 2
+Building and Using the Sample Programs
+Main Index
+Table 2-5  Access Program ddladd Source Files
+File Description
+SConscript File that is used by scons to guide the build
+ddladd.F Main source file for program ddladd
+ld2001.F Subroutine source file for program ddladd
+ld2004.F Subroutine source file for program ddladd
+ld66.F Subroutine source file for program ddladd
+ld67.F Subroutine source file for program ddladd
+ld675.F Subroutine source file for program ddladd
+ld68.F Subroutine source file for program ddladd
+ld681.F Subroutine source file for program ddladd
+ld69.F Subroutine source file for program ddladd
+ld70.F Subroutine source file for program ddladd
+ld705.F Subroutine source file for program ddladd
+ld706.F Subroutine source file for program ddladd
+ld707.F Subroutine source file for program ddladd
+Table 2-6  Access Program ddlprt Source Files
+File Description
+SConscript File that is used by scons to guide the build
+ddlprt.F Demonstration database dictionary print program
+Table 2-7  Access Program ddlqry Source Files
+File Description
+SConscript File that is used by scons to guide the build
+ddlqry.F Demonstration database dictionary query program&lt;/p&gt;
+&lt;p&gt;MSC Nastran Utilities Guide
+MSC.Access Source Files62
+Main Index
+Table 2-8  Access Program demo1 Source Files
+File Description
+SConscript File that is used by scons to guide the build
+demo1.F Source for sample MSC Nastran database reader.
+Table 2-9  Access Program demo2 Source Files
+File Description
+SConscript File that is used by scons to guide the build
+demo2.F Source for sample MSC Nastran database reader.
+Table 2-10  Access Program smplr Source Files
+File Description
+SConscript File that is used by scons to guide the build
+smplr.F Source for sample MSC Nastran database reader.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

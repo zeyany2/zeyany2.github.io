@@ -1,0 +1,727 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DOC REPO – MSC Nastran manuals</title>
+    <link>//uildDrafts:1313/docs/dematd_guide/</link>
+    <description>Recent content in MSC Nastran manuals on DOC REPO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="//uildDrafts:1313/docs/dematd_guide/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>User&#39;s Manual P1</title>
+      <link>//uildDrafts:1313/docs/dematd_guide/msc_nastran_2024.1_dematd_guide_001/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//uildDrafts:1313/docs/dematd_guide/msc_nastran_2024.1_dematd_guide_001/</guid>
+      <description>
+        
+        
+        &lt;p&gt;MSC Nastran 2024.1
+DEMATD GuideMSC Nastran DEMATD Guide&lt;/p&gt;
+&lt;p&gt;Worldwide Web
+&lt;a href=&#34;https://www.hexagon.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;www.hexagon.com&lt;/a&gt;
+Support
+&lt;a href=&#34;https://simcompanion.hexagon.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://simcompanion.hexagon.com&lt;/a&gt;
+Disclaimer
+Hexagon reserves the right to make changes in specifications and other information contained in this document without prior notice.
+The concepts, methods, and examples presented in this text are for illustrative and educational purposes only, and are not intended
+to be exhaustive or to apply to any particular engineering problem or design. Hexagon assumes no liability or responsibility to any
+person or company for direct or indirect damages resulting from the use of any information contained herein.
+User Documentation: Copyright 2024 Hexagon AB and/or its subsidiaries. All Rights Reserved.
+This notice shall be marked on any reproduction of this documentation, in whole or in part. Any reproduction or distribution of this
+document, in whole or in part, without the prior written consent of Hexagon is prohibited.
+This software may contain certain third-party software that is protected by copyright and licensed from Hexagon suppliers. Additional
+terms and conditions and/or notices may apply for certain third party software. Such additional third party software terms and
+conditions and/or notices may be set forth in documentation and/or at third-party software information  (or successor website designated
+by Hexagon from time to time).
+PCGLSS 8.0, Copyright © 1992-2016, Computational Applications and System Integration Inc. All rights reserved. PCGLSS 8.0 is
+licensed from Computational Applications and System Integration Inc.
+The Hexagon logo, Hexagon, MSC Software logo, MSC, Dytran, Marc, MSC Nastran, Patran, e -Xstream, Digimat, and Simulating
+Reality are trademarks or registered trademarks of Hexagon AB and/or its subsidiaries in the United States and/or other countries.
+NASTRAN is a registered trademark of NASA. FLEXlm and FlexNet Publisher are trademarks or registered trademarks of Flexera
+Software. All other trademarks are the property of their respective owners.
+Use, duplicate, or disclosure by the U.S. Government is subjected to restrictions as set forth in FAR 12.212 (Commercial Computer
+Software) and DFARS 227.7202 (Commercial Computer Software and Commercial Computer Software Documentation), as
+applicable.
+U.S. Patent 9,361,413
+May 16, 2024
+NA:V2024.1:Z:Z:Z:DC-DEMATD-PDFCorporate Office
+Hexagon Manufacturing Intelligence, Inc. UK
+78 Portsmouth Road Cedar House
+Cobham, Surrey KT11 1HY
+Telephone: (+44) 02070686555&lt;/p&gt;
+&lt;p&gt;Documentation Feedback
+At Hexagon Manufacturing Intelligence, we strive to produce the highest quality documentation and
+welcome your feedback. If you have comments or suggestions about our documentation, write to us .
+Please include the following information with your feedback:
+Document name
+Release/Version number
+Chapter/Section name
+Topic title (for Online Help)
+Brief description of the content (for example, incomplete/incorrect information, grammatical
+errors, information that requires clarification or more details and so on).
+Your suggestions for correcting/improving documentation
+Note:   The above mentioned e-mail address is only for providing documentation specific
+feedback. If you have any technical problems, issues, or queries, please contact Technical
+Support .&lt;/p&gt;
+&lt;p&gt;Contents
+MSC Nastran DEMATD Guide&lt;/p&gt;
+&lt;p&gt;Main Index
+Contents
+Introduction  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  1
+Usage  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  1
+List of materials that cannot be translated . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  2
+DEMATD translations of supported materials . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  3
+MATD001 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  3
+MATD2AN . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  3
+MATD2OR (shell)/MATD116(shell) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  4
+MATD2OR (solid)  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  4
+MATD003 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  6
+MATD005/MATD014 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  6
+MATD006 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  7
+MATD012 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  8
+MATD013 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  9
+MATD015 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  9
+MATD020 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  11
+MATD20M  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  11
+MATD022 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  12
+MATD024/MATD112/MATD114  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  13
+MATD025 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  14
+MATD026 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  15
+MATD027 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  17
+MATD028 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  17
+MATD054 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  18
+MATD059 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  20
+MATD063 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  21
+MATD064 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  22
+MATD77O . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  23&lt;/p&gt;
+&lt;p&gt;Main Index&lt;/p&gt;
+&lt;p&gt;1  Introduction
+Main Index
+Introduction
+Since Nastran 2017.1, there was a change in MSC Nastran Explicit Nonlinear (SOL 700) solution sequence.
+The underlying structural solver was changed from LS-Dyna to Dytran. This caused a variation in the
+support of data cards, especially materials, that can be used. A translator was created to facilitate the
+conversion of old input files. This translator converts materials where possible, from SOL 700
+VERSION=ORIGINAL to SOL 700 VERSION=PRIMARY.
+The current release of MSC Nastran does not support the SOL 700 MATDxxx bulk data entries anymore,
+with the exception of MATDEUL. The DEMATD utility translates them into supported material entries,
+or prints warnings if one to one translation is not possible. It will automatically process all files that are
+referenced by an INCLUDE directive as well, including nested files.
+Usage
+DEMATD has to be executed from the command line. For example, if the SOL 700 input deck is called
+original.dat  that contains the line model.bdf , the command to run DEMATD is :
+dematd  original.dat
+This will create the files DEMATD_original.dat  and DEMATD_model.bdf
+The default prefix DEMATD_  can also be changed to suit the requirement of the user. For example, If you
+use the command
+dematd  original.dat userpref_
+it will replace DEMATD with userpref  and create the files userpref_original.dat  and
+userpref_model.bdfNote:   The intent of the DEMATD tool is to help the conversion of material entries in the old
+input deck. Manual conversion of other entries are required for all other features (such as
+certain PARAMeters and Output Requests) that are not compatible.&lt;/p&gt;
+&lt;p&gt;MSC Nastran DEMATD Guide2
+Main Index
+List of materials that cannot be translated
+The database of materials available in the MSC Nastran SOL 700 VERSION=ORIGINAL (LS-Dyna
+version) is larger than the materials that are available in MSC Nastran SOL 700 VERSION=PRIMARY
+(Dytran version). Therefore there will be a set of materials that cannot be converted at all. The list of materials
+that cannot be converted is as follows:
+Table 0-1  Unsupported Material Cards
+MATD004 MATD040
+MATD007 MATD053
+MATD009 MATD057
+MATD010 MATD058
+MATD016 MATD062
+MATD018 MATD065
+MATD019 MATD066-MATD77H
+MATD021 MATD078-MATD111
+MATD029 MATD115
+MATD030 MATD119-MATD272
+MATD031 MATDB01
+MATD032 MATDERO
+MATD034 MATDIGI
+MATD036 MATDMG
+MATD037 MATDTxx
+MATD038 MATDSWx
+MATD039 MATDSxx
+Note:   MATD009: Leave warning. “If MATD009 is used for the definition of coupling surfaces,
+use PSHELL1 with OPTION=DUMMY instead of MATD009.”
+MATD034: It is fabric material and the usage is identical as MATFAB. However, the
+options are quite different between two materials. So it is not available to be translated into
+MATFAB.
+MATD036: Not supported. It is similar to SHEETMAT in Dytran but Nastran does not
+have the SHEETMAT material.
+MATD065: Although MATD065 will be translated to MAT1+MATEP with
+ZAMODEL, the results will not be the same because of small differences in theoretical
+implementation .&lt;/p&gt;
+&lt;p&gt;3  DEMATD translations of supported materials
+Main Index
+DEMATD translations of supported materials
+This section describes the comparison of translated entries to the original entries. It also describes the options
+available compared to the old entry.
+MATD001
+Options
+MATD2AN
+Options
+epsilon_3, gamma_13, and gamma_23 do not exist in shells. 1-&amp;gt;1, 2-&amp;gt;2, 3-&amp;gt; not supported, 4-&amp;gt;3, 5-&amp;gt;not
+supported and 6-&amp;gt; not supported.  Old New
+MATD001 MAT1
+RO RHO
+E E
+PR NU
+DA Not Supported
+DB Not Supported
+K Not Supported
+Option Not Supported
+VC Not Supported
+CP Not Supported
+Old (Available in shell and solid) New (Only available in shell)
+MATD2AN MAT2
+RO RHO
+C11 G11
+C12 G12
+C22 G22&lt;/p&gt;
+&lt;p&gt;MSC Nastran DEMATD Guide4
+Main Index
+MATD2OR (shell)/MATD116(shell)
+MATD2OR (solid)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;MATD2OR &amp;gt; MAT8
+Options
+EC, PRCA and PRCB do not exist in shells.C13 Not Supported
+C23 Not Supported
+C33 Not Supported
+C14 G13
+C24 G23
+C34 Not Supported
+C44 G33
+C15&lt;del&gt;C66 Not Supported
+AOPT Only 0 is available
+XP&lt;/del&gt;BETA Not Supported
+Old (Available in shell and solid) New
+MATD2OR (shell)/MATD116(shell) MAT8 (shell)
+MATD2OR (solid) MATORT (solid)
+RO RHO
+EA E1
+EB E2
+EC Not supported
+PRBA N12=EA*PRBA/EB
+PRCA Not supported
+PRCB Not supported
+GAB G12
+GBC G2,Z&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;5  DEMATD translations of supported materials
+Main Index
+2. MATD2OR &amp;gt; MATORT
+OptionsGCA G1,Z
+AOPT Only 0 is available
+G (not available in MATD116) Not supported
+SIGF (not available in MATD116) Not supported
+XP&lt;del&gt;BETA Not supported
+RO RHO
+EA E1
+EB E2
+EC E3
+PRBA N12=EA&lt;em&gt;PRBA/EB
+PRCA N31
+PRCB N23=EB&lt;/em&gt;PRCB/EC
+GAB G12
+GBC G23
+GCA G31
+AOPT OPTION
+0 = ELEM
+2 = VECT
+Others are not available
+G Not supported
+SIGF Not supported
+XP&lt;/del&gt;ZP Not supported
+A1&lt;del&gt;A3 X1&lt;/del&gt;Z1
+V1&lt;del&gt;V3 Not supported
+D1&lt;/del&gt;D3 X2~Z2
+BETA Not supported&lt;/p&gt;
+&lt;p&gt;MSC Nastran DEMATD Guide6
+Main Index
+MATD003
+Options
+MATD005/MATD014
+Options
+Check the table in  &lt;a href=&#34;https://en.wikipedia.org/wiki/Shear_modulus&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://en.wikipedia.org/wiki/Shear_modulus&lt;/a&gt;..
+The relationship to extract E and v using G and K.Old New
+MATD003 MAT1+MATEP+MATF
+RO RHO (MAT1)
+E E (MAT1)
+PR NU (MAT1)
+FORM=SLOPE (default) (MATEP)
+SIGY Y0 (MATEP)
+ETAN H (MATEP)
+BETA Only 0 is available
+RYIELD=VMISES (default) (MATEP)
+Option=Reffect
+SRC C
+SRP P
+Criterion=103 (MATF)
+FS MPS (MATF)
+VP Only 0 is available
+Old New
+MATD005/MATD014 MAT1+MATEP&lt;/p&gt;
+&lt;p&gt;7  DEMATD translations of supported materials
+Main Index
+Change EPS1&lt;del&gt;P10 in TABLED1. It is used in TABLE in MATEP.
+MATD006
+Options
+Check the table in  &lt;a href=&#34;https://en.wikipedia.org/wiki/Shear_modulus&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://en.wikipedia.org/wiki/Shear_modulus&lt;/a&gt;.
+Only bulk modulus is used. So any values of E an PR combination is possible to get the same value
+of BULK modulus.
+For example, K=1.0. Then set NU=0.2 and calculate E=3&lt;em&gt;K&lt;/em&gt;(1-2*NU)
+Change EPS1&lt;/del&gt;P10 in TABLED1. It is used in TABLE in MATEP.RO RHO (MAT1)
+G E=9&lt;em&gt;K&lt;/em&gt;G/(3&lt;em&gt;K+G) (MAT1)
+K (MATD005)/ BULK (MATD014) NU=(3&lt;/em&gt;K-2&lt;em&gt;G)/(2&lt;/em&gt;(3*K+G)) (MAT1)
+RYIELD=SOIL (MATEP)
+Option=SOIL
+CUTOFF=2.0 (default)
+YIELD=1.0 (default)
+YSTYP=1.0(default)
+TYPE=2.0 (This value is not default)
+A0,A1,A2 A0,A1,A2 (MATEP)
+PC VALUE (MATEP)
+EPS1&lt;del&gt;EPS10 X values in TABLE (MATEP)
+P1&lt;/del&gt;P10 Y values in TABLE (MATEP)
+Old New
+MATD006 MAT1+MATVE&lt;/p&gt;
+&lt;p&gt;MSC Nastran DEMATD Guide8
+Main Index
+MATD012
+Options
+Check the table in &lt;a href=&#34;https://en.wikipedia.org/wiki/Shear_modulus&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://en.wikipedia.org/wiki/Shear_modulus&lt;/a&gt;.
+The relationship to extract E and v using G and K.
+Change EPS1~P10 in TABLED1. It is used in TABLE in MATEP. RO RHO (MAT1)
+BULK E and NU (MAT1)
+MODEL= ISOLIN (MATVE)
+G0 G0 (MATVE)
+GI GI (MATVE)
+BETAS BETA (MATVE)
+Old New
+MATD012 MAT1+MATEP
+RO RHO (MAT1)
+G E=9&lt;em&gt;K&lt;/em&gt;G/(3&lt;em&gt;K+G) (MAT1)
+BULK NU=(3&lt;/em&gt;K-2&lt;em&gt;G)/(2&lt;/em&gt;(3*K+G)) (MAT1)
+FORM=SLOPE (default) (MATEP)
+RYIELD=VMISES (default) (MATEP)
+SIGY Y0 (MATEP)
+ETAN H (MATEP)&lt;/p&gt;
+&lt;p&gt;9  DEMATD translations of supported materials
+Main Index
+MATD013
+Options
+Check the table in &lt;a href=&#34;https://en.wikipedia.org/wiki/Shear_modulus&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://en.wikipedia.org/wiki/Shear_modulus&lt;/a&gt;.
+The relationship to extract E and v using G and K.
+Change EPS1~P10 in TABLED1. It is used in TABLE in MATEP.
+MATD015
+Options
+Check the table in &lt;a href=&#34;https://en.wikipedia.org/wiki/Shear_modulus&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://en.wikipedia.org/wiki/Shear_modulus&lt;/a&gt;.
+For example, G=1.0. Then set NU=0.2 and calculate E=2&lt;em&gt;G&lt;/em&gt;(1+NU)Old New
+MATD013 MAT1+MATEP+MATF
+RO RHO (MAT1)
+G E=9&lt;em&gt;K&lt;/em&gt;G/(3&lt;em&gt;K+G) (MAT1)
+BULK NU=(3&lt;/em&gt;K-2&lt;em&gt;G)/(2&lt;/em&gt;(3*K+G)) (MAT1)
+FORM=SLOPE (default) (MATEP)
+RYIELD=VMISES (default) (MATEP)
+SIGY Y0 (MATEP)
+ETAN H (MATEP)
+REM Only 0.0 is available
+When EPF is set and PRF is not set: Criterion=103 (MATF)
+EPF MPS (MATF)
+TREM DT (MATF)
+When PRF is set and EPF/DT are not set Criterion=104 (MATF)
+PRF PRS
+Old (available in shells and solids) New (available only in solids)
+MATD015 MAT1+MATEP+MATF&lt;/p&gt;
+&lt;p&gt;MSC Nastran DEMATD Guide 10
+Main Index
+Change EPS1~P10 in TABLED1. It is used in TABLE in MATEP.
+RO RHO (MAT1)
+G Only G is available in MATD015.
+If only G is defined, it is translated into E and NU.
+(MAT1)
+E E (MAT1)
+PR NU (MAT1)
+DTF Not supported
+VP Only 0 is available
+RATEOP Only 0 is available
+RYIELD=JHCOOK (MATEP)
+Option=Jhcook (MATEP)
+A A
+B B
+N N
+C C
+M M
+TM TMELT
+TR TROOM
+EPSO 0DOT
+CP CP
+PC Not supported
+SPALL Not supported
+C2P Not supported
+Criterion=102 (MATF)
+IT MTH
+0 -&amp;gt; DISC
+1 -&amp;gt; CONT
+D1-D5 D1-D5
+EPSO 0DOT&lt;/p&gt;
+&lt;p&gt;11  DEMATD translations of supported materials
+Main Index
+MATD020
+Options
+MATD20M
+Example:
+MATD20M,1,2,3,4,5,6,7  -&amp;gt; DYPARAM,MATRMRG1,MR1,MR2,MR3,MR4,MR5,MR6,MR7TM TMELT
+TR TROOM
+CP CP
+Old New
+MATD020 MATRIG
+RO RHO
+E E
+PR NU
+CMO Only 0 is available
+CON1 Only 0 is available
+CON2 Only 0 is available
+A1(LCO)~V3 Not supported
+Old New
+MATD20M PARAM,MATRMRG1&lt;/p&gt;
+&lt;p&gt;MSC Nastran DEMATD Guide 12
+Main Index
+MATD022
+Options
+EC, PRCA and PRCB don’t exist in shells.Old (available in shell and solid) New (only available in shell)
+MATD022 MAT8+MAT8A
+RO RHO (MAT8)
+EA E1 (MAT8)
+EB E2 (MAT8)
+EC Not supported
+PRBA N12=EA*PRBA/EB (MAT8)
+PRCA Not supported
+PRCB Not supported
+GAB G12 (MAT8)
+GBC G1,Z (MAT8)
+GCA G2,Z (MAT8)
+AOPT Only 0 is available
+MACF&lt;del&gt;BETA Not supported
+Not supported
+SN&lt;/del&gt;SZX Not supported
+FT=CHANG (MAT8A)
+SC S
+XT XT
+YT YT
+YC YC
+ALPH ALPHA&lt;/p&gt;
+&lt;p&gt;13  DEMATD translations of supported materials
+Main Index
+MATD024/MATD112/MATD114
+Options
+The combination of SIGY and ETAN -&amp;gt; FORM (MATEP) = SLOPE
+TIDSS -&amp;gt; FORM (MATEP) = TABLE
+Only one of above two options are available (If both are given, print warning: Select TIDSS and
+ignore SIGY and ETAN.)
+When both of the combination of C and P and TIDSR are given, print warning: Select TIDSR
+and ignore C and P
+If EPS1&lt;del&gt;ES8 are given, take one of actions below
+•Give an error: Use TIDSS instead of EPS1&lt;/del&gt;ES8.
+•Change the values to new TABLED1 and put RTID=new TABLED1 id.
+•If the both of EPS1&lt;del&gt;ES8 and TIDSS are given, print warning: Select TIDSS.Old New
+MATD024/MATD112/MATD114 MAT1+MATEP+MATF
+RO RHO (MAT1)
+E E (MAT1)
+PR NU (MAT1)
+SIGY Y0 (MATEP), FORM=SLOPE (default) (MATEP)
+ETAN H (MATEP), FORM=SLOPE (default) (MATEP)
+TIDSS FID (MATEP), FORM=TABLE (MATEP)
+RYIELD = VMISES (default) (MATEP)
+Option = Reffect
+C C
+P P
+TIDSR RTID
+Criterion=103 (MATF)
+FAIL (not available in MATD112) MPS (MATF)
+TDEL (not available in MATD112) DT (MATF)
+VP (not available in MATD112/MATD114) Only 0 is available
+EPS1&lt;/del&gt;EPS8 It is identical of x values in TIDSS
+ES1~ES8 It is identical of y values in TIDSS&lt;/p&gt;
+&lt;p&gt;MSC Nastran DEMATD Guide 14
+Main Index
+MATD025
+Options
+Check the table in &lt;a href=&#34;https://en.wikipedia.org/wiki/Shear_modulus.Old&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://en.wikipedia.org/wiki/Shear_modulus.Old&lt;/a&gt; New
+MATD025 MAT1+MATF
+RHO RHO (MAT1)
+BULK E=9&lt;em&gt;BULK&lt;/em&gt;G/(3&lt;em&gt;BULK+G) (MAT1)
+G NU=(3&lt;/em&gt;K-2&lt;em&gt;G)/(2&lt;/em&gt;(3*K+G)) (MAT1)
+Criterion=105 (MATF)
+ALPHA ALPHA (MATF)
+THETA THETA (MATF)
+GAMMA GAMMA (MATF)
+BETA BETA (MATF)
+R R (MATF)
+D D (MATF)
+W W (MATF)
+X0 X0 (MATF)
+C CBAR (MATF)
+N N (MATF)
+PLOT Not supported
+FTYPE TYPE (MATF)
+1 = SOIL
+2 = ROCK
+VEC ITER (MATF)
+0 = VEC
+1 = FULL
+TOFF TOFF (MATF)&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>User&#39;s Manual P2</title>
+      <link>//uildDrafts:1313/docs/dematd_guide/msc_nastran_2024.1_dematd_guide_002/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//uildDrafts:1313/docs/dematd_guide/msc_nastran_2024.1_dematd_guide_002/</guid>
+      <description>
+        
+        
+        &lt;p&gt;15  DEMATD translations of supported materials
+Main Index
+MATD026
+Options
+LS/Dyna material does not have the option as TYPE in MATEP. Instead of TYPE, if the x value of table,
+LCA&lt;del&gt;LCCA , starts from negative value or zero, it is the same as TYPE=RELVOL in MATEP. If it starts from
+positive value, it is the same as TYPE=CRUSH.Old New
+MATD026 MATORT+MATEP
+RO RHO (MATORT)
+EAAU E1 (MATORT)
+EBBU E2 (MATORT)
+ECCU E3 (MATORT)
+GABU G12 (MATORT)
+GBCU G23 (MATORT)
+GCAU G31 (MATORT)
+AOPT OPTION (MATORT)
+0 -&amp;gt; ELEM
+2 -&amp;gt; VECT
+Others are not available
+XP&lt;/del&gt;ZP Not supported
+A1&lt;del&gt;A3 X1&lt;/del&gt;Z1 (MATORT)
+V1&lt;del&gt;V3 Not supported
+D1&lt;/del&gt;D3 X2~Z2 (MATORT)
+TSEF Not supported
+SSEF Not supported
+RYIELD= ORTHOCR (MATEP)
+Option= OrthoCr
+TYPE=CRUSH or RELVOL depending on the start
+value of TABLED1’s
+E E (MATEP)
+PR NU (MATEP)&lt;/p&gt;
+&lt;p&gt;MSC Nastran DEMATD Guide 16
+Main Index
+SIGY Y0 (MATEP)
+VF RELV (MATEP)
+MU Not supported
+BULK Not supported
+LCA TIDXX (MATEP)
+LCB TIDYY (MATEP)
+IF LCB=0, TIDYY=LCA
+LCC TIDZZ (MATEP)
+IF LCC=0, TIDYY=LCA
+LCS If LCS=0, LCS=LCA
+It is not used directly, but it can be used for
+TIDXY~TIDXZ
+LCAB TIDXY (MATEP)
+If LCAB=0, TIDXY=LCS
+LCBC TIDYZ (MATEP)
+If LCBC=0, TIDYZ=LCS
+LCCA TIDZX (MATEP)
+If LCCA=0, TIDZX=LCS
+LCSR TIDSR (MATEP)&lt;/p&gt;
+&lt;p&gt;17  DEMATD translations of supported materials
+Main Index
+MATD027
+Options
+MATD028
+Options Old New
+MATD027 MATHE
+MODEL=MOONEY1
+RO RHO
+PR NU
+A A
+B B
+SGL~TID Not supported
+Old New
+MATD028 MAT1+MATEP
+RO RHO (MAT1)
+E E (MAT1)
+PR NU (MAT1)
+FORM=SLOPE (default) (MATEP)
+SIGY Y0 (MATEP)
+ETAN H (MATEP)&lt;/p&gt;
+&lt;p&gt;MSC Nastran DEMATD Guide 18
+Main Index
+MATD054
+Options Old (shell and solid) New (Only for shell)
+MATD054 MAT8+MAT8A
+RO RHO (MAT8)
+EA E1 (MAT8)
+EB E2 (MAT8)
+EC Not supported
+PRBA N12=EA*PRBA/EB
+PRCA Not supported
+PRCB Not supported
+GAB G12
+GBC G2,Z
+GCA G1,Z
+KF Not supported
+AOPT Only 0 is available
+A1~D3 Not supported
+DFAILM Not supported
+DFAILS Not supported
+TFAIL Not supported
+MAT8A
+TRSFAIL=SUBL
+ALPH ALPHA (MAT8A)
+SOFT Not supported
+FBRT Not supported
+YCFAC Not supported
+DFAILT Not supported
+DFAILC Not supported
+EFS Not supported
+XC XC (MAT8A)
+XT XT (MAT8A)&lt;/p&gt;
+&lt;p&gt;19  DEMATD translations of supported materials
+Main Index
+YC YC (MAT8A)
+YT YT (MAT8A)
+SC S (MAT8A)
+CRIT MAT8A
+FT = CHANG for CRIT=54
+FT = MODTSAI for CRIT=55
+BETA Not supported
+PFL Not supported
+EPSF Not supported
+EPSR Not supported
+TSMD Not supported
+SOFT2 Not supported
+SLIMT1 Not supported
+SLIMC1 Not supported
+SLIMT2 Not supported
+SLIMC2 Not supported
+SLIMS Not supported
+NCYRED PFD = STEPS (MAT8A)
+VALUE=NCYRED (MAT8A)
+SOFTG Not supported&lt;/p&gt;
+&lt;p&gt;MSC Nastran DEMATD Guide 20
+Main Index
+MATD059
+Options Old (shell and solid) New (Only for shell)
+MATD059 MAT8+MAT8A
+RO RHO (MAT8)
+EA E1 (MAT8)
+EB E2 (MAT8)
+EC Not supported
+PRBA N12=EA*PRBA/EB
+PRCA Not supported
+Option
+Only “SHELL” is available
+PRCB Not supported
+GAB G12
+GBC G2,Z
+GCA G1,Z
+KF Not supported
+AOPT Only 0 is available
+MAFLAG Not supported
+XP~BETA Not supported
+TSIZE Not supported
+MAT8A
+FT = HASHIN
+ALP ALPHA (MAT8A)
+SOFT Not supported
+FBRT Not supported
+SR Not supported
+SF Not supported
+XC XC (MAT8A)
+XT XT (MAT8A)&lt;/p&gt;
+&lt;p&gt;21  DEMATD translations of supported materials
+Main Index
+MATD063
+Options
+Check the table in &lt;a href=&#34;https://en.wikipedia.org/wiki/Shear_modulus.YC&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://en.wikipedia.org/wiki/Shear_modulus.YC&lt;/a&gt; YC (MAT8A)
+YT YT (MAT8A)
+SC S (MAT8A)
+Old  New&lt;br&gt;
+MATD063 MATHE
+Model=FOAM1
+TYPE=STRAIN
+CUTOFF=SFRAC
+RO RHO
+E K=E/(3*(1-2*PR))
+PR
+TID TABLE
+TSC VALUE=-TSC
+Be careful that TSC is positive in tension but
+VALUE is negative in tension.
+DAMP Not supported&lt;/p&gt;
+&lt;p&gt;MSC Nastran DEMATD Guide 22
+Main Index
+MATD064
+Options Old  New&lt;br&gt;
+MATD064 MAT1+MATEP
+RO RHO (MAT1)
+E E (MAT1)
+PR NU (MAT1)
+In MATEP:
+RYIELD= RPWRLAW
+Option= PwrLaw
+B=0.0
+C=0.0
+K A (MATEP)
+M M (MATEP)
+N N (MATEP)
+If N is integer, it is the TABLED1 id. Integer N is
+not supported in new SOL700
+E0 Not supported
+VP Only 0 is available
+EPS0 Only 1.0 is available&lt;/p&gt;
+&lt;p&gt;23  DEMATD translations of supported materials
+Main Index
+MATD77O
+Options Old  New&lt;br&gt;
+MATD77O MATHE
+MODEL=Ogden1
+RO RHO
+PR NU
+N Not supported
+NV Not supported
+G Not supported
+SIGF Not supported
+SGL Not supported
+SW Not supported
+ST Not supported
+TID1 Not supported
+DATA Not supported
+TID2 Not supported
+BSTART Not supported
+TRAMP Not supported
+MUi Mui
+ALPHAi ALPHAi
+Gi Not supported
+Betai Not supported&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
